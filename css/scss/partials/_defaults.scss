@@ -57,7 +57,7 @@
   *:after,
   hr,
   input[type="search"] {
-    /* Overwrite Normalize */
+    /* Override Normalize */
     @include box-sizing(border-box);
   }
 
@@ -125,14 +125,27 @@
       padding: 0;
   }
 
-  // [F]
-  // Grid Defaults to get images and embeds to work properly
-  // Get rid of gap under images by making them display: inline-block; by default
-  img {
-    max-width: 100%;
-    height: auto;
-    display: inline-block;
+  // Grid Defaults to get images and embeds to work properly:
+
+  // [R]
+  // Remove the gap between images, videos, audio and canvas and the bottom of
+  // their containers: h5bp.com/i/440
+  audio,
+  canvas,
+  img,
+  video {
+    /* Override Normalize */
     vertical-align: middle;
+  }
+
+  // [F]
+  // 1: Get rid of gap under images by making them display: inline-block; by default
+  // [R]
+  // 2: Make the image responsive.
+  img {
+    max-width: 100%; // 2
+    height: auto; // 2
+    display: inline-block; // 1
   }
 
   // [F]
@@ -140,6 +153,11 @@
   // incredibly awful unless.....
   img { -ms-interpolation-mode: bicubic; }
 
+  // [R]
+  // Remove the border around images in anchors.
+  a img {
+    border: none;
+  }
 
   // [F]
   // Miscellaneous useful HTML classes
@@ -154,12 +172,6 @@
   // Apply to single elements instead of globally to body.
   // Note this only applies to webkit-based desktop browsers and Firefox 25 (and later) on the Mac.
   .antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-
-  // [F]
-  // Get rid of gap under images by making them display: inline-block; by default
-  img {
-
-  }
 
   //
   // [F]

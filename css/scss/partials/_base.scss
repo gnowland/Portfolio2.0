@@ -1,27 +1,13 @@
 // This partial file is to combine together all stylesheets with common variables and framework utilities
 
-// Turn on/off "compass/css3" browser prefixing for the following:
-$experimental-support-for-opera:true;
-$experimental-support-for-khtml:false;
-
-
-
-
 /*
-* ---------------------------------------------------------------------------------------------------
-* BEGIN EXTERNAL PLUGIN IMPORT
-*/
-
-
-
-
+ * ---------------------------------------------------------------------------------------------------
+ * BEGIN EXTERNAL PLUGIN IMPORT
+ */
 
 @import
   "compass/css3",
   "normalize";
-
-
-
 
 /*
  * END EXTERNAL PLUGIN IMPORT
@@ -29,9 +15,10 @@ $experimental-support-for-khtml:false;
  * BEGIN LOCAL PARTIALS IMPORT
  */
 
-
-
-
 @import
-  "defaults";
-/* END LOGIN PLUGIN IMPORT */
+  "defaults",
+  "media";
+
+/*
+ * END LOCAL PARTIALS IMPORT
+ */

@@ -1,28 +1,52 @@
-/* MEDIA STYLES FROM FOUNDATION */
-// Media Query Ranges
-$small-range: (0em, 40em) !default;
-$medium-range: (40.063em, 64em) !default;
-$large-range: (64.063em, 90em) !default;
-$xlarge-range: (90.063em, 120em) !default;
-$xxlarge-range: (120.063em, 99999999em) !default;
+/* .media styles adapted from RESPONSIVEBP */
+// http://responsivebp.com/css/media.html
 
+// [R]
+// Properly scale your video on any device based on YouTube/Dailymotion ratio.
+.media {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 56.25%;
+  height: 0;
+  height: auto;
+  max-width: 100%;
+  margin-bottom: 1em;
+  overflow: hidden;
+}
 
-$screen: "only screen" !default;
+// Widescreen mode:
+.media.widescreen {
+  padding-bottom: 45%;
+}
 
-$landscape: "#{$screen} and (orientation: landscape)" !default;
-$portrait: "#{$screen} and (orientation: portrait)" !default;
+// The actual player.
+.media iframe,
+.media object,
+.media embed,
+.media video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  background-color: transparent;
+}
 
-$small-up: $screen !default;
-$small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})" !default;
-
-$medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range)})" !default;
-$medium-only: "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max-width:#{upper-bound($medium-range)})" !default;
-
-$large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})" !default;
-$large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})" !default;
-
-$xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-range)})" !default;
-$xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})" !default;
-
-$xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})" !default;
-$xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})" !default;
+// [R]
+// Constrained Images!
+// Position the image absolutely and then move it's four positions 1000000% out of the
+// container. This, in combination with the auto margin, is the core of the trick.
+// Why the large number? Firefox seems to have issue when using larger images even at 100%.
+.media img {
+    position: absolute;
+    top: -1000000%;
+    right: -1000000%;
+    bottom: -1000000%;
+    left: -1000000%;
+    margin: auto;
+    width: 100%;
+}

@@ -1,8 +1,8 @@
 /* SCSS Compiled with Compass */
 /*
-* ---------------------------------------------------------------------------------------------------
-* BEGIN EXTERNAL PLUGIN IMPORT
-*/
+ * ---------------------------------------------------------------------------------------------------
+ * BEGIN EXTERNAL PLUGIN IMPORT
+ */
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 /*! normalize.css v3.0.0 | HTML5 Display Definitions | MIT License | git.io/normalize */
 article,
@@ -246,7 +246,7 @@ html, body {
 *:after,
 hr,
 input[type="search"] {
-  /* Overwrite Normalize */
+  /* Override Normalize */
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -300,15 +300,26 @@ hr {
   padding: 0;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: inline-block;
+audio,
+canvas,
+img,
+video {
+  /* Override Normalize */
   vertical-align: middle;
 }
 
 img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+img {
   -ms-interpolation-mode: bicubic;
+}
+
+a img {
+  border: none;
 }
 
 .left {
@@ -348,4 +359,48 @@ select {
   width: 100%;
 }
 
-/* END LOGIN PLUGIN IMPORT */
+/* .media styles adapted from RESPONSIVEBP */
+.media {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 56.25%;
+  height: 0;
+  height: auto;
+  max-width: 100%;
+  margin-bottom: 1em;
+  overflow: hidden;
+}
+
+.media.widescreen {
+  padding-bottom: 45%;
+}
+
+.media iframe,
+.media object,
+.media embed,
+.media video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  background-color: transparent;
+}
+
+.media img {
+  position: absolute;
+  top: -1000000%;
+  right: -1000000%;
+  bottom: -1000000%;
+  left: -1000000%;
+  margin: auto;
+  width: 100%;
+}
+
+/*
+ * END LOCAL PARTIALS IMPORT
+ */
