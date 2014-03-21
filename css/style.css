@@ -1,8 +1,7 @@
-/* SCSS Compiled with Compass */
-/*
- * ---------------------------------------------------------------------------------------------------
- * BEGIN EXTERNAL PLUGIN IMPORT
- */
+/* SCSS compiled with Compass
+ * This file defines custom screen styles. */
+/* ---------------------------------------------------------------------------------------------------
+ * BEGIN COMPASS PLUGIN IMPORT */
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 /*! normalize.css v3.0.0 | HTML5 Display Definitions | MIT License | git.io/normalize */
 article,
@@ -232,9 +231,11 @@ th {
 }
 
 /*
- * END EXTERNAL PLUGIN IMPORT
+ * END COMPASS PLUGIN IMPORT
  * ---------------------------------------------------------------------------------------------------
- * BEGIN LOCAL PARTIALS IMPORT
+ * BEGIN LOCAL PARTIALS IMPORT */
+/* - - - local partials - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ * _defaults.scss
  */
 html, body {
   height: 100%;
@@ -359,7 +360,9 @@ select {
   width: 100%;
 }
 
-/* .media styles adapted from RESPONSIVEBP */
+/* - - - local partials - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ * _media.scss
+ */
 .media {
   position: relative;
   padding-top: 30px;
@@ -401,6 +404,6 @@ select {
   width: 100%;
 }
 
-/*
+/* ---------------------------------------------------------------------------------------------------
  * END LOCAL PARTIALS IMPORT
  */
