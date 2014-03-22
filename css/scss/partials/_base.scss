@@ -5,17 +5,36 @@
 
 @import
   "compass/css3",
-  "normalize";
+  "normalize",
+  "susy";
 
 /*
  * END COMPASS PLUGIN IMPORT
  * ---------------------------------------------------------------------------------------------------
- * BEGIN LOCAL PARTIALS IMPORT */
+ * BEGIN LOCAL PARTIALS ASSEMBLY */
+
+// !!IMPORTANT!!
+// Make sure to add:
+// @import "defaults";
+// to the first line of each partial!!
+
+// ** Partials import structure **
+//
+// functions (@import "calc/functions";)
+//   L defaults (@import "defaults";)
+//      L typography
+//      L grid
+//      L media
+//
+// Utilizes Foundation's "import once" function (in calc/functions)
 
 @import
-  "defaults",
+  "typography",
+  "grid",
   "media";
 
-/* ---------------------------------------------------------------------------------------------------
- * END LOCAL PARTIALS IMPORT
+/*
+ * END LOCAL PARTIALS ASSEMBLY
+ * ---------------------------------------------------------------------------------------------------
+ * BEGIN CUSTOM STYLES
  */

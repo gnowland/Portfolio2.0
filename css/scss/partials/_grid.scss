@@ -1,0 +1,13 @@
+// GRIDS BY SUSY http://susy.oddbird.net/
+// TUT: http://code.tutsplus.com/tutorials/responsive-grids-with-susy--net-27893
+
+ @import "defaults";
+
+/* - - - local partials assembly - - - - - - - - - - - - - - - - - - - -
+ * FILE: _grids.scss
+ */
+
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+);

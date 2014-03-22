@@ -1,6 +1,9 @@
 // BROWSERFIX & DEFAULTSET STYLES ADAPTED FROM FOUNDATION ([F]) & RESPONSIVEBP ([R])
-/* - - - local partials - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
- * _defaults.scss
+
+ @import "calc/functions";
+
+/* - - - local partials assembly - - - - - - - - - - - - - - - - - - - -
+ * FILE: _defaults.scss
  */
 
   // [F]
@@ -45,6 +48,21 @@
   }
 
   // [F]
+  // @mixins
+  //
+  // We use this to add transitions to elements
+  // $property - Default: all, Options: http://www.w3.org/TR/css3-transitions/#animatable-properties
+  // $speed - Default: 300ms
+  // $ease - Default:ease-out, Options: http://css-tricks.com/almanac/properties/t/transition-timing-function/
+  @mixin single-transition($property:all, $speed:300ms, $ease:ease-out) {
+    @if $experimental {
+      -webkit-transition: $property $speed $ease;
+      -moz-transition: $property $speed $ease;
+    }
+    transition: $property $speed $ease;
+  }
+
+  // [F]
   // Global styles
   $body-bg: #fff !default;
   $body-font-color: #222 !default;
@@ -64,6 +82,16 @@
   $success-color: #43AC6A !default;
   $warning-color: #f08a24 !default;
   $info-color: #a0d3e8 !default;
+
+  // [F]
+  // Media Query Ranges
+  $small-range: (0em, 40em) !default;
+  $medium-range: (40.063em, 64em) !default;
+  $large-range: (64.063em, 90em) !default;
+  $xlarge-range: (90.063em, 120em) !default;
+  $xxlarge-range: (120.063em, 99999999em) !default;
+
+@include exports("global") {
 
   // [F]
   // Must be 100% for off canvas to work
@@ -111,15 +139,6 @@
   a:hover { cursor: pointer; }
 
   // [R]
-  // Headers
-  // 1: Improve rendering of screen fonts.
-  // 2: Prevent page breaking.
-  h1, h2, h3, h4, h5, h6 {
-      text-rendering: optimizeLegibility; // 1
-      page-break-after: avoid; // 2
-  }
-
-  // [R]
   // Remove text-shadow in selection highlight: h5bp.com/i
   // These selection rule sets have to be separate.
   // #b3d4fc is common cursor selection color, but change to match design
@@ -132,17 +151,6 @@
   ::selection {
       background: #b3d4fc;
       text-shadow: none;
-  }
-
-  // [R]
-  // A better looking default horizontal rule
-  hr {
-      display: block;
-      height: 1px;
-      border: 0;
-      border-top: 1px solid #c0c0c0;
-      margin: 1em 0;
-      padding: 0;
   }
 
   // Grid Defaults to get images and embeds to work properly:
@@ -205,4 +213,5 @@
   // [F]
   // Make select elements 100% width by default
   select { width: 100%; }
+}
 

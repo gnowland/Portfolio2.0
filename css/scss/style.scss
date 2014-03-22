@@ -1,5 +1,11 @@
 /* SCSS compiled with Compass
  * This file defines custom screen styles. */
 
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
 @import "partials/base";
 
+header {
+  letter-spacing: 500%;
+}

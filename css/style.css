@@ -233,9 +233,9 @@ th {
 /*
  * END COMPASS PLUGIN IMPORT
  * ---------------------------------------------------------------------------------------------------
- * BEGIN LOCAL PARTIALS IMPORT */
-/* - - - local partials - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
- * _defaults.scss
+ * BEGIN LOCAL PARTIALS ASSEMBLY */
+/* - - - local partials assembly - - - - - - - - - - - - - - - - - - - -
+ * FILE: _defaults.scss
  */
 html, body {
   height: 100%;
@@ -277,11 +277,6 @@ a:hover {
   cursor: pointer;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  text-rendering: optimizeLegibility;
-  page-break-after: avoid;
-}
-
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
@@ -290,15 +285,6 @@ h1, h2, h3, h4, h5, h6 {
 ::selection {
   background: #b3d4fc;
   text-shadow: none;
-}
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #c0c0c0;
-  margin: 1em 0;
-  padding: 0;
 }
 
 audio,
@@ -360,8 +346,52 @@ select {
   width: 100%;
 }
 
-/* - - - local partials - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
- * _media.scss
+/* - - - local partials assembly - - - - - - - - - - - - - - - - - - - -
+ * FILE: _typography.scss
+ */
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+  page-break-after: avoid;
+}
+
+/* Typography resets */
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #c0c0c0;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* - - - local partials assembly - - - - - - - - - - - - - - - - - - - -
+ * FILE: _grids.scss
+ */
+/* - - - local partials assembly - - - - - - - - - - - - - - - - - - - -
+ * FILE: _media.scss
  */
 .media {
   position: relative;
@@ -404,6 +434,11 @@ select {
   width: 100%;
 }
 
-/* ---------------------------------------------------------------------------------------------------
- * END LOCAL PARTIALS IMPORT
+/*
+ * END LOCAL PARTIALS ASSEMBLY
+ * ---------------------------------------------------------------------------------------------------
+ * BEGIN CUSTOM STYLES
  */
+header {
+  letter-spacing: 500%;
+}
