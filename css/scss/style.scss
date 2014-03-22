@@ -6,6 +6,10 @@
 
 @import "partials/base";
 
-header {
-  letter-spacing: 500%;
+nav {
+  position: relative;
+  width: 928px;
+  padding: 2em;
+  margin-left: -14px;
+  @include border-radius (14px, 7px);
 }
