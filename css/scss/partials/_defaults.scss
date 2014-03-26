@@ -64,7 +64,7 @@
 
   // [F]
   // Global styles
-  $body-bg: #fff !default;
+  $body-bg: #eee !default;
   $body-font-color: #222 !default;
   $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
   $body-font-weight: normal !default;
@@ -127,6 +127,10 @@
 
   // [F]
   // Default body styles
+  // [Gridless]
+  // The body will work like a 'div#wrapper' (for this to work, the 'body' needs to have a set width)
+  // To add a background to the PAGE, set it in the 'html' element
+  // To add a background to the WRAPPER, set it in the 'body' element
   body {
     background: $body-bg;
     color: $body-font-color;
@@ -141,6 +145,11 @@
   }
 
   a:hover { cursor: pointer; }
+
+  // [responsify.it]
+  // Navigation defaults
+  nav ul, nav li { margin: 0; }
+  nav ul, ul { list-style:none; }
 
   // [R]
   // Remove text-shadow in selection highlight: h5bp.com/i

@@ -1,0 +1,49 @@
+// GRIDS BY SUSY http://susy.oddbird.net/
+// TUT: http://code.tutsplus.com/tutorials/responsive-grids-with-susy--net-27893
+
+@import
+  "defaults";
+
+/* - - - local partials assembly - - - - - - - - - - - - - - - - - - - -
+ * FILE: _grids.scss
+ */
+
+ // Setting up the Magic Grid
+ //
+
+ $susy: (
+   columns: 12,
+   gutters: 1/4,
+   math: fluid,
+   output: float,
+   gutter-position: after,
+   column-width: 4em,
+ );
+
+body {
+  @include container(12);
+}
+
+header {
+  @include span(8);
+}
+
+nav {
+  @include span(last 4 nest) {
+    li {
+      @include span(isolate 1 of 4 0 no-gutters wide);
+    }
+  }
+}
+
+#about {
+  @include span(6 break);
+}
+
+#work {
+  @include span(last 6);
+}
+
+#contact {
+  @include span(6 break);
+}

@@ -2,6 +2,27 @@
  * This file defines custom screen styles. */
 /* ---------------------------------------------------------------------------------------------------
  * BEGIN COMPASS PLUGIN IMPORT */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 /*! normalize.css v3.0.0 | HTML5 Display Definitions | MIT License | git.io/normalize */
 article,
@@ -262,7 +283,7 @@ html {
 }
 
 body {
-  background: white;
+  background: #eeeeee;
   color: #222222;
   padding: 0;
   margin: 0;
@@ -276,6 +297,14 @@ body {
 
 a:hover {
   cursor: pointer;
+}
+
+nav ul, nav li {
+  margin: 0;
+}
+
+nav ul, ul {
+  list-style: none;
 }
 
 ::-moz-selection {
@@ -341,6 +370,54 @@ textarea {
 
 select {
   width: 100%;
+}
+
+/* - - - local partials assembly - - - - - - - - - - - - - - - - - - - -
+ * FILE: _grids.scss
+ */
+body {
+  max-width: 59em;
+  margin-left: auto;
+  margin-right: auto;
+}
+body::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+header {
+  width: 66.10169%;
+  float: left;
+  margin-right: 1.69492%;
+}
+
+nav {
+  width: 32.20339%;
+  float: right;
+}
+nav li {
+  width: 25%;
+  float: left;
+}
+
+#about {
+  clear: both;
+  width: 49.15254%;
+  float: left;
+  margin-right: 1.69492%;
+}
+
+#work {
+  width: 49.15254%;
+  float: right;
+}
+
+#contact {
+  clear: both;
+  width: 49.15254%;
+  float: left;
+  margin-right: 1.69492%;
 }
 
 /* - - - local partials assembly - - - - - - - - - - - - - - - - - - - -
@@ -421,13 +498,13 @@ p aside {
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font-weight: bold;
   font-style: normal;
   color: #222222;
   text-rendering: optimizeLegibility;
   page-break-after: avoid;
   margin-top: 0.2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   line-height: 1.4;
 }
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
@@ -560,9 +637,6 @@ ol li ol {
 }
 
 /* - - - local partials assembly - - - - - - - - - - - - - - - - - - - -
- * FILE: _grids.scss
- */
-/* - - - local partials assembly - - - - - - - - - - - - - - - - - - - -
  * FILE: _media.scss
  */
 .media {
@@ -611,12 +685,28 @@ ol li ol {
  * ---------------------------------------------------------------------------------------------------
  * BEGIN CUSTOM STYLES
  */
-nav {
-  position: relative;
-  width: 928px;
-  padding: 2em;
-  margin-left: -14px;
-  -moz-border-radius: 14px / 7px;
-  -webkit-border-radius: 14px 7px;
-  border-radius: 14px / 7px;
+header {
+  margin-bottom: 0.4rem;
+}
+header h1 {
+  font-family: "Century Gothic", "Tw Cen MT", Futura, "URW Gothic L", Arial, sans-serif;
+  font-size: 2.75rem;
+  line-height: 2.5rem;
+  margin: 0;
+}
+
+nav ul {
+  width: 100%;
+}
+nav li {
+  display: inline;
+  text-align: center;
+}
+
+section h1 {
+  font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
+section p {
+  text-align: justify;
+  font-family: Georgia, Times, "Times New Roman", serif;
 }
