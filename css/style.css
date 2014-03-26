@@ -729,6 +729,10 @@ nav li {
   text-align: center;
 }
 
+.selected {
+  color: black;
+}
+
 section h1 {
   font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
 }
