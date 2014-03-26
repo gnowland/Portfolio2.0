@@ -1,2 +1,2 @@
 //Set header.push heght
-$('.push').height($('header').outerHeight());
+$( "body" ).css( "margin-top", $('header').outerHeight());
