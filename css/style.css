@@ -446,6 +446,12 @@ nav li {
   float: left;
 }
 
+footer {
+  clear: both;
+  width: 100%;
+  float: left;
+}
+
 /* - - - local partials assembly - - - - - - - - - - - - - - - - - - - -
  * FILE: _typography.scss
  */
