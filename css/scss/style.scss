@@ -9,12 +9,12 @@
 // Set custom site styles here:
 
 header {
-  margin-bottom: 0.4rem;
+  background-color: #eee;
   h1 {
-  font-family: "Century Gothic", "Tw Cen MT", Futura, "URW Gothic L", Arial, sans-serif;
-  font-size: 2.75rem;
-  line-height: 2.5rem;
-  margin: 0;
+    font-family: "Century Gothic", "Tw Cen MT", Futura, "URW Gothic L", Arial, sans-serif;
+    font-size: 2.75rem;
+    line-height: 2.5rem;
+    margin: 0;
   }
 }
 
@@ -37,4 +37,16 @@ section {
     text-align: justify;
     font-family: Georgia, Times, "Times New Roman", serif;
   }
+}
+
+#about {
+  background-color: #626564;
+}
+
+#work {
+  background-color: #b9394e;
+}
+
+#contact {
+  background-color: #153987;
 }

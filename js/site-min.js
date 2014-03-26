@@ -524,3 +524,5 @@ https://github.com/imakewebthings/jquery-waypoints/blob/master/licenses.txt
      Begin site.js
 ********************************************** */
 
+//Set header.push heght
+$('.push').height($('header').outerHeight());

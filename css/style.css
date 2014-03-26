@@ -280,6 +280,7 @@ input[type="search"] {
 }
 html {
   -webkit-overflow-scrolling: touch;
+  background: #404040;
 }
 
 body {
@@ -387,6 +388,32 @@ body::after {
 }
 
 header {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+  width: 100%;
+  float: left;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+header::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+header .wrapper {
+  max-width: 59em;
+  margin-left: auto;
+  margin-right: auto;
+}
+header .wrapper::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+header h1 {
   width: 66.10169%;
   float: left;
   margin-right: 1.69492%;
@@ -403,21 +430,20 @@ nav li {
 
 #about {
   clear: both;
-  width: 49.15254%;
+  width: 100%;
   float: left;
-  margin-right: 1.69492%;
 }
 
 #work {
-  width: 49.15254%;
-  float: right;
+  clear: both;
+  width: 100%;
+  float: left;
 }
 
 #contact {
   clear: both;
-  width: 49.15254%;
+  width: 100%;
   float: left;
-  margin-right: 1.69492%;
 }
 
 /* - - - local partials assembly - - - - - - - - - - - - - - - - - - - -
@@ -686,7 +712,7 @@ ol li ol {
  * BEGIN CUSTOM STYLES
  */
 header {
-  margin-bottom: 0.4rem;
+  background-color: #eee;
 }
 header h1 {
   font-family: "Century Gothic", "Tw Cen MT", Futura, "URW Gothic L", Arial, sans-serif;
@@ -709,4 +735,16 @@ section h1 {
 section p {
   text-align: justify;
   font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+#about {
+  background-color: #626564;
+}
+
+#work {
+  background-color: #b9394e;
+}
+
+#contact {
+  background-color: #153987;
 }

@@ -21,11 +21,21 @@
  );
 
 body {
-  @include container(12);
+  @include container;
 }
 
 header {
-  @include span(8);
+  @include container(100%);
+  @include full;
+  position: fixed; // keep on top of window
+  top: 0;
+  right: 0;
+  .wrapper{
+    @include container;
+  }
+  h1 {
+    @include span(8);
+  }
 }
 
 nav {
@@ -37,13 +47,13 @@ nav {
 }
 
 #about {
-  @include span(6 break);
+  @include span(12 break);
 }
 
 #work {
-  @include span(last 6);
+  @include span(12 break);
 }
 
 #contact {
-  @include span(6 break);
+  @include span(12 break);
 }
