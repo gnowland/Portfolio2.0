@@ -376,6 +376,7 @@ select {
 /* - - - local partials assembly - - - - - - - - - - - - - - - - - - - -
  * FILE: _grids.scss
  */
+/* Setting up the Magic Grid */
 body {
   max-width: 59em;
   margin-left: auto;
@@ -394,9 +395,6 @@ header {
   clear: both;
   width: 100%;
   float: left;
-  position: fixed;
-  top: 0;
-  right: 0;
 }
 header::after {
   content: " ";
@@ -452,6 +450,7 @@ footer {
   float: left;
 }
 
+/* Setting the Breakpoints */
 /* - - - local partials assembly - - - - - - - - - - - - - - - - - - - -
  * FILE: _typography.scss
  */
@@ -718,7 +717,12 @@ ol li ol {
  * BEGIN CUSTOM STYLES
  */
 header {
-  background-color: #eee;
+  background: #eee;
+  border-top: 6px #000 solid;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 header h1 {
   font-family: "Century Gothic", "Tw Cen MT", Futura, "URW Gothic L", Arial, sans-serif;
@@ -727,6 +731,9 @@ header h1 {
   margin: 0;
 }
 
+nav {
+  background: #000;
+}
 nav ul {
   width: 100%;
 }
@@ -734,9 +741,20 @@ nav li {
   display: inline;
   text-align: center;
 }
-
-.selected {
-  color: black;
+nav li:hover, nav li:focus {
+  cursor: pointer;
+}
+nav li.selected {
+  background: #008cba;
+}
+nav li.selected a {
+  color: #fff;
+}
+nav li.selected a:hover, nav li.selected a:focus {
+  color: #fff;
+}
+nav li.external {
+  background: #eee;
 }
 
 section h1 {

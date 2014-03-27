@@ -9,7 +9,12 @@
 // Set custom site styles here:
 
 header {
-  background-color: #eee;
+  background: #eee;
+  border-top: 6px #000 solid;
+  position: fixed; // keep on top of window
+  top: 0;
+  left: 0;
+  right: 0;
   h1 {
     font-family: "Century Gothic", "Tw Cen MT", Futura, "URW Gothic L", Arial, sans-serif;
     font-size: 2.75rem;
@@ -18,7 +23,9 @@ header {
   }
 }
 
+// Navigation
 nav {
+  background: #000;
   ul {
     width:100%;
   }
@@ -26,12 +33,26 @@ nav {
     display: inline;
     // padding-right: span(2/2);
     text-align: center;
+    &:hover, &:focus {
+      cursor: pointer
+    }
+    &.selected {
+      background: #008cba;
+      a {
+        color: #fff;
+        &:hover,
+        &:focus {
+          color: #fff;
+        }
+      }
+    }
+    &.external {
+      background: #eee;
+    }
   }
 }
-.selected {
-  color: black;
-}
 
+// Sections
 section {
   h1 {
     font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
