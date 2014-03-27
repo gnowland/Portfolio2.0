@@ -716,6 +716,21 @@ ol li ol {
  * ---------------------------------------------------------------------------------------------------
  * BEGIN CUSTOM STYLES
  */
+body {
+  margin-top: 12em;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+body.compact {
+  margin-top: 3em;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
 header {
   background: #eee;
   border-top: 6px #000 solid;
@@ -723,6 +738,18 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  height: 12em;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+header.compact {
+  height: 3em;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 header h1 {
   font-family: "Century Gothic", "Tw Cen MT", Futura, "URW Gothic L", Arial, sans-serif;

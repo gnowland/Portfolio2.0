@@ -7,6 +7,17 @@
 @import "partials/base";
 
 // Set custom site styles here:
+$expand-header-height: 12em;
+$compact-header-height: 3em;
+
+body {
+  margin-top: $expand-header-height;
+  @include transition(compact(all 0.5s ease));
+  &.compact {
+    margin-top: $compact-header-height;
+    @include transition(compact(all 0.5s ease));
+  }
+}
 
 header {
   background: #eee;
@@ -15,6 +26,12 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  height: $expand-header-height;
+  @include transition(compact(all 0.5s ease));
+  &.compact {
+    height: $compact-header-height;
+    @include transition(compact(all 0.5s ease));
+  }
   h1 {
     font-family: "Century Gothic", "Tw Cen MT", Futura, "URW Gothic L", Arial, sans-serif;
     font-size: 2.75rem;

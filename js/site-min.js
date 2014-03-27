@@ -528,15 +528,13 @@ https://github.com/imakewebthings/jquery-waypoints/blob/master/licenses.txt
 /*jshint devel:true */
 // console.log("You are here:", this.id);
 
-//Set body margin-top heght to bump down page height of header
-$( 'body' ).css( 'margin-top', $('header').outerHeight());
-
 // Navigation Menu
 $(function() { //When the document loads
 
   var sections = $('section');
   var nav_a = $('nav a');
-  var headerheight = $('header').outerHeight();
+  var headercompact = 49;
+  var headerexpanded = 192;
 
 // remove ".external" from firing
   nav_a.parent().not('.external').on('click', function (event) {
@@ -546,10 +544,23 @@ $(function() { //When the document loads
       var url = $(this).children('a').attr('href');
       // go to the section
       $('html, body').animate({
-          scrollTop:  $('html').find($(this).children('a').attr('href')).offset().top-headerheight+1
+          scrollTop:  $('html').find($(this).children('a').attr('href')).offset().top-headercompact+1
           }, 400, 'swing', function () {
             window.location.hash = url ;
           });
+  });
+
+  // Making the header animate
+  $('body').waypoint(function(direction) {
+    $('body, header').toggleClass('compact', direction === 'down');
+    }, {
+      offset: headerexpanded-1,
+  });
+
+  //Refreshing the waypoints when the header animates
+  $('header').on('transitionend webkitTransitionEnd', function() {
+    $.waypoints('refresh');
+    console.log('refresh');
   });
 
   // Highlighting
@@ -566,7 +577,7 @@ $(function() { //When the document loads
       active_link.parent().addClass('selected');
 
     },
-    offset: headerheight
+    offset: headercompact
   });
 
 // Check if at bottom of page, if so, add class to last <a> as sometimes the last div
@@ -594,9 +605,17 @@ $(function() { //When the document loads
       if (direction === 'up') {
         nav_a.parent().removeClass('selected');
         nav_a.parent().not('.external').first().addClass('selected');
+
+        // add class to make header expand to full height again (causes css transform to fire)
+        $('body, header').toggleClass('compact');
+//      }
+//      if (direction === 'down') {
+//        // add class to make header collapse to small height (causes css transform to fire)
+//        $('header').removeClass('expand');
+//        $('header').addClass('compact');
       }
     },
-    offset: headerheight-1
+    offset: headercompact-15
   });
 
 });
