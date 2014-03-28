@@ -533,8 +533,7 @@ $(function() { //When the document loads
 
   var sections = $('section');
   var nav_a = $('nav a');
-  var headercompact = 49;
-  var headerexpanded = 192;
+  var headercompact = 0; // Overridden by adding a psudo-element to all sections
 
 // remove ".external" from firing
   nav_a.parent().not('.external').on('click', function (event) {
@@ -545,23 +544,23 @@ $(function() { //When the document loads
       // go to the section
       $('html, body').animate({
           scrollTop:  $('html').find($(this).children('a').attr('href')).offset().top-headercompact+1
-          }, 400, 'swing', function () {
+          }, 800, 'swing', function () {
             window.location.hash = url ;
           });
   });
 
   // Making the header animate
-  $('body').waypoint(function(direction) {
-    $('body, header').toggleClass('compact', direction === 'down');
-    }, {
-      offset: headerexpanded-1,
-  });
+//  $('body').waypoint(function(direction) {
+//    $('body, .wrapper').toggleClass('compact', direction === 'down');
+//    }, {
+//     offset: headerexpanded-1, // <-- need to define header expanded var
+//  });
 
-  //Refreshing the waypoints when the header animates
-  $('header').on('transitionend webkitTransitionEnd', function() {
-    $.waypoints('refresh');
-    console.log('refresh');
-  });
+  // Refreshing the waypoints when the header animates
+//  $('header').on('transitionend webkitTransitionEnd', function() {
+//    $.waypoints('refresh');
+//    console.log('refresh');
+//  });
 
   // Highlighting
 
@@ -607,7 +606,7 @@ $(function() { //When the document loads
         nav_a.parent().not('.external').first().addClass('selected');
 
         // add class to make header expand to full height again (causes css transform to fire)
-        $('body, header').toggleClass('compact');
+//        $('body, header').toggleClass('compact');
 //      }
 //      if (direction === 'down') {
 //        // add class to make header collapse to small height (causes css transform to fire)

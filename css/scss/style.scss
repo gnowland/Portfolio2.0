@@ -11,12 +11,7 @@ $expand-header-height: 12em;
 $compact-header-height: 3em;
 
 body {
-  margin-top: $expand-header-height;
-  @include transition(compact(all 0.5s ease));
-  &.compact {
-    margin-top: $compact-header-height;
-    @include transition(compact(all 0.5s ease));
-  }
+  margin-top: $compact-header-height;
 }
 
 header {
@@ -26,7 +21,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  height: $expand-header-height;
+  height: $compact-header-height;
   @include transition(compact(all 0.5s ease));
   &.compact {
     height: $compact-header-height;
@@ -71,6 +66,12 @@ nav {
 
 // Sections
 section {
+  // Necessary for loading on right place when page is called from hash (http://goo.gl/2rNgyB)
+  // overrides "offset" function in waypoints.js
+  padding-top: $compact-header-height;
+  margin-top: -$compact-header-height;
+  -webkit-background-clip: content-box;
+  background-clip: content-box;
   h1 {
     font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
   }
@@ -81,6 +82,7 @@ section {
 }
 
 #about {
+//  padding-top: $expand-header-height;
   background-color: #626564;
 }
 
