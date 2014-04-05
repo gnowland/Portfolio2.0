@@ -280,11 +280,10 @@ input[type="search"] {
 }
 html {
   -webkit-overflow-scrolling: touch;
-  background: #404040;
+  background: #eeeeee;
 }
 
 body {
-  background: #eeeeee;
   color: #222222;
   padding: 0;
   margin: 0;
@@ -377,18 +376,21 @@ select {
  * FILE: _grids.scss
  */
 /* Setting up the Magic Grid */
-body {
+.wrapper {
   max-width: 59em;
   margin-left: auto;
   margin-right: auto;
+  height: inherit;
+  position: relative;
 }
-body::after {
+.wrapper::after {
   content: " ";
   display: block;
   clear: both;
 }
 
 header {
+  z-index: 5;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -397,16 +399,6 @@ header {
   float: left;
 }
 header::after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-header .wrapper {
-  max-width: 59em;
-  margin-left: auto;
-  margin-right: auto;
-}
-header .wrapper::after {
   content: " ";
   display: block;
   clear: both;
@@ -426,28 +418,45 @@ nav li {
   float: left;
 }
 
-#about {
+section {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   clear: both;
   width: 100%;
   float: left;
+  border-top: 3em solid transparent;
+  margin-top: -2.60em;
+}
+section::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+#about {
+  z-index: 4;
+}
+#about .bubble {
+  width: 66.10169%;
+  float: left;
+  margin-right: 1.69492%;
+}
+#about .portrait {
+  width: 32.20339%;
+  float: right;
 }
 
 #work {
-  clear: both;
-  width: 100%;
-  float: left;
+  z-index: 3;
 }
 
 #contact {
-  clear: both;
-  width: 100%;
-  float: left;
+  z-index: 2;
 }
 
 footer {
-  clear: both;
-  width: 100%;
-  float: left;
+  z-index: 1;
 }
 
 /* Setting the Breakpoints */
@@ -728,6 +737,7 @@ header {
   left: 0;
   right: 0;
   height: 3em;
+  padding-bottom: 3em;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
@@ -773,12 +783,6 @@ nav li.external {
   background: #eee;
 }
 
-section {
-  padding-top: 3em;
-  margin-top: -3em;
-  -webkit-background-clip: content-box;
-  background-clip: content-box;
-}
 section h1 {
   font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
 }
@@ -788,13 +792,23 @@ section p {
 }
 
 #about {
-  background-color: #626564;
+  background-image: url(../img/hexnoise.png), url(../img/background.jpg);
+  -moz-background-size: auto, cover;
+  -o-background-size: auto, cover;
+  -webkit-background-size: auto, cover;
+  background-size: auto, cover;
+  background-position: 0 0,30% 50%;
+  background-repeat: repeat,no-repeat;
+  overflow: hidden;
+  height: 23.25em;
 }
-
-#work {
-  background-color: #b9394e;
+#about .bubble {
+  float: left;
 }
-
-#contact {
-  background-color: #153987;
+#about img.portrait {
+  height: auto;
+  max-width: 100%;
+  float: right;
+  position: absolute;
+  bottom: 0;
 }

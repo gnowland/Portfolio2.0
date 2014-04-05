@@ -21,15 +21,19 @@
  );
 
 body {
+  //@include container;
+}
+
+.wrapper{
   @include container;
+  height: inherit;
+  position: relative;
 }
 
 header {
+  z-index: 5;
   @include container(100%);
   @include full;
-  .wrapper{
-    @include container;
-  }
   h1 {
     @include span(8);
   }
@@ -43,21 +47,42 @@ nav {
   }
 }
 
+section {
+  @include container(100%);
+  @include full;
+  border-top: 3em solid transparent;
+  margin-top: -2.60em;
+}
+
 #about {
-  @include span(12 break);
+  z-index: 4;
+  //@include span(12 break);  //these are the same for all sections
+  //@include container(100%);
+  //@include full;
+  .bubble {
+    @include span(8 of 12)
+  }
+  .portrait {
+    @include span(last 4 of 12)
+  }
 }
 
 #work {
-  @include span(12 break);
+  z-index: 3;
 }
 
 #contact {
-  @include span(12 break);
+  z-index: 2;
 }
 
 footer {
-  @include span(12 break);
+  z-index: 1;
 }
+
+
+
+
+
 
 /* Setting the Breakpoints */
 $breakpoint-to-ems: true;

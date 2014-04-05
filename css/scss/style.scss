@@ -22,6 +22,7 @@ header {
   left: 0;
   right: 0;
   height: $compact-header-height;
+  padding-bottom: $compact-header-height;
   @include transition(compact(all 0.5s ease));
   &.compact {
     height: $compact-header-height;
@@ -68,10 +69,8 @@ nav {
 section {
   // Necessary for loading on right place when page is called from hash (http://goo.gl/2rNgyB)
   // overrides "offset" function in waypoints.js
-  padding-top: $compact-header-height;
-  margin-top: -$compact-header-height;
-  -webkit-background-clip: content-box;
-  background-clip: content-box;
+  //padding-top: $compact-header-height;
+  //margin-top: -$compact-header-height;
   h1 {
     font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
   }
@@ -82,14 +81,32 @@ section {
 }
 
 #about {
-//  padding-top: $expand-header-height;
-  background-color: #626564;
+  background-image: url(../img/hexnoise.png),url(../img/background.jpg);
+  @include background-size(auto,cover);
+  background-position: 0 0,30% 50%;
+  background-repeat: repeat,no-repeat;
+  overflow: hidden;
+  height: 23.25em;
+  //position: relative;
+  //z-index: -2;
+  //}
+  .bubble {
+    float: left;
+  }
+  img.portrait {
+    height: auto;
+    max-width: 100%;
+    //margin-right: gutter(24);
+    float: right;
+    position: absolute;
+    bottom: 0;
+  }
 }
 
 #work {
-  background-color: #b9394e;
 }
 
 #contact {
-  background-color: #153987;
+}
+footer {
 }

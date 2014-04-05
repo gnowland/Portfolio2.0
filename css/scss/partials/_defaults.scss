@@ -64,7 +64,7 @@
 
   // [F]
   // Global styles
-  $html-bg: #404040 !default;
+  $html-bg: #eee !default;
   $body-bg: #eee !default;
   $body-font-color: #222 !default;
   $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
@@ -134,7 +134,7 @@
   // To add a background to the PAGE, set it in the 'html' element
   // To add a background to the WRAPPER, set it in the 'body' element
   body {
-    background: $body-bg;
+    //background: $body-bg;
     color: $body-font-color;
     padding: 0;
     margin: 0;

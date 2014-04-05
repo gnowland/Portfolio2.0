@@ -2,3 +2,5 @@
 .DS_Store
 Ω*
 codekit-config.json
+sftp-config.json
+img/preprocessed
