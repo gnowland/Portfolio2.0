@@ -20,14 +20,22 @@
    column-width: 4em,
  );
 
+ //Making Mixins
+ @mixin offset ($margin) {
+  border-top: 3em solid transparent;
+  margin-top: $margin;
+ }
+
+
 body {
   //@include container;
 }
 
-.wrapper{
+.row{
   @include container;
   height: inherit;
   position: relative;
+  @include offset(-3em);
 }
 
 header {
@@ -50,8 +58,7 @@ nav {
 section {
   @include container(100%);
   @include full;
-  border-top: 3em solid transparent;
-  margin-top: -2.60em;
+  @include offset(-2.60em);
 }
 
 #about {
@@ -59,11 +66,17 @@ section {
   //@include span(12 break);  //these are the same for all sections
   //@include container(100%);
   //@include full;
-  .bubble {
-    @include span(8 of 12)
+  .col1 {
+    @include span(8 of 12);
+    @include offset(-3em);
+    height: inherit;
+    position: relative;
   }
-  .portrait {
-    @include span(last 4 of 12)
+  .col2 {
+    @include span(last 4 of 12);
+    @include offset(-3em);
+    height: inherit;
+    position: relative;
   }
 }
 
@@ -89,7 +102,6 @@ $breakpoint-to-ems: true;
 
 
 // assume min-width (by default) if only a number
-$breakpoint-medium-width: 500px;
 $breakpoint-medium-width-em: 30em;
 // set min-width/max-width if both values are numbers
 $breakpoint-medium-not-wide: 500px 700px;

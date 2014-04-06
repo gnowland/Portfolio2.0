@@ -28,7 +28,7 @@ $(function() { //When the document loads
 
   // Making the header animate
 //  $('body').waypoint(function(direction) {
-//    $('body, .wrapper').toggleClass('compact', direction === 'down');
+//    $('body, header.row').toggleClass('compact', direction === 'down');
 //    }, {
 //     offset: headerexpanded-1, // <-- need to define header expanded var
 //  });

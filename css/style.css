@@ -2,6 +2,20 @@
  * This file defines custom screen styles. */
 /* ---------------------------------------------------------------------------------------------------
  * BEGIN COMPASS PLUGIN IMPORT */
+@font-face {
+  font-family: "Franchise";
+  src: url('/font/eot("../font/franchise/franchise-bold-webfont.eot")');
+  src: url('/font/eot("../font/franchise/franchise-bold-webfont.eot")?#iefix') format('embedded-opentype'), url('/font/../font/franchise/franchise-bold-webfont.woff?1396770569') format('woff'), url('/font/../font/franchise/franchise-bold-webfont.ttf?1396770580') format('truetype'), url('/font/../font/franchise/franchise-bold-webfont.svg?1396770665') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceSansProBlack";
+  src: url('/font/eot("../font/source-sans-pro/SourceSansPro-Black-webfont.eot")');
+  src: url('/font/eot("../font/source-sans-pro/SourceSansPro-Black-webfont.eot")?#iefix') format('embedded-opentype'), url('/font/../font/source-sans-pro/SourceSansPro-Black-webfont.woff?1396777419') format('woff'), url('/font/../font/source-sans-pro/SourceSansPro-Black-webfont.ttf?1396777410') format('truetype'), url('/font/../font/source-sans-pro/SourceSansPro-Black-webfont.svg?1396777404') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -376,14 +390,16 @@ select {
  * FILE: _grids.scss
  */
 /* Setting up the Magic Grid */
-.wrapper {
+.row {
   max-width: 59em;
   margin-left: auto;
   margin-right: auto;
   height: inherit;
   position: relative;
+  border-top: 3em solid transparent;
+  margin-top: -3em;
 }
-.wrapper::after {
+.row::after {
   content: " ";
   display: block;
   clear: both;
@@ -426,7 +442,7 @@ section {
   width: 100%;
   float: left;
   border-top: 3em solid transparent;
-  margin-top: -2.60em;
+  margin-top: -2.6em;
 }
 section::after {
   content: " ";
@@ -437,14 +453,22 @@ section::after {
 #about {
   z-index: 4;
 }
-#about .bubble {
+#about .col1 {
   width: 66.10169%;
   float: left;
   margin-right: 1.69492%;
+  border-top: 3em solid transparent;
+  margin-top: -3em;
+  height: inherit;
+  position: relative;
 }
-#about .portrait {
+#about .col2 {
   width: 32.20339%;
   float: right;
+  border-top: 3em solid transparent;
+  margin-top: -3em;
+  height: inherit;
+  position: relative;
 }
 
 #work {
@@ -801,14 +825,44 @@ section p {
   background-repeat: repeat,no-repeat;
   overflow: hidden;
   height: 23.25em;
+  position: relative;
 }
-#about .bubble {
-  float: left;
+
+.bubble h1 {
+  font-family: "Franchise", "Century Gothic", "Tw Cen MT", Futura, "URW Gothic L", Arial, sans-serif;
+  color: #fff;
+  font-weight: 800;
+  margin: 10% 0 0 0.5em;
+  line-height: .5;
+  font-size: 2em;
+  text-transform: uppercase;
 }
-#about img.portrait {
-  height: auto;
-  max-width: 100%;
-  float: right;
+.bubble p {
+  position: relative;
+  top: 15%;
+  text-align: left;
+  min-height: 5em;
+  background-color: #fff;
+  padding: 1em;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+}
+.bubble p:after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: -1.6em;
+  top: 60%;
+  border: 1em solid;
+  border-color: transparent transparent #fff #fff;
+}
+
+#about .col2 img {
+  max-height: 18em;
+  width: auto;
   position: absolute;
   bottom: 0;
+  right: 0;
 }
