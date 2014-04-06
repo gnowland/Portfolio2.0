@@ -6,16 +6,8 @@
 @import
   "compass/css3",
   "susy",
-  "breakpoint";
-
-// Add custom font-face declirations:
-  // See correct font declaration usage: http://goo.gl/ld2zSu
-  // In order to refer to a specific style of the font in your stylesheets as e.g. "font-style: italic;", you
-  // may add a couple of @font-face includes containing the respective font files for each style and specying
-  // respective the $style parameter. Order of the includes matters, and it is: normal, bold, italic, bold+italic.
-  // @include font-face($name, $font-files, $eot, $weight, $style)
-@include font-face("Franchise", font-files("../font/franchise/franchise-bold-webfont.woff","../font/franchise/franchise-bold-webfont.ttf","../font/franchise/franchise-bold-webfont.svg"), eot("../font/franchise/franchise-bold-webfont.eot"), 700, normal);
-@include font-face("SourceSansProBlack", font-files("../font/source-sans-pro/SourceSansPro-Black-webfont.woff","../font/source-sans-pro/SourceSansPro-Black-webfont.ttf","../font/source-sans-pro/SourceSansPro-Black-webfont.svg"), eot("../font/source-sans-pro/SourceSansPro-Black-webfont.eot"), 900, normal);
+  "breakpoint",
+  "fonts";
 
 // Import Normalize seperately so I can add these first:
   // [Responsify.it]

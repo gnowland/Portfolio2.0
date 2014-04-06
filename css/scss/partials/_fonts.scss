@@ -1,0 +1,70 @@
+// Add custom font-face declirations:
+  // See correct font declaration usage: http://goo.gl/ld2zSu
+  // In order to refer to a specific style of the font in your stylesheets as e.g. "font-style: italic;", you
+  // may add a couple of @font-face includes containing the respective font files for each style and specying
+  // respective the $style parameter. Order of the includes matters, and it is: normal, bold, italic, bold+italic.
+  // @include font-face($name, $font-files, $eot, $weight, $style)
+
+  @mixin font-faces ($family, $faces, $prefix: null, $path: null) {
+    @each $face in $faces {
+      $name: nth($face, 1);
+      @if $prefix {
+        $name: '#{$prefix}#{$name}';
+      }
+      $weight: false;
+      $style: false;
+      @if length($face) > 1 {
+        $weight: nth($face, 2);
+      }
+      @if length($face) > 2 {
+        $style: nth($face, 3);
+      }
+      @include font-face($family, $name, $path, $weight, $style);
+    }
+  }
+
+  @mixin font-face ($family, $name, $path: null, $weight: null, $style: null) {
+    $url: $name;
+    @if $path {
+      $url: '#{$path}/#{$name}';
+    }
+    @font-face {
+        font-family: $family;
+        @if $weight {
+          font-weight: $weight;
+        }
+        @if $style {
+          font-style:  $style;
+        }
+        src: url('#{$url}.eot');                                      // IE9 Compat Modes
+        src: url('#{$url}.eot?#iefix')   format('embedded-opentype'), // IE6-IE8
+             url('#{$url}.woff')         format('woff'),              // Modern Browsers
+             url('#{$url}.ttf')          format('truetype'),          // Safari, Android, iOS
+             url('#{$url}.svg##{$name}') format('svg');               // Legacy iOS
+    }
+  }
+
+  @include font-faces('Gotham', (
+    'Thin'         100,
+    'ThinItalic'   100 italic,
+    'XLight'       200,
+    'XLightItalic' 200 italic,
+    'Light'        300,
+    'LightItalic'  300 italic,
+    'Book'         400,
+    'BookItalic'   400 italic,
+    'Medium'       600,
+    'MediumItalic' 600 italic,
+    'Bold'         700,
+    'BoldItalic'   700 italic,
+    'Black'        800,
+    'BlackItalic'  800 italic,
+    'Ultra'        900,
+    'UltraItalic'  900 italic,
+  ), 'Gotham-', '/font/gotham');
+
+  @include font-faces('Franchise', (
+    'Bold'         700,
+  ), 'Franchise-', '/font/franchise');
+
+//@include font-faces("SourceSansPro", font-files("/font/source-sans-pro/SourceSansPro-Black-webfont.woff","/font/source-sans-pro/SourceSansPro-Black-webfont.ttf","/font/source-sans-pro/SourceSansPro-Black-webfont.svg"), eot("/font/source-sans-pro/SourceSansPro-Black-webfont.eot"), 900, normal);
