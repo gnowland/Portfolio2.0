@@ -45,26 +45,26 @@
   }
 
   @include font-faces('Gotham', (
-    'Thin'         100,
-    'ThinItalic'   100 italic,
-    'XLight'       200,
-    'XLightItalic' 200 italic,
-    'Light'        300,
-    'LightItalic'  300 italic,
-    'Book'         400,
-    'BookItalic'   400 italic,
-    'Medium'       600,
-    'MediumItalic' 600 italic,
-    'Bold'         700,
-    'BoldItalic'   700 italic,
-    'Black'        800,
-    'BlackItalic'  800 italic,
-    'Ultra'        900,
-    'UltraItalic'  900 italic,
-  ), 'Gotham-', '/font/gotham');
+    'thin'         100,
+    'thinitalic'   100 italic,
+    'xlight'       200,
+    'xlightitalic' 200 italic,
+    'light'        300,
+    'lightitalic'  300 italic,
+    'book'         400,
+    'bookitalic'   400 italic,
+    'medium'       600,
+    'mediumitalic' 600 italic,
+    'bold'         700,
+    'bolditalic'   700 italic,
+    'black'        800,
+    'blackitalic'  800 italic,
+    'ultra'        900,
+    'ultraitalic'  900 italic,
+  ), 'gotham-', '../font/gotham');
 
-  @include font-faces('Franchise', (
-    'Bold'         700,
-  ), 'Franchise-', '/font/franchise');
+//  @include font-faces('Franchise', (
+//    'bold'         700,
+//  ), 'franchise-', '../font/franchise');
 
 //@include font-faces("SourceSansPro", font-files("/font/source-sans-pro/SourceSansPro-Black-webfont.woff","/font/source-sans-pro/SourceSansPro-Black-webfont.ttf","/font/source-sans-pro/SourceSansPro-Black-webfont.svg"), eot("/font/source-sans-pro/SourceSansPro-Black-webfont.eot"), 900, normal);

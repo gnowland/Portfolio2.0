@@ -26,6 +26,9 @@
   margin-top: $margin;
  }
 
+ $section-top-offset: -2.60em;
+ $row-top-offset: -3em;
+
 
 body {
   //@include container;
@@ -35,7 +38,7 @@ body {
   @include container;
   height: inherit;
   position: relative;
-  @include offset(-3em);
+  @include offset($row-top-offset);
 }
 
 header {
@@ -58,7 +61,7 @@ nav {
 section {
   @include container(100%);
   @include full;
-  @include offset(-2.60em);
+  @include offset($section-top-offset);
 }
 
 #about {
@@ -68,13 +71,13 @@ section {
   //@include full;
   .col1 {
     @include span(8 of 12);
-    @include offset(-3em);
+    @include offset($row-top-offset);
     height: inherit;
     position: relative;
   }
   .col2 {
     @include span(last 4 of 12);
-    @include offset(-3em);
+    @include offset($row-top-offset);
     height: inherit;
     position: relative;
   }
