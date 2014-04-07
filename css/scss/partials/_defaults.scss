@@ -222,5 +222,27 @@
   // [F]
   // Make select elements 100% width by default
   select { width: 100%; }
+
+  [data-icon]:before {
+    font-family: "FontCustom";
+    content: attr(data-icon);
+    speak: none;
+   }
+
+  //[data-icon]:before,
+  //.icon-GN:before {
+  //  display: inline-block;
+  //  font-family: "FontCustom";
+  //  font-style: normal;
+  //  font-weight: normal;
+  //  font-variant: normal;
+  //  line-height: inherit;
+  //  text-decoration: inherit;
+  //  text-rendering: optimizeLegibility;
+  //  text-transform: none;
+  //  -moz-osx-font-smoothing: grayscale;
+  //  -webkit-font-smoothing: antialiased;
+  //  font-smoothing: antialiased;
+  //}
 }
 

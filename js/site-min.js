@@ -619,11 +619,4 @@ $(function() { //When the document loads
     },
     offset: headercompact-15
   });
-
-  $(document).scroll(function(){
-  var opac = $('document').scrollTop() / ($('#about').height() - 300);
-  $('#about').css({'background': '-webkit-linear-gradient(rgba(255,255,255,' + opac + '),rgba(208,51,27,' + opac + ')), rgba(22,104,150,1)'});
-  $('#about').css({'background': 'linear-gradient(rgba(255,255,255,' + opac + '),rgba(208,51,27,' + opac + ')), rgba(22,104,150,1)'});
-  });
-
 });

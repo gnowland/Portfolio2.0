@@ -190,30 +190,6 @@
   src: url("../font/font-custom/fontcustom-regular.eot");
   src: url("../font/font-custom/fontcustom-regular.eot?#iefix") format("embedded-opentype"), url("../font/font-custom/fontcustom-regular.woff") format("woff"), url("../font/font-custom/fontcustom-regular.ttf") format("truetype"), url("../font/font-custom/fontcustom-regular.svg#fontcustom-regular") format("svg");
 }
-[data-icon]:before {
-  content: attr(data-icon);
-}
-
-[data-icon]:before,
-.icon-GN:before {
-  display: inline-block;
-  font-family: "FontCustom";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  line-height: inherit;
-  text-decoration: inherit;
-  text-rendering: optimizeLegibility;
-  text-transform: none;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-}
-
-.icon-GN:before {
-  content: "\f100";
-}
-
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -582,6 +558,12 @@ textarea {
 
 select {
   width: 100%;
+}
+
+[data-icon]:before {
+  font-family: "FontCustom";
+  content: attr(data-icon);
+  speak: none;
 }
 
 /* - - - local partials assembly - - - - - - - - - - - - - - - - - - - -
@@ -990,10 +972,10 @@ header h1 {
   line-height: 2.5rem;
   margin: 0;
 }
-header .icon-GN {
+header [data-icon='\f100'] {
   font-size: 1.25em;
   line-height: 0.6;
-  margin: 0 -0.1em 0 -0.25em;
+  margin: 0 -0.2em 0 -0.05em;
   color: rgba(27, 60, 89, 0.82);
   text-shadow: 1px 2px 2px #eeeeee, 0 0 0 black, 1px 2px 2px #eeeeee;
 }
@@ -1035,7 +1017,8 @@ section p {
 }
 
 #about {
-  background: linear-gradient(rgba(255, 255, 255, 0), rgba(208, 51, 27, 0)), #166896;
+  background: #166896;
+  background-attachment: fixed;
   -moz-box-shadow: inset 0 0 400px 0 rgba(0, 0, 0, 0.8);
   -webkit-box-shadow: inset 0 0 400px 0 rgba(0, 0, 0, 0.8);
   box-shadow: inset 0 0 400px 0 rgba(0, 0, 0, 0.8);
