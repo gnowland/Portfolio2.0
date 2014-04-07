@@ -996,12 +996,12 @@ section p {
 
 #about {
   background-image: url(../img/hexnoise.png), url(../img/background.jpg);
-  -moz-background-size: auto, contain;
-  -o-background-size: auto, contain;
-  -webkit-background-size: auto, contain;
-  background-size: auto, contain;
+  -moz-background-size: auto, cover;
+  -o-background-size: auto, cover;
+  -webkit-background-size: auto, cover;
+  background-size: auto, cover;
   background-attachment: scroll, fixed;
-  background-position: 0 0,30% -90%;
+  background-position: 0 0,30% 100%;
   background-repeat: repeat,no-repeat;
   overflow: hidden;
   height: 23.25em;
@@ -1033,7 +1033,7 @@ section p {
   position: absolute;
   width: 0;
   height: 0;
-  right: -18.5%;
+  right: -2em;
   top: 60%;
   border: 1em solid;
   border-color: transparent transparent rgba(255, 255, 255, 0.8) rgba(255, 255, 255, 0.8);
