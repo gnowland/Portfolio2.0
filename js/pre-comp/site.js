@@ -5,8 +5,8 @@
 // Navigation Menu
 $(function() { //When the document loads
 
-  // Tell the DOM that JS is enabled
-  $('html').removeClass('no-js');
+  // Tell the DOM that JS is enabled and page is loaded
+  $('html').addClass('loaded').removeClass('no-js');
 
   var sections = $('section');
   var nav_a = $('nav a');
@@ -14,16 +14,16 @@ $(function() { //When the document loads
 
 // remove ".external" from firing
   nav_a.parent().not('.external').on('click', function (event) {
-      // Don't reload the page
-      event.preventDefault();
-      // Find the url
-      var url = $(this).children('a').attr('href');
-      // go to the section
-      $('html, body').animate({
-          scrollTop:  $('html').find($(this).children('a').attr('href')).offset().top-headercompact+1
-          }, 800, 'swing', function () {
-            window.location.hash = url ;
-          });
+    // Don't reload the page
+    event.preventDefault();
+    // Find the url
+    var url = $(this).children('a').attr('href');
+    // go to the section
+    $('html, body').animate({
+      scrollTop:  $('html').find($(this).children('a').attr('href')).offset().top-headercompact+1
+      }, 800, 'swing', function () {
+        window.location.hash = url ;
+    });
   });
 
   // Making the header animate

@@ -18,15 +18,15 @@
 @font-face {
   font-family: "Gotham";
   font-weight: 200;
-  src: url("../font/gotham/gotham-xlight.eot");
-  src: url("../font/gotham/gotham-xlight.eot?#iefix") format("embedded-opentype"), url("../font/gotham/gotham-xlight.woff") format("woff"), url("../font/gotham/gotham-xlight.ttf") format("truetype"), url("../font/gotham/gotham-xlight.svg#gotham-xlight") format("svg");
+  src: url("../font/gotham/gotham-extralight.eot");
+  src: url("../font/gotham/gotham-extralight.eot?#iefix") format("embedded-opentype"), url("../font/gotham/gotham-extralight.woff") format("woff"), url("../font/gotham/gotham-extralight.ttf") format("truetype"), url("../font/gotham/gotham-extralight.svg#gotham-extralight") format("svg");
 }
 @font-face {
   font-family: "Gotham";
   font-weight: 200;
   font-style: italic;
-  src: url("../font/gotham/gotham-xlightitalic.eot");
-  src: url("../font/gotham/gotham-xlightitalic.eot?#iefix") format("embedded-opentype"), url("../font/gotham/gotham-xlightitalic.woff") format("woff"), url("../font/gotham/gotham-xlightitalic.ttf") format("truetype"), url("../font/gotham/gotham-xlightitalic.svg#gotham-xlightitalic") format("svg");
+  src: url("../font/gotham/gotham-extralightitalic.eot");
+  src: url("../font/gotham/gotham-extralightitalic.eot?#iefix") format("embedded-opentype"), url("../font/gotham/gotham-extralightitalic.woff") format("woff"), url("../font/gotham/gotham-extralightitalic.ttf") format("truetype"), url("../font/gotham/gotham-extralightitalic.svg#gotham-extralightitalic") format("svg");
 }
 @font-face {
   font-family: "Gotham";
@@ -105,6 +105,84 @@
   font-style: italic;
   src: url("../font/gotham/gotham-ultraitalic.eot");
   src: url("../font/gotham/gotham-ultraitalic.eot?#iefix") format("embedded-opentype"), url("../font/gotham/gotham-ultraitalic.woff") format("woff"), url("../font/gotham/gotham-ultraitalic.ttf") format("truetype"), url("../font/gotham/gotham-ultraitalic.svg#gotham-ultraitalic") format("svg");
+}
+@font-face {
+  font-family: "SourceSansPro";
+  font-weight: 200;
+  src: url("../font/source-sans-pro/sourcesanspro-extralight.eot");
+  src: url("../font/source-sans-pro/sourcesanspro-extralight.eot?#iefix") format("embedded-opentype"), url("../font/source-sans-pro/sourcesanspro-extralight.woff") format("woff"), url("../font/source-sans-pro/sourcesanspro-extralight.ttf") format("truetype"), url("../font/source-sans-pro/sourcesanspro-extralight.svg#sourcesanspro-extralight") format("svg");
+}
+@font-face {
+  font-family: "SourceSansPro";
+  font-weight: 200;
+  font-style: italic;
+  src: url("../font/source-sans-pro/sourcesanspro-extralightitalic.eot");
+  src: url("../font/source-sans-pro/sourcesanspro-extralightitalic.eot?#iefix") format("embedded-opentype"), url("../font/source-sans-pro/sourcesanspro-extralightitalic.woff") format("woff"), url("../font/source-sans-pro/sourcesanspro-extralightitalic.ttf") format("truetype"), url("../font/source-sans-pro/sourcesanspro-extralightitalic.svg#sourcesanspro-extralightitalic") format("svg");
+}
+@font-face {
+  font-family: "SourceSansPro";
+  font-weight: 300;
+  src: url("../font/source-sans-pro/sourcesanspro-light.eot");
+  src: url("../font/source-sans-pro/sourcesanspro-light.eot?#iefix") format("embedded-opentype"), url("../font/source-sans-pro/sourcesanspro-light.woff") format("woff"), url("../font/source-sans-pro/sourcesanspro-light.ttf") format("truetype"), url("../font/source-sans-pro/sourcesanspro-light.svg#sourcesanspro-light") format("svg");
+}
+@font-face {
+  font-family: "SourceSansPro";
+  font-weight: 300;
+  font-style: italic;
+  src: url("../font/source-sans-pro/sourcesanspro-lightitalic.eot");
+  src: url("../font/source-sans-pro/sourcesanspro-lightitalic.eot?#iefix") format("embedded-opentype"), url("../font/source-sans-pro/sourcesanspro-lightitalic.woff") format("woff"), url("../font/source-sans-pro/sourcesanspro-lightitalic.ttf") format("truetype"), url("../font/source-sans-pro/sourcesanspro-lightitalic.svg#sourcesanspro-lightitalic") format("svg");
+}
+@font-face {
+  font-family: "SourceSansPro";
+  font-weight: 400;
+  src: url("../font/source-sans-pro/sourcesanspro-regular.eot");
+  src: url("../font/source-sans-pro/sourcesanspro-regular.eot?#iefix") format("embedded-opentype"), url("../font/source-sans-pro/sourcesanspro-regular.woff") format("woff"), url("../font/source-sans-pro/sourcesanspro-regular.ttf") format("truetype"), url("../font/source-sans-pro/sourcesanspro-regular.svg#sourcesanspro-regular") format("svg");
+}
+@font-face {
+  font-family: "SourceSansPro";
+  font-weight: 400;
+  font-style: italic;
+  src: url("../font/source-sans-pro/sourcesanspro-regularitalic.eot");
+  src: url("../font/source-sans-pro/sourcesanspro-regularitalic.eot?#iefix") format("embedded-opentype"), url("../font/source-sans-pro/sourcesanspro-regularitalic.woff") format("woff"), url("../font/source-sans-pro/sourcesanspro-regularitalic.ttf") format("truetype"), url("../font/source-sans-pro/sourcesanspro-regularitalic.svg#sourcesanspro-regularitalic") format("svg");
+}
+@font-face {
+  font-family: "SourceSansPro";
+  font-weight: 600;
+  src: url("../font/source-sans-pro/sourcesanspro-semibold.eot");
+  src: url("../font/source-sans-pro/sourcesanspro-semibold.eot?#iefix") format("embedded-opentype"), url("../font/source-sans-pro/sourcesanspro-semibold.woff") format("woff"), url("../font/source-sans-pro/sourcesanspro-semibold.ttf") format("truetype"), url("../font/source-sans-pro/sourcesanspro-semibold.svg#sourcesanspro-semibold") format("svg");
+}
+@font-face {
+  font-family: "SourceSansPro";
+  font-weight: 600;
+  font-style: italic;
+  src: url("../font/source-sans-pro/sourcesanspro-semibolditalic.eot");
+  src: url("../font/source-sans-pro/sourcesanspro-semibolditalic.eot?#iefix") format("embedded-opentype"), url("../font/source-sans-pro/sourcesanspro-semibolditalic.woff") format("woff"), url("../font/source-sans-pro/sourcesanspro-semibolditalic.ttf") format("truetype"), url("../font/source-sans-pro/sourcesanspro-semibolditalic.svg#sourcesanspro-semibolditalic") format("svg");
+}
+@font-face {
+  font-family: "SourceSansPro";
+  font-weight: 700;
+  src: url("../font/source-sans-pro/sourcesanspro-bold.eot");
+  src: url("../font/source-sans-pro/sourcesanspro-bold.eot?#iefix") format("embedded-opentype"), url("../font/source-sans-pro/sourcesanspro-bold.woff") format("woff"), url("../font/source-sans-pro/sourcesanspro-bold.ttf") format("truetype"), url("../font/source-sans-pro/sourcesanspro-bold.svg#sourcesanspro-bold") format("svg");
+}
+@font-face {
+  font-family: "SourceSansPro";
+  font-weight: 700;
+  font-style: italic;
+  src: url("../font/source-sans-pro/sourcesanspro-bolditalic.eot");
+  src: url("../font/source-sans-pro/sourcesanspro-bolditalic.eot?#iefix") format("embedded-opentype"), url("../font/source-sans-pro/sourcesanspro-bolditalic.woff") format("woff"), url("../font/source-sans-pro/sourcesanspro-bolditalic.ttf") format("truetype"), url("../font/source-sans-pro/sourcesanspro-bolditalic.svg#sourcesanspro-bolditalic") format("svg");
+}
+@font-face {
+  font-family: "SourceSansPro";
+  font-weight: 900;
+  src: url("../font/source-sans-pro/sourcesanspro-black.eot");
+  src: url("../font/source-sans-pro/sourcesanspro-black.eot?#iefix") format("embedded-opentype"), url("../font/source-sans-pro/sourcesanspro-black.woff") format("woff"), url("../font/source-sans-pro/sourcesanspro-black.ttf") format("truetype"), url("../font/source-sans-pro/sourcesanspro-black.svg#sourcesanspro-black") format("svg");
+}
+@font-face {
+  font-family: "SourceSansPro";
+  font-weight: 900;
+  font-style: italic;
+  src: url("../font/source-sans-pro/sourcesanspro-blackitalic.eot");
+  src: url("../font/source-sans-pro/sourcesanspro-blackitalic.eot?#iefix") format("embedded-opentype"), url("../font/source-sans-pro/sourcesanspro-blackitalic.woff") format("woff"), url("../font/source-sans-pro/sourcesanspro-blackitalic.ttf") format("truetype"), url("../font/source-sans-pro/sourcesanspro-blackitalic.svg#sourcesanspro-blackitalic") format("svg");
 }
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -575,6 +653,16 @@ footer {
 
 /* Setting the Breakpoints */
 /* - - - local partials assembly - - - - - - - - - - - - - - - - - - - -
+ * FILE: _transitions.scss
+ */
+.loaded .bubble {
+  -moz-transform: scale();
+  -ms-transform: scale();
+  -webkit-transform: scale();
+  transform: scale();
+}
+
+/* - - - local partials assembly - - - - - - - - - - - - - - - - - - - -
  * FILE: _typography.scss
  */
 .text-left {
@@ -908,11 +996,12 @@ section p {
 
 #about {
   background-image: url(../img/hexnoise.png), url(../img/background.jpg);
-  -moz-background-size: auto, cover;
-  -o-background-size: auto, cover;
-  -webkit-background-size: auto, cover;
-  background-size: auto, cover;
-  background-position: 0 0,30% 50%;
+  -moz-background-size: auto, contain;
+  -o-background-size: auto, contain;
+  -webkit-background-size: auto, contain;
+  background-size: auto, contain;
+  background-attachment: scroll, fixed;
+  background-position: 0 0,30% -90%;
   background-repeat: repeat,no-repeat;
   overflow: hidden;
   height: 23.25em;
@@ -922,32 +1011,32 @@ section p {
 .bubble h1 {
   font-family: "Gotham", "Century Gothic", "Tw Cen MT", Futura, "URW Gothic L", Arial, sans-serif;
   font-weight: 600;
-  color: #fff;
-  margin: 10% 0 0 0.5em;
+  color: white;
+  margin: 5% 0 0 0.5em;
   line-height: .75;
   font-size: 1.4em;
   text-transform: uppercase;
 }
 .bubble p {
+  font-family: "SourceSansPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  padding: 0.5em;
   position: relative;
   top: 15%;
   text-align: left;
   min-height: 5em;
-  background-color: #fff;
-  padding: 1em;
-  -moz-border-radius: 7px;
-  -webkit-border-radius: 7px;
-  border-radius: 7px;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 .bubble p:after {
   content: ' ';
   position: absolute;
   width: 0;
   height: 0;
-  right: -1.6em;
+  right: -18.5%;
   top: 60%;
   border: 1em solid;
-  border-color: transparent transparent #fff #fff;
+  border-color: transparent transparent rgba(255, 255, 255, 0.8) rgba(255, 255, 255, 0.8);
 }
 
 #about .col2 img {

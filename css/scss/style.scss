@@ -8,6 +8,7 @@
 
 // Set custom site styles here:
 $compact-header-height: 3em;
+$bubble-bg: rgba(255,255,255,0.8);
 
 body {
   margin-top: $compact-header-height;
@@ -28,7 +29,7 @@ header {
     @include transition(compact(all 0.5s ease));
   }
   h1 {
-    font-family: "Gotham", "Century Gothic", "Tw Cen MT", Futura, "URW Gothic L", Arial, sans-serif;
+    font-family: $gotham-font-stack;
     font-weight: 800;
     font-size: 2.75rem;
     line-height: 2.5rem;
@@ -82,8 +83,9 @@ section {
 
 #about {
   background-image: url(../img/hexnoise.png),url(../img/background.jpg);
-  @include background-size(auto,cover);
-  background-position: 0 0,30% 50%;
+  @include background-size(auto, contain);
+  background-attachment: scroll, fixed;
+  background-position: 0 0,30% -90%;
   background-repeat: repeat,no-repeat;
   overflow: hidden;
   height: 23.25em;
@@ -93,33 +95,37 @@ section {
 
 .bubble {
   h1 {
-    font-family: "Gotham", "Century Gothic", "Tw Cen MT", Futura, "URW Gothic L", Arial, sans-serif;
+    font-family: $gotham-font-stack;
     font-weight: 600;
-    color: #fff;
-    margin: 10% 0 0 0.5em;
+    color: rgba(255,255,255,1);
+    margin: 5% 0 0 0.5em;
     line-height: .75;
     font-size: 1.4em;
     text-transform: uppercase;
   }
   p {
+    font-family: $sourcesanspro-font-stack;
+    font-size: 1.5em;
+    font-weight: 700;
+    padding: 0.5em;
     position: relative;
     top: 15%;
     text-align: left;
     min-height: 5em;
-    background-color: #fff;
-    padding: 1em;
+    background-color: rgba(255,255,255,0.8);
+    //@include box-shadow(10px 10px 0 1px rgba(255,255,255,0.8));
     //border: 8px solid #666;
-    @include border-radius(7px);
+    //@include border-radius(7px);
     //@include box-shadow(rgba(150,150,150,.3) 0 0 100px 0 inset);
     &:after {
       content: ' ';
       position: absolute;
       width: 0;
       height: 0;
-      right: -1.6em;
+      right: -18.5%;
       top: 60%;
       border: 1em solid;
-      border-color: transparent transparent #fff #fff;
+      border-color: transparent transparent $bubble-bg $bubble-bg;
     }
   }
 }

@@ -5,6 +5,8 @@
   // respective the $style parameter. Order of the includes matters, and it is: normal, bold, italic, bold+italic.
   // @include font-face($name, $font-files, $eot, $weight, $style)
 
+//Mixins
+
   @mixin font-faces ($family, $faces, $prefix: null, $path: null) {
     @each $face in $faces {
       $name: nth($face, 1);
@@ -44,27 +46,41 @@
     }
   }
 
+// Load Fonts & Create Stacks:
   @include font-faces('Gotham', (
-    'thin'         100,
-    'thinitalic'   100 italic,
-    'xlight'       200,
-    'xlightitalic' 200 italic,
-    'light'        300,
-    'lightitalic'  300 italic,
-    'book'         400,
-    'bookitalic'   400 italic,
-    'medium'       600,
-    'mediumitalic' 600 italic,
-    'bold'         700,
-    'bolditalic'   700 italic,
-    'black'        800,
-    'blackitalic'  800 italic,
-    'ultra'        900,
-    'ultraitalic'  900 italic,
+    'thin'             100,
+    'thinitalic'       100 italic,
+    'extralight'       200,
+    'extralightitalic' 200 italic,
+    'light'            300,
+    'lightitalic'      300 italic,
+    'book'             400,
+    'bookitalic'       400 italic,
+    'medium'           600,
+    'mediumitalic'     600 italic,
+    'bold'             700,
+    'bolditalic'       700 italic,
+    'black'            800,
+    'blackitalic'      800 italic,
+    'ultra'            900,
+    'ultraitalic'      900 italic,
   ), 'gotham-', '../font/gotham');
 
-//  @include font-faces('Franchise', (
-//    'bold'         700,
-//  ), 'franchise-', '../font/franchise');
+  @include font-faces('SourceSansPro', (
+    'extralight'       200,
+    'extralightitalic' 200 italic,
+    'light'            300,
+    'lightitalic'      300 italic,
+    'regular'          400,
+    'regularitalic'    400 italic,
+    'semibold'         600,
+    'semibolditalic'   600 italic,
+    'bold'             700,
+    'bolditalic'       700 italic,
+    'black'            900,
+    'blackitalic'      900 italic,
+  ), 'sourcesanspro-', '../font/source-sans-pro');
 
-//@include font-faces("SourceSansPro", font-files("/font/source-sans-pro/SourceSansPro-Black-webfont.woff","/font/source-sans-pro/SourceSansPro-Black-webfont.ttf","/font/source-sans-pro/SourceSansPro-Black-webfont.svg"), eot("/font/source-sans-pro/SourceSansPro-Black-webfont.eot"), 900, normal);
+    // Make Font Stacks
+    $gotham-font-stack: "Gotham", "Century Gothic", "Tw Cen MT", Futura, "URW Gothic L", Arial, sans-serif;
+    $sourcesanspro-font-stack: "SourceSansPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
