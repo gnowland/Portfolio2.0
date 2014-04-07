@@ -999,6 +999,8 @@ header .icon-GN {
 }
 
 nav {
+  font-family: "SourceSansPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
   background: #000;
 }
 nav ul {
@@ -1033,10 +1035,14 @@ section p {
 }
 
 #about {
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(208, 51, 27, 0)), #166896;
+  -moz-box-shadow: inset 0 0 400px 0 rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: inset 0 0 400px 0 rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 0 400px 0 rgba(0, 0, 0, 0.8);
   overflow: hidden;
-  height: 23.25em;
   position: relative;
-  background: url(../img/hexnoise.png) fixed 0 0 repeat, #1b3c59;
+  width: 100%;
+  height: 23.25em;
 }
 
 .bubble {
