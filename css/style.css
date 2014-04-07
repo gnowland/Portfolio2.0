@@ -1033,17 +1033,10 @@ section p {
 }
 
 #about {
-  background-image: url(../img/hexnoise.png), url(../img/background.jpg);
-  -moz-background-size: auto, cover;
-  -o-background-size: auto, cover;
-  -webkit-background-size: auto, cover;
-  background-size: auto, cover;
-  background-attachment: scroll, fixed;
-  background-position: 0 0, 50% 100%;
-  background-repeat: repeat,no-repeat;
   overflow: hidden;
   height: 23.25em;
   position: relative;
+  background: url(../img/hexnoise.png) fixed 0 0 repeat, #1b3c59;
 }
 
 .bubble {

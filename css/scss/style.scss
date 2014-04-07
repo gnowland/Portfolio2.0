@@ -91,14 +91,17 @@ section {
 }
 
 #about {
-  background-image: url(../img/hexnoise.png),url(../img/background.jpg);
-  @include background-size(auto, cover);
-  background-attachment: scroll, fixed;
-  background-position: 0 0, 50% 100%;
-  background-repeat: repeat,no-repeat;
   overflow: hidden;
   height: 23.25em;
   position: relative;
+  background: url(../img/hexnoise.png) fixed 0 0 repeat, rgba(27,60,89,1);
+  //.background {
+  //  background-image: url(../img/hexnoise.png),url(../img/background.jpg);
+  //  @include background-size(auto, cover);
+  //  background-attachment: scroll, fixed;
+  //  background-position: 0 0, 0 0;
+  //  background-repeat: repeat,no-repeat;
+  //}
 }
 
 .bubble {
