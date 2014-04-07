@@ -1017,8 +1017,7 @@ section p {
 }
 
 #about {
-  background: #166896;
-  background-attachment: fixed;
+  background: url(../img/hexnoise.png) fixed 0 0 repeat, #166896;
   -moz-box-shadow: inset 0 0 400px 0 rgba(0, 0, 0, 0.8);
   -webkit-box-shadow: inset 0 0 400px 0 rgba(0, 0, 0, 0.8);
   box-shadow: inset 0 0 400px 0 rgba(0, 0, 0, 0.8);
