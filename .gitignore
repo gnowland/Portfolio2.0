@@ -3,6 +3,7 @@
 Ω*
 codekit-config.json
 sftp-config.json
-img/preprocessed
-font/
--excluded/
+/img/preprocessed
+/font/*
+!/font/font-custom/*
+/-excluded/*

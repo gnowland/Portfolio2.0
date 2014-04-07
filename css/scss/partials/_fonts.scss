@@ -81,6 +81,33 @@
     'blackitalic'      900 italic,
   ), 'sourcesanspro-', '../font/source-sans-pro');
 
-    // Make Font Stacks
-    $gotham-font-stack: "Gotham", "Century Gothic", "Tw Cen MT", Futura, "URW Gothic L", Arial, sans-serif;
-    $sourcesanspro-font-stack: "SourceSansPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  @include font-faces('FontCustom', (
+    'regular'          400,
+  ), 'fontcustom-', '../font/font-custom');
+
+
+// Make Font Stacks
+  $gotham-font-stack: "Gotham", "Century Gothic", "Tw Cen MT", Futura, "URW Gothic L", Arial, sans-serif;
+  $sourcesanspro-font-stack: "SourceSansPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+// Make Custom Icons
+    [data-icon]:before { content: attr(data-icon); }
+
+    [data-icon]:before,
+    .icon-GN:before {
+      display: inline-block;
+      font-family: "FontCustom";
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      line-height: inherit;
+      text-decoration: inherit;
+      text-rendering: optimizeLegibility;
+      text-transform: none;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      font-smoothing: antialiased;
+    }
+
+    .icon-GN:before { content: "\f100"; }

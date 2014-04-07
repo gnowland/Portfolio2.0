@@ -9,13 +9,15 @@
 // Set custom site styles here:
 $compact-header-height: 3em;
 $bubble-bg: rgba(255,255,255,0.8);
+$logo-color: rgba(27,60,89,0.82);
+$header-bgcolor: #eee;
 
 body {
   margin-top: $compact-header-height;
 }
 
 header {
-  background: #eee;
+  background: $header-bgcolor;
   border-top: 6px #000 solid;
   position: fixed; // keep on top of window
   top: 0;
@@ -34,6 +36,12 @@ header {
     font-size: 2.75rem;
     line-height: 2.5rem;
     margin: 0;
+  }
+  .icon-GN {
+    font-size: 1.25em;
+    margin: 0 -0.1em 0 -0.25em;
+    color: $logo-color;
+    @include text-shadow(1px 2px 2px $header-bgcolor, 0 0 0 #000, 1px 2px 2px $header-bgcolor);
   }
 }
 
@@ -83,9 +91,9 @@ section {
 
 #about {
   background-image: url(../img/hexnoise.png),url(../img/background.jpg);
-  @include background-size(auto, cover);
-  background-attachment: scroll, fixed;
-  background-position: 0 0,30% 100%;
+  @include background-size(auto, cover!important);
+  background-attachment: scroll, fixed!important;
+  background-position: 0 0,50% 100%;
   background-repeat: repeat,no-repeat;
   overflow: hidden;
   height: 23.25em;
@@ -94,10 +102,11 @@ section {
 }
 
 .bubble {
+  margin: 0.7em;
   h1 {
     font-family: $gotham-font-stack;
     font-weight: 600;
-    color: rgba(255,255,255,1);
+    color: $bubble-bg;
     margin: 5% 0 0 0.5em;
     line-height: .75;
     font-size: 1.4em;
@@ -111,7 +120,6 @@ section {
     position: relative;
     top: 15%;
     text-align: left;
-    min-height: 5em;
     background-color: $bubble-bg;
     //@include box-shadow(10px 10px 0 1px rgba(255,255,255,0.8));
     //border: 8px solid #666;
@@ -123,7 +131,7 @@ section {
       width: 0;
       height: 0;
       right: -2em;
-      top: 60%;
+      margin-top: 0.4%;
       border: 1em solid;
       border-color: transparent transparent $bubble-bg $bubble-bg;
     }
