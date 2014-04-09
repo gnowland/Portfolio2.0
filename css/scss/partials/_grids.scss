@@ -34,7 +34,9 @@ $z-footer: 1;
   margin-top: $margin;
  }
 
- $section-top-offset: -2.60em;
+ // Necessary for loading on right place when page is called from hash (http://goo.gl/2rNgyB)
+ // overrides "offset" function in waypoints.js
+ $section-top-offset: -3em;
  $row-top-offset: -3em;
 
 

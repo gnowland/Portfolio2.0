@@ -7,43 +7,45 @@
 @import "partials/base";
 
 // Set custom site styles here:
-$compact-header-height: 3em;
+$header-height: 3em;
 $bubble-bg: rgba(255,255,255,0.8);
-$logo-color: rgba(27,60,89,0.82);
 $header-bgcolor: #eee;
 
 body {
-  margin-top: $compact-header-height;
+  margin-top: $header-height;
 }
 
 header {
+  margin: 0;
+  padding: 0;
+  height: $header-height;
   background: $header-bgcolor;
   border-top: 6px #000 solid;
   position: fixed; // keep on top of window
   top: 0;
   left: 0;
   right: 0;
-  height: $compact-header-height;
-  padding-bottom: $compact-header-height;
-  @include transition(compact(all 0.5s ease));
-  &.compact {
-    height: $compact-header-height;
-    @include transition(compact(all 0.5s ease));
-  }
   h1 {
-    font-family: $gotham-font-stack;
-    font-weight: 800;
-    font-size: 2.75rem;
-    line-height: 2.5rem;
     margin: 0;
+    padding: 0;
+    font-family: $gotham-font-stack;
+    color: #122A3F;
+    font-weight: 700;
+    font-size: 4.4rem;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    text-align: center;
+    @include text-shadow(#fff -1px 1px 0, rgb(33,77,114) -2px 2px 0);
+    //font-size: 2.75rem;
+    //line-height: 2.5rem;
   }
-
   [data-icon='\f100'] {
     font-size: 1.25em;
-    line-height: 0.6;
-    margin: 0 -0.2em 0 -0.05em;
-    color: $logo-color;
-    @include text-shadow(1px 2px 2px $header-bgcolor, 0 0 0 #000, 1px 2px 2px $header-bgcolor);
+    line-height: 0;
+    margin: 0 -0.25em 0 0;
+    @include text-shadow(0px 1px 1px rgba(255, 255, 255, 1));
+    //color: $header-bgcolor; //rgba(27,60,89,0.82);
+    //@include text-shadow(1px 2px 2px $header-bgcolor, 0 0 0 #000, 1px 2px 2px $header-bgcolor);
   }
 }
 
@@ -51,7 +53,7 @@ header {
 nav {
   font-family: $sourcesanspro-font-stack;
   font-weight: 400;
-  background: #000;
+  height: auto;
   ul {
     width:100%;
   }
@@ -59,6 +61,7 @@ nav {
     display: inline;
     // padding-right: span(2/2);
     text-align: center;
+    background: #000;
     &:hover, &:focus {
       cursor: pointer
     }
@@ -80,10 +83,6 @@ nav {
 
 // Sections
 section {
-  // Necessary for loading on right place when page is called from hash (http://goo.gl/2rNgyB)
-  // overrides "offset" function in waypoints.js
-  //padding-top: $compact-header-height;
-  //margin-top: -$compact-header-height;
   h1 {
     font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
   }
