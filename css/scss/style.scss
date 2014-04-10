@@ -90,6 +90,51 @@ header {
     @include text-shadow(rgba(255, 255, 255, 1) -1px 1px 0, rgb(33,77,114) -2px 2px 0);
     //font-size: 2.75rem;
     //line-height: 2.5rem;
+    @media (min-width: 400px) and (max-width: 500px) {
+      font-size: 1.5em;
+    }
+    @media (min-width: 500px) {
+      font-size: 1.5em;
+    }
+    @media (min-width: 600px) {
+      font-size: 1.6em;
+    }
+    @media (min-width: 630px) {
+      font-size: 1.7em;
+    }
+    @media (min-width: 660px) {
+      font-size: 1.8em;
+    }
+    @media (min-width: 690px) {
+      font-size: 1.9em;
+    }
+    @media (min-width: 720px) {
+      font-size: 2.0em;
+    }
+    @media (min-width: 750px) {
+      font-size: 2.1em;
+    }
+    @media (min-width: 780px) {
+      font-size: 2.2em;
+    }
+    @media (min-width: 810px) {
+      font-size: 2.3em;
+    }
+    @media (min-width: 840px) {
+      font-size: 2.4em;
+    }
+    @media (min-width: 870px) {
+      font-size: 2.5em;
+    }
+    @media (min-width: 900px) {
+      font-size: 2.6em;
+    }
+    @media (min-width: 930px) {
+      font-size: 2.7em;
+    }
+    @media (min-width: 960px) {
+      font-size: 2.8em;
+    }
   }
   [data-icon='\f100'] {
     font-size: 1.25em;

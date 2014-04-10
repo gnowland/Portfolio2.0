@@ -58,15 +58,24 @@ header {
   @include container(100%);
   @include full;
   h1 {
-    @include span(8);
+    @include span(last 8);
   }
 }
 
 nav {
   z-index: $z-nav;
-  @include span(last 4 nest) {
-    li {
-      @include span(isolate 1 of 4 0 no-gutters wide);
+  @media (min-width: 900px) {
+    @include span(last 4 nest) {
+      li {
+        @include span(isolate 1 of 4 0 no-gutters wide);
+      }
+    }
+  }
+  @media (max-width: 900px) {
+    @include span (last 4 nest) {
+      li {
+        @include span(isolate 1 of 2 0 no-gutters wide);
+      }
     }
   }
 }
