@@ -15,10 +15,10 @@
 // Headers
 // 1: Improve rendering of screen fonts.
 // 2: Prevent page breaking.
-$header-font-family: $body-font-family !default;
+$header-font-family: $gotham-font-stack !default;
 $header-font-weight: bold !default;
 $header-font-style: normal !default;
-$header-font-color: #222 !default;
+$header-font-color: #122A3F !default;
 $header-line-height: 1.4 !default;
 $header-top-margin: .2rem !default;
 $header-bottom-margin: .4rem !default;
@@ -217,16 +217,17 @@ $definition-list-margin-bottom: rem-calc(12) !default;
     line-height: inherit;
   }
 
+// Already covered in normalize.css, override with font NUMBERS!
   strong,
   b {
-    font-weight: bold;
+    font-weight: 700;
     line-height: inherit;
   }
 
-  small {
-    font-size: $small-font-size;
-    line-height: inherit;
-  }
+//  small {
+//    font-size: $small-font-size;
+//    line-height: inherit;
+//  }
 
   code {
     font-family: $code-font-family;

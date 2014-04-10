@@ -82,8 +82,8 @@
   ), 'sourcesanspro-', '../font/source-sans-pro');
 
   @include font-faces('FontCustom', (
-    'regular'          400,
-  ), 'fontcustom-', '../font/font-custom');
+    ''                 400,
+  ), 'fontcustom', '../font/font-custom');
 
 
 // Make Font Stacks

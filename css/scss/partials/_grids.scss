@@ -31,17 +31,19 @@ $z-footer: 1;
  //Making Mixins
  @mixin offset ($margin) {
   border-top: 3em solid transparent;
-  margin-top: $margin;
+  margin-top: -$margin;
  }
 
  // Necessary for loading on right place when page is called from hash (http://goo.gl/2rNgyB)
  // overrides "offset" function in waypoints.js
- $section-top-offset: -3em;
- $row-top-offset: -3em;
+ $section-top-offset: 3em;
+ $row-top-offset: 3em;
+ $top-border-height: 0.4em;
 
 
 body {
   //@include container;
+  margin-top: $section-top-offset + $top-border-height;
 }
 
 .row{

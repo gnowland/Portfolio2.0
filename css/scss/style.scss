@@ -7,46 +7,20 @@
 @import "partials/base";
 
 // Set custom site styles here:
-$header-height: 3em;
+$header-height: 3.5em;
 $bubble-bg: rgba(255,255,255,0.8);
-$header-bgcolor: #eee;
-
-body {
-  margin-top: $header-height;
-}
 
 header {
   margin: 0;
   padding: 0;
   height: $header-height;
-  background: $header-bgcolor;
-  border-top: 6px #000 solid;
+  background: $body-bg;
+  border-top: $top-border-height #000 solid;
   position: fixed; // keep on top of window
   top: 0;
   left: 0;
   right: 0;
-  h1 {
-    margin: 0;
-    padding: 0;
-    font-family: $gotham-font-stack;
-    color: #122A3F;
-    font-weight: 700;
-    font-size: 4.4rem;
-    letter-spacing: 0.1em;
-    line-height: 1;
-    text-align: center;
-    @include text-shadow(#fff -1px 1px 0, rgb(33,77,114) -2px 2px 0);
-    //font-size: 2.75rem;
-    //line-height: 2.5rem;
-  }
-  [data-icon='\f100'] {
-    font-size: 1.25em;
-    line-height: 0;
-    margin: 0 -0.25em 0 0;
-    @include text-shadow(0px 1px 1px rgba(255, 255, 255, 1));
-    //color: $header-bgcolor; //rgba(27,60,89,0.82);
-    //@include text-shadow(1px 2px 2px $header-bgcolor, 0 0 0 #000, 1px 2px 2px $header-bgcolor);
-  }
+  //@include box-shadow(0px 0px 5px 0px rgba(50, 50, 50, 0.50));
 }
 
 // Navigation
@@ -81,11 +55,36 @@ nav {
   }
 }
 
+header {
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-family: $gotham-font-stack;
+    color: $header-font-color;
+    font-size: 2.8em;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    text-align: center;
+    @include text-shadow(#fff -1px 1px 0, rgb(33,77,114) -2px 2px 0);
+    //font-size: 2.75rem;
+    //line-height: 2.5rem;
+  }
+  [data-icon='\f100'] {
+    font-size: 1.25em;
+    line-height: 0;
+    margin: 0 -0.2em 0 -0.35em;
+    @include text-shadow(0px 1px 1px rgba(255, 255, 255, 1));
+    //color: $body-bg; //rgba(27,60,89,0.82);
+    //@include text-shadow(1px 2px 2px $body-bg, 0 0 0 #000, 1px 2px 2px $body-bg);
+  }
+}
+
 // Sections
 section {
-  h1 {
-    font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
-  }
+  //h1 {
+    //font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+  //}
   p {
     text-align: justify;
     font-family: Georgia, Times, "Times New Roman", serif;
@@ -122,8 +121,9 @@ section {
   }
   p {
     font-family: $sourcesanspro-font-stack;
-    font-size: 1.5em;
-    font-weight: 700;
+    font-size: 1.4em;
+    font-weight: 500;
+    line-height: 1.3;
     padding: 0.5em;
     position: relative;
     top: 15%;
@@ -133,13 +133,30 @@ section {
     //border: 8px solid #666;
     //@include border-radius(7px);
     //@include box-shadow(rgba(150,150,150,.3) 0 0 100px 0 inset);
+    strong {
+      text-transform: uppercase;
+      //padding: 0 0.2em;
+      //margin: 0;
+      font-weight: 800;
+      &:nth-of-type(1) {
+        color: rgba(22, 88, 151, 1);//(18, 100, 177, 1);//rgba(209, 88, 32, 1);
+      }
+      &:nth-of-type(2) {
+        color: rgba(209, 88, 32, 1);
+      }
+    }
+    //[data-icon='\f101'] {
+    //  color: $body-font-color;
+    //  font-size: 1em;
+    //  margin-right: -0.1em;
+    //} <span aria-hidden="true" data-icon="&#61697;"></span>
     &:after {
       content: ' ';
       position: absolute;
       width: 0;
       height: 0;
-      right: -2em;
-      margin-top: 0.4%;
+      right: -1.97em;
+      margin-top: -10%;
       border: 1em solid;
       border-color: transparent transparent $bubble-bg $bubble-bg;
     }
