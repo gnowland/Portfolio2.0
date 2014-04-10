@@ -82,18 +82,21 @@ section {
   //@include span(12 break);  //these are the same for all sections
   //@include container(100%);
   //@include full;
-  .col1 {
-    @include span(8 of 12);
-    @include offset($row-top-offset);
-    height: inherit;
-    position: relative;
-  }
-  .col2 {
-    @include span(last 4 of 12);
-    @include offset($row-top-offset);
-    height: inherit;
-    position: relative;
-  }
+  //.col1 {
+  //  @include span(12 of 12);
+  //  @include offset($row-top-offset);
+  //  height: inherit;
+  //  position: relative;
+    .bubble {
+      @include span(8 of 12);
+    }
+    img {
+      width: span(last 4 of 12);
+      //@include offset($row-top-offset);
+      //height: inherit;
+      //position: relative;
+    }
+  //}
 }
 
 #work {

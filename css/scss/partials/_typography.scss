@@ -69,7 +69,7 @@ $code-font-weight: bold !default;
 // We use these to style anchors
 $anchor-text-decoration: none !default;
 $anchor-font-color: $primary-color !default;
-$anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%) !default;
+$anchor-font-color-hover: rgba(7, 96, 138, 1) !default;//scale-color($anchor-font-color, $lightness: -14%) !default;
 
 // [F]
 // We use these to style the <hr> element
@@ -145,9 +145,13 @@ $definition-list-margin-bottom: rem-calc(12) !default;
     color: $anchor-font-color;
     text-decoration: $anchor-text-decoration;
     line-height: inherit;
+    padding: 0 0.2em;
 
     &:hover,
-    &:focus { color: $anchor-font-color-hover; }
+    &:focus {
+    text-decoration: underline;
+    color: $anchor-font-color-hover;
+    }
 
     // [R]
     // Remove the border around images in anchors.

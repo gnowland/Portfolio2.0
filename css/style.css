@@ -638,22 +638,13 @@ section::after {
 #about {
   z-index: 4;
 }
-#about .col1 {
+#about .bubble {
   width: 66.10169%;
   float: left;
   margin-right: 1.69492%;
-  border-top: 3em solid transparent;
-  margin-top: -3em;
-  height: inherit;
-  position: relative;
 }
-#about .col2 {
+#about img {
   width: 32.20339%;
-  float: right;
-  border-top: 3em solid transparent;
-  margin-top: -3em;
-  height: inherit;
-  position: relative;
 }
 
 #work {
@@ -727,9 +718,11 @@ a {
   color: #008cba;
   text-decoration: none;
   line-height: inherit;
+  padding: 0 0.2em;
 }
 a:hover, a:focus {
-  color: #0078a0;
+  text-decoration: underline;
+  color: #07608a;
 }
 a img {
   border: none;
@@ -953,7 +946,7 @@ header {
 
 nav {
   font-family: "SourceSansPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   height: auto;
 }
 nav ul {
@@ -962,22 +955,54 @@ nav ul {
 nav li {
   display: inline;
   text-align: center;
-  background: #000;
+  background: black;
+  -moz-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  -webkit-transition: background 0.2s linear;
+  transition: background 0.2s linear;
 }
 nav li:hover, nav li:focus {
   cursor: pointer;
 }
-nav li.selected {
+nav li a:hover, nav li a:focus {
+  background: none;
+  text-decoration: none;
+}
+nav li.selected:nth-of-type(1) {
+  background: #01a275;
+  -moz-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  -webkit-transition: background 0.2s linear;
+  transition: background 0.2s linear;
+}
+nav li.selected:nth-of-type(2) {
+  background: #c96363;
+  -moz-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  -webkit-transition: background 0.2s linear;
+  transition: background 0.2s linear;
+}
+nav li.selected:nth-of-type(3) {
   background: #008cba;
+  -moz-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  -webkit-transition: background 0.2s linear;
+  transition: background 0.2s linear;
 }
 nav li.selected a {
-  color: #fff;
+  color: #eee;
 }
 nav li.selected a:hover, nav li.selected a:focus {
-  color: #fff;
+  color: #eee;
+  background: none;
+  text-decoration: none;
 }
 nav li.external {
   background: #eee;
+}
+nav li.external a:hover, nav li.external a:focus {
+  background: none;
+  text-decoration: none;
 }
 
 header h1 {
@@ -1012,56 +1037,65 @@ section p {
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 23.25em;
+  height: auto;
 }
 
 .bubble {
-  margin: 0.7em;
+  margin: 3% 0 8% 5%;
 }
 .bubble h1 {
   font-family: "Gotham", "Century Gothic", "Tw Cen MT", Futura, "URW Gothic L", Arial, sans-serif;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.8);
-  margin: 5% 0 0 0.5em;
+  margin: 6% 0 0 0.5em;
   line-height: .75;
-  font-size: 1.4em;
+  font-size: 1.7em;
   text-transform: uppercase;
 }
 .bubble p {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+.bubble p:nth-of-type(1) {
   font-family: "SourceSansPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.4em;
+  font-size: 1.6em;
   font-weight: 500;
-  line-height: 1.3;
-  padding: 0.5em;
+  line-height: 1.4;
+  padding: 0.4em 0.4em 0.3em 0.4em;
   position: relative;
   top: 15%;
   text-align: left;
   background-color: rgba(255, 255, 255, 0.8);
 }
-.bubble p strong {
+.bubble p:nth-of-type(1) strong {
   text-transform: uppercase;
   font-weight: 800;
 }
-.bubble p strong:nth-of-type(1) {
-  color: #165897;
+.bubble p:nth-of-type(1) strong:nth-of-type(n) {
+  color: #009168;
 }
-.bubble p strong:nth-of-type(2) {
-  color: #d15820;
+.bubble p:nth-of-type(2) {
+  border-top: #7c7c7c 1px dotted;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 0.5em 0.75em 0.3em;
 }
-.bubble p:after {
+.bubble p:nth-of-type(2) a {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.bubble:after {
   content: ' ';
   position: absolute;
   width: 0;
   height: 0;
-  right: -1.97em;
-  margin-top: -10%;
-  border: 1em solid;
+  left: 71.1%;
+  margin-top: -20%;
+  border: 0.7em solid;
+  border: 2.2vw solid;
   border-color: transparent transparent rgba(255, 255, 255, 0.8) rgba(255, 255, 255, 0.8);
 }
 
-#about .col2 img {
-  max-height: 18em;
-  width: auto;
+#about img {
+  height: auto;
   position: absolute;
   bottom: 0;
   right: 0;
