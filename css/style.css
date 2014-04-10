@@ -1143,6 +1143,8 @@ section p {
 .bubble p {
   background-color: rgba(255, 255, 255, 0.8);
   margin: 0;
+  border-right: 1px rgba(255, 255, 255, 0.3) solid;
+  text-align: center;
 }
 .bubble p:nth-of-type(1) {
   font-family: "SourceSansPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1152,7 +1154,6 @@ section p {
   padding: 0.4em 0.4em 0.3em 0.4em;
   position: relative;
   top: 15%;
-  text-align: left;
   background-color: rgba(255, 255, 255, 0.8);
 }
 .bubble p:nth-of-type(1) strong {
@@ -1176,9 +1177,8 @@ section p {
   width: 0;
   height: 0;
   left: 71.1%;
-  margin-top: -20%;
-  border: 0.7em solid;
-  border: 2.2vw solid;
+  margin-top: -22%;
+  border: 1em solid;
   border-color: transparent transparent rgba(255, 255, 255, 0.8) rgba(255, 255, 255, 0.8);
 }
 
