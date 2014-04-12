@@ -652,12 +652,11 @@ section::after {
   z-index: 4;
 }
 #about .bubble {
-  width: 66.10169%;
+  width: 74.57627%;
   float: left;
-  margin-right: 1.69492%;
 }
 #about img {
-  width: 32.20339%;
+  width: 23.72881%;
 }
 
 #work {
@@ -1129,13 +1128,13 @@ section p {
 }
 
 .bubble {
-  margin: 3% 0 8% 5%;
+  margin: 2% 0 6% 2%;
 }
 .bubble h1 {
   font-family: "Gotham", "Century Gothic", "Tw Cen MT", Futura, "URW Gothic L", Arial, sans-serif;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.8);
-  margin: 6% 0 0 0.5em;
+  margin: 4% 0 0 0.5em;
   line-height: .75;
   font-size: 1.7em;
   text-transform: uppercase;
@@ -1147,7 +1146,7 @@ section p {
 }
 .bubble p:nth-of-type(1) {
   font-family: "SourceSansPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.6em;
+  font-size: 1.8em;
   font-weight: 500;
   line-height: 1.4;
   padding: 0.4em 0.4em 0.3em 0.4em;
@@ -1166,17 +1165,24 @@ section p {
   border-top: #7c7c7c 1px dotted;
   background-color: rgba(255, 255, 255, 0.6);
   padding: 0.5em 0.75em 0.3em;
+  font-size: 1.1em;
+}
+.bubble p:nth-of-type(2) strong {
+  color: #009168;
+  font-style: italic;
+  font-weight: normal;
 }
 .bubble p:nth-of-type(2) a {
   background-color: rgba(255, 255, 255, 0.4);
+  white-space: nowrap;
 }
 .bubble:after {
   content: ' ';
   position: absolute;
   width: 0;
   height: 0;
-  left: 71.1%;
-  margin-top: -22%;
+  left: 76.5%;
+  margin-top: -17%;
   border: 1em solid;
   border-color: transparent transparent rgba(255, 255, 255, 0.8) rgba(255, 255, 255, 0.8);
 }

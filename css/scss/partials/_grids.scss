@@ -97,10 +97,10 @@ section {
   //  height: inherit;
   //  position: relative;
     .bubble {
-      @include span(8 of 12);
+      @include span(9 of 12 no-gutters);
     }
     img {
-      width: span(last 4 of 12);
+      width: span(last 3 of 12);
       //@include offset($row-top-offset);
       //height: inherit;
       //position: relative;
