@@ -189,7 +189,6 @@ section {
     background-color: $bubble-bg;
     margin: 0;
     text-align: center;
-    text-shadow: 1px 1px 30px rgba(27, 27, 27, 0.3);
     color: rgb(0, 0, 0);
     &:nth-of-type(1) {
       font-family: $sourcesanspro-font-stack;
@@ -199,7 +198,7 @@ section {
       padding: 0.4em 0.4em 0.3em 0.4em;
       position: relative;
       top: 15%;
-      background-color: transparent; //$bubble-bg;
+      background-color: $bubble-bg;
       //@include box-shadow(10px 10px 0 1px rgba(255,255,255,0.8));
       //border: 8px solid #666;
       //@include border-radius(7px);
@@ -222,17 +221,16 @@ section {
     }
     &:nth-of-type(2) {
       border-top: rgba(124, 124, 124, 1) 1px dotted;
-      background-color: transparent; //rgba(255,255,255,0.6);
+      background-color: rgba(255,255,255,0.6);
       padding: 0.5em 0.75em 0.3em;
       font-size: 1.1em;
       strong {
-        color: rgba(0, 145, 104, 1);
+        color: rgb(0, 114, 96); //rgba(0, 145, 104, 1); need to make a little darker because of lighter backgorund opacity
         font-style: italic;
         font-weight: normal;
       }
       a {
-        color: #fff;
-        //background-color: rgba(255,255,255,0.4);
+        background-color: rgba(255,255,255,0.4);
         white-space: nowrap;
       }
     }
@@ -244,7 +242,7 @@ section {
     height: 0;
     left: 76.5%;
     margin-top: -17%;
-    border: none;//1em solid;
+    border: 1em solid;
     border-color: transparent transparent $bubble-bg $bubble-bg;
   }
 }
