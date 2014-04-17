@@ -23,59 +23,6 @@ header {
   //@include box-shadow(0px 0px 5px 0px rgba(50, 50, 50, 0.50));
 }
 
-// Navigation
-nav {
-  font-family: $sourcesanspro-font-stack;
-  font-weight: 600;
-  height: auto;
-  ul {
-    width:100%;
-  }
-  li {
-    display: inline;
-    // padding-right: span(2/2);
-    text-align: center;
-    background: rgba(0, 0, 0, 1);
-    @include transition(background 0.2s linear);
-    &:hover, &:focus {
-      cursor: pointer;
-    }
-    a:hover, a:focus {
-      background: none;
-      text-decoration: none;
-    }
-    &.selected {
-      &:nth-of-type(1) {
-      background: rgba(1, 162, 117, 1);
-      @include transition(background 0.2s linear);
-      }
-      &:nth-of-type(2) {
-      background: rgba(201, 99, 99, 1);
-      @include transition(background 0.2s linear);
-      }
-      &:nth-of-type(3) {
-      background: rgba(0, 140, 186, 1);
-      @include transition(background 0.2s linear);
-      }
-      a {
-        color: #eee;
-        &:hover, &:focus {
-          color: #eee;
-          background: none;
-          text-decoration: none;
-        }
-      }
-    }
-    &.external {
-      background: #eee;
-      a:hover, a:focus {
-        background: none;
-        text-decoration: none;
-      }
-    }
-  }
-}
-
 header {
   h1 {
     margin: 0;
@@ -146,6 +93,60 @@ header {
   }
 }
 
+// Navigation
+nav {
+  font-family: $gotham-font-stack;//$sourcesanspro-font-stack;
+  text-transform: uppercase;
+  font-weight: 600;
+  height: auto;
+  ul {
+    width:100%;
+  }
+  li {
+    display: inline;
+    // padding-right: span(2/2);
+    text-align: center;
+    background: rgba(0, 0, 0, 1);
+    @include transition(background 0.2s linear);
+    &:hover, &:focus {
+      cursor: pointer;
+    }
+    a:hover, a:focus {
+      background: none;
+      text-decoration: none;
+    }
+    &.selected {
+      &:nth-of-type(1) {
+      background: rgba(1, 162, 117, 1);
+      @include transition(background 0.2s linear);
+      }
+      &:nth-of-type(2) {
+      background: rgba(201, 99, 99, 1);
+      @include transition(background 0.2s linear);
+      }
+      &:nth-of-type(3) {
+      background: rgba(0, 140, 186, 1);
+      @include transition(background 0.2s linear);
+      }
+      a {
+        color: #eee;
+        &:hover, &:focus {
+          color: #eee;
+          background: none;
+          text-decoration: none;
+        }
+      }
+    }
+    &.external {
+      background: #eee;
+      a:hover, a:focus {
+        background: none;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
 // Sections
 section {
   //h1 {
@@ -204,10 +205,10 @@ section {
       //@include border-radius(7px);
       //@include box-shadow(rgba(150,150,150,.3) 0 0 100px 0 inset);
       strong {
-        text-transform: uppercase;
+        text-transform: none;//uppercase;
         //padding: 0 0.2em;
         //margin: 0;
-        font-weight: 800;
+        font-weight: 700;
         &:nth-of-type(n) {
           color: rgba(0, 145, 104, 1);
           //#01A275;//rgba(201, 99, 99, 1); //rgba(7, 96, 138, 1); //rgba(22, 88, 151, 1);//(18, 100, 177, 1);//rgba(209, 88, 32, 1);
@@ -224,13 +225,16 @@ section {
       background-color: rgba(255,255,255,0.6);
       padding: 0.5em 0.75em 0.3em;
       font-size: 1.1em;
-      strong {
-        color: rgb(0, 114, 96); //rgba(0, 145, 104, 1); need to make a little darker because of lighter backgorund opacity
-        font-style: italic;
-        font-weight: normal;
+      i {
+        color: rgb(0, 114, 96);
       }
+      //strong {
+      //  color: rgb(0, 114, 96); //rgba(0, 145, 104, 1); need to make a little darker because of lighter backgorund opacity
+      //  font-style: italic;
+      //  font-weight: 400;
+      //}
       a {
-        background-color: rgba(255,255,255,0.4);
+        background-color: rgba(255,255,255,0.5);
         white-space: nowrap;
       }
     }
@@ -240,7 +244,7 @@ section {
     position: absolute;
     width: 0;
     height: 0;
-    left: 76.5%;
+    left: 76.55%;
     margin-top: -17%;
     border: 1em solid;
     border-color: transparent transparent $bubble-bg $bubble-bg;
@@ -261,4 +265,11 @@ section {
 #contact {
 }
 footer {
+  background: url(../img/hexnoise.png) fixed 0 0 repeat, rgb(46, 46, 46);
+  @include box-shadow(inset 0 0 200px 0 rgba(0,0,0,0.8));
+  p {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.18);
+    margin: 0;
+  }
 }

@@ -58,7 +58,12 @@ header {
   @include container(100%);
   @include full;
   h1 {
-    @include span(last 8);
+    @media (min-width: 900px) {
+      @include span(last 8);
+    }
+    @media (max-width: 900px) {
+      @include span(5.5);
+    }
   }
 }
 
@@ -72,9 +77,9 @@ nav {
     }
   }
   @media (max-width: 900px) {
-    @include span (last 4 nest) {
+    @include span (last 6.5 nest) {
       li {
-        @include span(isolate 1 of 2 0 no-gutters wide);
+        @include span(isolate 1 of 4 0 no-gutters wide);
       }
     }
   }
@@ -97,7 +102,7 @@ section {
   //  height: inherit;
   //  position: relative;
     .bubble {
-      @include span(9 of 12 no-gutters);
+      @include span(9 of 12);
     }
     img {
       width: span(last 3 of 12);
@@ -117,6 +122,8 @@ section {
 }
 
 footer {
+  @include span (12);
+  margin-top: 0.4em; //to compensate for $top-border-height: 0.4em;
   z-index: $z-footer;
 }
 
