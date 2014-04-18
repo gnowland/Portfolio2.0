@@ -534,6 +534,20 @@ $(function() { //When the document loads
   // Tell the DOM that JS is enabled and page is loaded
   $('html').addClass('loaded').removeClass('no-js');
 
+  // FADE IN/OUT PAGES:
+  //  $('body').css('display', 'none');
+  //  $('body').fadeIn(1000);
+  //
+  //  $('.external').click(function(event) {
+  //    event.preventDefault();
+  //    newLocation = this.href;
+  //    $('body').fadeOut(1000, newpage);
+  //  });
+  //
+  //  function newpage() {
+  //    window.location = newLocation;
+  //  }
+
   var sections = $('section');
   var nav_a = $('nav a');
   var headercompact = 7;// $('header').outerHeight(); // Overridden by adding a psudo-element to all sections
@@ -577,7 +591,7 @@ $(function() { //When the document loads
       var active_link = $('nav a[href="#' + active_section.attr("id") + '"]');
       nav_a.parent().removeClass('selected');
       active_link.parent().addClass('selected');
-
+      $('header').removeClass().addClass(active_section.attr("id")); //to change the color of the border
     },
     offset: headercompact
   });
@@ -587,14 +601,16 @@ $(function() { //When the document loads
   $('section:last').waypoint({
     handler: function(direction){
       if (direction === 'down') {
-          nav_a.parent().removeClass('selected');
-          nav_a.parent().not('.external').last().addClass('selected');
+        nav_a.parent().removeClass('selected');
+        nav_a.parent().not('.external').last().addClass('selected');
+        $('header').removeClass().addClass($(this).attr("id")); //to change the color of the border
       }
       // Add class to the section above the last div once the user starts scrolling up again,
       // then the normal "highlighting" function takes back over control
       else {
-          nav_a.parent().removeClass('selected');
-          nav_a.parent().not('.external').eq(-2).addClass('selected');
+        nav_a.parent().removeClass('selected');
+        nav_a.parent().not('.external').eq(-2).addClass('selected');
+        $('header').removeClass().addClass($(this).prev().attr("id")); //to change the color of the border
       }
     },
     offset: 'bottom-in-view'
@@ -607,7 +623,9 @@ $(function() { //When the document loads
       if (direction === 'up') {
         nav_a.parent().removeClass('selected');
         nav_a.parent().not('.external').first().addClass('selected');
+        $('header').removeClass().addClass($(this).attr("id")); //to change the color of the border
 
+// Not needed:
         // add class to make header expand to full height again (causes css transform to fire)
 //        $('body, header').toggleClass('compact');
 //      }

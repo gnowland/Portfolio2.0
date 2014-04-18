@@ -9,6 +9,9 @@
 // Set custom site styles here:
 $header-height: 3.5em;
 $bubble-bg: rgba(255,255,255,0.8);
+$about-color: rgb(1, 162, 117);
+$work-color: rgb(201, 99, 99);
+$contact-color: rgb(0, 140, 186);
 
 header {
   margin: 0;
@@ -16,14 +19,24 @@ header {
   height: $header-height;
   background: $body-bg;
   border-top: $top-border-height #000 solid;
+  @include transition(border-top 0.2s linear);
   position: fixed; // keep on top of window
   top: 0;
   left: 0;
   right: 0;
   //@include box-shadow(0px 0px 5px 0px rgba(50, 50, 50, 0.50));
-}
-
-header {
+  &.about {
+    border-top: $top-border-height $about-color solid;
+    @include transition(border-top 0.2s linear);
+  }
+  &.work {
+    border-top: $top-border-height $work-color solid;
+    @include transition(border-top 0.2s linear);
+  }
+  &.contact {
+    border-top: $top-border-height $contact-color solid;
+    @include transition(border-top 0.2s linear);
+  }
   h1 {
     margin: 0;
     padding: 0;
@@ -88,6 +101,7 @@ header {
     line-height: 0;
     margin: 0 -0.2em 0 -0.35em;
     @include text-shadow(0px 1px 1px rgba(255, 255, 255, 1));
+    color: rgb(26, 74, 116);
     //color: $body-bg; //rgba(27,60,89,0.82);
     //@include text-shadow(1px 2px 2px $body-bg, 0 0 0 #000, 1px 2px 2px $body-bg);
   }
@@ -95,9 +109,6 @@ header {
 
 // Navigation
 nav {
-  font-family: $gotham-font-stack;//$sourcesanspro-font-stack;
-  text-transform: uppercase;
-  font-weight: 600;
   height: auto;
   ul {
     width:100%;
@@ -106,10 +117,16 @@ nav {
     display: inline;
     // padding-right: span(2/2);
     text-align: center;
-    background: rgba(0, 0, 0, 1);
+    background: $body-bg;
     @include transition(background 0.2s linear);
     &:hover, &:focus {
       cursor: pointer;
+    }
+    a {
+      font-family: $gotham-font-stack;//$sourcesanspro-font-stack;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: rgb(26, 74, 116);
     }
     a:hover, a:focus {
       background: none;
@@ -117,15 +134,15 @@ nav {
     }
     &.selected {
       &:nth-of-type(1) {
-      background: rgba(1, 162, 117, 1);
+      background: $about-color;
       @include transition(background 0.2s linear);
       }
       &:nth-of-type(2) {
-      background: rgba(201, 99, 99, 1);
+      background: $work-color;
       @include transition(background 0.2s linear);
       }
       &:nth-of-type(3) {
-      background: rgba(0, 140, 186, 1);
+      background: $contact-color;
       @include transition(background 0.2s linear);
       }
       a {
@@ -138,10 +155,75 @@ nav {
       }
     }
     &.external {
-      background: #eee;
       a:hover, a:focus {
         background: none;
         text-decoration: none;
+      }
+    }
+  }
+}
+
+#about {
+  background: url(../img/hexnoise.png) fixed 0 0 repeat, rgba(14, 67, 97, 1); //rgba(22,104,150,1);
+              //orange: 208,51,27, light blue: 10,83,146 or LOGO COLOR: 27,60,89,1 !!similar: 34,53,70
+  @include box-shadow(inset 0 0 400px 0 rgba(0,0,0,0.8));
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  text-align: center;
+  //.background {
+  //  background-image: url(../img/hexnoise.png),url(../img/background.jpg);
+  //  @include background-size(auto, cover);
+  //  background-attachment: scroll, fixed;
+  //  background-position: 0 0, 0 0;
+  //  background-repeat: repeat,no-repeat;
+  //}
+  img {
+    width: 10em;
+    height: auto;
+    margin: 0 auto;
+    //margin-right: gutter(24);
+    border-radius: 50%;
+  }
+  p {
+    margin: 0;
+    color: rgb(238, 238, 238);
+    text-align: center;
+    &:nth-of-type(1) {
+      font-family: $sourcesanspro-font-stack;
+      font-size: 1.8em;
+      font-weight: 500;
+      line-height: 1.4;
+      padding: 0.4em 0.4em 0.3em 0.4em;
+      position: relative;
+      top: 15%;
+      //@include box-shadow(10px 10px 0 1px rgba(255,255,255,0.8));
+      //border: 8px solid #666;
+      //@include border-radius(7px);
+      //@include box-shadow(rgba(150,150,150,.3) 0 0 100px 0 inset);
+      strong {
+        text-transform: none;
+        font-weight: 700;
+        color: $about-color;
+      }
+    }
+    &:nth-of-type(2) {
+    //  border-top: rgba(124, 124, 124, 1) 1px dotted;
+      padding: 0.5em 0.75em 0.3em;
+      font-size: 1.1em;
+      i {
+        color: $about-color;
+      }
+      //strong {
+      //  color: rgb(0, 114, 96); //rgba(0, 145, 104, 1); need to make a little darker because of lighter backgorund opacity
+      //  font-style: italic;
+      //  font-weight: 400;
+      //}
+      a {
+      //  background-color: rgba(255,255,255,0.5);
+        white-space: nowrap;
       }
     }
   }
@@ -156,107 +238,6 @@ section {
     text-align: justify;
     font-family: Georgia, Times, "Times New Roman", serif;
   }
-}
-
-#about {
-  background: url(../img/hexnoise.png) fixed 0 0 repeat, rgba(22,104,150,1); //hexnoise.png
-              //orange: 208,51,27, light blue: 10,83,146 or LOGO COLOR: 27,60,89,1 !!similar: 34,53,70
-  @include box-shadow(inset 0 0 400px 0 rgba(0,0,0,0.8));
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: auto;
-  //.background {
-  //  background-image: url(../img/hexnoise.png),url(../img/background.jpg);
-  //  @include background-size(auto, cover);
-  //  background-attachment: scroll, fixed;
-  //  background-position: 0 0, 0 0;
-  //  background-repeat: repeat,no-repeat;
-  //}
-}
-
-.bubble {
-  margin: 2% 0 6% 2%;
-  h1 {
-    font-family: $gotham-font-stack;
-    font-weight: 600;
-    color: $bubble-bg;
-    margin: 4% 0 0 0.5em;
-    line-height: .75;
-    font-size: 1.7em;
-    text-transform: uppercase;
-  }
-  p {
-    background-color: $bubble-bg;
-    margin: 0;
-    text-align: center;
-    color: rgb(0, 0, 0);
-    &:nth-of-type(1) {
-      font-family: $sourcesanspro-font-stack;
-      font-size: 1.8em;
-      font-weight: 500;
-      line-height: 1.4;
-      padding: 0.4em 0.4em 0.3em 0.4em;
-      position: relative;
-      top: 15%;
-      background-color: $bubble-bg;
-      //@include box-shadow(10px 10px 0 1px rgba(255,255,255,0.8));
-      //border: 8px solid #666;
-      //@include border-radius(7px);
-      //@include box-shadow(rgba(150,150,150,.3) 0 0 100px 0 inset);
-      strong {
-        text-transform: none;//uppercase;
-        //padding: 0 0.2em;
-        //margin: 0;
-        font-weight: 700;
-        &:nth-of-type(n) {
-          color: rgba(0, 145, 104, 1);
-          //#01A275;//rgba(201, 99, 99, 1); //rgba(7, 96, 138, 1); //rgba(22, 88, 151, 1);//(18, 100, 177, 1);//rgba(209, 88, 32, 1);
-          //@include text-shadow(rgba(255, 255, 255, 0.9) -1px 1px 0, rgba(22, 88, 151, 0.9) -2px 2px 0);
-        }
-        //&:nth-of-type(2) {
-         // color: rgba(209, 88, 32, 1);
-        // @include text-shadow(rgba(255, 255, 255, 0.9) -1px 1px 0, rgba(209, 88, 32, 0.9) -2px 2px 0);
-        //}
-      }
-    }
-    &:nth-of-type(2) {
-      border-top: rgba(124, 124, 124, 1) 1px dotted;
-      background-color: rgba(255,255,255,0.6);
-      padding: 0.5em 0.75em 0.3em;
-      font-size: 1.1em;
-      i {
-        color: rgb(0, 114, 96);
-      }
-      //strong {
-      //  color: rgb(0, 114, 96); //rgba(0, 145, 104, 1); need to make a little darker because of lighter backgorund opacity
-      //  font-style: italic;
-      //  font-weight: 400;
-      //}
-      a {
-        background-color: rgba(255,255,255,0.5);
-        white-space: nowrap;
-      }
-    }
-  }
-  &:after {
-    content: ' ';
-    position: absolute;
-    width: 0;
-    height: 0;
-    left: 76.55%;
-    margin-top: -17%;
-    border: 1em solid;
-    border-color: transparent transparent $bubble-bg $bubble-bg;
-  }
-}
-
-#about img {
-  height: auto;
-  //margin-right: gutter(24);
-  position: absolute;
-  bottom: 0;
-  right: 0;
 }
 
 #work {

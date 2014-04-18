@@ -69,20 +69,27 @@ header {
 
 nav {
   z-index: $z-nav;
-  @media (min-width: 900px) {
-    @include span(last 4 nest) {
-      li {
-        @include span(isolate 1 of 4 0 no-gutters wide);
-      }
+  @include span(last 4 nest) {
+    li {
+      //@include span(isolate 1 of 4 0 no-gutters wide);
+      @include span(no-gutters wide);
+      padding: 0 0.2em;
     }
   }
-  @media (max-width: 900px) {
-    @include span (last 6.5 nest) {
-      li {
-        @include span(isolate 1 of 4 0 no-gutters wide);
-      }
-    }
-  }
+  //@media (min-width: 900px) {
+  //  @include span(last 4 nest) {
+  //    li {
+  //      @include span(isolate 1 of 4 0 no-gutters wide);
+  //    }
+  //  }
+  //}
+  //@media (max-width: 900px) {
+  //  @include span (last 6.5 nest) {
+  //    li {
+  //      @include span(isolate 1 of 4 0 no-gutters wide);
+  //    }
+  //  }
+  //}
 }
 
 section {
@@ -93,24 +100,7 @@ section {
 
 #about {
   z-index: $z-about;
-  //@include span(12 break);  //these are the same for all sections
-  //@include container(100%);
-  //@include full;
-  //.col1 {
-  //  @include span(12 of 12);
-  //  @include offset($row-top-offset);
-  //  height: inherit;
-  //  position: relative;
-    .bubble {
-      @include span(9 of 12);
-    }
-    img {
-      width: span(last 3 of 12);
-      //@include offset($row-top-offset);
-      //height: inherit;
-      //position: relative;
-    }
-  //}
+  @include span(12);
 }
 
 #work {
