@@ -1116,6 +1116,11 @@ section p {
   background-color: #222;
   padding: 2%;
 }
+@media (max-width: 550px) {
+  #work {
+    padding: 2% 6%;
+  }
+}
 #work .box {
   width: 18.4%;
   margin-right: 2%;
@@ -1173,7 +1178,21 @@ section p {
     margin-right: 0;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 550px) {
+  #work .box {
+    width: 100%;
+    margin-right: 6%;
+  }
+  #work .box:nth-child(n) {
+    margin-right: 6%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+  }
+  #work .box:nth-child(1n) {
+    margin-right: 0;
+  }
+}
+@media (max-width: 550px) {
   #work .box :nth-child(n) {
     width: 80%;
     margin: 10% 10%;
