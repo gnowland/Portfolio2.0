@@ -8,22 +8,20 @@
 
 // Set custom site styles here:
 $header-height: 3.5em;
-$bubble-bg: rgba(255,255,255,0.8);
-$about-color: rgb(1, 162, 117);
-$work-color: rgb(201, 99, 99);
-$contact-color: rgb(0, 140, 186);
+$bubble-bg:     rgba(255,255,255,0.8);
+$about-color:   rgb(1, 162, 117);
+$work-color:    rgb(0, 140, 186);
+$contact-color: rgb(201, 99, 99);
+$blog-color:    rgb(67, 103, 158);
 
 header {
   margin: 0;
   padding: 0;
-  height: $header-height;
+  //height: $header-height;
+  height: 1.96em;
   background: $body-bg;
-  border-top: $top-border-height #000 solid;
+  border-top: $top-border-height #eee solid;
   @include transition(border-top 0.2s linear);
-  position: fixed; // keep on top of window
-  top: 0;
-  left: 0;
-  right: 0;
   //@include box-shadow(0px 0px 5px 0px rgba(50, 50, 50, 0.50));
   &.about {
     border-top: $top-border-height $about-color solid;
@@ -37,12 +35,17 @@ header {
     border-top: $top-border-height $contact-color solid;
     @include transition(border-top 0.2s linear);
   }
+  &.blog {
+    border-top: $top-border-height $blog-color solid;
+    @include transition(border-top 0.2s linear);
+  }
   h1 {
     margin: 0;
-    padding: 0;
+    padding: 0.07em 0;
+    background: $body-bg;
     font-family: $gotham-font-stack;
     color: $header-font-color;
-    font-size: 2.8em;
+    font-size: 1.7em;
     font-weight: 700;
     letter-spacing: 0.1em;
     line-height: 1;
@@ -50,58 +53,13 @@ header {
     @include text-shadow(rgba(255, 255, 255, 1) -1px 1px 0, rgb(33,77,114) -2px 2px 0);
     //font-size: 2.75rem;
     //line-height: 2.5rem;
-    @media (min-width: 400px) and (max-width: 500px) {
-      font-size: 1.5em;
-    }
-    @media (min-width: 500px) {
-      font-size: 1.5em;
-    }
-    @media (min-width: 600px) {
-      font-size: 1.6em;
-    }
-    @media (min-width: 630px) {
-      font-size: 1.7em;
-    }
-    @media (min-width: 660px) {
-      font-size: 1.8em;
-    }
-    @media (min-width: 690px) {
-      font-size: 1.9em;
-    }
-    @media (min-width: 720px) {
-      font-size: 2.0em;
-    }
-    @media (min-width: 750px) {
-      font-size: 2.1em;
-    }
-    @media (min-width: 780px) {
-      font-size: 2.2em;
-    }
-    @media (min-width: 810px) {
-      font-size: 2.3em;
-    }
-    @media (min-width: 840px) {
-      font-size: 2.4em;
-    }
-    @media (min-width: 870px) {
-      font-size: 2.5em;
-    }
-    @media (min-width: 900px) {
-      font-size: 2.6em;
-    }
-    @media (min-width: 930px) {
-      font-size: 2.7em;
-    }
-    @media (min-width: 960px) {
-      font-size: 2.8em;
-    }
   }
   [data-icon='\f100'] {
     font-size: 1.25em;
     line-height: 0;
-    margin: 0 -0.2em 0 -0.35em;
+    margin: 0 -0.13em 0 -0.27em;
     @include text-shadow(0px 1px 1px rgba(255, 255, 255, 1));
-    color: rgb(26, 74, 116);
+    //color: rgb(26, 74, 116);
     //color: $body-bg; //rgba(27,60,89,0.82);
     //@include text-shadow(1px 2px 2px $body-bg, 0 0 0 #000, 1px 2px 2px $body-bg);
   }
@@ -109,15 +67,10 @@ header {
 
 // Navigation
 nav {
-  height: auto;
-  ul {
-    width:100%;
-  }
   li {
-    display: inline;
+    display: inline-block;
     // padding-right: span(2/2);
     text-align: center;
-    background: $body-bg;
     @include transition(background 0.2s linear);
     &:hover, &:focus {
       cursor: pointer;
@@ -145,6 +98,10 @@ nav {
       background: $contact-color;
       @include transition(background 0.2s linear);
       }
+      &:nth-of-type(4) {
+        background: $blog-color;
+        @include transition(background 0.2s linear);
+      }
       a {
         color: #eee;
         &:hover, &:focus {
@@ -164,41 +121,42 @@ nav {
 }
 
 #about {
-  background: url(../img/hexnoise.png) fixed 0 0 repeat, rgba(14, 67, 97, 1); //rgba(22,104,150,1);
+  background: url(../img/bg.jpg) fixed 33% 0 no-repeat;
+  @include background-size(cover);
+  //background: url(../img/hexnoise.png) fixed 0 0 repeat, rgba(14, 67, 97, 1); //rgba(22,104,150,1);
               //orange: 208,51,27, light blue: 10,83,146 or LOGO COLOR: 27,60,89,1 !!similar: 34,53,70
   @include box-shadow(inset 0 0 400px 0 rgba(0,0,0,0.8));
   overflow: hidden;
-  position: relative;
   width: 100%;
   height: auto;
-  padding: 20px;
+  padding: 2%;
   text-align: center;
-  //.background {
   //  background-image: url(../img/hexnoise.png),url(../img/background.jpg);
   //  @include background-size(auto, cover);
   //  background-attachment: scroll, fixed;
   //  background-position: 0 0, 0 0;
   //  background-repeat: repeat,no-repeat;
-  //}
   img {
-    width: 10em;
     height: auto;
-    margin: 0 auto;
-    //margin-right: gutter(24);
     border-radius: 50%;
   }
   p {
     margin: 0;
-    color: rgb(238, 238, 238);
+    color: rgb(34, 34, 34); //rgb(238, 238, 238);
     text-align: center;
     &:nth-of-type(1) {
       font-family: $sourcesanspro-font-stack;
-      font-size: 1.8em;
-      font-weight: 500;
+      font-weight: 600;
       line-height: 1.4;
-      padding: 0.4em 0.4em 0.3em 0.4em;
+      padding: 0.4em 0;
       position: relative;
       top: 15%;
+      @media (min-width: 0px) {
+      font-size: 1.6em;
+      }
+      @media (min-width: 900px) {
+      font-size: 2.5em;
+      }
       //@include box-shadow(10px 10px 0 1px rgba(255,255,255,0.8));
       //border: 8px solid #666;
       //@include border-radius(7px);
@@ -206,7 +164,7 @@ nav {
       strong {
         text-transform: none;
         font-weight: 700;
-        color: $about-color;
+        color: $about-color;//scale-color($about-color, $lightness: -25%);
       }
     }
     &:nth-of-type(2) {
@@ -240,7 +198,74 @@ section {
   }
 }
 
+// Setting Up Box Grid!
+
+@mixin rowMachine($numPerRow, $boxMargin) {
+  width: ((100% - (($numPerRow - 1) * $boxMargin)) / $numPerRow);
+  margin-right: $boxMargin;
+  &:nth-child(n) {
+    margin-right: $boxMargin;
+    margin-bottom: $boxMargin/2;
+    margin-top: $boxMargin/2
+  }
+  &:nth-child(#{$numPerRow}n) {
+    margin-right: 0;
+  }
+}
+
 #work {
+  background-color: #222;
+  padding: 2%;
+  .box {
+    @include rowMachine(5, 2%);
+    background: white;
+    padding: 20px;
+    float: left;
+
+    @media (max-width: 1400px) {
+      @include rowMachine(4, 2%);
+    }
+    @media (max-width: 1000px) {
+      @include rowMachine(3, 2%);
+    }
+    @media (max-width: 700px) {
+      @include rowMachine(2, 3%);
+    }
+    @media (max-width: 450px) {
+      :nth-child(n) {
+      width: 80%;
+      margin: 10% 10%;
+    }
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+  .young {
+
+  }
+  .whitehall {
+
+  }
+  .loso {
+
+  }
+  .udress {
+
+  }
+  .delride {
+
+  }
+  .backcountry {
+
+  }
+  .edgemoor {
+
+  }
+  .queen {
+
+  }
 }
 
 #contact {
@@ -254,3 +279,5 @@ footer {
     margin: 0;
   }
 }
+
+@import "partials/mediaqueries";

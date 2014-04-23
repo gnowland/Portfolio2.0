@@ -1,8 +1,11 @@
 // REMOVE BEFORE SHIP!!! :
 /*jshint devel:true */
+
+// DEBUGGING CODE:
 // console.log("You are here:", this.id);
 
-// Navigation Menu
+
+
 $(function() { //When the document loads
 
   // Tell the DOM that JS is enabled and page is loaded
@@ -22,6 +25,9 @@ $(function() { //When the document loads
   //    window.location = newLocation;
   //  }
 
+
+  // NAVIGATION MENU
+
   var sections = $('section');
   var nav_a = $('nav a');
   var headercompact = 7;// $('header').outerHeight(); // Overridden by adding a psudo-element to all sections
@@ -40,20 +46,7 @@ $(function() { //When the document loads
     });
   });
 
-  // Making the header animate
-//  $('body').waypoint(function(direction) {
-//    $('body, header.row').toggleClass('compact', direction === 'down');
-//    }, {
-//     offset: headerexpanded-1, // <-- need to define header expanded var
-//  });
-
-  // Refreshing the waypoints when the header animates
-//  $('header').on('transitionend webkitTransitionEnd', function() {
-//    $.waypoints('refresh');
-//    console.log('refresh');
-//  });
-
-  // Highlighting
+// Highlighting the nav menu buttons and border
 
   sections.waypoint({
     handler: function(direction) {
@@ -98,17 +91,17 @@ $(function() { //When the document loads
         nav_a.parent().removeClass('selected');
         nav_a.parent().not('.external').first().addClass('selected');
         $('header').removeClass().addClass($(this).attr("id")); //to change the color of the border
-
-// Not needed:
-        // add class to make header expand to full height again (causes css transform to fire)
-//        $('body, header').toggleClass('compact');
-//      }
-//      if (direction === 'down') {
-//        // add class to make header collapse to small height (causes css transform to fire)
-//        $('header').removeClass('expand');
-//        $('header').addClass('compact');
       }
     },
-    offset: headercompact-15
+    offset: '-40%' //headercompact-15
   });
+
+  //To make header smaller after scrolling down
+  //$('#about').waypoint({
+  //  handler: function(direction){
+  //    if (direction === 'down') {
+  //
+  //    }
+  //  }
+  //})
 });

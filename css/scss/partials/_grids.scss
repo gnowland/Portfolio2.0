@@ -46,7 +46,7 @@ body {
   margin-top: $section-top-offset + $top-border-height;
 }
 
-.row{
+.contain{
   @include container;
   height: inherit;
   position: relative;
@@ -55,27 +55,40 @@ body {
 
 header {
   z-index: $z-header;
+  position: fixed; // keep on top of window
+  top: 0;
+  left: 0;
+  right: 0;
   @include container(100%);
   @include full;
   h1 {
-    @media (min-width: 900px) {
-      @include span(last 8);
-    }
-    @media (max-width: 900px) {
-      @include span(5.5);
-    }
+  width: auto;
+  clear: both;
+  //@include span(last 8);
+  //  @media (min-width: 900px) {
+  //    @include span(last 8);
+  //  }
+  //  @media (max-width: 900px) {
+  //    @include span(5.5);
+  //  }
   }
 }
 
 nav {
   z-index: $z-nav;
-  @include span(last 4 nest) {
+  position: relative;
+  max-width: 22.1em;
+  margin: 0 auto;
+  ul {
+    //float: right;
+  }
+  //@include span(last 4 nest) {
     li {
       //@include span(isolate 1 of 4 0 no-gutters wide);
       @include span(no-gutters wide);
-      padding: 0 0.2em;
+      padding: 0 0.6em;
     }
-  }
+  //}
   //@media (min-width: 900px) {
   //  @include span(last 4 nest) {
   //    li {
@@ -100,21 +113,25 @@ section {
 
 #about {
   z-index: $z-about;
+  position: relative;
   @include span(12);
 }
 
 #work {
   z-index: $z-work;
+  position: relative;
 }
 
 #contact {
   z-index: $z-contact;
+  position: relative;
 }
 
 footer {
   @include span (12);
   margin-top: 0.4em; //to compensate for $top-border-height: 0.4em;
   z-index: $z-footer;
+  position: relative;
 }
 
 
