@@ -31,7 +31,7 @@
     //  @include transition(font-size 0.2s linear);
     }
     #about img {
-      margin-top: .5em + ($i / 10);
+      margin-top: .1em + ($i / 50);
       width: 8em + ($i / 6);
     // @include transition(width 0.2s linear, margin-top 0.2s linear);
     }

@@ -42,7 +42,6 @@ header {
   h1 {
     margin: 0;
     padding: 0.07em 0;
-    background: $body-bg;
     font-family: $gotham-font-stack;
     color: $header-font-color;
     font-size: 1.7em;
@@ -122,8 +121,9 @@ nav {
 }
 
 #about {
-  background: url(../img/bg.jpg) fixed 33% 0 no-repeat;
-  @include background-size(cover);
+  //background: url(../img/bg.jpg) fixed 33% 0 no-repeat;
+  //@include background-size(cover);
+  background: url(../img/graphpaper.png) scroll 0 0 repeat, rgba(14, 67, 97, 1);
   //background: url(../img/hexnoise.png) fixed 0 0 repeat, rgba(14, 67, 97, 1); //rgba(22,104,150,1);
               //orange: 208,51,27, light blue: 10,83,146 or LOGO COLOR: 27,60,89,1 !!similar: 34,53,70
   @include box-shadow(inset 0 0 400px 0 rgba(0,0,0,0.8));
@@ -143,7 +143,7 @@ nav {
   }
   p {
     margin: 0;
-    color: rgb(34, 34, 34); //rgb(238, 238, 238);
+    color: rgb(235, 235, 235);//rgb(34, 34, 34); //rgb(238, 238, 238);
     text-align: center;
     &:nth-of-type(1) {
       font-family: $sourcesanspro-font-stack;
