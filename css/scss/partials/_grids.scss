@@ -77,32 +77,16 @@ header {
 nav {
   z-index: $z-nav;
   position: relative;
-  max-width: 22.1em;
+  //max-width: 22.1em; //moved ot mediaqueries.css
+  //width: span(3);
   margin: 0 auto;
   ul {
-    //float: right;
   }
   //@include span(last 4 nest) {
     li {
       //@include span(isolate 1 of 4 0 no-gutters wide);
       @include span(no-gutters wide);
-      padding: 0 0.6em;
     }
-  //}
-  //@media (min-width: 900px) {
-  //  @include span(last 4 nest) {
-  //    li {
-  //      @include span(isolate 1 of 4 0 no-gutters wide);
-  //    }
-  //  }
-  //}
-  //@media (max-width: 900px) {
-  //  @include span (last 6.5 nest) {
-  //    li {
-  //      @include span(isolate 1 of 4 0 no-gutters wide);
-  //    }
-  //  }
-  //}
 }
 
 section {

@@ -615,12 +615,10 @@ header h1 {
 nav {
   z-index: 6;
   position: relative;
-  max-width: 22.1em;
   margin: 0 auto;
 }
 nav li {
   float: left;
-  padding: 0 0.6em;
 }
 
 section {
@@ -1010,6 +1008,7 @@ nav li a {
   text-transform: uppercase;
   font-weight: 700;
   color: #1a4a74;
+  padding: 0;
 }
 nav li a:hover, nav li a:focus {
   background: none;
@@ -1206,6 +1205,13 @@ footer p {
  * FILE: _mediaqueries.scss
  */
 @media (min-width: 19.375em) {
+  nav {
+    width: 19.375em;
+  }
+  nav li {
+    width: 4.84375em;
+  }
+
   header h1 {
     font-size: 1.4em;
   }
@@ -1216,6 +1222,13 @@ footer p {
   }
 }
 @media (min-width: 21.25em) {
+  nav {
+    width: 20.375em;
+  }
+  nav li {
+    width: 5.09375em;
+  }
+
   header h1 {
     font-size: 1.5em;
   }
@@ -1226,6 +1239,13 @@ footer p {
   }
 }
 @media (min-width: 23.125em) {
+  nav {
+    width: 21.375em;
+  }
+  nav li {
+    width: 5.34375em;
+  }
+
   header h1 {
     font-size: 1.6em;
   }
@@ -1236,6 +1256,13 @@ footer p {
   }
 }
 @media (min-width: 25em) {
+  nav {
+    width: 22.375em;
+  }
+  nav li {
+    width: 5.59375em;
+  }
+
   header h1 {
     font-size: 1.7em;
   }
@@ -1246,6 +1273,13 @@ footer p {
   }
 }
 @media (min-width: 26.875em) {
+  nav {
+    width: 23.375em;
+  }
+  nav li {
+    width: 5.84375em;
+  }
+
   header h1 {
     font-size: 1.8em;
   }
@@ -1256,6 +1290,13 @@ footer p {
   }
 }
 @media (min-width: 28.75em) {
+  nav {
+    width: 24.375em;
+  }
+  nav li {
+    width: 6.09375em;
+  }
+
   header h1 {
     font-size: 1.9em;
   }
@@ -1266,6 +1307,13 @@ footer p {
   }
 }
 @media (min-width: 30.625em) {
+  nav {
+    width: 25.375em;
+  }
+  nav li {
+    width: 6.34375em;
+  }
+
   header h1 {
     font-size: 2em;
   }
@@ -1276,6 +1324,13 @@ footer p {
   }
 }
 @media (min-width: 32.5em) {
+  nav {
+    width: 26.375em;
+  }
+  nav li {
+    width: 6.59375em;
+  }
+
   header h1 {
     font-size: 2.1em;
   }
@@ -1286,6 +1341,13 @@ footer p {
   }
 }
 @media (min-width: 34.375em) {
+  nav {
+    width: 27.375em;
+  }
+  nav li {
+    width: 6.84375em;
+  }
+
   header h1 {
     font-size: 2.2em;
   }
@@ -1296,6 +1358,13 @@ footer p {
   }
 }
 @media (min-width: 36.25em) {
+  nav {
+    width: 28.375em;
+  }
+  nav li {
+    width: 7.09375em;
+  }
+
   header h1 {
     font-size: 2.3em;
   }
@@ -1306,6 +1375,13 @@ footer p {
   }
 }
 @media (min-width: 38.125em) {
+  nav {
+    width: 29.375em;
+  }
+  nav li {
+    width: 7.34375em;
+  }
+
   header h1 {
     font-size: 2.4em;
   }
@@ -1316,6 +1392,13 @@ footer p {
   }
 }
 @media (min-width: 40em) {
+  nav {
+    width: 30.375em;
+  }
+  nav li {
+    width: 7.59375em;
+  }
+
   header h1 {
     font-size: 2.5em;
   }
@@ -1326,6 +1409,13 @@ footer p {
   }
 }
 @media (min-width: 41.875em) {
+  nav {
+    width: 31.375em;
+  }
+  nav li {
+    width: 7.84375em;
+  }
+
   header h1 {
     font-size: 2.6em;
   }
@@ -1336,6 +1426,13 @@ footer p {
   }
 }
 @media (min-width: 43.75em) {
+  nav {
+    width: 32.375em;
+  }
+  nav li {
+    width: 8.09375em;
+  }
+
   header h1 {
     font-size: 2.7em;
   }
@@ -1346,6 +1443,13 @@ footer p {
   }
 }
 @media (min-width: 45.625em) {
+  nav {
+    width: 33.375em;
+  }
+  nav li {
+    width: 8.34375em;
+  }
+
   header h1 {
     font-size: 2.8em;
   }
@@ -1356,6 +1460,13 @@ footer p {
   }
 }
 @media (min-width: 47.5em) {
+  nav {
+    width: 34.375em;
+  }
+  nav li {
+    width: 8.59375em;
+  }
+
   header h1 {
     font-size: 2.9em;
   }
@@ -1366,6 +1477,13 @@ footer p {
   }
 }
 @media (min-width: 49.375em) {
+  nav {
+    width: 35.375em;
+  }
+  nav li {
+    width: 8.84375em;
+  }
+
   header h1 {
     font-size: 3em;
   }
@@ -1376,6 +1494,13 @@ footer p {
   }
 }
 @media (min-width: 51.25em) {
+  nav {
+    width: 36.375em;
+  }
+  nav li {
+    width: 9.09375em;
+  }
+
   header h1 {
     font-size: 3.1em;
   }
@@ -1386,6 +1511,13 @@ footer p {
   }
 }
 @media (min-width: 53.125em) {
+  nav {
+    width: 37.375em;
+  }
+  nav li {
+    width: 9.34375em;
+  }
+
   header h1 {
     font-size: 3.2em;
   }
@@ -1396,6 +1528,13 @@ footer p {
   }
 }
 @media (min-width: 55em) {
+  nav {
+    width: 38.375em;
+  }
+  nav li {
+    width: 9.59375em;
+  }
+
   header h1 {
     font-size: 3.3em;
   }
@@ -1406,6 +1545,13 @@ footer p {
   }
 }
 @media (min-width: 56.875em) {
+  nav {
+    width: 39.375em;
+  }
+  nav li {
+    width: 9.84375em;
+  }
+
   header h1 {
     font-size: 3.4em;
   }
@@ -1416,6 +1562,13 @@ footer p {
   }
 }
 @media (min-width: 58.75em) {
+  nav {
+    width: 40.375em;
+  }
+  nav li {
+    width: 10.09375em;
+  }
+
   header h1 {
     font-size: 3.5em;
   }
@@ -1426,6 +1579,13 @@ footer p {
   }
 }
 @media (min-width: 60.625em) {
+  nav {
+    width: 41.375em;
+  }
+  nav li {
+    width: 10.34375em;
+  }
+
   header h1 {
     font-size: 3.6em;
   }
@@ -1436,6 +1596,13 @@ footer p {
   }
 }
 @media (min-width: 62.5em) {
+  nav {
+    width: 42.375em;
+  }
+  nav li {
+    width: 10.59375em;
+  }
+
   header h1 {
     font-size: 3.7em;
   }
@@ -1446,6 +1613,13 @@ footer p {
   }
 }
 @media (min-width: 64.375em) {
+  nav {
+    width: 43.375em;
+  }
+  nav li {
+    width: 10.84375em;
+  }
+
   header h1 {
     font-size: 3.8em;
   }
@@ -1456,6 +1630,13 @@ footer p {
   }
 }
 @media (min-width: 66.25em) {
+  nav {
+    width: 44.375em;
+  }
+  nav li {
+    width: 11.09375em;
+  }
+
   header h1 {
     font-size: 3.9em;
   }
@@ -1466,6 +1647,13 @@ footer p {
   }
 }
 @media (min-width: 68.125em) {
+  nav {
+    width: 45.375em;
+  }
+  nav li {
+    width: 11.34375em;
+  }
+
   header h1 {
     font-size: 4em;
   }
@@ -1476,6 +1664,13 @@ footer p {
   }
 }
 @media (min-width: 70em) {
+  nav {
+    width: 46.375em;
+  }
+  nav li {
+    width: 11.59375em;
+  }
+
   header h1 {
     font-size: 4.1em;
   }
@@ -1486,6 +1681,13 @@ footer p {
   }
 }
 @media (min-width: 71.875em) {
+  nav {
+    width: 47.375em;
+  }
+  nav li {
+    width: 11.84375em;
+  }
+
   header h1 {
     font-size: 4.2em;
   }
@@ -1496,6 +1698,13 @@ footer p {
   }
 }
 @media (min-width: 73.75em) {
+  nav {
+    width: 48.375em;
+  }
+  nav li {
+    width: 12.09375em;
+  }
+
   header h1 {
     font-size: 4.3em;
   }
@@ -1506,6 +1715,13 @@ footer p {
   }
 }
 @media (min-width: 75.625em) {
+  nav {
+    width: 49.375em;
+  }
+  nav li {
+    width: 12.34375em;
+  }
+
   header h1 {
     font-size: 4.4em;
   }
