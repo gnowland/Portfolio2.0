@@ -1179,6 +1179,11 @@ section p {
     margin: 10% 10%;
   }
 }
+#work .box:before {
+  content: " ";
+  display: block;
+  padding-top: 100%;
+}
 #work .box img {
   max-width: 100%;
 }

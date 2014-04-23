@@ -236,7 +236,13 @@ section {
       :nth-child(n) {
       width: 80%;
       margin: 10% 10%;
+      }
     }
+
+    &:before {
+      content: " ";
+      display: block;
+      padding-top: 100%;
     }
 
     img {
