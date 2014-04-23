@@ -551,7 +551,6 @@ $(function() { //When the document loads
   //    window.location = newLocation;
   //  }
 
-
   // NAVIGATION MENU
 
   var sections = $('section');
@@ -566,7 +565,7 @@ $(function() { //When the document loads
     var url = $(this).children('a').attr('href');
     // go to the section
     $('html, body').animate({
-      scrollTop:  $('html').find($(this).children('a').attr('href')).offset().top-headercompact+1
+      scrollTop:  $('html').find($(this).children('a').attr('href')).offset().top-headercompact+2
       }, 800, 'swing', function () {
         window.location.hash = url ;
     });
@@ -623,11 +622,11 @@ $(function() { //When the document loads
   });
 
   //To make header smaller after scrolling down
-  //$('#about').waypoint({
-  //  handler: function(direction){
-  //    if (direction === 'down') {
-  //
-  //    }
-  //  }
-  //})
+//  $('#about').waypoint({
+//    handler: function(direction){
+//      if (direction === 'down') {
+//        $('header h1').toggle
+//      }
+//    }
+//  })
 });
