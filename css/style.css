@@ -939,7 +939,6 @@ ol li ol {
 header {
   margin: 0;
   padding: 0;
-  height: 1.96em;
   background: #eeeeee;
   border-top: 0.4em #eeeeee solid;
   -moz-transition: border-top 0.2s linear;
@@ -1206,13 +1205,9 @@ footer p {
 /* - - - local partials assembly - - - - - - - - - - - - - - - - - - - -
  * FILE: _mediaqueries.scss
  */
-@media (min-width: 310px) {
+@media (min-width: 19.375em) {
   header h1 {
     font-size: 1.4em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1220,13 +1215,9 @@ footer p {
     width: 8em;
   }
 }
-@media (min-width: 340px) {
+@media (min-width: 21.25em) {
   header h1 {
     font-size: 1.5em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1234,13 +1225,9 @@ footer p {
     width: 8.16667em;
   }
 }
-@media (min-width: 370px) {
+@media (min-width: 23.125em) {
   header h1 {
     font-size: 1.6em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1248,13 +1235,9 @@ footer p {
     width: 8.33333em;
   }
 }
-@media (min-width: 400px) {
+@media (min-width: 25em) {
   header h1 {
     font-size: 1.7em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1262,13 +1245,9 @@ footer p {
     width: 8.5em;
   }
 }
-@media (min-width: 430px) {
+@media (min-width: 26.875em) {
   header h1 {
     font-size: 1.8em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1276,13 +1255,9 @@ footer p {
     width: 8.66667em;
   }
 }
-@media (min-width: 460px) {
+@media (min-width: 28.75em) {
   header h1 {
     font-size: 1.9em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1290,13 +1265,9 @@ footer p {
     width: 8.83333em;
   }
 }
-@media (min-width: 490px) {
+@media (min-width: 30.625em) {
   header h1 {
     font-size: 2em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1304,13 +1275,9 @@ footer p {
     width: 9em;
   }
 }
-@media (min-width: 520px) {
+@media (min-width: 32.5em) {
   header h1 {
     font-size: 2.1em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1318,13 +1285,9 @@ footer p {
     width: 9.16667em;
   }
 }
-@media (min-width: 550px) {
+@media (min-width: 34.375em) {
   header h1 {
     font-size: 2.2em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1332,13 +1295,9 @@ footer p {
     width: 9.33333em;
   }
 }
-@media (min-width: 580px) {
+@media (min-width: 36.25em) {
   header h1 {
     font-size: 2.3em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1346,13 +1305,9 @@ footer p {
     width: 9.5em;
   }
 }
-@media (min-width: 610px) {
+@media (min-width: 38.125em) {
   header h1 {
     font-size: 2.4em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1360,13 +1315,9 @@ footer p {
     width: 9.66667em;
   }
 }
-@media (min-width: 640px) {
+@media (min-width: 40em) {
   header h1 {
     font-size: 2.5em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1374,13 +1325,9 @@ footer p {
     width: 9.83333em;
   }
 }
-@media (min-width: 670px) {
+@media (min-width: 41.875em) {
   header h1 {
     font-size: 2.6em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1388,13 +1335,9 @@ footer p {
     width: 10em;
   }
 }
-@media (min-width: 700px) {
+@media (min-width: 43.75em) {
   header h1 {
     font-size: 2.7em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1402,13 +1345,9 @@ footer p {
     width: 10.16667em;
   }
 }
-@media (min-width: 730px) {
+@media (min-width: 45.625em) {
   header h1 {
     font-size: 2.8em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1416,13 +1355,9 @@ footer p {
     width: 10.33333em;
   }
 }
-@media (min-width: 760px) {
+@media (min-width: 47.5em) {
   header h1 {
     font-size: 2.9em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1430,13 +1365,9 @@ footer p {
     width: 10.5em;
   }
 }
-@media (min-width: 790px) {
+@media (min-width: 49.375em) {
   header h1 {
     font-size: 3em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1444,13 +1375,9 @@ footer p {
     width: 10.66667em;
   }
 }
-@media (min-width: 820px) {
+@media (min-width: 51.25em) {
   header h1 {
     font-size: 3.1em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1458,13 +1385,9 @@ footer p {
     width: 10.83333em;
   }
 }
-@media (min-width: 850px) {
+@media (min-width: 53.125em) {
   header h1 {
     font-size: 3.2em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1472,13 +1395,9 @@ footer p {
     width: 11em;
   }
 }
-@media (min-width: 880px) {
+@media (min-width: 55em) {
   header h1 {
     font-size: 3.3em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1486,13 +1405,9 @@ footer p {
     width: 11.16667em;
   }
 }
-@media (min-width: 910px) {
+@media (min-width: 56.875em) {
   header h1 {
     font-size: 3.4em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1500,13 +1415,9 @@ footer p {
     width: 11.33333em;
   }
 }
-@media (min-width: 940px) {
+@media (min-width: 58.75em) {
   header h1 {
     font-size: 3.5em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1514,13 +1425,9 @@ footer p {
     width: 11.5em;
   }
 }
-@media (min-width: 970px) {
+@media (min-width: 60.625em) {
   header h1 {
     font-size: 3.6em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1528,13 +1435,9 @@ footer p {
     width: 11.66667em;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 62.5em) {
   header h1 {
     font-size: 3.7em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1542,13 +1445,9 @@ footer p {
     width: 11.83333em;
   }
 }
-@media (min-width: 1030px) {
+@media (min-width: 64.375em) {
   header h1 {
     font-size: 3.8em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1556,13 +1455,9 @@ footer p {
     width: 12em;
   }
 }
-@media (min-width: 1060px) {
+@media (min-width: 66.25em) {
   header h1 {
     font-size: 3.9em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1570,13 +1465,9 @@ footer p {
     width: 12.16667em;
   }
 }
-@media (min-width: 1090px) {
+@media (min-width: 68.125em) {
   header h1 {
     font-size: 4em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1584,13 +1475,9 @@ footer p {
     width: 12.33333em;
   }
 }
-@media (min-width: 1120px) {
+@media (min-width: 70em) {
   header h1 {
     font-size: 4.1em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1598,13 +1485,9 @@ footer p {
     width: 12.5em;
   }
 }
-@media (min-width: 1150px) {
+@media (min-width: 71.875em) {
   header h1 {
     font-size: 4.2em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1612,13 +1495,9 @@ footer p {
     width: 12.66667em;
   }
 }
-@media (min-width: 1180px) {
+@media (min-width: 73.75em) {
   header h1 {
     font-size: 4.3em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {
@@ -1626,13 +1505,9 @@ footer p {
     width: 12.83333em;
   }
 }
-@media (min-width: 1210px) {
+@media (min-width: 75.625em) {
   header h1 {
     font-size: 4.4em;
-    -moz-transition: font-size 0.2s linear;
-    -o-transition: font-size 0.2s linear;
-    -webkit-transition: font-size 0.2s linear;
-    transition: font-size 0.2s linear;
   }
 
   #about img {

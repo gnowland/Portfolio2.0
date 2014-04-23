@@ -18,7 +18,7 @@ header {
   margin: 0;
   padding: 0;
   //height: $header-height;
-  height: 1.96em;
+  //height: 1.96em;
   background: $body-bg;
   border-top: $top-border-height #eee solid;
   @include transition(border-top 0.2s linear);

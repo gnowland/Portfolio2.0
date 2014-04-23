@@ -5,19 +5,36 @@
  * FILE: _mediaqueries.scss
  */
 
-@media (min-width: 0px) and (max-width: 309px) {
-
-}
+//@media (min-width: 0px) and (max-width: 309px) {
+//  nav li {
+//    line-height: 0;
+//    padding: 0.1em;
+//    a {
+//    font-size: 0.3em;
+//    line-height: 1;
+//    }
+//  }
+//  header h1 {
+//      font-size: 0.6em;
+//    //  @include transition(font-size 0.2s linear);
+//    }
+//  #about img {
+//    margin-top: 1em;
+//    width: 8em;
+//   // @include transition(width 0.2s linear, margin-top 0.2s linear);
+//    }
+//  }
 
 @for $i from 0 through 30 {
-  @media (min-width: 310px + ($i * 30px)) {
+  @media (min-width: 19.375em + ($i * 1.875em)) {
     header h1 {
       font-size: 1.4em + ($i / 10);
-      @include transition(font-size 0.2s linear);
+    //  @include transition(font-size 0.2s linear);
     }
   #about img {
     margin-top: .5em + ($i / 10);
     width: 8em + ($i / 6);
+   // @include transition(width 0.2s linear, margin-top 0.2s linear);
     }
   }
 }
