@@ -15,7 +15,7 @@
       margin-top: -(3.141em + ($i * 0.114em)); //offset mixin
     }
     section {
-      border-top: (3.141em + ($i * 0.114em)) solid transparent; //offset mixin
+      border-top: (3.141em + ($i * 0.114em)) solid #eee; //offset mixin //#eee to make placeholder for nav/header
       margin-top: -(3.141em + ($i * 0.114em)); //offset mixin
     }
     nav {

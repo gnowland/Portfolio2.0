@@ -203,27 +203,36 @@ section {
 @mixin rowMachine($numPerRow, $boxMargin) {
   $square: ((99% - (($numPerRow) * $boxMargin)) / $numPerRow);
   width: $square;
-  margin: $boxMargin/2;
+  margin: ($boxMargin / 2);
+  @include transition(margin 0.1s ease, width 0.1s ease);
   &:nth-child(n) {
-    margin: $boxMargin/2;
+    margin: ($boxMargin / 2);
+    &:hover {
+      width: $square + 1;
+      margin: (($boxMargin / 2) - 0.5);
+      @include transition(margin 0.1s ease, width 0.1s ease);
+      h2.caption {
+        font-size: 1.55em;
+        @include transition(font-size 0.05s ease);
+      }
+    }
   }
   &:nth-child(#{$numPerRow}n) {
     margin-right: auto;
-    //margin-left: auto;
   }
 }
 
 #work {
   background-color: rgb(34, 34, 34);
   position: relative;
-  //@media (min-width: 320px) {
-  //  padding: 4%; //half of below "rowMachine" padding
-  //}
+  @media (min-width: 27.5em) {
+    padding: 4% 0; //half of below "rowMachine" padding
+  }
   @media (min-width: 43.750em) { //coencides with the padding of the boxes below
-    padding: 2.5%;
+    padding: 3% 0;
   }
   @media (min-width: 53.125em) {
-    padding: 1.5%;
+    padding: 1% 0;
   }
 
   a.box {
@@ -238,7 +247,7 @@ section {
     position: relative;
     max-width: 23.625em;
     @media (min-width: 20em) {
-      @include rowMachine(1, 10%);
+      @include rowMachine(1, 15%);
       &:nth-child(1n) {
         margin-left: auto;
       }
@@ -247,7 +256,7 @@ section {
       display: block;
     }
     @media (min-width: 27.5em) { //coencides with padding above
-      @include rowMachine(2, 5%);
+      @include rowMachine(2, 6%);
     }
     @media (min-width: 53.125em) {
       @include rowMachine(3, 3%);
@@ -258,12 +267,6 @@ section {
     @media (min-width: 100em) {
       @include rowMachine(5, 3%)
     }
-    //@media (max-width: 550px) {
-    //  :nth-child(n) {
-    //    width: 80%;
-    //    margin: 10% 10%;
-    //  }
-    //}
 
     // Scale image equally
     img {
@@ -274,7 +277,6 @@ section {
 
     h2.caption {
       background: rgba(0,0,0, 0.77);
-      color: rgb(32, 174, 221);
       position: absolute;
       top: 60%;
       left: 0;
@@ -286,7 +288,9 @@ section {
       font-weight: 400;
       font-family: $sourcesanspro-font-stack;
       letter-spacing: 0.02em;
+      color: $body-bg; //rgb(32, 174, 221); //matching blue
       text-shadow: rgba(35,35,35, 0.8) -0.5px 1px 0;
+      @include transition(font-size 0.05s ease);
     }
   }
 

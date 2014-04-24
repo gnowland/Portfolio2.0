@@ -1106,14 +1106,19 @@ section p {
   background-color: #222222;
   position: relative;
 }
+@media (min-width: 27.5em) {
+  #work {
+    padding: 4% 0;
+  }
+}
 @media (min-width: 43.75em) {
   #work {
-    padding: 2.5%;
+    padding: 3% 0;
   }
 }
 @media (min-width: 53.125em) {
   #work {
-    padding: 1.5%;
+    padding: 1% 0;
   }
 }
 #work a.box {
@@ -1127,11 +1132,30 @@ section p {
 }
 @media (min-width: 20em) {
   #work .box {
-    width: 89%;
-    margin: 5%;
+    width: 84%;
+    margin: 7.5%;
+    -moz-transition: margin 0.1s ease, width 0.1s ease;
+    -o-transition: margin 0.1s ease, width 0.1s ease;
+    -webkit-transition: margin 0.1s ease, width 0.1s ease;
+    transition: margin 0.1s ease, width 0.1s ease;
   }
   #work .box:nth-child(n) {
-    margin: 5%;
+    margin: 7.5%;
+  }
+  #work .box:nth-child(n):hover {
+    width: 85%;
+    margin: 7%;
+    -moz-transition: margin 0.1s ease, width 0.1s ease;
+    -o-transition: margin 0.1s ease, width 0.1s ease;
+    -webkit-transition: margin 0.1s ease, width 0.1s ease;
+    transition: margin 0.1s ease, width 0.1s ease;
+  }
+  #work .box:nth-child(n):hover h2.caption {
+    font-size: 1.55em;
+    -moz-transition: font-size 0.05s ease;
+    -o-transition: font-size 0.05s ease;
+    -webkit-transition: font-size 0.05s ease;
+    transition: font-size 0.05s ease;
   }
   #work .box:nth-child(1n) {
     margin-right: auto;
@@ -1147,11 +1171,30 @@ section p {
 }
 @media (min-width: 27.5em) {
   #work .box {
-    width: 44.5%;
-    margin: 2.5%;
+    width: 43.5%;
+    margin: 3%;
+    -moz-transition: margin 0.1s ease, width 0.1s ease;
+    -o-transition: margin 0.1s ease, width 0.1s ease;
+    -webkit-transition: margin 0.1s ease, width 0.1s ease;
+    transition: margin 0.1s ease, width 0.1s ease;
   }
   #work .box:nth-child(n) {
+    margin: 3%;
+  }
+  #work .box:nth-child(n):hover {
+    width: 44.5%;
     margin: 2.5%;
+    -moz-transition: margin 0.1s ease, width 0.1s ease;
+    -o-transition: margin 0.1s ease, width 0.1s ease;
+    -webkit-transition: margin 0.1s ease, width 0.1s ease;
+    transition: margin 0.1s ease, width 0.1s ease;
+  }
+  #work .box:nth-child(n):hover h2.caption {
+    font-size: 1.55em;
+    -moz-transition: font-size 0.05s ease;
+    -o-transition: font-size 0.05s ease;
+    -webkit-transition: font-size 0.05s ease;
+    transition: font-size 0.05s ease;
   }
   #work .box:nth-child(2n) {
     margin-right: auto;
@@ -1161,9 +1204,28 @@ section p {
   #work .box {
     width: 30%;
     margin: 1.5%;
+    -moz-transition: margin 0.1s ease, width 0.1s ease;
+    -o-transition: margin 0.1s ease, width 0.1s ease;
+    -webkit-transition: margin 0.1s ease, width 0.1s ease;
+    transition: margin 0.1s ease, width 0.1s ease;
   }
   #work .box:nth-child(n) {
     margin: 1.5%;
+  }
+  #work .box:nth-child(n):hover {
+    width: 31%;
+    margin: 1%;
+    -moz-transition: margin 0.1s ease, width 0.1s ease;
+    -o-transition: margin 0.1s ease, width 0.1s ease;
+    -webkit-transition: margin 0.1s ease, width 0.1s ease;
+    transition: margin 0.1s ease, width 0.1s ease;
+  }
+  #work .box:nth-child(n):hover h2.caption {
+    font-size: 1.55em;
+    -moz-transition: font-size 0.05s ease;
+    -o-transition: font-size 0.05s ease;
+    -webkit-transition: font-size 0.05s ease;
+    transition: font-size 0.05s ease;
   }
   #work .box:nth-child(3n) {
     margin-right: auto;
@@ -1173,9 +1235,28 @@ section p {
   #work .box {
     width: 21.75%;
     margin: 1.5%;
+    -moz-transition: margin 0.1s ease, width 0.1s ease;
+    -o-transition: margin 0.1s ease, width 0.1s ease;
+    -webkit-transition: margin 0.1s ease, width 0.1s ease;
+    transition: margin 0.1s ease, width 0.1s ease;
   }
   #work .box:nth-child(n) {
     margin: 1.5%;
+  }
+  #work .box:nth-child(n):hover {
+    width: 22.75%;
+    margin: 1%;
+    -moz-transition: margin 0.1s ease, width 0.1s ease;
+    -o-transition: margin 0.1s ease, width 0.1s ease;
+    -webkit-transition: margin 0.1s ease, width 0.1s ease;
+    transition: margin 0.1s ease, width 0.1s ease;
+  }
+  #work .box:nth-child(n):hover h2.caption {
+    font-size: 1.55em;
+    -moz-transition: font-size 0.05s ease;
+    -o-transition: font-size 0.05s ease;
+    -webkit-transition: font-size 0.05s ease;
+    transition: font-size 0.05s ease;
   }
   #work .box:nth-child(4n) {
     margin-right: auto;
@@ -1185,9 +1266,28 @@ section p {
   #work .box {
     width: 16.8%;
     margin: 1.5%;
+    -moz-transition: margin 0.1s ease, width 0.1s ease;
+    -o-transition: margin 0.1s ease, width 0.1s ease;
+    -webkit-transition: margin 0.1s ease, width 0.1s ease;
+    transition: margin 0.1s ease, width 0.1s ease;
   }
   #work .box:nth-child(n) {
     margin: 1.5%;
+  }
+  #work .box:nth-child(n):hover {
+    width: 17.8%;
+    margin: 1%;
+    -moz-transition: margin 0.1s ease, width 0.1s ease;
+    -o-transition: margin 0.1s ease, width 0.1s ease;
+    -webkit-transition: margin 0.1s ease, width 0.1s ease;
+    transition: margin 0.1s ease, width 0.1s ease;
+  }
+  #work .box:nth-child(n):hover h2.caption {
+    font-size: 1.55em;
+    -moz-transition: font-size 0.05s ease;
+    -o-transition: font-size 0.05s ease;
+    -webkit-transition: font-size 0.05s ease;
+    transition: font-size 0.05s ease;
   }
   #work .box:nth-child(5n) {
     margin-right: auto;
@@ -1200,7 +1300,6 @@ section p {
 }
 #work .box h2.caption {
   background: rgba(0, 0, 0, 0.77);
-  color: #20aedd;
   position: absolute;
   top: 60%;
   left: 0;
@@ -1212,7 +1311,12 @@ section p {
   font-weight: 400;
   font-family: "SourceSansPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: 0.02em;
+  color: #eeeeee;
   text-shadow: rgba(35, 35, 35, 0.8) -0.5px 1px 0;
+  -moz-transition: font-size 0.05s ease;
+  -o-transition: font-size 0.05s ease;
+  -webkit-transition: font-size 0.05s ease;
+  transition: font-size 0.05s ease;
 }
 
 footer {
@@ -1241,7 +1345,7 @@ footer p {
   }
 
   section {
-    border-top: 3.141em solid transparent;
+    border-top: 3.141em solid #eeeeee;
     margin-top: -3.141em;
   }
 
@@ -1272,7 +1376,7 @@ footer p {
   }
 
   section {
-    border-top: 3.255em solid transparent;
+    border-top: 3.255em solid #eeeeee;
     margin-top: -3.255em;
   }
 
@@ -1303,7 +1407,7 @@ footer p {
   }
 
   section {
-    border-top: 3.369em solid transparent;
+    border-top: 3.369em solid #eeeeee;
     margin-top: -3.369em;
   }
 
@@ -1334,7 +1438,7 @@ footer p {
   }
 
   section {
-    border-top: 3.483em solid transparent;
+    border-top: 3.483em solid #eeeeee;
     margin-top: -3.483em;
   }
 
@@ -1365,7 +1469,7 @@ footer p {
   }
 
   section {
-    border-top: 3.597em solid transparent;
+    border-top: 3.597em solid #eeeeee;
     margin-top: -3.597em;
   }
 
@@ -1396,7 +1500,7 @@ footer p {
   }
 
   section {
-    border-top: 3.711em solid transparent;
+    border-top: 3.711em solid #eeeeee;
     margin-top: -3.711em;
   }
 
@@ -1427,7 +1531,7 @@ footer p {
   }
 
   section {
-    border-top: 3.825em solid transparent;
+    border-top: 3.825em solid #eeeeee;
     margin-top: -3.825em;
   }
 
@@ -1458,7 +1562,7 @@ footer p {
   }
 
   section {
-    border-top: 3.939em solid transparent;
+    border-top: 3.939em solid #eeeeee;
     margin-top: -3.939em;
   }
 
@@ -1489,7 +1593,7 @@ footer p {
   }
 
   section {
-    border-top: 4.053em solid transparent;
+    border-top: 4.053em solid #eeeeee;
     margin-top: -4.053em;
   }
 
@@ -1520,7 +1624,7 @@ footer p {
   }
 
   section {
-    border-top: 4.167em solid transparent;
+    border-top: 4.167em solid #eeeeee;
     margin-top: -4.167em;
   }
 
@@ -1551,7 +1655,7 @@ footer p {
   }
 
   section {
-    border-top: 4.281em solid transparent;
+    border-top: 4.281em solid #eeeeee;
     margin-top: -4.281em;
   }
 
@@ -1582,7 +1686,7 @@ footer p {
   }
 
   section {
-    border-top: 4.395em solid transparent;
+    border-top: 4.395em solid #eeeeee;
     margin-top: -4.395em;
   }
 
@@ -1613,7 +1717,7 @@ footer p {
   }
 
   section {
-    border-top: 4.509em solid transparent;
+    border-top: 4.509em solid #eeeeee;
     margin-top: -4.509em;
   }
 
@@ -1644,7 +1748,7 @@ footer p {
   }
 
   section {
-    border-top: 4.623em solid transparent;
+    border-top: 4.623em solid #eeeeee;
     margin-top: -4.623em;
   }
 
@@ -1675,7 +1779,7 @@ footer p {
   }
 
   section {
-    border-top: 4.737em solid transparent;
+    border-top: 4.737em solid #eeeeee;
     margin-top: -4.737em;
   }
 
@@ -1706,7 +1810,7 @@ footer p {
   }
 
   section {
-    border-top: 4.851em solid transparent;
+    border-top: 4.851em solid #eeeeee;
     margin-top: -4.851em;
   }
 
@@ -1737,7 +1841,7 @@ footer p {
   }
 
   section {
-    border-top: 4.965em solid transparent;
+    border-top: 4.965em solid #eeeeee;
     margin-top: -4.965em;
   }
 
@@ -1768,7 +1872,7 @@ footer p {
   }
 
   section {
-    border-top: 5.079em solid transparent;
+    border-top: 5.079em solid #eeeeee;
     margin-top: -5.079em;
   }
 
@@ -1799,7 +1903,7 @@ footer p {
   }
 
   section {
-    border-top: 5.193em solid transparent;
+    border-top: 5.193em solid #eeeeee;
     margin-top: -5.193em;
   }
 
@@ -1830,7 +1934,7 @@ footer p {
   }
 
   section {
-    border-top: 5.307em solid transparent;
+    border-top: 5.307em solid #eeeeee;
     margin-top: -5.307em;
   }
 
@@ -1861,7 +1965,7 @@ footer p {
   }
 
   section {
-    border-top: 5.421em solid transparent;
+    border-top: 5.421em solid #eeeeee;
     margin-top: -5.421em;
   }
 
@@ -1892,7 +1996,7 @@ footer p {
   }
 
   section {
-    border-top: 5.535em solid transparent;
+    border-top: 5.535em solid #eeeeee;
     margin-top: -5.535em;
   }
 
@@ -1923,7 +2027,7 @@ footer p {
   }
 
   section {
-    border-top: 5.649em solid transparent;
+    border-top: 5.649em solid #eeeeee;
     margin-top: -5.649em;
   }
 
@@ -1954,7 +2058,7 @@ footer p {
   }
 
   section {
-    border-top: 5.763em solid transparent;
+    border-top: 5.763em solid #eeeeee;
     margin-top: -5.763em;
   }
 
@@ -1985,7 +2089,7 @@ footer p {
   }
 
   section {
-    border-top: 5.877em solid transparent;
+    border-top: 5.877em solid #eeeeee;
     margin-top: -5.877em;
   }
 
@@ -2016,7 +2120,7 @@ footer p {
   }
 
   section {
-    border-top: 5.991em solid transparent;
+    border-top: 5.991em solid #eeeeee;
     margin-top: -5.991em;
   }
 
@@ -2047,7 +2151,7 @@ footer p {
   }
 
   section {
-    border-top: 6.105em solid transparent;
+    border-top: 6.105em solid #eeeeee;
     margin-top: -6.105em;
   }
 
@@ -2078,7 +2182,7 @@ footer p {
   }
 
   section {
-    border-top: 6.219em solid transparent;
+    border-top: 6.219em solid #eeeeee;
     margin-top: -6.219em;
   }
 
@@ -2109,7 +2213,7 @@ footer p {
   }
 
   section {
-    border-top: 6.333em solid transparent;
+    border-top: 6.333em solid #eeeeee;
     margin-top: -6.333em;
   }
 
@@ -2140,7 +2244,7 @@ footer p {
   }
 
   section {
-    border-top: 6.447em solid transparent;
+    border-top: 6.447em solid #eeeeee;
     margin-top: -6.447em;
   }
 
@@ -2171,7 +2275,7 @@ footer p {
   }
 
   section {
-    border-top: 6.561em solid transparent;
+    border-top: 6.561em solid #eeeeee;
     margin-top: -6.561em;
   }
 
