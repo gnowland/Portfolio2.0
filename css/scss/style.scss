@@ -219,10 +219,10 @@ section {
   //@media (min-width: 320px) {
   //  padding: 4%; //half of below "rowMachine" padding
   //}
-  @media (min-width: 700px) { //coencides with the padding of the boxes below
+  @media (min-width: 43.750em) { //coencides with the padding of the boxes below
     padding: 2.5%;
   }
-  @media (min-width: 850px) {
+  @media (min-width: 53.125em) {
     padding: 1.5%;
   }
 
@@ -237,25 +237,25 @@ section {
     display: inline-block;
     position: relative;
     max-width: 23.625em;
-    @media (min-width: 320px) {
+    @media (min-width: 20em) {
       @include rowMachine(1, 10%);
       &:nth-child(1n) {
         margin-left: auto;
       }
     }
-    @media (max-width: 699px) { //make it float center when only 1 in line
+    @media (max-width: 27.438em) { //make it float center when only 1 in line
       display: block;
     }
-    @media (min-width: 700px) { //coencides with padding above
+    @media (min-width: 27.5em) { //coencides with padding above
       @include rowMachine(2, 5%);
     }
-    @media (min-width: 890px) {
+    @media (min-width: 53.125em) {
       @include rowMachine(3, 3%);
     }
-    @media (min-width: 1200px) {
+    @media (min-width: 75em) {
       @include rowMachine(4, 3%);
     }
-    @media (min-width: 1600px) {
+    @media (min-width: 100em) {
       @include rowMachine(5, 3%)
     }
     //@media (max-width: 550px) {
