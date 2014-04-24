@@ -68,7 +68,6 @@ header {
 nav {
   li {
     display: inline-block;
-    // padding-right: span(2/2);
     text-align: center;
     @include transition(background 0.2s linear);
     &:hover, &:focus {
@@ -147,7 +146,7 @@ nav {
     text-align: center;
     &:nth-of-type(1) {
       font-family: $sourcesanspro-font-stack;
-      font-weight: 600;
+      font-weight: 400;
       line-height: 1.4;
       padding: 0.4em 0;
       position: relative;
@@ -202,80 +201,123 @@ section {
 // Setting Up Box Grid!
 
 @mixin rowMachine($numPerRow, $boxMargin) {
-  width: ((100% - (($numPerRow - 1) * $boxMargin)) / $numPerRow);
-  margin-right: $boxMargin;
+  $square: ((99% - (($numPerRow) * $boxMargin)) / $numPerRow);
+  width: $square;
+  margin: $boxMargin/2;
   &:nth-child(n) {
-    margin-right: $boxMargin;
-    margin-bottom: $boxMargin/2;
-    margin-top: $boxMargin/2
+    margin: $boxMargin/2;
   }
   &:nth-child(#{$numPerRow}n) {
-    margin-right: 0;
+    margin-right: auto;
+    //margin-left: auto;
   }
 }
 
 #work {
   background-color: #222;
-  padding: 2%;
-  @media (max-width: 550px) {
-    padding: 2% 6%;
+  position: relative;
+  //@media (min-width: 320px) {
+  //  padding: 4%; //half of below "rowMachine" padding
+  //}
+  @media (min-width: 700px) { //coencides with the padding of the boxes below
+    padding: 2.5%;
   }
-  .box {
-    @include rowMachine(5, 2%);
-    background: white;
-    padding: 20px;
-    float: left;
+  @media (min-width: 850px) {
+    padding: 1.5%;
+  }
 
-    @media (max-width: 1400px) {
-      @include rowMachine(4, 2%);
-    }
-    @media (max-width: 1000px) {
-      @include rowMachine(3, 2%);
-    }
-    @media (max-width: 700px) {
-      @include rowMachine(2, 3%);
-    }
-    @media (max-width: 550px) {
-      @include rowMachine(1, 6%)
-    }
-    @media (max-width: 550px) {
-      :nth-child(n) {
-      width: 80%;
-      margin: 10% 10%;
+  a.box {
+    padding: 0;
+  }
+
+  .box {
+    //padding: 20px;
+    //background: rgb(245,245,245); //now a border
+    background: rgb(20,20,20);
+    display: inline-block;
+    position: relative;
+    max-width: 378px;
+    @media (min-width: 320px) {
+      @include rowMachine(1, 10%);
+      &:nth-child(1n) {
+        margin-left: auto;
       }
     }
-
-    &:before {
-      content: " ";
+    @media (max-width: 699px) { //make it float center when only 1 in line
       display: block;
-      padding-top: 100%;
     }
+    @media (min-width: 700px) { //coencides with padding above
+      @include rowMachine(2, 5%);
+    }
+    @media (min-width: 850px) {
+      @include rowMachine(3, 3%);
+    }
+    @media (min-width: 1200px) {
+      @include rowMachine(4, 3%);
+    }
+    @media (min-width: 1600px) {
+      @include rowMachine(5, 3%)
+    }
+    //@media (max-width: 550px) {
+    //  :nth-child(n) {
+    //    width: 80%;
+    //    margin: 10% 10%;
+    //  }
+    //}
 
+    // Scale image equally
     img {
       max-width: 100%;
+      padding: 2px;
+      border: 0.35em solid rgb(245,245,245);
+    }
+
+    h2.caption {
+      background: rgba(0,0,0, 0.77);
+      color: rgb(32, 174, 221);
+      position: absolute;
+      top: 60%;
+      left: 0;
+      width: 100%;
+      padding: 1.2%;
+      min-height: 18%;
+      font-size: 1.5em;
+      text-align: center;
+      font-weight: 400;
+      font-family: $sourcesanspro-font-stack;
+      letter-spacing: 0.02em;
+      text-shadow: rgba(35,35,35, 0.8) -0.5px 1px 0;
     }
   }
+
   .young {
 
   }
+
   .whitehall {
 
   }
+
   .loso {
 
   }
+
   .udress {
 
   }
+
   .delride {
 
   }
+
   .backcountry {
 
   }
+
   .edgemoor {
 
   }
+
   .queen {
 
   }
@@ -283,6 +325,7 @@ section {
 
 #contact {
 }
+
 footer {
   background: url(../img/hexnoise.png) fixed 0 0 repeat, rgb(46, 46, 46);
   @include box-shadow(inset 0 0 200px 0 rgba(0,0,0,0.8));

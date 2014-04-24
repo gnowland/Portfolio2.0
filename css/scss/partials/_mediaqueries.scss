@@ -28,7 +28,7 @@
     }
     header h1 {
       font-size: 1.4em + ($i / 10);
-    //  @include transition(font-size 0.2s linear);
+      //@include transition(font-size 0.2s linear); // Makes ugly fly-in when loading
     }
     #about img {
       margin-top: .1em + ($i / 50);
@@ -52,3 +52,9 @@ nav {
     max-width: 6.5em; //6.5em is just a good looking width to cap it at
   }
 }
+
+// Header adjust override:
+// header h1.compact {
+//   font-size: 3.2em;
+//   @include transition(font-size 0.2s linear);
+//}

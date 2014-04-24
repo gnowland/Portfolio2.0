@@ -584,6 +584,9 @@ $(function() { //When the document loads
       nav_a.parent().removeClass('selected');
       active_link.parent().addClass('selected');
       $('header').removeClass().addClass(active_section.attr("id")); //to change the color of the border
+//      if (parseInt($('header h1').css('font-size')) > 51) { //Change header size when loaded from url hash
+//        $('header h1').addClass('compact');
+//      }
     },
     offset: headercompact
   });
@@ -624,9 +627,22 @@ $(function() { //When the document loads
   //To make header smaller after scrolling down
 //  $('#about').waypoint({
 //    handler: function(direction){
+//
+//      var fontSize = parseInt($('header h1').css('font-size'));
+//
 //      if (direction === 'down') {
-//        $('header h1').toggle
+//        if (fontSize > 51) {
+//          $('header h1').addClass('compact');
+//          $('body').css('margin-top','5.563em');
+//          $(".contain, section").css({'margin-top':'-5.563em','border-top':'5.563em solid transparent'});
+//        }
 //      }
-//    }
-//  })
+//      else {
+//        $('header h1').removeClass('compact');
+//        $('body').css('margin-top','');
+//        $(".contain, section").css({'margin-top':'','border-top':''});
+//      }
+//    },
+//    offset: -40
+//  });
 });
