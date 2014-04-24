@@ -1103,7 +1103,7 @@ section p {
 }
 
 #work {
-  background-color: #222;
+  background-color: #222222;
   position: relative;
 }
 @media (min-width: 700px) {
@@ -1120,10 +1120,10 @@ section p {
   padding: 0;
 }
 #work .box {
-  background: #141414;
+  background: #222222;
   display: inline-block;
   position: relative;
-  max-width: 378px;
+  max-width: 23.625em;
 }
 @media (min-width: 320px) {
   #work .box {
@@ -1157,7 +1157,7 @@ section p {
     margin-right: auto;
   }
 }
-@media (min-width: 850px) {
+@media (min-width: 890px) {
   #work .box {
     width: 30%;
     margin: 1.5%;
@@ -1195,8 +1195,8 @@ section p {
 }
 #work .box img {
   max-width: 100%;
-  padding: 2px;
-  border: 0.35em solid whitesmoke;
+  padding: 0px;
+  border: 7px solid whitesmoke;
 }
 #work .box h2.caption {
   background: rgba(0, 0, 0, 0.77);

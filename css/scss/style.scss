@@ -214,7 +214,7 @@ section {
 }
 
 #work {
-  background-color: #222;
+  background-color: rgb(34, 34, 34);
   position: relative;
   //@media (min-width: 320px) {
   //  padding: 4%; //half of below "rowMachine" padding
@@ -233,10 +233,10 @@ section {
   .box {
     //padding: 20px;
     //background: rgb(245,245,245); //now a border
-    background: rgb(20,20,20);
+    background: rgb(34, 34, 34);//matte around picture
     display: inline-block;
     position: relative;
-    max-width: 378px;
+    max-width: 23.625em;
     @media (min-width: 320px) {
       @include rowMachine(1, 10%);
       &:nth-child(1n) {
@@ -249,7 +249,7 @@ section {
     @media (min-width: 700px) { //coencides with padding above
       @include rowMachine(2, 5%);
     }
-    @media (min-width: 850px) {
+    @media (min-width: 890px) {
       @include rowMachine(3, 3%);
     }
     @media (min-width: 1200px) {
@@ -268,8 +268,8 @@ section {
     // Scale image equally
     img {
       max-width: 100%;
-      padding: 2px;
-      border: 0.35em solid rgb(245,245,245);
+      padding: 0px; //matte around picture
+      border: 7px solid rgb(245,245,245);
     }
 
     h2.caption {
