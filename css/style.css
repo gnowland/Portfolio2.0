@@ -1304,8 +1304,10 @@ section p {
   top: 60%;
   left: 0;
   width: 100%;
-  padding: 1.2%;
-  min-height: 18%;
+  padding: 4% 1%;
+  height: 2.6em;
+  line-height: 1.1;
+  overflow: hidden;
   font-size: 1.5em;
   text-align: center;
   font-weight: 400;
