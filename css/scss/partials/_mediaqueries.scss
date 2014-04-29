@@ -5,7 +5,8 @@
  * FILE: _mediaqueries.scss
  */
 
- $header-height: 3.3em; //3.321 was calculated as the starting point at a width of 19.375em
+ $starting-width: 19.375em; //a good place to start with 30 revolutions... any window below 19.375em will fail but that would be a postage stamp anyway.
+ $header-height: 3.3em; //3.321 was calculated as the starting point at a width of 19.375em and then finagled so that everything checked out in browser
 
 @for $i from 0 through 30 { // 19.375em == 0 . // 30 is where the header stops needing to get any larger
   @media (min-width: 19.375em + ($i * 1.875em)) {
@@ -21,16 +22,18 @@
       margin-top: -($header-height + ($i * 0.114em)); //offset mixin
     }
     nav {
-      width: 19.375em + ($i / 1 ) + 1.6em; //+1.5em because "CONTACT" is too wide... pushes nav slightly off screen though.
+      width: $starting-width + ($i / 1 ); //to float center //+1.5em because "CONTACT" is too wide... pushes nav slightly off screen though.
       //width: 21em + ($i / 1 );
+      // will be overridden at 6.5em (see 'overrides' below)
       li {
-      width: ((19.375em + ($i / 1) + 1.6em) / 4); //4 is how many nav items //+1.5em because "CONTACT" is too wide... pushes nav slightly off screen though.
+      width: (4.7em + ($i / 1) / 4); //4 is how many nav items //+1.5em because "CONTACT" is too wide... pushes nav slightly off screen though.
       //width: ((21em + ($i / 1)) / 4);
+      // will be overridden at 6.5em (see 'overrides' below)
       }
     }
     header h1 {
       font-size: 1.4em + ($i / 10);
-      //@include transition(font-size 0.2s linear); // Makes ugly fly-in when loading
+      //@include transition(font-size 0.2s linear); // Makes ugly fly-in effect when loading
     }
     #about img {
       margin-top: .3em + ($i / 50);
@@ -40,11 +43,11 @@
   }
 }
 
-@media (min-width: 19em) and (max-width: 25em) {
-  nav {
-  margin-left: -(1.6em / (4 * 2)); //trying to compensate for making the width 1.5em too large per item which is noticible on smaller screens
-  }
-}
+//@media (min-width: 19em) and (max-width: 25em) {
+//  nav {
+//  margin-left: -(1.6em / (4 * 2)); //trying to compensate for making the width 1.5em too large per item which is noticible on smaller screens
+//  }
+//}
 
 @media (max-width: 60.188em) {
   #about p:nth-of-type(1) {

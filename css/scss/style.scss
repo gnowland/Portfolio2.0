@@ -224,10 +224,6 @@ section {
       width: $square + 1;
       margin: (($boxMargin / 2) - 0.5);
       @include transition(margin 0.1s ease, width 0.1s ease);
-      .caption h2 {
-        font-size: 1.55em;
-        @include transition(font-size 0.05s ease);
-      }
     }
   }
   &:nth-child(#{$numPerRow}n) {
@@ -239,19 +235,19 @@ section {
   background-color: $work-bg-color;//rgb(34, 34, 34);
   position: relative;
   @media (min-width: 20em) { // 1 up
-    padding: 7% 8%; //half of below "rowMachine" padding //coencides with the padding of the boxes below
+    padding: 5% 8% 7%; //half of below "rowMachine" padding //coencides with the padding of the boxes below
   }
-  @media (min-width: 43.750em) { //2 up \
-    padding: 5% 6%;
+  @media (min-width: 43.750em) { //2 up
+    padding: 4% 4%;
   }
   @media (min-width: 53.125em) { // 3 up
-    padding: 5% 7%;
+    padding: 3% 6%;
   }
   @media (min-width: 75em) { // 4 up
-    padding: 4% 5%;
+    padding: 2% 4%;
   }
   @media (min-width: 100em) { // 5 up
-    padding: 4% 5%;
+    padding: 1% 3%;
   }
 
   a.box {
@@ -264,7 +260,7 @@ section {
     max-width: 23.625em;
     border: 1px solid rgb(255, 255, 255);
     @include box-shadow(0px 1px 3px rgba(0, 0, 0, 0.5));
-    @media (min-width: 20em) {
+    @media (min-width: 20em) { // 1 up
       @include rowMachine(1, 15%);
       &:nth-child(1n) {
         margin-left: auto;
@@ -273,17 +269,17 @@ section {
     @media (max-width: 27.438em) { //make it float center when only 1 in line
       display: block;
     }
-    @media (min-width: 27.5em) { //coencides with padding above
-      @include rowMachine(2, 6%);
+    @media (min-width: 27.5em) { //2 up //coencides with padding above
+      @include rowMachine(2, 7%);
     }
-    @media (min-width: 53.125em) {
-      @include rowMachine(3, 4%);
+    @media (min-width: 53.125em) { //3 up
+      @include rowMachine(3, 3.5%);
     }
-    @media (min-width: 75em) {
-      @include rowMachine(4, 4%);
+    @media (min-width: 75em) { //4 up
+      @include rowMachine(4, 3.5%);
     }
-    @media (min-width: 100em) {
-      @include rowMachine(5, 4%)
+    @media (min-width: 100em) { // 5 up
+      @include rowMachine(5, 3%)
     }
 
     // Scale image equally
