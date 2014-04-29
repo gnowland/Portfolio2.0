@@ -113,7 +113,7 @@ section {
 
 footer {
   @include span (12);
-  margin-top: 0.4em; //to compensate for $top-border-height: 0.4em;
+  //margin-top: 0.4em; //to compensate for $top-border-height: 0.4em;
   z-index: $z-footer;
   position: relative;
 }

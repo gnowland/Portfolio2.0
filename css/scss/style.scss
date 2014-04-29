@@ -8,11 +8,13 @@
 
 // Set custom site styles here:
 $header-height: 3.5em;
-$bubble-bg:     rgba(255,255,255,0.8);
-$about-color:   rgb(1, 162, 117);
-$work-color:    rgb(0, 140, 186);
-$contact-color: rgb(201, 99, 99);
-$blog-color:    rgb(67, 103, 158);
+$bubble-bg:        rgba(255,255,255,0.8);
+$about-color:      rgb(1, 162, 117);
+$work-color:       rgb(0, 140, 186);
+$work-bg-color:    $body-bg;
+$contact-color:    rgb(201, 99, 99);
+$contact-bg-color: rgb(34, 34, 34);
+$blog-color:       rgb(67, 103, 158);
 
 header {
   margin: 0;
@@ -42,6 +44,7 @@ header {
   h1 {
     margin: 0;
     padding: 0.07em 0;
+    padding: 0.1em 0 0.15em 0;
     font-family: $gotham-font-stack;
     color: $header-font-color;
     font-size: 1.7em;
@@ -57,7 +60,8 @@ header {
     font-size: 1.25em;
     line-height: 0;
     margin: 0 -0.13em 0 -0.27em;
-    @include text-shadow(0px 1px 1px rgba(255, 255, 255, 1));
+    //@include text-shadow(0px 1px 1px rgba(255, 255, 255, 1));
+    @include text-shadow(0 -0.5px 1px rgb(163,163,163)); //rgb(117, 122, 128) //rgb(178,181,184)
     //color: rgb(26, 74, 116);
     //color: $body-bg; //rgba(27,60,89,0.82);
     //@include text-shadow(1px 2px 2px $body-bg, 0 0 0 #000, 1px 2px 2px $body-bg);
@@ -136,13 +140,27 @@ nav {
   //  background-attachment: scroll, fixed;
   //  background-position: 0 0, 0 0;
   //  background-repeat: repeat,no-repeat;
+  .tagline {
+    margin: 0.5em 0;
+    span {
+      font-family: $gotham-font-stack;
+      font-weight: 700;
+      font-size: 1.33em;
+      text-transform: uppercase;
+      color: $header-font-color;//$paragraph-light-color;
+      vertical-align: middle;
+      letter-spacing: 0.1em;
+      @include text-shadow(0px 0px 0 rgb(150,150,150), -0.2px 0.2px 0 white, -0.5px 0.5px 0 white, -1px 1px 0 white, -1.5px 1.5px 0 white, -1px 1px 0 white, -2px 2px 0 white);
+    }
+  }
   img {
     height: auto;
     border-radius: 50%;
+    margin: 0 2%;
   }
   p {
     margin: 0;
-    color: rgb(235, 235, 235);//rgb(34, 34, 34); //rgb(238, 238, 238);
+    color: $paragraph-light-color; //rgb(235, 235, 235);//rgb(34, 34, 34); //rgb(238, 238, 238);
     text-align: center;
     &:nth-of-type(1) {
       font-family: $sourcesanspro-font-stack;
@@ -151,12 +169,7 @@ nav {
       padding: 0.4em 0;
       position: relative;
       top: 15%;
-      @media (min-width: 0px) {
-      font-size: 1.6em;
-      }
-      @media (min-width: 900px) {
       font-size: 2.5em;
-      }
       //@include box-shadow(10px 10px 0 1px rgba(255,255,255,0.8));
       //border: 8px solid #666;
       //@include border-radius(7px);
@@ -211,7 +224,7 @@ section {
       width: $square + 1;
       margin: (($boxMargin / 2) - 0.5);
       @include transition(margin 0.1s ease, width 0.1s ease);
-      h2.caption {
+      .caption h2 {
         font-size: 1.55em;
         @include transition(font-size 0.05s ease);
       }
@@ -223,16 +236,22 @@ section {
 }
 
 #work {
-  background-color: rgb(34, 34, 34);
+  background-color: $work-bg-color;//rgb(34, 34, 34);
   position: relative;
-  @media (min-width: 27.5em) {
-    padding: 4% 0; //half of below "rowMachine" padding
+  @media (min-width: 20em) { // 1 up
+    padding: 7% 8%; //half of below "rowMachine" padding //coencides with the padding of the boxes below
   }
-  @media (min-width: 43.750em) { //coencides with the padding of the boxes below
-    padding: 3% 0;
+  @media (min-width: 43.750em) { //2 up \
+    padding: 5% 6%;
   }
-  @media (min-width: 53.125em) {
-    padding: 1% 0;
+  @media (min-width: 53.125em) { // 3 up
+    padding: 5% 7%;
+  }
+  @media (min-width: 75em) { // 4 up
+    padding: 4% 5%;
+  }
+  @media (min-width: 100em) { // 5 up
+    padding: 4% 5%;
   }
 
   a.box {
@@ -240,12 +259,11 @@ section {
   }
 
   .box {
-    //padding: 20px;
-    //background: rgb(245,245,245); //now a border
-    background: rgb(34, 34, 34);//matte around picture
     display: inline-block;
     position: relative;
     max-width: 23.625em;
+    border: 1px solid rgb(255, 255, 255);
+    @include box-shadow(0px 1px 3px rgba(0, 0, 0, 0.5));
     @media (min-width: 20em) {
       @include rowMachine(1, 15%);
       &:nth-child(1n) {
@@ -259,37 +277,41 @@ section {
       @include rowMachine(2, 6%);
     }
     @media (min-width: 53.125em) {
-      @include rowMachine(3, 3%);
+      @include rowMachine(3, 4%);
     }
     @media (min-width: 75em) {
-      @include rowMachine(4, 3%);
+      @include rowMachine(4, 4%);
     }
     @media (min-width: 100em) {
-      @include rowMachine(5, 3%)
+      @include rowMachine(5, 4%)
     }
 
     // Scale image equally
     img {
       max-width: 100%;
-      padding: 0px; //matte around picture
-      border: 7px solid rgb(245,245,245);
     }
+  }
 
-    h2.caption {
-      background: rgba(0,0,0, 0.77);
-      position: absolute;
-      top: 60%;
-      left: 0;
-      width: 100%;
-      padding: 4% 1%;
-      height: 2.6em;
-      line-height: 1.1;
-      overflow: hidden;
-      font-size: 1.5em;
+  .caption {
+    background: rgba(0,0,0, 0.77);
+    position: absolute;
+    display: table;
+    top: 70%;
+    left: 0;
+    right: 0;
+    width: 100.5%;
+    padding: 2% 1%;
+    height: 3.125em;
+    overflow: hidden;
+    h2 {
+      display: table-cell;
       text-align: center;
-      font-weight: 400;
+      vertical-align: middle;
       font-family: $sourcesanspro-font-stack;
-      letter-spacing: 0.02em;
+      font-size: 1.5em;
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: 0.01em;
       color: $body-bg; //rgb(32, 174, 221); //matching blue
       text-shadow: rgba(35,35,35, 0.8) -0.5px 1px 0;
       @include transition(font-size 0.05s ease);
@@ -330,6 +352,7 @@ section {
 }
 
 #contact {
+  background-color: $contact-bg-color;
 }
 
 footer {
