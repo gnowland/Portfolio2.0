@@ -10,6 +10,7 @@
 $header-height: 3.5em;
 $bubble-bg:        rgba(255,255,255,0.8);
 $about-color:      rgb(1, 162, 117);
+$about-bg-color:   rgb(14, 67, 97);
 $work-color:       rgb(0, 140, 186);
 $work-bg-color:    $body-bg;
 $contact-color:    rgb(201, 99, 99);
@@ -126,10 +127,10 @@ nav {
 #about {
   //background: url(../img/bg.jpg) fixed 33% 0 no-repeat;
   //@include background-size(cover);
-  background: url(../img/graphpaper.png) scroll 0 0 repeat, rgba(14, 67, 97, 1);
-  //background: url(../img/hexnoise.png) fixed 0 0 repeat, rgba(14, 67, 97, 1); //rgba(22,104,150,1);
+  background: url(../img/graphpaper.png) scroll 0 0 repeat, $about-bg-color;
+  //background: url(../img/hexnoise.png) fixed 0 0 repeat, $about-bg-color; //rgba(22,104,150,1);
               //orange: 208,51,27, light blue: 10,83,146 or LOGO COLOR: 27,60,89,1 !!similar: 34,53,70
-  @include box-shadow(inset 0 0 400px 0 rgba(0,0,0,0.8));
+  //@include box-shadow(inset 0 0 400px 0 rgba(0,0,0,0.8)); //box shadow slows down rendering A LOT!
   overflow: hidden;
   width: 100%;
   height: auto;
@@ -147,9 +148,12 @@ nav {
       font-weight: 700;
       font-size: 1.33em;
       text-transform: uppercase;
-      color: $header-font-color;//$paragraph-light-color;
-      vertical-align: middle;
       letter-spacing: 0.1em;
+      color: $about-bg-color; //$header-font-color;//$paragraph-light-color;
+      vertical-align: middle;
+      border-top: 1px solid rgb(230,230,230);
+      border-bottom: 1px solid rgb(230,230,230);
+      padding: 4px 0 6.3px 3px;
       @include text-shadow(0px 0px 0 rgb(150,150,150), -0.2px 0.2px 0 white, -0.5px 0.5px 0 white, -1px 1px 0 white, -1.5px 1.5px 0 white, -1px 1px 0 white, -2px 2px 0 white);
     }
   }
@@ -211,92 +215,31 @@ section {
   }
 }
 
-// Setting Up Box Grid!
-
-@mixin rowMachine($numPerRow, $boxMargin) {
-  $square: ((99% - (($numPerRow) * $boxMargin)) / $numPerRow);
-  width: $square;
-  margin: ($boxMargin / 2);
-  @include transition(margin 0.1s ease, width 0.1s ease);
-  &:nth-child(n) {
-    margin: ($boxMargin / 2);
-    &:hover {
-      width: $square + 1;
-      margin: (($boxMargin / 2) - 0.5);
-      @include transition(margin 0.1s ease, width 0.1s ease);
-    }
-  }
-  &:nth-child(#{$numPerRow}n) {
-    margin-right: auto;
-  }
-}
-
 #work {
   background-color: $work-bg-color;//rgb(34, 34, 34);
   position: relative;
-  @media (min-width: 20em) { // 1 up
-    padding: 5% 8% 7%; //half of below "rowMachine" padding //coencides with the padding of the boxes below
-  }
-  @media (min-width: 43.750em) { //2 up
-    padding: 4% 4%;
-  }
-  @media (min-width: 53.125em) { // 3 up
-    padding: 3% 6%;
-  }
-  @media (min-width: 75em) { // 4 up
-    padding: 2% 4%;
-  }
-  @media (min-width: 100em) { // 5 up
-    padding: 1% 3%;
-  }
-
   a.box {
     padding: 0;
   }
-
   .box {
     display: inline-block;
     position: relative;
     max-width: 23.625em;
     border: 1px solid rgb(255, 255, 255);
-    @include box-shadow(0px 1px 3px rgba(0, 0, 0, 0.5));
-    @media (min-width: 20em) { // 1 up
-      @include rowMachine(1, 15%);
-      &:nth-child(1n) {
-        margin-left: auto;
-      }
-    }
-    @media (max-width: 27.438em) { //make it float center when only 1 in line
-      display: block;
-    }
-    @media (min-width: 27.5em) { //2 up //coencides with padding above
-      @include rowMachine(2, 7%);
-    }
-    @media (min-width: 53.125em) { //3 up
-      @include rowMachine(3, 3.5%);
-    }
-    @media (min-width: 75em) { //4 up
-      @include rowMachine(4, 3.5%);
-    }
-    @media (min-width: 100em) { // 5 up
-      @include rowMachine(5, 3%)
-    }
-
-    // Scale image equally
+    @include box-shadow(0px 2px 3px 0 rgb(200,200,200));
     img {
-      max-width: 100%;
+      max-width: 100%;     // Scale image equally
     }
   }
-
   .caption {
-    background: rgba(0,0,0, 0.77);
+    background-color: rgba(0,0,0, 0.77);
     position: absolute;
     display: table;
-    top: 70%;
+    bottom: 15%;
     left: 0;
     right: 0;
     width: 100.5%;
-    padding: 2% 1%;
+    padding: 3% 4%;
     height: 3.125em;
     overflow: hidden;
     h2 {
@@ -308,7 +251,7 @@ section {
       font-weight: 400;
       line-height: 1;
       letter-spacing: 0.01em;
-      color: $body-bg; //rgb(32, 174, 221); //matching blue
+      color: $paragraph-light-color; //rgb(52, 159, 209); better color matching #work on a dark background; //$body-bg;
       text-shadow: rgba(35,35,35, 0.8) -0.5px 1px 0;
       @include transition(font-size 0.05s ease);
     }
@@ -353,7 +296,7 @@ section {
 
 footer {
   background: url(../img/hexnoise.png) fixed 0 0 repeat, rgb(46, 46, 46);
-  @include box-shadow(inset 0 0 200px 0 rgba(0,0,0,0.8));
+  //@include box-shadow(inset 0 0 200px 0 rgba(0,0,0,0.8));
   p {
     text-align: center;
     color: rgba(255, 255, 255, 0.18);

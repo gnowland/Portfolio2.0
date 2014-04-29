@@ -557,22 +557,37 @@ $(function() { //When the document loads
   var nav_a = $('nav a');
   var headercompact = 7;// $('header').outerHeight(); // Overridden by adding a psudo-element to all sections
 
+
+//SUPERSEEDED BY THE CODE BELOW IT
 // remove ".external" from firing
-  nav_a.parent().not('.external').on('click', function (event) {
-    // Don't reload the page
-    event.preventDefault();
-    // Find the url
-    var url = $(this).children('a').attr('href');
-    // go to the section
-    $('html, body').animate({
-      scrollTop:  $('html').find($(this).children('a').attr('href')).offset().top-headercompact+2
-      }, 800, 'swing', function () {
-        window.location.hash = url ;
+//  nav_a.parent().not('.external').on('click', function (event) {
+//    // Don't reload the page
+//    event.preventDefault();
+//    // Find the url
+//    var url = $(this).children('a').attr('href');
+//    // go to the section
+//    $('html, body').animate({
+//      scrollTop:  $('html').find($(this).children('a').attr('href')).offset().top-headercompact+2
+//      }, 800, 'swing', function () {
+//        window.location.hash = url ;
+//    });
+//  });
+
+  //Performs a smooth page scroll to an anchor on the same page from all links
+  $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top-headercompact+2
+          }, 800, 'swing');
+          return false;
+        }
+      }
     });
-  });
 
 // Highlighting the nav menu buttons and border
-
   sections.waypoint({
     handler: function(direction) {
 
@@ -645,4 +660,5 @@ $(function() { //When the document loads
 //    },
 //    offset: -40
 //  });
+
 });
