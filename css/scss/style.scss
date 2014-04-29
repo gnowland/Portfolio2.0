@@ -84,6 +84,7 @@ nav {
       font-weight: 700;
       color: rgb(26, 74, 116);
       padding: 0;
+      border: none;
     }
     a:hover, a:focus {
       background: none;
@@ -185,19 +186,19 @@ nav {
         color: $about-color;//scale-color($about-color, $lightness: -25%);
         text-shadow: rgb(1, 111, 80) -0.5px 1px 0;
       }
-      a {
+      a { //asterisk
         text-decoration: line-through;
+        border: none;
       }
     }
     &:nth-of-type(2) {
       //border-top: rgba(124, 124, 124, 1) 1px dotted;
       //padding: 1em 0.75em 0.3em;
-      padding:2em 0;
+      padding:4% 0;
       font-size: 1.2em;
       letter-spacing: 0.01em;
       max-width: 45em;
       margin: auto;
-      border-top: 1px dotted gray;
       i {
         color: $about-color;
         font-size: 1.1em;
@@ -217,6 +218,11 @@ nav {
       white-space: nowrap;
       text-shadow: rgb(0, 102, 135) -0.5px 1px 0;
     }
+  }
+  hr {
+    border: dotted rgb(150,150,150);//rgb(97, 150, 180);
+    border-width: 1px 0 0;
+    padding: 0;
   }
 }
 

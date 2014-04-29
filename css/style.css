@@ -727,11 +727,13 @@ td {
 a {
   color: #008cba;
   text-decoration: none;
+  border-bottom: 1px dotted #008cba;
   line-height: inherit;
-  padding: 0 0.2em;
+  margin: 0 0.2em;
 }
 a:hover, a:focus {
   color: #0078a0;
+  border-color: #0078a0;
 }
 a img {
   border: none;
@@ -1023,6 +1025,7 @@ nav li a {
   font-weight: 700;
   color: #1a4a74;
   padding: 0;
+  border: none;
 }
 nav li a:hover, nav li a:focus {
   background: none;
@@ -1121,14 +1124,14 @@ nav li.external a:hover, nav li.external a:focus {
 }
 #about p:nth-of-type(1) a {
   text-decoration: line-through;
+  border: none;
 }
 #about p:nth-of-type(2) {
-  padding: 2em 0;
+  padding: 4% 0;
   font-size: 1.2em;
   letter-spacing: 0.01em;
   max-width: 45em;
   margin: auto;
-  border-top: 1px dotted gray;
 }
 #about p:nth-of-type(2) i {
   color: #01a275;
@@ -1140,6 +1143,11 @@ nav li.external a:hover, nav li.external a:focus {
 #about p a {
   white-space: nowrap;
   text-shadow: #006687 -0.5px 1px 0;
+}
+#about hr {
+  border: dotted #969696;
+  border-width: 1px 0 0;
+  padding: 0;
 }
 
 #work {

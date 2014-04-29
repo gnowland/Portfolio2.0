@@ -145,14 +145,15 @@ $definition-list-margin-bottom: rem-calc(12) !default;
   a {
     color: $anchor-font-color;
     text-decoration: $anchor-text-decoration;
-    //border-bottom: 1px solid white;
+    border-bottom: 1px dotted $anchor-font-color;
     line-height: inherit;
-    padding: 0 0.2em;
+    margin: 0 0.2em;
 
     &:hover,
     &:focus {
     //text-decoration: underline;
     color: $anchor-font-color-hover;
+    border-color: $anchor-font-color-hover;
     }
 
     // [R]
