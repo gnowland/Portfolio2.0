@@ -30,7 +30,7 @@ $(function() { //When the document loads
   var sections = $('section');
   var nav_a = $('nav a');
   var headercompact = 7;// $('header').outerHeight(); // Overridden by adding a psudo-element to all sections
-
+  var currentOffset = $('body').css('margin-top').match(/\d+/);
 
 //SUPERSEEDED BY THE CODE BELOW IT
 // remove ".external" from firing
@@ -47,15 +47,42 @@ $(function() { //When the document loads
 //    });
 //  });
 
+//Scroll the asterisk!
+$('.a').click(function() {
+  $('html, body').animate({
+    scrollTop:  $('#about p:eq(0)').offset().top+currentOffset
+    }, 500, 'swing', function () {
+      console.log(currentOffset);
+    });
+  });
+
   //Performs a smooth page scroll to an anchor on the same page from all links
-  $('a[href*=#]:not([href=#])').click(function() {
+    //Newer chris coyer srcipt, but makes page flash.. use this if carousels are messing up
+    //$('.scrollto').click(function() {
+    //    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    //                || location.hostname == this.hostname) {
+    //        var hashStr = this.hash.slice(1);
+    //        var target = $(this.hash);
+    //        target = target.length ? target : $('[name=' + hashStr +']');
+    //
+    //        if (target.length) {
+    //            $('html,body').animate({ scrollTop: target.offset().top-headercompact}, 500);
+    //            window.location.hash = hashStr;
+    //            return false;
+    //        }
+    //    }
+    //});
+  //Older chris coyer scipt, might interfere with carousels?
+  $('a[href*=#]:not([href=#]).scrollto').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
         var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
         if (target.length) {
           $('html,body').animate({
             scrollTop: target.offset().top-headercompact+2
-          }, 800, 'swing');
+          }, 800, 'swing', function () {
+            window.location.hash = target.selector;
+            });
           return false;
         }
       }

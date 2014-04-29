@@ -67,7 +67,7 @@
   $html-bg: #eee !default;
   $body-bg: #eee !default;
   $body-font-color: #222 !default;
-  $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
+  $body-font-family: $heuristica-font-stack !default;
   $body-font-weight: normal !default;
   $body-font-style: normal !default;
 

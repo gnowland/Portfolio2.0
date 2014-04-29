@@ -81,6 +81,13 @@
     'blackitalic'      900 italic,
   ), 'sourcesanspro-', '../font/source-sans-pro');
 
+  @include font-faces('Heuristica', (
+    'regular'          400,
+    'regularitalic'    400 italic,
+    'bold'             700,
+    'bolditalic'       700 italic,
+  ), 'heuristica-', '../font/heuristica');
+
   @include font-faces('FontCustom', (
     ''                 400,
   ), 'fontcustom', '../font/font-custom');
@@ -88,4 +95,5 @@
 // Make Font Stacks
   $gotham-font-stack: "Gotham", "Century Gothic", "Tw Cen MT", Futura, "URW Gothic L", Arial, sans-serif;
   $sourcesanspro-font-stack: "SourceSansPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  $heuristica-font-stack: "Heuristica", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif; 
 

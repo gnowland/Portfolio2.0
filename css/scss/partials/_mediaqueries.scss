@@ -26,7 +26,7 @@
       //width: 21em + ($i / 1 );
       // will be overridden at 6.5em (see 'overrides' below)
       li {
-      width: (4.7em + ($i / 1) / 4); //4 is how many nav items //+1.5em because "CONTACT" is too wide... pushes nav slightly off screen though.
+      width: (4.7em + ($i / 1) / 4) + .1em; //4 is how many nav items //+1.5em because "CONTACT" is too wide... pushes nav slightly off screen though.
       //width: ((21em + ($i / 1)) / 4);
       // will be overridden at 6.5em (see 'overrides' below)
       }
@@ -53,6 +53,12 @@
 @media (max-width: 60.188em) {
   #about p:nth-of-type(1) {
     font-size: 1.6em;
+  }
+  #about p:nth-of-type(2) {
+    font-size: 1.05em;
+    i {
+      font-size: 1.1em;
+    }
   }
   #about .tagline span {
     font-size: 1em;

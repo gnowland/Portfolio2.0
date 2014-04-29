@@ -49,7 +49,7 @@ $small-font-color: scale-color($header-font-color, $lightness: 35%) !default;
 
 // [F]
 // We use these to style paragraphs
-$paragraph-font-family: inherit !default;
+$paragraph-font-family: $heuristica-font-stack !default;
 $paragraph-font-weight: normal !default;
 $paragraph-font-size: 1rem !default;
 $paragraph-line-height: 1.6 !default;
@@ -145,6 +145,7 @@ $definition-list-margin-bottom: rem-calc(12) !default;
   a {
     color: $anchor-font-color;
     text-decoration: $anchor-text-decoration;
+    //border-bottom: 1px solid white;
     line-height: inherit;
     padding: 0 0.2em;
 

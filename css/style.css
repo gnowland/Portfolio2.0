@@ -185,6 +185,32 @@
   src: url("../font/source-sans-pro/sourcesanspro-blackitalic.eot?#iefix") format("embedded-opentype"), url("../font/source-sans-pro/sourcesanspro-blackitalic.woff") format("woff"), url("../font/source-sans-pro/sourcesanspro-blackitalic.ttf") format("truetype"), url("../font/source-sans-pro/sourcesanspro-blackitalic.svg#sourcesanspro-blackitalic") format("svg");
 }
 @font-face {
+  font-family: "Heuristica";
+  font-weight: 400;
+  src: url("../font/heuristica/heuristica-regular.eot");
+  src: url("../font/heuristica/heuristica-regular.eot?#iefix") format("embedded-opentype"), url("../font/heuristica/heuristica-regular.woff") format("woff"), url("../font/heuristica/heuristica-regular.ttf") format("truetype"), url("../font/heuristica/heuristica-regular.svg#heuristica-regular") format("svg");
+}
+@font-face {
+  font-family: "Heuristica";
+  font-weight: 400;
+  font-style: italic;
+  src: url("../font/heuristica/heuristica-regularitalic.eot");
+  src: url("../font/heuristica/heuristica-regularitalic.eot?#iefix") format("embedded-opentype"), url("../font/heuristica/heuristica-regularitalic.woff") format("woff"), url("../font/heuristica/heuristica-regularitalic.ttf") format("truetype"), url("../font/heuristica/heuristica-regularitalic.svg#heuristica-regularitalic") format("svg");
+}
+@font-face {
+  font-family: "Heuristica";
+  font-weight: 700;
+  src: url("../font/heuristica/heuristica-bold.eot");
+  src: url("../font/heuristica/heuristica-bold.eot?#iefix") format("embedded-opentype"), url("../font/heuristica/heuristica-bold.woff") format("woff"), url("../font/heuristica/heuristica-bold.ttf") format("truetype"), url("../font/heuristica/heuristica-bold.svg#heuristica-bold") format("svg");
+}
+@font-face {
+  font-family: "Heuristica";
+  font-weight: 700;
+  font-style: italic;
+  src: url("../font/heuristica/heuristica-bolditalic.eot");
+  src: url("../font/heuristica/heuristica-bolditalic.eot?#iefix") format("embedded-opentype"), url("../font/heuristica/heuristica-bolditalic.woff") format("woff"), url("../font/heuristica/heuristica-bolditalic.ttf") format("truetype"), url("../font/heuristica/heuristica-bolditalic.svg#heuristica-bolditalic") format("svg");
+}
+@font-face {
   font-family: "FontCustom";
   font-weight: 400;
   src: url("../font/font-custom/fontcustom.eot");
@@ -475,7 +501,7 @@ body {
   color: #222222;
   padding: 0;
   margin: 0;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Heuristica", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1.4;
@@ -713,7 +739,7 @@ a img {
 
 /* Default paragraph styles */
 p {
-  font-family: inherit;
+  font-family: "Heuristica", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
   font-weight: normal;
   font-size: 1rem;
   line-height: 1.6;
@@ -815,7 +841,7 @@ dl {
   line-height: 1.6;
   margin-bottom: 1.25rem;
   list-style-position: outside;
-  font-family: inherit;
+  font-family: "Heuristica", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
 }
 
 ul {
@@ -1048,7 +1074,7 @@ nav li.external a:hover, nav li.external a:focus {
   overflow: hidden;
   width: 100%;
   height: auto;
-  padding: 2%;
+  padding: 3% 2%;
   text-align: center;
 }
 #about .tagline {
@@ -1076,12 +1102,13 @@ nav li.external a:hover, nav li.external a:focus {
   margin: 0;
   color: #fafafa;
   text-align: center;
+  text-shadow: #969696 -0.5px 1px 0;
 }
 #about p:nth-of-type(1) {
   font-family: "SourceSansPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   line-height: 1.4;
-  padding: 0.4em 0;
+  padding: 4% 0;
   position: relative;
   top: 15%;
   font-size: 2.5em;
@@ -1090,21 +1117,29 @@ nav li.external a:hover, nav li.external a:focus {
   text-transform: none;
   font-weight: 700;
   color: #01a275;
+  text-shadow: #016f50 -0.5px 1px 0;
+}
+#about p:nth-of-type(1) a {
+  text-decoration: line-through;
 }
 #about p:nth-of-type(2) {
-  padding: 0.5em 0.75em 0.3em;
-  font-size: 1.1em;
+  padding: 2em 0;
+  font-size: 1.2em;
+  letter-spacing: 0.01em;
+  max-width: 45em;
+  margin: auto;
+  border-top: 1px dotted gray;
 }
 #about p:nth-of-type(2) i {
   color: #01a275;
+  font-size: 1.1em;
+  font-style: italic;
+  text-shadow: #016f50 -0.5px 1px 0;
+  padding: 0.155em;
 }
-#about p:nth-of-type(2) a {
+#about p a {
   white-space: nowrap;
-}
-
-section p {
-  text-align: justify;
-  font-family: Georgia, Times, "Times New Roman", serif;
+  text-shadow: #006687 -0.5px 1px 0;
 }
 
 #work {
@@ -1129,26 +1164,22 @@ section p {
 #work .caption {
   background-color: rgba(0, 0, 0, 0.77);
   position: absolute;
-  display: table;
   bottom: 15%;
   left: 0;
   right: 0;
   width: 100.5%;
-  padding: 3% 4%;
-  height: 3.125em;
+  padding: 3% 2%;
   overflow: hidden;
 }
 #work .caption h2 {
-  display: table-cell;
   text-align: center;
-  vertical-align: middle;
   font-family: "SourceSansPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.5em;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
   color: #fafafa;
-  text-shadow: rgba(35, 35, 35, 0.8) -0.5px 1px 0;
+  text-shadow: #232323 -0.5px 1px 0;
   -moz-transition: font-size 0.05s ease;
   -o-transition: font-size 0.05s ease;
   -webkit-transition: font-size 0.05s ease;
@@ -1190,7 +1221,7 @@ footer p {
     width: 19.375em;
   }
   nav li {
-    width: 4.7em;
+    width: 4.8em;
   }
 
   header h1 {
@@ -1221,7 +1252,7 @@ footer p {
     width: 20.375em;
   }
   nav li {
-    width: 4.95em;
+    width: 5.05em;
   }
 
   header h1 {
@@ -1252,7 +1283,7 @@ footer p {
     width: 21.375em;
   }
   nav li {
-    width: 5.2em;
+    width: 5.3em;
   }
 
   header h1 {
@@ -1283,7 +1314,7 @@ footer p {
     width: 22.375em;
   }
   nav li {
-    width: 5.45em;
+    width: 5.55em;
   }
 
   header h1 {
@@ -1314,7 +1345,7 @@ footer p {
     width: 23.375em;
   }
   nav li {
-    width: 5.7em;
+    width: 5.8em;
   }
 
   header h1 {
@@ -1345,7 +1376,7 @@ footer p {
     width: 24.375em;
   }
   nav li {
-    width: 5.95em;
+    width: 6.05em;
   }
 
   header h1 {
@@ -1376,7 +1407,7 @@ footer p {
     width: 25.375em;
   }
   nav li {
-    width: 6.2em;
+    width: 6.3em;
   }
 
   header h1 {
@@ -1407,7 +1438,7 @@ footer p {
     width: 26.375em;
   }
   nav li {
-    width: 6.45em;
+    width: 6.55em;
   }
 
   header h1 {
@@ -1438,7 +1469,7 @@ footer p {
     width: 27.375em;
   }
   nav li {
-    width: 6.7em;
+    width: 6.8em;
   }
 
   header h1 {
@@ -1469,7 +1500,7 @@ footer p {
     width: 28.375em;
   }
   nav li {
-    width: 6.95em;
+    width: 7.05em;
   }
 
   header h1 {
@@ -1500,7 +1531,7 @@ footer p {
     width: 29.375em;
   }
   nav li {
-    width: 7.2em;
+    width: 7.3em;
   }
 
   header h1 {
@@ -1531,7 +1562,7 @@ footer p {
     width: 30.375em;
   }
   nav li {
-    width: 7.45em;
+    width: 7.55em;
   }
 
   header h1 {
@@ -1562,7 +1593,7 @@ footer p {
     width: 31.375em;
   }
   nav li {
-    width: 7.7em;
+    width: 7.8em;
   }
 
   header h1 {
@@ -1593,7 +1624,7 @@ footer p {
     width: 32.375em;
   }
   nav li {
-    width: 7.95em;
+    width: 8.05em;
   }
 
   header h1 {
@@ -1624,7 +1655,7 @@ footer p {
     width: 33.375em;
   }
   nav li {
-    width: 8.2em;
+    width: 8.3em;
   }
 
   header h1 {
@@ -1655,7 +1686,7 @@ footer p {
     width: 34.375em;
   }
   nav li {
-    width: 8.45em;
+    width: 8.55em;
   }
 
   header h1 {
@@ -1686,7 +1717,7 @@ footer p {
     width: 35.375em;
   }
   nav li {
-    width: 8.7em;
+    width: 8.8em;
   }
 
   header h1 {
@@ -1717,7 +1748,7 @@ footer p {
     width: 36.375em;
   }
   nav li {
-    width: 8.95em;
+    width: 9.05em;
   }
 
   header h1 {
@@ -1748,7 +1779,7 @@ footer p {
     width: 37.375em;
   }
   nav li {
-    width: 9.2em;
+    width: 9.3em;
   }
 
   header h1 {
@@ -1779,7 +1810,7 @@ footer p {
     width: 38.375em;
   }
   nav li {
-    width: 9.45em;
+    width: 9.55em;
   }
 
   header h1 {
@@ -1810,7 +1841,7 @@ footer p {
     width: 39.375em;
   }
   nav li {
-    width: 9.7em;
+    width: 9.8em;
   }
 
   header h1 {
@@ -1841,7 +1872,7 @@ footer p {
     width: 40.375em;
   }
   nav li {
-    width: 9.95em;
+    width: 10.05em;
   }
 
   header h1 {
@@ -1872,7 +1903,7 @@ footer p {
     width: 41.375em;
   }
   nav li {
-    width: 10.2em;
+    width: 10.3em;
   }
 
   header h1 {
@@ -1903,7 +1934,7 @@ footer p {
     width: 42.375em;
   }
   nav li {
-    width: 10.45em;
+    width: 10.55em;
   }
 
   header h1 {
@@ -1934,7 +1965,7 @@ footer p {
     width: 43.375em;
   }
   nav li {
-    width: 10.7em;
+    width: 10.8em;
   }
 
   header h1 {
@@ -1965,7 +1996,7 @@ footer p {
     width: 44.375em;
   }
   nav li {
-    width: 10.95em;
+    width: 11.05em;
   }
 
   header h1 {
@@ -1996,7 +2027,7 @@ footer p {
     width: 45.375em;
   }
   nav li {
-    width: 11.2em;
+    width: 11.3em;
   }
 
   header h1 {
@@ -2027,7 +2058,7 @@ footer p {
     width: 46.375em;
   }
   nav li {
-    width: 11.45em;
+    width: 11.55em;
   }
 
   header h1 {
@@ -2058,7 +2089,7 @@ footer p {
     width: 47.375em;
   }
   nav li {
-    width: 11.7em;
+    width: 11.8em;
   }
 
   header h1 {
@@ -2089,7 +2120,7 @@ footer p {
     width: 48.375em;
   }
   nav li {
-    width: 11.95em;
+    width: 12.05em;
   }
 
   header h1 {
@@ -2120,7 +2151,7 @@ footer p {
     width: 49.375em;
   }
   nav li {
-    width: 12.2em;
+    width: 12.3em;
   }
 
   header h1 {
@@ -2135,6 +2166,13 @@ footer p {
 @media (max-width: 60.188em) {
   #about p:nth-of-type(1) {
     font-size: 1.6em;
+  }
+
+  #about p:nth-of-type(2) {
+    font-size: 1.05em;
+  }
+  #about p:nth-of-type(2) i {
+    font-size: 1.1em;
   }
 
   #about .tagline span {

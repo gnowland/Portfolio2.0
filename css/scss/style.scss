@@ -134,7 +134,7 @@ nav {
   overflow: hidden;
   width: 100%;
   height: auto;
-  padding: 2%;
+  padding: 3% 2%;
   text-align: center;
   //  background-image: url(../img/hexnoise.png),url(../img/background.jpg);
   //  @include background-size(auto, cover);
@@ -166,11 +166,12 @@ nav {
     margin: 0;
     color: $paragraph-light-color; //rgb(235, 235, 235);//rgb(34, 34, 34); //rgb(238, 238, 238);
     text-align: center;
+    text-shadow: rgb(150,150,150) -0.5px 1px 0;
     &:nth-of-type(1) {
       font-family: $sourcesanspro-font-stack;
       font-weight: 400;
       line-height: 1.4;
-      padding: 0.4em 0;
+      padding: 4% 0;
       position: relative;
       top: 15%;
       font-size: 2.5em;
@@ -182,36 +183,40 @@ nav {
         text-transform: none;
         font-weight: 700;
         color: $about-color;//scale-color($about-color, $lightness: -25%);
+        text-shadow: rgb(1, 111, 80) -0.5px 1px 0;
+      }
+      a {
+        text-decoration: line-through;
       }
     }
     &:nth-of-type(2) {
-    //  border-top: rgba(124, 124, 124, 1) 1px dotted;
-      padding: 0.5em 0.75em 0.3em;
-      font-size: 1.1em;
+      //border-top: rgba(124, 124, 124, 1) 1px dotted;
+      //padding: 1em 0.75em 0.3em;
+      padding:2em 0;
+      font-size: 1.2em;
+      letter-spacing: 0.01em;
+      max-width: 45em;
+      margin: auto;
+      border-top: 1px dotted gray;
       i {
         color: $about-color;
+        font-size: 1.1em;
+        font-style: italic;
+        //background-color: rgb(255, 255, 181);//rgb(253, 253, 154);
+        text-shadow: rgb(1, 111, 80) -0.5px 1px 0;
+        padding: 0.155em;
       }
       //strong {
       //  color: rgb(0, 114, 96); //rgba(0, 145, 104, 1); need to make a little darker because of lighter backgorund opacity
       //  font-style: italic;
       //  font-weight: 400;
       //}
-      a {
-      //  background-color: rgba(255,255,255,0.5);
-        white-space: nowrap;
-      }
     }
-  }
-}
-
-// Sections
-section {
-  //h1 {
-    //font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
-  //}
-  p {
-    text-align: justify;
-    font-family: Georgia, Times, "Times New Roman", serif;
+    a {
+      //background-color: rgba(255,255,255,0.5);
+      white-space: nowrap;
+      text-shadow: rgb(0, 102, 135) -0.5px 1px 0;
+    }
   }
 }
 
@@ -234,25 +239,21 @@ section {
   .caption {
     background-color: rgba(0,0,0, 0.77);
     position: absolute;
-    display: table;
     bottom: 15%;
     left: 0;
     right: 0;
     width: 100.5%;
-    padding: 3% 4%;
-    height: 3.125em;
+    padding: 3% 2%;
     overflow: hidden;
     h2 {
-      display: table-cell;
       text-align: center;
-      vertical-align: middle;
       font-family: $sourcesanspro-font-stack;
       font-size: 1.5em;
-      font-weight: 400;
+      font-weight: 600;
       line-height: 1;
-      letter-spacing: 0.01em;
+      letter-spacing: 0.02em;
       color: $paragraph-light-color; //rgb(52, 159, 209); better color matching #work on a dark background; //$body-bg;
-      text-shadow: rgba(35,35,35, 0.8) -0.5px 1px 0;
+      text-shadow: rgb(35,35,35) -0.5px 1px 0;
       @include transition(font-size 0.05s ease);
     }
   }
