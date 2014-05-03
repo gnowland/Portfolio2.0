@@ -9,13 +9,20 @@
 // Set custom site styles here:
 $header-height: 3.5em;
 $bubble-bg:        rgba(255,255,255,0.8);
-$about-color:      rgb(1, 162, 117);
-$about-bg-color:   rgb(14, 67, 97);
+$about-color:      rgb(78, 177, 136);//rgb(53,151,156)rgb(57,166,121);//rgb(1, 162, 117);
+$about-bg-color:   rgb(42,85,130);//rgb(38,76,117);//rgb(46, 93, 143);//rgb(56, 93, 143);//rgb(46, 76, 117);rgb(66, 109, 169);//rgb(14, 67, 97);
 $work-color:       rgb(0, 140, 186);
 $work-bg-color:    $body-bg;
 $contact-color:    rgb(201, 99, 99);
 $contact-bg-color: rgb(34, 34, 34);
 $blog-color:       rgb(67, 103, 158);
+
+//Mixins:
+@mixin textStyle($color) {
+  color: $color;
+  text-shadow: scale-color($color, $lightness: -33%) -0.03em 0.02em 0;
+}
+
 
 header {
   margin: 0;
@@ -75,6 +82,7 @@ nav {
     display: inline-block;
     text-align: center;
     @include transition(background 0.2s linear);
+    color: scale-color($anchor-font-color, $lightness: 3%);//hover color
     &:hover, &:focus {
       cursor: pointer;
     }
@@ -91,17 +99,18 @@ nav {
       text-decoration: none;
     }
     &.selected {
+      color: #eee; //hover color
       &:nth-of-type(1) {
-      background: $about-color;
-      @include transition(background 0.2s linear);
+        background: $about-color;
+        @include transition(background 0.2s linear);
       }
       &:nth-of-type(2) {
-      background: $work-color;
-      @include transition(background 0.2s linear);
+        background: $work-color;
+        @include transition(background 0.2s linear);
       }
       &:nth-of-type(3) {
-      background: $contact-color;
-      @include transition(background 0.2s linear);
+        background: $contact-color;
+        @include transition(background 0.2s linear);
       }
       &:nth-of-type(4) {
         background: $blog-color;
@@ -110,7 +119,6 @@ nav {
       a {
         color: #eee;
         &:hover, &:focus {
-          color: #eee;
           background: none;
           text-decoration: none;
         }
@@ -126,12 +134,7 @@ nav {
 }
 
 #about {
-  //background: url(../img/bg.jpg) fixed 33% 0 no-repeat;
-  //@include background-size(cover);
-  background: url(../img/graphpaper.png) scroll 0 0 repeat, $about-bg-color;
-  //background: url(../img/hexnoise.png) fixed 0 0 repeat, $about-bg-color; //rgba(22,104,150,1);
-              //orange: 208,51,27, light blue: 10,83,146 or LOGO COLOR: 27,60,89,1 !!similar: 34,53,70
-  //@include box-shadow(inset 0 0 400px 0 rgba(0,0,0,0.8)); //box shadow slows down rendering A LOT!
+  background: url(../img/graph-pattern.png) fixed 0 0 repeat, $about-bg-color;
   overflow: hidden;
   width: 100%;
   height: auto;
@@ -150,11 +153,8 @@ nav {
       font-size: 1.33em;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      color: $about-bg-color; //$header-font-color;//$paragraph-light-color;
+      color: $about-bg-color;
       vertical-align: middle;
-      //border-top: 1px solid rgb(230,230,230);
-      //border-bottom: 1px solid rgb(230,230,230);
-      //@include text-shadow(0px 0px 0 rgb(150,150,150), -0.2px 0.2px 0 white, -0.5px 0.5px 0 white, -1px 1px 0 white, -1.5px 1.5px 0 white, -1px 1px 0 white, -2px 2px 0 white);
       position: relative;
       top: 0.2em;
       background-color: rgb(255, 255, 255);
@@ -189,9 +189,12 @@ nav {
   }
   p {
     margin: 0;
-    color: $paragraph-light-color; //rgb(235, 235, 235);//rgb(34, 34, 34); //rgb(238, 238, 238);
     text-align: center;
-    text-shadow: rgb(150,150,150) -0.5px 1px 0;
+    @include textStyle($paragraph-light-color);
+    a {
+      white-space: nowrap;
+      @include textStyle($anchor-font-color);
+    }
     &:nth-of-type(1) {
       font-family: $sourcesanspro-font-stack;
       font-weight: 400;
@@ -200,15 +203,10 @@ nav {
       position: relative;
       top: 15%;
       font-size: 2.5em;
-      //@include box-shadow(10px 10px 0 1px rgba(255,255,255,0.8));
-      //border: 8px solid #666;
-      //@include border-radius(7px);
-      //@include box-shadow(rgba(150,150,150,.3) 0 0 100px 0 inset);
       strong {
         text-transform: none;
         font-weight: 700;
-        color: $about-color;//scale-color($about-color, $lightness: -25%);
-        text-shadow: rgb(1, 111, 80) -0.5px 1px 0;
+        @include textStyle($about-color);
       }
       a { //asterisk
         text-decoration: line-through;
@@ -220,27 +218,16 @@ nav {
       //padding: 1em 0.75em 0.3em;
       padding:4% 0;
       font-size: 1.2em;
-      letter-spacing: 0.01em;
+      letter-spacing: 0.02em;
       max-width: 45em;
       margin: auto;
       i {
-        color: $about-color;
         font-size: 1.1em;
         font-style: italic;
-        //background-color: rgb(255, 255, 181);//rgb(253, 253, 154);
-        text-shadow: rgb(1, 111, 80) -0.5px 1px 0;
-        padding: 0.155em;
+        background-color: rgba(70,69,74, 0.7);//rgb(253, 253, 154);
+        padding: 0.1em 0.8em;//0.155em;
+        @include textStyle($about-color);
       }
-      //strong {
-      //  color: rgb(0, 114, 96); //rgba(0, 145, 104, 1); need to make a little darker because of lighter backgorund opacity
-      //  font-style: italic;
-      //  font-weight: 400;
-      //}
-    }
-    a {
-      //background-color: rgba(255,255,255,0.5);
-      white-space: nowrap;
-      text-shadow: rgb(0, 102, 135) -0.5px 1px 0;
     }
   }
   hr {
@@ -253,6 +240,7 @@ nav {
 #work {
   background-color: $work-bg-color;//rgb(34, 34, 34);
   position: relative;
+  border-color: rgb(255,255,255); //hover color fix
   a.box {
     padding: 0;
   }
@@ -265,6 +253,16 @@ nav {
     img {
       max-width: 100%;     // Scale image equally
     }
+
+    // Transition
+    @include transition-duration(0.2s);
+    @include transition-property(transform);
+    overflow:hidden;
+    &:hover {
+      @include transform(scale(1.04));
+    }
+    // /Transition
+
   }
   .caption {
     background-color: rgba(0,0,0, 0.77);
@@ -282,8 +280,7 @@ nav {
       font-weight: 600;
       line-height: 1;
       letter-spacing: 0.02em;
-      color: $paragraph-light-color; //rgb(52, 159, 209); better color matching #work on a dark background; //$body-bg;
-      text-shadow: rgb(35,35,35) -0.5px 1px 0;
+      @include textStyle($paragraph-light-color);
       @include transition(font-size 0.05s ease);
     }
   }

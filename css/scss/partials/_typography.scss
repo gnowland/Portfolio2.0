@@ -147,7 +147,8 @@ $definition-list-margin-bottom: rem-calc(12) !default;
     text-decoration: $anchor-text-decoration;
     border-bottom: 1px dotted $anchor-font-color;
     line-height: inherit;
-    margin: 0 0.2em;
+    //margin: 0 0.2em;
+    padding-bottom: 0.1em;
 
     transition: 250ms ease-out;
     transition-property: border-color, color;
@@ -155,8 +156,8 @@ $definition-list-margin-bottom: rem-calc(12) !default;
     &:hover,
     &:focus {
     //text-decoration: underline;
-    color: inherit;//$anchor-font-color-hover;
-    border-color: $anchor-font-color-hover;
+    color: inherit !important;//$anchor-font-color-hover;
+    border-color: inherit !important;
     }
 
     // [R]

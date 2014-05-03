@@ -729,13 +729,13 @@ a {
   text-decoration: none;
   border-bottom: 1px dotted #008cba;
   line-height: inherit;
-  margin: 0 0.2em;
+  padding-bottom: 0.1em;
   transition: 250ms ease-out;
   transition-property: border-color, color;
 }
 a:hover, a:focus {
-  color: inherit;
-  border-color: #0078a0;
+  color: inherit !important;
+  border-color: inherit !important;
 }
 a img {
   border: none;
@@ -963,7 +963,7 @@ header {
   transition: border-top 0.2s linear;
 }
 header.about {
-  border-top: 0.4em #01a275 solid;
+  border-top: 0.4em #4eb188 solid;
   -moz-transition: border-top 0.2s linear;
   -o-transition: border-top 0.2s linear;
   -webkit-transition: border-top 0.2s linear;
@@ -1017,6 +1017,7 @@ nav li {
   -o-transition: background 0.2s linear;
   -webkit-transition: background 0.2s linear;
   transition: background 0.2s linear;
+  color: #0093c4;
 }
 nav li:hover, nav li:focus {
   cursor: pointer;
@@ -1033,8 +1034,11 @@ nav li a:hover, nav li a:focus {
   background: none;
   text-decoration: none;
 }
+nav li.selected {
+  color: #eee;
+}
 nav li.selected:nth-of-type(1) {
-  background: #01a275;
+  background: #4eb188;
   -moz-transition: background 0.2s linear;
   -o-transition: background 0.2s linear;
   -webkit-transition: background 0.2s linear;
@@ -1065,7 +1069,6 @@ nav li.selected a {
   color: #eee;
 }
 nav li.selected a:hover, nav li.selected a:focus {
-  color: #eee;
   background: none;
   text-decoration: none;
 }
@@ -1075,7 +1078,7 @@ nav li.external a:hover, nav li.external a:focus {
 }
 
 #about {
-  background: url(../img/graphpaper.png) scroll 0 0 repeat, #0e4361;
+  background: url(../img/graph-pattern.png) fixed 0 0 repeat, #2a5582;
   overflow: hidden;
   width: 100%;
   height: auto;
@@ -1091,7 +1094,7 @@ nav li.external a:hover, nav li.external a:focus {
   font-size: 1.33em;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #0e4361;
+  color: #2a5582;
   vertical-align: middle;
   position: relative;
   top: 0.2em;
@@ -1126,9 +1129,14 @@ nav li.external a:hover, nav li.external a:focus {
 }
 #about p {
   margin: 0;
-  color: #fafafa;
   text-align: center;
-  text-shadow: #969696 -0.5px 1px 0;
+  color: #fafafa;
+  text-shadow: #a8a8a8 -0.03em 0.02em 0;
+}
+#about p a {
+  white-space: nowrap;
+  color: #008cba;
+  text-shadow: #005e7d -0.03em 0.02em 0;
 }
 #about p:nth-of-type(1) {
   font-family: "SourceSansPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1142,8 +1150,8 @@ nav li.external a:hover, nav li.external a:focus {
 #about p:nth-of-type(1) strong {
   text-transform: none;
   font-weight: 700;
-  color: #01a275;
-  text-shadow: #016f50 -0.5px 1px 0;
+  color: #4eb188;
+  text-shadow: #34775b -0.03em 0.02em 0;
 }
 #about p:nth-of-type(1) a {
   text-decoration: line-through;
@@ -1152,20 +1160,17 @@ nav li.external a:hover, nav li.external a:focus {
 #about p:nth-of-type(2) {
   padding: 4% 0;
   font-size: 1.2em;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
   max-width: 45em;
   margin: auto;
 }
 #about p:nth-of-type(2) i {
-  color: #01a275;
   font-size: 1.1em;
   font-style: italic;
-  text-shadow: #016f50 -0.5px 1px 0;
-  padding: 0.155em;
-}
-#about p a {
-  white-space: nowrap;
-  text-shadow: #006687 -0.5px 1px 0;
+  background-color: rgba(70, 69, 74, 0.7);
+  padding: 0.1em 0.8em;
+  color: #4eb188;
+  text-shadow: #34775b -0.03em 0.02em 0;
 }
 #about hr {
   border: dotted #969696;
@@ -1176,6 +1181,7 @@ nav li.external a:hover, nav li.external a:focus {
 #work {
   background-color: #eeeeee;
   position: relative;
+  border-color: white;
 }
 #work a.box {
   padding: 0;
@@ -1188,9 +1194,24 @@ nav li.external a:hover, nav li.external a:focus {
   -moz-box-shadow: 0px 2px 3px 0 #c8c8c8;
   -webkit-box-shadow: 0px 2px 3px 0 #c8c8c8;
   box-shadow: 0px 2px 3px 0 #c8c8c8;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  overflow: hidden;
 }
 #work .box img {
   max-width: 100%;
+}
+#work .box:hover {
+  -moz-transform: scale(1.04);
+  -ms-transform: scale(1.04);
+  -webkit-transform: scale(1.04);
+  transform: scale(1.04);
 }
 #work .caption {
   background-color: rgba(0, 0, 0, 0.77);
@@ -1210,7 +1231,7 @@ nav li.external a:hover, nav li.external a:focus {
   line-height: 1;
   letter-spacing: 0.02em;
   color: #fafafa;
-  text-shadow: #232323 -0.5px 1px 0;
+  text-shadow: #a8a8a8 -0.03em 0.02em 0;
   -moz-transition: font-size 0.05s ease;
   -o-transition: font-size 0.05s ease;
   -webkit-transition: font-size 0.05s ease;
@@ -2222,25 +2243,13 @@ footer p {
   #work .box:nth-child(n) {
     margin: 0%;
   }
-  #work .box:nth-child(n):hover {
-    width: 100%;
-    margin: -0.5%;
-  }
   #work .box:nth-child(1n) {
     margin-right: auto;
-  }
-  #work .box:nth-child(1n):hover {
-    width: 100%;
-    margin: -0.6%;
   }
   #work .box:nth-child(1n) {
     margin-left: auto;
     margin-top: 10%;
     margin-bottom: 10%;
-  }
-  #work .box:nth-child(1n):hover {
-    margin-top: 9.5%;
-    margin-bottom: 9.5%;
   }
 }
 @media (max-width: 27.438em) {
@@ -2254,16 +2263,8 @@ footer p {
   #work .box:nth-child(n) {
     margin: 2.75%;
   }
-  #work .box:nth-child(n):hover {
-    width: 45%;
-    margin: 2.25%;
-  }
   #work .box:nth-child(2n) {
     margin-right: auto;
-  }
-  #work .box:nth-child(2n):hover {
-    width: 45%;
-    margin: 2.15%;
   }
 }
 @media (min-width: 43.75em) {
@@ -2282,16 +2283,8 @@ footer p {
   #work .box:nth-child(n) {
     margin: 2%;
   }
-  #work .box:nth-child(n):hover {
-    width: 30%;
-    margin: 1.5%;
-  }
   #work .box:nth-child(3n) {
     margin-right: auto;
-  }
-  #work .box:nth-child(3n):hover {
-    width: 30%;
-    margin: 1.4%;
   }
 }
 @media (min-width: 75em) {
@@ -2305,16 +2298,8 @@ footer p {
   #work .box:nth-child(n) {
     margin: 1.75%;
   }
-  #work .box:nth-child(n):hover {
-    width: 22.25%;
-    margin: 1.25%;
-  }
   #work .box:nth-child(4n) {
     margin-right: auto;
-  }
-  #work .box:nth-child(4n):hover {
-    width: 22.25%;
-    margin: 1.15%;
   }
 }
 @media (min-width: 100em) {
@@ -2328,16 +2313,8 @@ footer p {
   #work .box:nth-child(n) {
     margin: 1.25%;
   }
-  #work .box:nth-child(n):hover {
-    width: 18.3%;
-    margin: 0.75%;
-  }
   #work .box:nth-child(5n) {
     margin-right: auto;
-  }
-  #work .box:nth-child(5n):hover {
-    width: 18.3%;
-    margin: 0.65%;
   }
 }
 nav {
