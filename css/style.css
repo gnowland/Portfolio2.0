@@ -1119,31 +1119,35 @@ nav li.external a:hover, nav li.external a:focus {
   background-color: white;
 }
 #about .tagline span:nth-of-type(1) {
-  padding: 0.2em 0.5em;
+  padding: 0.3em 0.5em;
+  margin-right: -1.5px;
 }
 #about .tagline span:nth-of-type(1):before {
   position: absolute;
   content: "";
-  border: 0.8em solid white;
+  border: 0.89em solid white;
   border-left-color: transparent;
-  left: -1.2em;
-  top: 0.15em;
+  left: -1.6em;
+  top: 0.3em;
 }
 #about .tagline span:nth-of-type(2) {
-  padding: 0.2em 0.7em;
+  padding: 0.3em 0.7em;
+  margin-left: -1px;
 }
 #about .tagline span:nth-of-type(2):after {
   position: absolute;
   content: "";
-  border: 0.8em solid white;
+  border: 0.89em solid white;
   border-right-color: transparent;
-  right: -1.2em;
-  top: 0.15em;
+  right: -1.6em;
+  top: 0.3em;
 }
 #about .tagline img {
   height: auto;
   border-radius: 50%;
   margin: 0 -0.15em 0 -0.1em;
+  position: relative;
+  z-index: 1;
 }
 #about p {
   color: #fafafa;
@@ -1166,7 +1170,7 @@ nav li.external a:hover, nav li.external a:focus {
   font-family: "SourceSansPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   line-height: 1.4;
-  padding: 4% 0 8%;
+  padding: 4% 0 0;
   margin: 0;
   position: relative;
   top: 15%;
@@ -1183,8 +1187,10 @@ nav li.external a:hover, nav li.external a:focus {
 #about .pitch p strong {
   font-weight: 700;
 }
-#about .pitch p img {
+#about .pitch img {
   max-width: 259px;
+  padding: 3% 0 3%;
+  margin: 0;
 }
 
 .disclosure {
@@ -2269,10 +2275,7 @@ footer p {
 @media (max-width: 60.188em) {
   #about .pitch p {
     font-size: 1.6em;
-    padding: 10% 0;
-  }
-  #about .pitch p img {
-    padding-top: 1em;
+    padding: 5% 0 4%;
   }
 
   #about .disclosure {
@@ -2286,8 +2289,7 @@ footer p {
   }
 
   #about .tagline span {
-    font-size: 1em;
-    text-shadow: 0px 0px 0 #969696, -0.2px 0.2px 0 white, -0.5px 0.5px 0 white, -1px 1px 0 white, -1.5px 1.5px 0 white, -1px 1px 0 white;
+    font-size: 1.1em;
   }
 }
 @media (min-width: 20em) {
