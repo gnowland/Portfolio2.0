@@ -52,7 +52,7 @@ $('.asterisk').click(function() {
   var scrollToSection = $('.disclosure');
   var transformSection = $('.disclosure p:first-child');
   $('html, body').animate({
-    scrollTop:  scrollToSection.offset().top-(currentOffset*2)
+    scrollTop:  scrollToSection.offset().top-(currentOffset*1.5)
     }, 650, 'swing', function () {
         transformSection.addClass('highlight')
         setTimeout(function (){
