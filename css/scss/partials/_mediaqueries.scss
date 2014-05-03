@@ -51,13 +51,20 @@
 
 //Font Breakpoint
 @media (max-width: 60.188em) {
-  #about p:nth-of-type(1) {
+  #about .pitch p {
     font-size: 1.6em;
+    padding: 10% 0;
+    img {
+      padding-top: 1em;
+    }
   }
-  #about p:nth-of-type(2) {
-    font-size: 1.05em;
-    i {
-      font-size: 1.1em;
+  #about .disclosure {
+    padding: 1em 0;
+      p {
+      font-size: 1.05em;
+      i {
+        font-size: 1.1em;
+      }
     }
   }
   #about .tagline span {

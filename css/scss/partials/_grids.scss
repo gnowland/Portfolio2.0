@@ -21,12 +21,13 @@
  );
 
 // Setting z-indexes
-$z-nav: 6;
-$z-header: 5;
-$z-about: 4;
-$z-work: 3;
-$z-contact: 2;
-$z-footer: 1;
+$z-nav:     7;
+$z-header:  ($z-nav - 1);
+$z-about:   ($z-nav - 2);
+$z-skills:  ($z-nav - 3);
+$z-work:    ($z-nav - 4);
+$z-contact: ($z-nav - 5);
+$z-footer:  ($z-nav - 6);
 
  // Making Mixins
  //@mixin offset ($margin) { // Moved to _mediaqueries.scss
@@ -99,6 +100,11 @@ section {
   z-index: $z-about;
   position: relative;
   @include span(12);
+}
+
+#skills {
+  z-index: $z-skills;
+  position: relative;
 }
 
 #work {

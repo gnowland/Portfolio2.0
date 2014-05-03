@@ -574,10 +574,17 @@ $(function() { //When the document loads
 //  });
 
 //Scroll the asterisk!
-$('.a').click(function() {
+$('.asterisk').click(function() {
+  var scrollToSection = $('.disclosure');
+  var transformSection = $('.disclosure p:first-child');
   $('html, body').animate({
-    scrollTop:  $('#about p:eq(1)').offset().top-(currentOffset*2)
-    }, 650, 'swing' );
+    scrollTop:  scrollToSection.offset().top-(currentOffset*2)
+    }, 650, 'swing', function () {
+        transformSection.addClass('highlight')
+        setTimeout(function (){
+             transformSection.removeClass('highlight');
+         }, 300);
+      });
   });
 
   //Performs a smooth page scroll to an anchor on the same page from all links

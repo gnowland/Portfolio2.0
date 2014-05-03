@@ -24,6 +24,7 @@ $header-top-margin: .2rem !default;
 $header-bottom-margin: .4rem !default;
 $header-text-rendering: optimizeLegibility !default; // 1
 $header-page-break-after: avoid !default; // 2
+$header-text-transform: uppercase;
 
 // [F]
 // We use these to control header font sizes
@@ -150,14 +151,15 @@ $definition-list-margin-bottom: rem-calc(12) !default;
     //margin: 0 0.2em;
     padding-bottom: 0.1em;
 
-    transition: 250ms ease-out;
-    transition-property: border-color, color;
+    transition: 0.2s ease-out;
+    transition-property: (border-color, color, text-shadow);
 
     &:hover,
     &:focus {
     //text-decoration: underline;
     color: inherit !important;//$anchor-font-color-hover;
     border-color: inherit !important;
+    text-shadow: inherit !important;
     }
 
     // [R]
@@ -194,6 +196,7 @@ $definition-list-margin-bottom: rem-calc(12) !default;
     margin-top: $header-top-margin;
     margin-bottom: $header-bottom-margin;
     line-height: $header-line-height;
+    text-transform: $header-text-transform;
 
     small {
       font-size: $small-font-size;

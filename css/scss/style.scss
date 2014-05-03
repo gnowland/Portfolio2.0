@@ -10,7 +10,9 @@
 $header-height: 3.5em;
 $bubble-bg:        rgba(255,255,255,0.8);
 $about-color:      rgb(78, 177, 136);//rgb(53,151,156)rgb(57,166,121);//rgb(1, 162, 117);
-$about-bg-color:   rgb(42,85,130);//rgb(38,76,117);//rgb(46, 93, 143);//rgb(56, 93, 143);//rgb(46, 76, 117);rgb(66, 109, 169);//rgb(14, 67, 97);
+$about-bg-color:   rgb(40,80,115);//rgb(50,90,130);//rgb(42,85,130);rgb(38,76,117);//rgb(46, 93, 143);//rgb(56, 93, 143);//rgb(46, 76, 117);rgb(66, 109, 169);//rgb(14, 67, 97);
+$skills-bg-color:  rgb(44, 44, 44);
+$skills-txt-color: rgb(220,220,220);
 $work-color:       rgb(0, 140, 186);
 $work-bg-color:    $body-bg;
 $contact-color:    rgb(201, 99, 99);
@@ -73,6 +75,16 @@ header {
     //color: rgb(26, 74, 116);
     //color: $body-bg; //rgba(27,60,89,0.82);
     //@include text-shadow(1px 2px 2px $body-bg, 0 0 0 #000, 1px 2px 2px $body-bg);
+
+    // Transition
+    position: relative;
+    @include transition-duration(.6s);
+    @include transition-property(transform);
+    overflow:hidden;
+    &:hover {
+      @include transform(rotateY( 360deg ));
+    }
+    // /Transition
   }
 }
 
@@ -83,9 +95,9 @@ nav {
     text-align: center;
     @include transition(background 0.2s linear);
     color: scale-color($anchor-font-color, $lightness: 3%);//hover color
-    &:hover, &:focus {
-      cursor: pointer;
-    }
+    //&:hover, &:focus { //Misleading...
+    //  cursor: pointer;
+    //}
     a {
       font-family: $gotham-font-stack;//$sourcesanspro-font-stack;
       text-transform: uppercase;
@@ -135,11 +147,9 @@ nav {
 
 #about {
   background: url(../img/graph-pattern.png) fixed 0 0 repeat, $about-bg-color;
-  overflow: hidden;
-  width: 100%;
-  height: auto;
-  padding: 3% 2%;
+  padding: 3% 2% 4%;
   text-align: center;
+  overflow: hidden;
   //  background-image: url(../img/hexnoise.png),url(../img/background.jpg);
   //  @include background-size(auto, cover);
   //  background-attachment: scroll, fixed;
@@ -181,59 +191,89 @@ nav {
         }
       }
     }
-  }
-  img {
-    height: auto;
-    border-radius: 50%;
-    margin: 0 -0.15em 0 -0.1em;
+    img {
+      height: auto;
+      border-radius: 50%;
+      margin: 0 -0.15em 0 -0.1em;
+    }
   }
   p {
-    margin: 0;
-    text-align: center;
     @include textStyle($paragraph-light-color);
+    span {
+      white-space: nowrap;
+    }
     a {
       white-space: nowrap;
       @include textStyle($anchor-font-color);
     }
-    &:nth-of-type(1) {
-      font-family: $sourcesanspro-font-stack;
-      font-weight: 400;
-      line-height: 1.4;
-      padding: 4% 0;
-      position: relative;
-      top: 15%;
-      font-size: 2.5em;
-      strong {
-        text-transform: none;
-        font-weight: 700;
-        @include textStyle($about-color);
-      }
-      a { //asterisk
-        text-decoration: line-through;
-        border: none;
-      }
-    }
-    &:nth-of-type(2) {
-      //border-top: rgba(124, 124, 124, 1) 1px dotted;
-      //padding: 1em 0.75em 0.3em;
-      padding:4% 0;
-      font-size: 1.2em;
-      letter-spacing: 0.02em;
-      max-width: 45em;
-      margin: auto;
-      i {
-        font-size: 1.1em;
-        font-style: italic;
-        background-color: rgba(70,69,74, 0.7);//rgb(253, 253, 154);
-        padding: 0.1em 0.8em;//0.155em;
-        @include textStyle($about-color);
-      }
+    strong {
+      text-transform: none;
+      @include textStyle($about-color);
     }
   }
-  hr {
-    border: dotted rgb(150,150,150);//rgb(97, 150, 180);
-    border-width: 1px 0 0;
-    padding: 0;
+  .pitch p {
+    font-family: $sourcesanspro-font-stack;
+    font-weight: 400;
+    line-height: 1.4;
+    padding: 4% 0 8%;
+    margin: 0;
+    position: relative;
+    top: 15%;
+    font-size: 2.5em;
+    a { //asterisk
+      font-family: $heuristica-font-stack;
+      @include textStyle(scale-color($anchor-font-color, $lightness: 15%));
+      border: none;
+      font-size: 1.2em;
+      line-height: 0;
+    }
+    strong {
+      font-weight: 700;
+    }
+    img {
+      max-width: 259px;
+    }
+  }
+}
+
+.disclosure {
+  //box-shadow: 0 0 20px -5px rgb(10,10,10);
+  margin: 0 -2.1%;
+  padding: 1.5% 2%;
+  background: rgba(20,40,60, 0.4);
+  //@include transition(background 500ms ease);
+  p {
+    max-width: 40em;
+    font-size: 1.4em;
+    letter-spacing: 0.02em;
+    margin: auto;
+    padding: 0.2em 0;
+    &:first-child { //zoom effect when asterisk clicked
+      @include transition(transform 300ms linear);
+      &.highlight {
+        @include transform(scale(1.02));
+        //background: rgb(54,55,41);//scale-color($skills-bg-color, $lightness: 10%);
+      }
+    }
+    > span:first-child { //asterisk
+        font-size: 1.8em;
+        @include textStyle($skills-txt-color);//rgb(181,91,40));
+        line-height: 0;
+        vertical-align: middle;
+      }
+    i {
+      width: 100%;
+      display: block;
+      text-align: center;
+      font-size: 1.1em;
+      font-style: italic;
+      //background-color: rgba(70,69,74, 0.7);//rgb(253, 253, 154);
+      @include textStyle($about-color);//@include textStyle(rgb(181,91,40));
+    }
+    strong {
+      font-weight: 400;
+      font-size: 1.1em;
+    }
   }
 }
 
@@ -255,8 +295,7 @@ nav {
     }
 
     // Transition
-    @include transition-duration(0.2s);
-    @include transition-property(transform);
+    @include transition(transform 0.15s linear);
     overflow:hidden;
     &:hover {
       @include transform(scale(1.04));
@@ -280,6 +319,7 @@ nav {
       font-weight: 600;
       line-height: 1;
       letter-spacing: 0.02em;
+      text-transform: none;
       @include textStyle($paragraph-light-color);
       @include transition(font-size 0.05s ease);
     }
