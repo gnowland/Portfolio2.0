@@ -152,16 +152,40 @@ nav {
       letter-spacing: 0.1em;
       color: $about-bg-color; //$header-font-color;//$paragraph-light-color;
       vertical-align: middle;
-      border-top: 1px solid rgb(230,230,230);
-      border-bottom: 1px solid rgb(230,230,230);
-      padding: 4px 0 6.3px 3px;
-      @include text-shadow(0px 0px 0 rgb(150,150,150), -0.2px 0.2px 0 white, -0.5px 0.5px 0 white, -1px 1px 0 white, -1.5px 1.5px 0 white, -1px 1px 0 white, -2px 2px 0 white);
+      //border-top: 1px solid rgb(230,230,230);
+      //border-bottom: 1px solid rgb(230,230,230);
+      //@include text-shadow(0px 0px 0 rgb(150,150,150), -0.2px 0.2px 0 white, -0.5px 0.5px 0 white, -1px 1px 0 white, -1.5px 1.5px 0 white, -1px 1px 0 white, -2px 2px 0 white);
+      position: relative;
+      top: 0.2em;
+      background-color: rgb(255, 255, 255);
+      &:nth-of-type(1){
+        padding: 0.2em 0.5em;
+        &:before {
+          position: absolute;
+          content: "";
+          border: 0.8em solid rgb(255, 255, 255);
+          border-left-color: transparent;
+          left: -1.2em;
+          top: 0.15em;
+        }
+      }
+      &:nth-of-type(2) {
+        padding: 0.2em 0.7em;
+        &:after {
+          position: absolute;
+          content: "";
+          border: 0.8em solid rgb(255, 255, 255);
+          border-right-color: transparent;
+          right: -1.2em;
+          top: 0.15em;
+        }
+      }
     }
   }
   img {
     height: auto;
     border-radius: 50%;
-    margin: 0 2%;
+    margin: 0 -0.15em 0 -0.1em;
   }
   p {
     margin: 0;
@@ -248,7 +272,7 @@ nav {
     bottom: 15%;
     left: 0;
     right: 0;
-    width: 100.5%;
+    width: 100%;
     padding: 3% 2%;
     overflow: hidden;
     h2 {

@@ -149,10 +149,13 @@ $definition-list-margin-bottom: rem-calc(12) !default;
     line-height: inherit;
     margin: 0 0.2em;
 
+    transition: 250ms ease-out;
+    transition-property: border-color, color;
+
     &:hover,
     &:focus {
     //text-decoration: underline;
-    color: $anchor-font-color-hover;
+    color: inherit;//$anchor-font-color-hover;
     border-color: $anchor-font-color-hover;
     }
 

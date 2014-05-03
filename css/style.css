@@ -730,9 +730,11 @@ a {
   border-bottom: 1px dotted #008cba;
   line-height: inherit;
   margin: 0 0.2em;
+  transition: 250ms ease-out;
+  transition-property: border-color, color;
 }
 a:hover, a:focus {
-  color: #0078a0;
+  color: inherit;
   border-color: #0078a0;
 }
 a img {
@@ -1091,15 +1093,36 @@ nav li.external a:hover, nav li.external a:focus {
   letter-spacing: 0.1em;
   color: #0e4361;
   vertical-align: middle;
-  border-top: 1px solid #e6e6e6;
-  border-bottom: 1px solid #e6e6e6;
-  padding: 4px 0 6.3px 3px;
-  text-shadow: 0px 0px 0 #969696, -0.2px 0.2px 0 white, -0.5px 0.5px 0 white, -1px 1px 0 white, -1.5px 1.5px 0 white, -1px 1px 0 white, -2px 2px 0 white;
+  position: relative;
+  top: 0.2em;
+  background-color: white;
+}
+#about .tagline span:nth-of-type(1) {
+  padding: 0.2em 0.5em;
+}
+#about .tagline span:nth-of-type(1):before {
+  position: absolute;
+  content: "";
+  border: 0.8em solid white;
+  border-left-color: transparent;
+  left: -1.2em;
+  top: 0.15em;
+}
+#about .tagline span:nth-of-type(2) {
+  padding: 0.2em 0.7em;
+}
+#about .tagline span:nth-of-type(2):after {
+  position: absolute;
+  content: "";
+  border: 0.8em solid white;
+  border-right-color: transparent;
+  right: -1.2em;
+  top: 0.15em;
 }
 #about img {
   height: auto;
   border-radius: 50%;
-  margin: 0 2%;
+  margin: 0 -0.15em 0 -0.1em;
 }
 #about p {
   margin: 0;
@@ -1175,7 +1198,7 @@ nav li.external a:hover, nav li.external a:focus {
   bottom: 15%;
   left: 0;
   right: 0;
-  width: 100.5%;
+  width: 100%;
   padding: 3% 2%;
   overflow: hidden;
 }
