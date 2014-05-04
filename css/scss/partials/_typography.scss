@@ -109,6 +109,11 @@ $definition-list-margin-bottom: rem-calc(12) !default;
   margin-bottom: $subheader-bottom-margin;
 }
 
+@mixin textStyle($color, $x) {
+  color: $color;
+  text-shadow: scale-color($color, $lightness: -33%) $x (-$x / 2) 0;
+}
+
 @include exports("type") {
 
   // Global Text Styles
@@ -190,7 +195,7 @@ $definition-list-margin-bottom: rem-calc(12) !default;
     font-family: $header-font-family;
     font-weight: $header-font-weight;
     font-style: $header-font-style;
-    color: $header-font-color;
+    @include textStyle($header-font-color, -2px);
     text-rendering: $header-text-rendering;
     page-break-after: $header-page-break-after;
     margin-top: $header-top-margin;

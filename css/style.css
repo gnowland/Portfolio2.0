@@ -772,6 +772,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   font-style: normal;
   color: #28415c;
+  text-shadow: #1b2c3e -2px 1px 0;
   text-rendering: optimizeLegibility;
   page-break-after: avoid;
   margin-top: 0.2rem;
@@ -1155,20 +1156,20 @@ nav li.external a:hover, nav li.external a:focus {
 #about p a {
   white-space: nowrap;
   color: #008cba;
-  text-shadow: #005e7d -0.8px 0.5px 0;
+  text-shadow: #005e7d -1px 0.5px 0;
 }
 #about p strong {
   text-transform: none;
   color: #4eb188;
-  text-shadow: #34775b -0.8px 0.5px 0;
+  text-shadow: #34775b -1px 0.5px 0;
 }
 #about .pitch p {
   color: #fafafa;
-  text-shadow: #a8a8a8 -0.8px 0.5px 0;
+  text-shadow: #a8a8a8 -1px 0.5px 0;
   font-family: "SourceSansPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  line-height: 1.4;
-  padding: 1em 1em 18%;
+  line-height: 1.3;
+  padding: 1em 1em 9.7%;
   margin: 0;
   position: relative;
   top: 15%;
@@ -1177,7 +1178,7 @@ nav li.external a:hover, nav li.external a:focus {
 #about .pitch p a {
   font-family: "Heuristica", "Hoefler Text", Garamond, Baskerville, "Baskerville Old Face", "Times New Roman", serif;
   color: #00b1eb;
-  text-shadow: #00769d -0.8px 0.5px 0;
+  text-shadow: #00769d -1px 0.5px 0;
   border: none;
   font-size: 1.2em;
   line-height: 0;
@@ -1192,7 +1193,7 @@ nav li.external a:hover, nav li.external a:focus {
   bottom: 0;
   content: "";
   border-style: solid;
-  border-width: 0px 55px 40px 0px;
+  border-width: 0px 40px 40px 0px;
   border-color: transparent transparent #323232 transparent;
   box-shadow: inset 0 5px 20px -10px #282828;
 }
@@ -1203,7 +1204,7 @@ nav li.external a:hover, nav li.external a:focus {
   bottom: 0;
   content: "";
   border-style: solid;
-  border-width: 0px 0px 40px 55px;
+  border-width: 0px 0px 40px 40px;
   border-color: transparent transparent #323232 transparent;
   box-shadow: inset 0 5px 20px -10px #282828;
 }
@@ -1216,9 +1217,10 @@ nav li.external a:hover, nav li.external a:focus {
 }
 .disclosure p {
   color: #fafafa;
-  text-shadow: #a8a8a8 -0.2px -0.1px 0;
+  text-shadow: #a8a8a8 -0.2px 0.1px 0;
   max-width: 40em;
   font-size: 1.2em;
+  line-height: 1.5;
   letter-spacing: 0.025em;
   margin: auto;
   padding: 0.2em 0;
@@ -1238,7 +1240,7 @@ nav li.external a:hover, nav li.external a:focus {
 .disclosure p > span:first-child {
   font-size: 1.8em;
   color: gainsboro;
-  text-shadow: #939393 -0.8px 0.5px 0;
+  text-shadow: #939393 -1px 0.5px 0;
   line-height: 0;
   vertical-align: middle;
 }
@@ -1248,10 +1250,14 @@ nav li.external a:hover, nav li.external a:focus {
 .disclosure p:nth-of-type(1) i {
   width: 100%;
   display: block;
+  margin-top: 0.5em;
   text-align: center;
   font-style: italic;
   color: #4eb188;
-  text-shadow: #34775b -0.8px 0.5px 0;
+  text-shadow: #34775b -1px 0.5px 0;
+}
+.disclosure p:last-of-type {
+  margin-top: 0.5em;
 }
 .disclosure hr {
   padding: 0;
@@ -1309,7 +1315,7 @@ nav li.external a:hover, nav li.external a:focus {
   letter-spacing: 0.02em;
   text-transform: none;
   color: #fafafa;
-  text-shadow: #a8a8a8 -0.8px 0.5px 0;
+  text-shadow: #a8a8a8 -0.8px 0.4px 0;
   -moz-transition: font-size 0.05s ease;
   -o-transition: font-size 0.05s ease;
   -webkit-transition: font-size 0.05s ease;

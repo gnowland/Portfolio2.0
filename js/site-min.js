@@ -555,7 +555,7 @@ $(function() { //When the document loads
 
   var sections = $('section');
   var nav_a = $('nav a');
-  var headercompact = 7;// $('header').outerHeight(); // Overridden by adding a psudo-element to all sections
+  var offsetAdj = 7;// $('header').outerHeight(); // Overridden by adding a psudo-element to all sections
   var currentOffset = $('body').css('margin-top').match(/\d+/);
 
 //SUPERSEEDED BY THE CODE BELOW IT
@@ -578,7 +578,7 @@ $('.asterisk').click(function() {
   var scrollToSection = $('.disclosure');
   var transformSection = $('.disclosure p:first-child');
   $('html, body').animate({
-    scrollTop:  scrollToSection.offset().top-(currentOffset*1.75)
+    scrollTop:  scrollToSection.offset().top-(currentOffset*2.1)
     }, 650, 'swing', function () {
         transformSection.addClass('highlight')
         setTimeout(function (){
@@ -610,7 +610,7 @@ $('.asterisk').click(function() {
         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
         if (target.length) {
           $('html,body').animate({
-            scrollTop: target.offset().top-headercompact+2
+            scrollTop: target.offset().top-offsetAdj+2
           }, 800, 'swing', function () {
             window.location.hash = target.selector;
             });
@@ -635,7 +635,7 @@ $('.asterisk').click(function() {
 //        $('header h1').addClass('compact');
 //      }
     },
-    offset: headercompact
+    offset: offsetAdj
   });
 
 // Check if at bottom of page, if so, add class to last <a> as sometimes the last div
@@ -668,7 +668,7 @@ $('.asterisk').click(function() {
         $('header').removeClass().addClass($(this).attr("id")); //to change the color of the border
       }
     },
-    offset: '-40%' //headercompact-15
+    offset: '-40%' //offsetAdj-15
   });
 
   //To make header smaller after scrolling down
