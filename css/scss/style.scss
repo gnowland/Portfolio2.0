@@ -11,6 +11,10 @@ $header-height: 3.5em;
 $bubble-bg:        rgba(255,255,255,0.8);
 $about-color:      rgb(78, 177, 136);//rgb(53,151,156)rgb(57,166,121);//rgb(1, 162, 117);
 $about-bg-color:   rgb(40,80,115);//rgb(50,90,130);//rgb(42,85,130);rgb(38,76,117);//rgb(46, 93, 143);//rgb(56, 93, 143);//rgb(46, 76, 117);rgb(66, 109, 169);//rgb(14, 67, 97);
+$pitch-shadow-x:   -0.8px;
+$pitch-shadow-y:   0.5px;
+$discl-shadow-x:   -0.2px;
+$discl-shadow-y:   -0.1px;
 $skills-bg-color:  rgb(44, 44, 44);
 $skills-txt-color: rgb(220,220,220);
 $work-color:       rgb(0, 140, 186);
@@ -20,9 +24,9 @@ $contact-bg-color: rgb(34, 34, 34);
 $blog-color:       rgb(67, 103, 158);
 
 //Mixins:
-@mixin textStyle($color) {
+@mixin textStyle($color, $x, $y) {
   color: $color;
-  text-shadow: scale-color($color, $lightness: -33%) -0.03em 0.02em 0;
+  text-shadow: scale-color($color, $lightness: -33%) $x $y 0;
 }
 
 
@@ -147,9 +151,9 @@ nav {
 
 #about {
   background: url(../img/graph-pattern.png) fixed 0 0 repeat, $about-bg-color;
-  padding: 3em 1em 4em;
+  padding: 3em 0 0; //4em;
   text-align: center;
-  overflow: hidden;
+  overflow: auto;
   //  background-image: url(../img/hexnoise.png),url(../img/background.jpg);
   //  @include background-size(auto, cover);
   //  background-attachment: scroll, fixed;
@@ -202,38 +206,61 @@ nav {
     }
   }
   p {
-    @include textStyle($paragraph-light-color);
     span {
       white-space: nowrap;
     }
     a {
       white-space: nowrap;
-      @include textStyle($anchor-font-color);
+      @include textStyle($anchor-font-color, $pitch-shadow-x, $pitch-shadow-y);
     }
     strong {
       text-transform: none;
-      @include textStyle($about-color);
+      @include textStyle($about-color, $pitch-shadow-x, $pitch-shadow-y);
     }
   }
   .pitch {
     p {
+      @include textStyle($paragraph-light-color, $pitch-shadow-x, $pitch-shadow-y);
       font-family: $sourcesanspro-font-stack;
       font-weight: 400;
       line-height: 1.4;
-      padding: 1em 1em 4em;
+      padding: 1em 1em 18%;
       margin: 0;
       position: relative;
       top: 15%;
       font-size: 2.5em;
       a { //asterisk
         font-family: $heuristica-font-stack;
-        @include textStyle(scale-color($anchor-font-color, $lightness: 15%));
+        @include textStyle(scale-color($anchor-font-color, $lightness: 15%), $pitch-shadow-x, $pitch-shadow-y);
         border: none;
         font-size: 1.2em;
         line-height: 0;
       }
       strong {
         font-weight: 700;
+      }
+      //arrow effect
+      &:before {
+        position: absolute;
+        width: 50%;
+        left: 0;
+        bottom: 0;
+        content: "";
+        border-style: solid;
+        border-width: 0px 55px 40px 0px;
+        border-color: transparent transparent rgb(50, 50, 50) transparent;
+        box-shadow: inset 0 5px 20px -10px rgb(40,40,40);
+      }
+      &:after {
+        position: absolute;
+        width: 50%;
+        right: 0;
+        bottom: 0;
+        content: "";
+        border-style: solid;
+        border-width: 0px 0px 40px 55px;
+        border-color: transparent transparent rgb(50, 50, 50) transparent;
+        box-shadow: inset 0 5px 20px -10px rgb(40,40,40);
       }
     }
   //  img {
@@ -245,15 +272,16 @@ nav {
 }
 
 .disclosure {
-  //box-shadow: 0 0 20px -5px rgb(10,10,10);
-  margin: 0 -1em;
+  margin: 0;
   padding: 1.5em 1em;
-  background: rgba(20,40,60, 0.4);
+  background: rgb(50,50,50);//rgba(20,40,60, 0.4);
+  position: relative;
   //@include transition(background 500ms ease);
   p {
+    @include textStyle($paragraph-light-color, $discl-shadow-x, $discl-shadow-y);
     max-width: 40em;
-    font-size: 1.4em;
-    letter-spacing: 0.02em;
+    font-size: 1.2em;
+    letter-spacing: 0.025em;
     margin: auto;
     padding: 0.2em 0;
     &:first-child { //zoom effect when asterisk clicked
@@ -265,21 +293,26 @@ nav {
     }
     > span:first-child { //asterisk
         font-size: 1.8em;
-        @include textStyle($skills-txt-color);//rgb(181,91,40));
+        @include textStyle($skills-txt-color, $pitch-shadow-x, $pitch-shadow-y);//rgb(181,91,40));
         line-height: 0;
         vertical-align: middle;
       }
-    i {
-      width: 100%;
-      display: block;
-      text-align: center;
-      font-style: italic;
-      //background-color: rgba(70,69,74, 0.7);//rgb(253, 253, 154);
-      @include textStyle($about-color);//@include textStyle(rgb(181,91,40));
+    &:nth-of-type(1) {
+      font-size: 1.4em;
+      i {
+        width: 100%;
+        display: block;
+        text-align: center;
+        font-style: italic;
+        //background-color: rgba(70,69,74, 0.7);//rgb(253, 253, 154);
+        @include textStyle($about-color, $pitch-shadow-x, $pitch-shadow-y);//@include textStyle(rgb(181,91,40));
+      }
     }
-    strong {
-      font-weight: 400;
-    }
+  }
+  hr {
+    padding: 0;
+    max-width: 40em;
+    margin: 1em auto;
   }
 }
 
@@ -326,7 +359,7 @@ nav {
       line-height: 1;
       letter-spacing: 0.02em;
       text-transform: none;
-      @include textStyle($paragraph-light-color);
+      @include textStyle($paragraph-light-color, $pitch-shadow-x, $pitch-shadow-y);
       @include transition(font-size 0.05s ease);
     }
   }
