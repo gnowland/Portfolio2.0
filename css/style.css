@@ -772,7 +772,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   font-style: normal;
   color: #28415c;
-  text-shadow: #1b2c3e -2px 1px 0;
   text-rendering: optimizeLegibility;
   page-break-after: avoid;
   margin-top: 0.2rem;
@@ -1250,7 +1249,7 @@ nav li.external a:hover, nav li.external a:focus {
 .disclosure p:nth-of-type(1) i {
   width: 100%;
   display: block;
-  margin-top: 0.5em;
+  margin-top: 0em;
   text-align: center;
   font-style: italic;
   color: #4eb188;
@@ -1284,17 +1283,23 @@ nav li.external a:hover, nav li.external a:focus {
   box-shadow: 0px 2px 3px 0 #c8c8c8;
   display: block;
   position: relative;
-  -moz-transition: -moz-transform 0.15s linear;
-  -o-transition: -o-transform 0.15s linear;
-  -webkit-transition: -webkit-transform 0.15s linear;
-  transition: transform 0.15s linear;
+  -moz-transition: -moz-transform 0.2s ease-out;
+  -o-transition: -o-transform 0.2s ease-out;
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
   overflow: hidden;
 }
 #work .box a:hover {
-  -moz-transform: scale(1.04);
-  -ms-transform: scale(1.04);
-  -webkit-transform: scale(1.04);
-  transform: scale(1.04);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+#work .box a:hover .caption {
+  -moz-transform: translate(0, 200%);
+  -ms-transform: translate(0, 200%);
+  -webkit-transform: translate(0, 200%);
+  transform: translate(0, 200%);
 }
 #work .box img {
   max-width: 100%;
@@ -1304,6 +1309,7 @@ nav li.external a:hover, nav li.external a:focus {
   line-height: 1.2;
   padding-top: 0.5em;
   margin: 0;
+  text-shadow: #c8c8c8 -0.1px -0.1px 0;
 }
 #work .caption {
   background-color: rgba(0, 0, 0, 0.77);
@@ -1314,6 +1320,10 @@ nav li.external a:hover, nav li.external a:focus {
   width: 100%;
   padding: 3% 2%;
   overflow: hidden;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
 }
 #work .caption h2 {
   text-align: center;
@@ -2349,6 +2359,9 @@ footer p {
     margin-top: 10%;
     margin-bottom: 10%;
   }
+  #work .box .caption h2 {
+    font-size: 1.5em;
+  }
 }
 @media (max-width: 27.438em) {
   display: block;
@@ -2364,10 +2377,16 @@ footer p {
   #work .box:nth-child(2n) {
     margin-right: auto;
   }
+  #work .box .caption h2 {
+    font-size: 1.2em;
+  }
 }
 @media (min-width: 43.75em) {
   #work {
     padding: 1% 5%;
+  }
+  #work .box .caption h2 {
+    font-size: 1.5em;
   }
 }
 @media (min-width: 53.125em) {
