@@ -1027,7 +1027,7 @@ header [data-icon='\f100'] {
   transition-property: transform;
   overflow: hidden;
 }
-header [data-icon='\f100']:hover {
+header [data-icon='\f100']:hover, header [data-icon='\f100']:focus, header [data-icon='\f100']:active {
   -moz-transform: rotateY(360deg);
   -ms-transform: rotateY(360deg);
   -webkit-transform: rotateY(360deg);
@@ -1268,33 +1268,42 @@ nav li.external a:hover, nav li.external a:focus {
 #work {
   background-color: #eeeeee;
   position: relative;
-  border-color: white;
-}
-#work a.box {
-  padding: 0;
 }
 #work .box {
   display: inline-block;
   position: relative;
   max-width: 23.625em;
+  border-color: white;
+  vertical-align: top;
+}
+#work .box a {
+  padding: 0;
   border: 1px solid white;
   -moz-box-shadow: 0px 2px 3px 0 #c8c8c8;
   -webkit-box-shadow: 0px 2px 3px 0 #c8c8c8;
   box-shadow: 0px 2px 3px 0 #c8c8c8;
+  display: block;
+  position: relative;
   -moz-transition: -moz-transform 0.15s linear;
   -o-transition: -o-transform 0.15s linear;
   -webkit-transition: -webkit-transform 0.15s linear;
   transition: transform 0.15s linear;
   overflow: hidden;
 }
-#work .box img {
-  max-width: 100%;
-}
-#work .box:hover {
+#work .box a:hover {
   -moz-transform: scale(1.04);
   -ms-transform: scale(1.04);
   -webkit-transform: scale(1.04);
   transform: scale(1.04);
+}
+#work .box img {
+  max-width: 100%;
+}
+#work .box p {
+  color: #555555;
+  line-height: 1.2;
+  padding-top: 0.5em;
+  margin: 0;
 }
 #work .caption {
   background-color: rgba(0, 0, 0, 0.77);
@@ -1315,7 +1324,7 @@ nav li.external a:hover, nav li.external a:focus {
   letter-spacing: 0.02em;
   text-transform: none;
   color: #fafafa;
-  text-shadow: #a8a8a8 -0.8px 0.4px 0;
+  text-shadow: black -1px 0.5px 0;
   -moz-transition: font-size 0.05s ease;
   -o-transition: font-size 0.05s ease;
   -webkit-transition: font-size 0.05s ease;
