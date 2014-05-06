@@ -609,8 +609,17 @@ select {
   clear: both;
 }
 
+nav {
+  z-index: 8;
+  position: relative;
+  margin: 0 auto;
+}
+nav li {
+  float: left;
+}
+
 header {
-  z-index: 6;
+  z-index: 7;
   position: fixed;
   top: 0;
   left: 0;
@@ -632,15 +641,6 @@ header h1 {
   clear: both;
 }
 
-nav {
-  z-index: 7;
-  position: relative;
-  margin: 0 auto;
-}
-nav li {
-  float: left;
-}
-
 section {
   max-width: 100%;
   margin-left: auto;
@@ -656,6 +656,13 @@ section::after {
 }
 
 #about {
+  z-index: 6;
+  position: relative;
+  width: 100%;
+  float: left;
+}
+
+#slug {
   z-index: 5;
   position: relative;
   width: 100%;
@@ -665,6 +672,8 @@ section::after {
 #skills {
   z-index: 4;
   position: relative;
+  width: 100%;
+  float: left;
 }
 
 #work {
@@ -735,6 +744,7 @@ a {
   border-bottom: 1px solid #007095;
   line-height: inherit;
   padding-bottom: 0.1em;
+  white-space: nowrap;
   transition: 0.2s ease-out;
   transition-property: border-color, color, text-shadow;
 }
@@ -764,6 +774,10 @@ p aside {
   font-size: 0.875rem;
   line-height: 1.35;
   font-style: italic;
+}
+
+span {
+  white-space: nowrap;
 }
 
 /* Default header styles */
@@ -959,6 +973,10 @@ ol li ol {
  * ---------------------------------------------------------------------------------------------------
  * BEGIN CUSTOM STYLES
  */
+body {
+  border-top: 0.4em #eeeeee solid;
+}
+
 header {
   margin: 0;
   padding: 0;
@@ -1097,14 +1115,21 @@ nav li.external a:hover, nav li.external a:focus {
   text-decoration: none;
 }
 
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
 #about {
   background: url(../img/graph-pattern.png) fixed 0 0 repeat, #285073;
-  padding: 3em 0 0;
-  text-align: center;
-  overflow: auto;
+  padding: 0 0 40px 0;
+  overflow: hidden;
+  min-height: 100%;
+  display: table;
 }
 #about .tagline {
-  margin: 0.5em 0;
+  margin: 0;
 }
 #about .tagline span {
   font-family: "Gotham", "Century Gothic", "Tw Cen MT", Futura, "URW Gothic L", Arial, sans-serif;
@@ -1149,43 +1174,33 @@ nav li.external a:hover, nav li.external a:focus {
   position: relative;
   z-index: 1;
 }
-#about p span {
-  white-space: nowrap;
-}
-#about p a {
-  white-space: nowrap;
-  color: #008cba;
-  text-shadow: #005e7d -1px 0.5px 0;
-}
-#about p strong {
-  text-transform: none;
-  color: #4eb188;
-  text-shadow: #34775b -1px 0.5px 0;
-}
-#about .pitch p {
+#about p {
   color: #fafafa;
   text-shadow: #a8a8a8 -1px 0.5px 0;
+  border-color: #fafafa;
   font-family: "SourceSansPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   line-height: 1.3;
-  padding: 1em 1em 9.7%;
-  margin: 0;
-  position: relative;
-  top: 15%;
   font-size: 2.5em;
+  margin: 1em 1em;
 }
-#about .pitch p a {
+#about p a {
   font-family: "Heuristica", "Hoefler Text", Garamond, Baskerville, "Baskerville Old Face", "Times New Roman", serif;
   color: #00b1eb;
   text-shadow: #00769d -1px 0.5px 0;
+  border-color: #00b1eb;
   border: none;
   font-size: 1.2em;
   line-height: 0;
 }
-#about .pitch p strong {
+#about p strong {
   font-weight: 700;
+  text-transform: none;
+  color: #4eb188;
+  text-shadow: #34775b -1px 0.5px 0;
+  border-color: #4eb188;
 }
-#about .pitch p:before {
+#about:before {
   position: absolute;
   width: 50%;
   left: 0;
@@ -1196,7 +1211,7 @@ nav li.external a:hover, nav li.external a:focus {
   border-color: transparent transparent #323232 transparent;
   box-shadow: inset 0 5px 20px -10px #282828;
 }
-#about .pitch p:after {
+#about:after {
   position: absolute;
   width: 50%;
   right: 0;
@@ -1208,57 +1223,60 @@ nav li.external a:hover, nav li.external a:focus {
   box-shadow: inset 0 5px 20px -10px #282828;
 }
 
-.disclosure {
+#slug {
   margin: 0;
   padding: 1.5em 1em;
   background: #323232;
-  position: relative;
+  text-align: center;
 }
-.disclosure p {
+#slug p {
   color: #fafafa;
   text-shadow: #a8a8a8 -0.2px 0.1px 0;
+  border-color: #fafafa;
   max-width: 40em;
+  margin: 0 auto 0.6em;
   font-size: 1.2em;
-  line-height: 1.5;
+  line-height: 1.45;
   letter-spacing: 0.025em;
-  margin: auto;
-  padding: 0.2em 0;
 }
-.disclosure p:first-child {
+#slug p:first-child {
   -moz-transition: -moz-transform 300ms linear;
   -o-transition: -o-transform 300ms linear;
   -webkit-transition: -webkit-transform 300ms linear;
   transition: transform 300ms linear;
 }
-.disclosure p:first-child.highlight {
+#slug p:first-child.highlight {
   -moz-transform: scale(1.02);
   -ms-transform: scale(1.02);
   -webkit-transform: scale(1.02);
   transform: scale(1.02);
 }
-.disclosure p > span:first-child {
+#slug p a {
+  color: #008cba;
+  text-shadow: #005e7d -1px 0.5px 0;
+  border-color: #008cba;
+}
+#slug p > span:first-child {
   font-size: 1.8em;
   color: gainsboro;
   text-shadow: #939393 -1px 0.5px 0;
+  border-color: gainsboro;
   line-height: 0;
   vertical-align: middle;
 }
-.disclosure p:nth-of-type(1) {
+#slug p:nth-of-type(1) {
   font-size: 1.4em;
 }
-.disclosure p:nth-of-type(1) i {
+#slug p:nth-of-type(1) i {
   width: 100%;
   display: block;
-  margin-top: 0em;
-  text-align: center;
+  margin-top: .3em;
   font-style: italic;
   color: #4eb188;
   text-shadow: #34775b -1px 0.5px 0;
+  border-color: #4eb188;
 }
-.disclosure p:last-of-type {
-  margin-top: 0.5em;
-}
-.disclosure hr {
+#slug hr {
   padding: 0;
   max-width: 40em;
   margin: 1em auto;
@@ -1283,10 +1301,10 @@ nav li.external a:hover, nav li.external a:focus {
   box-shadow: 0px 2px 3px 0 #c8c8c8;
   display: block;
   position: relative;
-  -moz-transition: -moz-transform 0.2s ease-out;
-  -o-transition: -o-transform 0.2s ease-out;
-  -webkit-transition: -webkit-transform 0.2s ease-out;
-  transition: transform 0.2s ease-out;
+  -moz-transition: -moz-transform 0.2s linear;
+  -o-transition: -o-transform 0.2s linear;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
   overflow: hidden;
 }
 #work .box a:hover {
@@ -1300,6 +1318,8 @@ nav li.external a:hover, nav li.external a:focus {
   -ms-transform: translate(0, 200%);
   -webkit-transform: translate(0, 200%);
   transform: translate(0, 200%);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
 }
 #work .box img {
   max-width: 100%;
@@ -1310,6 +1330,19 @@ nav li.external a:hover, nav li.external a:focus {
   padding-top: 0.5em;
   margin: 0;
   text-shadow: #c8c8c8 -0.1px -0.1px 0;
+  vertical-align: top;
+}
+#work .box p span {
+  float: right;
+  margin-left: 0.9em;
+  font-weight: 400;
+  color: #eeeeee;
+  text-shadow: #9f9f9f -1px 0.5px 0;
+  border-color: #eeeeee;
+  padding: 0 0.2em 0 0.25em;
+  letter-spacing: 0.03em;
+  border-radius: 3px;
+  background: #a5a5a5;
 }
 #work .caption {
   background-color: rgba(0, 0, 0, 0.77);
@@ -1320,10 +1353,10 @@ nav li.external a:hover, nav li.external a:focus {
   width: 100%;
   padding: 3% 2%;
   overflow: hidden;
-  -moz-transition: -moz-transform 0.3s ease-out;
-  -o-transition: -o-transform 0.3s ease-out;
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  transition: transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out, opacity 0.4s ease-out;
+  -o-transition: -o-transform 0.3s ease-out, opacity 0.4s ease-out;
+  -webkit-transition: -webkit-transform 0.3s ease-out, opacity 0.4s ease-out;
+  transition: transform 0.3s ease-out, opacity 0.4s ease-out;
 }
 #work .caption h2 {
   text-align: center;
@@ -1345,9 +1378,6 @@ nav li.external a:hover, nav li.external a:focus {
   background-color: #222222;
 }
 
-footer {
-  background: url(../img/hexnoise.png) fixed 0 0 repeat, #2e2e2e;
-}
 footer p {
   text-align: center;
   color: rgba(255, 255, 255, 0.18);
@@ -1362,14 +1392,9 @@ footer p {
     margin-top: 3.7em;
   }
 
-  .contain {
-    border-top: 3.3em solid transparent;
-    margin-top: -3.3em;
-  }
-
   section {
     border-top: 3.3em solid #eeeeee;
-    margin-top: -3.3em;
+    margin-top: -3.7em;
   }
 
   nav {
@@ -1393,14 +1418,9 @@ footer p {
     margin-top: 3.814em;
   }
 
-  .contain {
-    border-top: 3.414em solid transparent;
-    margin-top: -3.414em;
-  }
-
   section {
     border-top: 3.414em solid #eeeeee;
-    margin-top: -3.414em;
+    margin-top: -3.814em;
   }
 
   nav {
@@ -1424,14 +1444,9 @@ footer p {
     margin-top: 3.928em;
   }
 
-  .contain {
-    border-top: 3.528em solid transparent;
-    margin-top: -3.528em;
-  }
-
   section {
     border-top: 3.528em solid #eeeeee;
-    margin-top: -3.528em;
+    margin-top: -3.928em;
   }
 
   nav {
@@ -1455,14 +1470,9 @@ footer p {
     margin-top: 4.042em;
   }
 
-  .contain {
-    border-top: 3.642em solid transparent;
-    margin-top: -3.642em;
-  }
-
   section {
     border-top: 3.642em solid #eeeeee;
-    margin-top: -3.642em;
+    margin-top: -4.042em;
   }
 
   nav {
@@ -1486,14 +1496,9 @@ footer p {
     margin-top: 4.156em;
   }
 
-  .contain {
-    border-top: 3.756em solid transparent;
-    margin-top: -3.756em;
-  }
-
   section {
     border-top: 3.756em solid #eeeeee;
-    margin-top: -3.756em;
+    margin-top: -4.156em;
   }
 
   nav {
@@ -1517,14 +1522,9 @@ footer p {
     margin-top: 4.27em;
   }
 
-  .contain {
-    border-top: 3.87em solid transparent;
-    margin-top: -3.87em;
-  }
-
   section {
     border-top: 3.87em solid #eeeeee;
-    margin-top: -3.87em;
+    margin-top: -4.27em;
   }
 
   nav {
@@ -1548,14 +1548,9 @@ footer p {
     margin-top: 4.384em;
   }
 
-  .contain {
-    border-top: 3.984em solid transparent;
-    margin-top: -3.984em;
-  }
-
   section {
     border-top: 3.984em solid #eeeeee;
-    margin-top: -3.984em;
+    margin-top: -4.384em;
   }
 
   nav {
@@ -1579,14 +1574,9 @@ footer p {
     margin-top: 4.498em;
   }
 
-  .contain {
-    border-top: 4.098em solid transparent;
-    margin-top: -4.098em;
-  }
-
   section {
     border-top: 4.098em solid #eeeeee;
-    margin-top: -4.098em;
+    margin-top: -4.498em;
   }
 
   nav {
@@ -1610,14 +1600,9 @@ footer p {
     margin-top: 4.612em;
   }
 
-  .contain {
-    border-top: 4.212em solid transparent;
-    margin-top: -4.212em;
-  }
-
   section {
     border-top: 4.212em solid #eeeeee;
-    margin-top: -4.212em;
+    margin-top: -4.612em;
   }
 
   nav {
@@ -1641,14 +1626,9 @@ footer p {
     margin-top: 4.726em;
   }
 
-  .contain {
-    border-top: 4.326em solid transparent;
-    margin-top: -4.326em;
-  }
-
   section {
     border-top: 4.326em solid #eeeeee;
-    margin-top: -4.326em;
+    margin-top: -4.726em;
   }
 
   nav {
@@ -1672,14 +1652,9 @@ footer p {
     margin-top: 4.84em;
   }
 
-  .contain {
-    border-top: 4.44em solid transparent;
-    margin-top: -4.44em;
-  }
-
   section {
     border-top: 4.44em solid #eeeeee;
-    margin-top: -4.44em;
+    margin-top: -4.84em;
   }
 
   nav {
@@ -1703,14 +1678,9 @@ footer p {
     margin-top: 4.954em;
   }
 
-  .contain {
-    border-top: 4.554em solid transparent;
-    margin-top: -4.554em;
-  }
-
   section {
     border-top: 4.554em solid #eeeeee;
-    margin-top: -4.554em;
+    margin-top: -4.954em;
   }
 
   nav {
@@ -1734,14 +1704,9 @@ footer p {
     margin-top: 5.068em;
   }
 
-  .contain {
-    border-top: 4.668em solid transparent;
-    margin-top: -4.668em;
-  }
-
   section {
     border-top: 4.668em solid #eeeeee;
-    margin-top: -4.668em;
+    margin-top: -5.068em;
   }
 
   nav {
@@ -1765,14 +1730,9 @@ footer p {
     margin-top: 5.182em;
   }
 
-  .contain {
-    border-top: 4.782em solid transparent;
-    margin-top: -4.782em;
-  }
-
   section {
     border-top: 4.782em solid #eeeeee;
-    margin-top: -4.782em;
+    margin-top: -5.182em;
   }
 
   nav {
@@ -1796,14 +1756,9 @@ footer p {
     margin-top: 5.296em;
   }
 
-  .contain {
-    border-top: 4.896em solid transparent;
-    margin-top: -4.896em;
-  }
-
   section {
     border-top: 4.896em solid #eeeeee;
-    margin-top: -4.896em;
+    margin-top: -5.296em;
   }
 
   nav {
@@ -1827,14 +1782,9 @@ footer p {
     margin-top: 5.41em;
   }
 
-  .contain {
-    border-top: 5.01em solid transparent;
-    margin-top: -5.01em;
-  }
-
   section {
     border-top: 5.01em solid #eeeeee;
-    margin-top: -5.01em;
+    margin-top: -5.41em;
   }
 
   nav {
@@ -1858,14 +1808,9 @@ footer p {
     margin-top: 5.524em;
   }
 
-  .contain {
-    border-top: 5.124em solid transparent;
-    margin-top: -5.124em;
-  }
-
   section {
     border-top: 5.124em solid #eeeeee;
-    margin-top: -5.124em;
+    margin-top: -5.524em;
   }
 
   nav {
@@ -1889,14 +1834,9 @@ footer p {
     margin-top: 5.638em;
   }
 
-  .contain {
-    border-top: 5.238em solid transparent;
-    margin-top: -5.238em;
-  }
-
   section {
     border-top: 5.238em solid #eeeeee;
-    margin-top: -5.238em;
+    margin-top: -5.638em;
   }
 
   nav {
@@ -1920,14 +1860,9 @@ footer p {
     margin-top: 5.752em;
   }
 
-  .contain {
-    border-top: 5.352em solid transparent;
-    margin-top: -5.352em;
-  }
-
   section {
     border-top: 5.352em solid #eeeeee;
-    margin-top: -5.352em;
+    margin-top: -5.752em;
   }
 
   nav {
@@ -1951,14 +1886,9 @@ footer p {
     margin-top: 5.866em;
   }
 
-  .contain {
-    border-top: 5.466em solid transparent;
-    margin-top: -5.466em;
-  }
-
   section {
     border-top: 5.466em solid #eeeeee;
-    margin-top: -5.466em;
+    margin-top: -5.866em;
   }
 
   nav {
@@ -1982,14 +1912,9 @@ footer p {
     margin-top: 5.98em;
   }
 
-  .contain {
-    border-top: 5.58em solid transparent;
-    margin-top: -5.58em;
-  }
-
   section {
     border-top: 5.58em solid #eeeeee;
-    margin-top: -5.58em;
+    margin-top: -5.98em;
   }
 
   nav {
@@ -2013,14 +1938,9 @@ footer p {
     margin-top: 6.094em;
   }
 
-  .contain {
-    border-top: 5.694em solid transparent;
-    margin-top: -5.694em;
-  }
-
   section {
     border-top: 5.694em solid #eeeeee;
-    margin-top: -5.694em;
+    margin-top: -6.094em;
   }
 
   nav {
@@ -2044,14 +1964,9 @@ footer p {
     margin-top: 6.208em;
   }
 
-  .contain {
-    border-top: 5.808em solid transparent;
-    margin-top: -5.808em;
-  }
-
   section {
     border-top: 5.808em solid #eeeeee;
-    margin-top: -5.808em;
+    margin-top: -6.208em;
   }
 
   nav {
@@ -2075,14 +1990,9 @@ footer p {
     margin-top: 6.322em;
   }
 
-  .contain {
-    border-top: 5.922em solid transparent;
-    margin-top: -5.922em;
-  }
-
   section {
     border-top: 5.922em solid #eeeeee;
-    margin-top: -5.922em;
+    margin-top: -6.322em;
   }
 
   nav {
@@ -2106,14 +2016,9 @@ footer p {
     margin-top: 6.436em;
   }
 
-  .contain {
-    border-top: 6.036em solid transparent;
-    margin-top: -6.036em;
-  }
-
   section {
     border-top: 6.036em solid #eeeeee;
-    margin-top: -6.036em;
+    margin-top: -6.436em;
   }
 
   nav {
@@ -2137,14 +2042,9 @@ footer p {
     margin-top: 6.55em;
   }
 
-  .contain {
-    border-top: 6.15em solid transparent;
-    margin-top: -6.15em;
-  }
-
   section {
     border-top: 6.15em solid #eeeeee;
-    margin-top: -6.15em;
+    margin-top: -6.55em;
   }
 
   nav {
@@ -2168,14 +2068,9 @@ footer p {
     margin-top: 6.664em;
   }
 
-  .contain {
-    border-top: 6.264em solid transparent;
-    margin-top: -6.264em;
-  }
-
   section {
     border-top: 6.264em solid #eeeeee;
-    margin-top: -6.264em;
+    margin-top: -6.664em;
   }
 
   nav {
@@ -2199,14 +2094,9 @@ footer p {
     margin-top: 6.778em;
   }
 
-  .contain {
-    border-top: 6.378em solid transparent;
-    margin-top: -6.378em;
-  }
-
   section {
     border-top: 6.378em solid #eeeeee;
-    margin-top: -6.378em;
+    margin-top: -6.778em;
   }
 
   nav {
@@ -2230,14 +2120,9 @@ footer p {
     margin-top: 6.892em;
   }
 
-  .contain {
-    border-top: 6.492em solid transparent;
-    margin-top: -6.492em;
-  }
-
   section {
     border-top: 6.492em solid #eeeeee;
-    margin-top: -6.492em;
+    margin-top: -6.892em;
   }
 
   nav {
@@ -2261,14 +2146,9 @@ footer p {
     margin-top: 7.006em;
   }
 
-  .contain {
-    border-top: 6.606em solid transparent;
-    margin-top: -6.606em;
-  }
-
   section {
     border-top: 6.606em solid #eeeeee;
-    margin-top: -6.606em;
+    margin-top: -7.006em;
   }
 
   nav {
@@ -2292,14 +2172,9 @@ footer p {
     margin-top: 7.12em;
   }
 
-  .contain {
-    border-top: 6.72em solid transparent;
-    margin-top: -6.72em;
-  }
-
   section {
     border-top: 6.72em solid #eeeeee;
-    margin-top: -6.72em;
+    margin-top: -7.12em;
   }
 
   nav {
@@ -2319,24 +2194,22 @@ footer p {
   }
 }
 @media (max-width: 60.188em) {
-  #about {
-    padding-top: 2em;
-  }
-  #about .pitch p {
+  #about p {
     font-size: 1.6em;
-    padding-bottom: 3em;
   }
-  #about .disclosure {
+
+  .tagline span {
+    font-size: 1.1em;
+  }
+
+  #slug {
     padding-top: 1em;
     padding-bottom: 1em;
   }
-  #about .disclosure p {
+  #slug p {
     font-size: 1.05em;
   }
-  #about .disclosure p i {
-    font-size: 1.1em;
-  }
-  #about .tagline span {
+  #slug p:nth-of-type(1), #slug p i {
     font-size: 1.1em;
   }
 }
@@ -2348,10 +2221,10 @@ footer p {
     width: 99%;
     margin: 0%;
   }
-  #work .box:nth-child(n) {
+  #work .box:nth-of-type(n) {
     margin: 0%;
   }
-  #work .box:nth-child(1n) {
+  #work .box:nth-of-type(1n) {
     margin-right: auto;
   }
   #work .box:nth-child(1n) {
@@ -2371,10 +2244,10 @@ footer p {
     width: 44%;
     margin: 2.75%;
   }
-  #work .box:nth-child(n) {
+  #work .box:nth-of-type(n) {
     margin: 2.75%;
   }
-  #work .box:nth-child(2n) {
+  #work .box:nth-of-type(2n) {
     margin-right: auto;
   }
   #work .box .caption h2 {
@@ -2397,10 +2270,10 @@ footer p {
     width: 29%;
     margin: 2%;
   }
-  #work .box:nth-child(n) {
+  #work .box:nth-of-type(n) {
     margin: 2%;
   }
-  #work .box:nth-child(3n) {
+  #work .box:nth-of-type(3n) {
     margin-right: auto;
   }
 }
@@ -2412,10 +2285,10 @@ footer p {
     width: 21.25%;
     margin: 1.75%;
   }
-  #work .box:nth-child(n) {
+  #work .box:nth-of-type(n) {
     margin: 1.75%;
   }
-  #work .box:nth-child(4n) {
+  #work .box:nth-of-type(4n) {
     margin-right: auto;
   }
 }
@@ -2427,10 +2300,10 @@ footer p {
     width: 17.3%;
     margin: 1.25%;
   }
-  #work .box:nth-child(n) {
+  #work .box:nth-of-type(n) {
     margin: 1.25%;
   }
-  #work .box:nth-child(5n) {
+  #work .box:nth-of-type(5n) {
     margin-right: auto;
   }
 }

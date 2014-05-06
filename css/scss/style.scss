@@ -23,7 +23,9 @@ $blog-color:       rgb(67, 103, 158);
 
 //Mixins:
 
-
+body {
+  border-top: $top-border-height #eee solid;
+}
 
 header {
   margin: 0;
@@ -144,18 +146,27 @@ nav {
   }
 }
 
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
 #about {
   background: url(../img/graph-pattern.png) fixed 0 0 repeat, $about-bg-color;
-  padding: 3em 0 0; //4em;
-  text-align: center;
-  overflow: auto;
+  padding: 0 0 40px 0; //40 px for  the bottom border
+  //text-align: center; //part of .middle
+  overflow: hidden;
+  //height: 100%;
+  min-height: 100%;
+  display: table;
   //  background-image: url(../img/hexnoise.png),url(../img/background.jpg);
   //  @include background-size(auto, cover);
   //  background-attachment: scroll, fixed;
   //  background-position: 0 0, 0 0;
   //  background-repeat: repeat,no-repeat;
   .tagline {
-    margin: 0.5em 0;
+    margin: 0;
     span {
       font-family: $gotham-font-stack;
       font-weight: 700;
@@ -200,92 +211,80 @@ nav {
       z-index: 1;
     }
   }
+
   p {
-    span {
-      white-space: nowrap;
-    }
-    a {
-      white-space: nowrap;
-      @include textStyle($anchor-font-color, $pitch-shadow-d);
+    @include textStyle($paragraph-light-color, $pitch-shadow-d);
+    font-family: $sourcesanspro-font-stack;
+    font-weight: 400;
+    line-height: 1.3;
+    font-size: 2.5em;
+    margin: 1em 1em;
+    a { //asterisk
+      font-family: $heuristica-font-stack;
+      @include textStyle(scale-color($anchor-font-color, $lightness: 15%), $pitch-shadow-d);
+      border: none;
+      font-size: 1.2em;
+      line-height: 0;
     }
     strong {
+      font-weight: 700;
       text-transform: none;
       @include textStyle($about-color, $pitch-shadow-d);
     }
   }
-  .pitch {
-    p {
-      @include textStyle($paragraph-light-color, $pitch-shadow-d);
-      font-family: $sourcesanspro-font-stack;
-      font-weight: 400;
-      line-height: 1.3;
-      padding: 1em 1em 9.7%;
-      margin: 0;
-      position: relative;
-      top: 15%;
-      font-size: 2.5em;
-      a { //asterisk
-        font-family: $heuristica-font-stack;
-        @include textStyle(scale-color($anchor-font-color, $lightness: 15%), $pitch-shadow-d);
-        border: none;
-        font-size: 1.2em;
-        line-height: 0;
-      }
-      strong {
-        font-weight: 700;
-      }
-      //arrow effect
-      &:before {
-        position: absolute;
-        width: 50%;
-        left: 0;
-        bottom: 0;
-        content: "";
-        border-style: solid;
-        border-width: 0px 40px 40px 0px;
-        border-color: transparent transparent rgb(50, 50, 50) transparent;
-        box-shadow: inset 0 5px 20px -10px rgb(40,40,40);
-      }
-      &:after {
-        position: absolute;
-        width: 50%;
-        right: 0;
-        bottom: 0;
-        content: "";
-        border-style: solid;
-        border-width: 0px 0px 40px 40px;
-        border-color: transparent transparent rgb(50, 50, 50) transparent;
-        box-shadow: inset 0 5px 20px -10px rgb(40,40,40);
-      }
-    }
   //  img {
   //    max-width: 259px;
   //    padding: 3% 0 3%;
   //    margin: 0;
   //  }
+
+  //arrow effect
+  &:before {
+    position: absolute;
+    width: 50%;
+    left: 0;
+    bottom: 0;
+    content: "";
+    border-style: solid;
+    border-width: 0px 40px 40px 0px;
+    border-color: transparent transparent rgb(50, 50, 50) transparent;
+    box-shadow: inset 0 5px 20px -10px rgb(40,40,40);
+  }
+  &:after {
+    position: absolute;
+    width: 50%;
+    right: 0;
+    bottom: 0;
+    content: "";
+    border-style: solid;
+    border-width: 0px 0px 40px 40px;
+    border-color: transparent transparent rgb(50, 50, 50) transparent;
+    box-shadow: inset 0 5px 20px -10px rgb(40,40,40);
   }
 }
 
-.disclosure {
+#slug {
   margin: 0;
   padding: 1.5em 1em;
   background: rgb(50,50,50);//rgba(20,40,60, 0.4);
-  position: relative;
+  text-align: center;
   //@include transition(background 500ms ease);
   p {
     @include textStyle($paragraph-light-color, $discl-shadow-d);
     max-width: 40em;
+    margin: 0 auto 0.6em;
     font-size: 1.2em;
-    line-height: 1.5;
+    line-height: 1.45;
     letter-spacing: 0.025em;
-    margin: auto;
-    padding: 0.2em 0;
     &:first-child { //zoom effect when asterisk clicked
       @include transition(transform 300ms linear);
       &.highlight {
         @include transform(scale(1.02));
         //background: rgb(54,55,41);//scale-color($skills-bg-color, $lightness: 10%);
       }
+    }
+    a {
+      @include textStyle($anchor-font-color, $pitch-shadow-d);
     }
     > span:first-child { //asterisk
         font-size: 1.8em;
@@ -298,15 +297,11 @@ nav {
       i {
         width: 100%;
         display: block;
-        margin-top: 0em;
-        text-align: center;
+        margin-top: .3em;
         font-style: italic;
         //background-color: rgba(70,69,74, 0.7);//rgb(253, 253, 154);
         @include textStyle($about-color, $pitch-shadow-d);//@include textStyle(rgb(181,91,40));
       }
-    }
-    &:last-of-type {
-      margin-top: 0.5em;
     }
   }
   hr {
@@ -332,12 +327,13 @@ nav {
         display: block;
         position: relative;
         // Transition
-        @include transition(transform 0.2s ease-out);
+        @include transition(transform 0.2s linear);
         overflow:hidden;
         &:hover {
           @include transform(scale(1.05));
           .caption {
             @include transform(translate(0, 200%));
+            @include opacity(0);
           }
         }
         // /Transition
@@ -351,6 +347,19 @@ nav {
     padding-top: 0.5em;
     margin: 0;
     text-shadow: rgb(200,200,200) -0.1px -0.1px 0;
+    vertical-align: top;
+    span {
+      float: right;
+      margin-left: 0.9em;
+      font-weight: 400;
+      @include textStyle(rgb(238, 238, 238), $pitch-shadow-d);
+      padding: 0 0.2em 0 0.25em;
+      letter-spacing: 0.03em;
+      // border: solid rgba(151, 151, 151, 0.88);
+      // border-width: 0 0 1px 0;
+      border-radius: 3px;
+      background: rgb(165, 165, 165);//rgb(96, 147, 202);//rgb(83, 170, 199);///rgb(99, 154, 214);
+    }
     }
   }
   .caption {
@@ -362,7 +371,7 @@ nav {
     width: 100%;
     padding: 3% 2%;
     overflow: hidden;
-    @include transition(transform 0.3s ease-out);
+    @include transition(transform 0.3s ease-out, opacity 0.4s ease-out);
     h2 {
       text-align: center;
       font-family: $sourcesanspro-font-stack;
@@ -415,8 +424,6 @@ nav {
 }
 
 footer {
-  background: url(../img/hexnoise.png) fixed 0 0 repeat, rgb(46, 46, 46);
-  //@include box-shadow(inset 0 0 200px 0 rgba(0,0,0,0.8));
   p {
     text-align: center;
     color: rgba(255, 255, 255, 0.18);

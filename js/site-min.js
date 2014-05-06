@@ -555,7 +555,7 @@ $(function() { //When the document loads
 
   var sections = $('section');
   var nav_a = $('nav a');
-  var offsetAdj = 7;// $('header').outerHeight(); // Overridden by adding a psudo-element to all sections
+  var offsetAdj = 8;// $('header').outerHeight(); // Overridden by adding a psudo-element to all sections
   var currentOffset = $('body').css('margin-top').match(/\d+/);
 
 //SUPERSEEDED BY THE CODE BELOW IT
@@ -575,8 +575,8 @@ $(function() { //When the document loads
 
 //Scroll the asterisk!
 $('.asterisk').click(function() {
-  var scrollToSection = $('.disclosure');
-  var transformSection = $('.disclosure p:first-child');
+  var scrollToSection = $('#slug');
+  var transformSection = $('#slug p:first-child');
   $('html, body').animate({
     scrollTop:  scrollToSection.offset().top-(currentOffset*2.1)
     }, 650, 'swing', function () {
@@ -625,7 +625,9 @@ $('.asterisk').click(function() {
 
       var active_section;
       active_section = $(this);
-      if (direction === "up") { active_section = active_section.prev(); }
+      if (direction === "up") { active_section = active_section.prevAll('section'); }
+
+      console.log("You are here:", active_section);
 
       var active_link = $('nav a[href="#' + active_section.attr("id") + '"]');
       nav_a.parent().removeClass('selected');

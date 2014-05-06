@@ -112,6 +112,7 @@ $definition-list-margin-bottom: rem-calc(12) !default;
 @mixin textStyle($color, $x) {
   color: $color;
   text-shadow: scale-color($color, $lightness: -33%) $x (-$x / 2) 0;
+  border-color: $color;
 }
 
 @include exports("type") {
@@ -155,6 +156,7 @@ $definition-list-margin-bottom: rem-calc(12) !default;
     line-height: inherit;
     //margin: 0 0.2em;
     padding-bottom: 0.1em;
+    white-space: nowrap;
 
     transition: 0.2s ease-out;
     transition-property: (border-color, color, text-shadow);
@@ -188,6 +190,10 @@ $definition-list-margin-bottom: rem-calc(12) !default;
       line-height: $paragraph-aside-line-height;
       font-style: $paragraph-aside-font-style;
     }
+  }
+
+  span {
+    white-space: nowrap;
   }
 
   /* Default header styles */

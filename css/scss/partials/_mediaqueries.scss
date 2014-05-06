@@ -11,15 +11,15 @@
 @for $i from 0 through 30 { // 19.375em == 0 . // 30 is where the header stops needing to get any larger
   @media (min-width: 19.375em + ($i * 1.875em)) {
     body {
-      margin-top: ($header-height + ($i * 0.114em)) + 0.4em; //0.4em is the top border height //0.114 was calculated as the mean height increase as the text size increases. 
+      margin-top: ($header-height + ($i * 0.114em) + 0.4em); //0.4em is the top border height //0.114 was calculated as the mean height increase as the text size increases.
     }
-    .contain {
-      border-top: ($header-height + ($i * 0.114em)) solid transparent; //offset mixin
-      margin-top: -($header-height + ($i * 0.114em)); //offset mixin
-    }
+    //.contain {
+    //  border-top: ($header-height + ($i * 0.114em)) solid transparent; //offset mixin
+    //  margin-top: -($header-height + ($i * 0.114em)); //offset mixin
+    //}
     section {
-      border-top: ($header-height + ($i * 0.114em)) solid #eee; //offset mixin //#eee to make placeholder for nav/header
-      margin-top: -($header-height + ($i * 0.114em)); //offset mixin
+      border-top: ($header-height + ($i * 0.114em)) solid #eee; // 0.4 em is the border top //offset mixin //#eee to make placeholder for nav/header
+      margin-top: -($header-height + ($i * 0.114em) + 0.4em); //offset mixin
     }
     nav {
       width: $starting-width + ($i / 1 ); //to float center //+1.5em because "CONTACT" is too wide... pushes nav slightly off screen though.
@@ -51,26 +51,22 @@
 
 //Font Breakpoint
 @media (max-width: 60.188em) {
-  #about {
-    padding-top: 2em;
-    .pitch p {
+  #about p {
     font-size: 1.6em;
-    padding-bottom: 3em;
-    }
-    .disclosure {
-    padding-top: 1em;
-    padding-bottom: 1em;
-        p {
-        font-size: 1.05em;
-        i {
-        font-size: 1.1em;
-        }
-      }
-    }
-    .tagline span {
+  }
+  .tagline span {
+    font-size: 1.1em;
+    //color: rgb(10,48,70);
+    //@include text-shadow(0px 0px 0 rgb(150,150,150), -0.2px 0.2px 0 white, -0.5px 0.5px 0 white, -1px 1px 0 white, -1.5px 1.5px 0 white, -1px 1px 0 white);
+  }
+  #slug {
+  padding-top: 1em;
+  padding-bottom: 1em;
+    p {
+      font-size: 1.05em;
+      &:nth-of-type(1), i {
       font-size: 1.1em;
-      //color: rgb(10,48,70);
-      //@include text-shadow(0px 0px 0 rgb(150,150,150), -0.2px 0.2px 0 white, -0.5px 0.5px 0 white, -1px 1px 0 white, -1.5px 1.5px 0 white, -1px 1px 0 white);
+      }
     }
   }
 }
@@ -82,7 +78,7 @@
   $square: ((99% - (($numPerRow) * $boxMargin)) / $numPerRow);
   width: $square;
   margin: ($boxMargin / 2);
-  &:nth-child(n) {
+  &:nth-of-type(n) {
     margin: ($boxMargin / 2);
 //    &:hover {
 //      width: $square + 1;
@@ -90,7 +86,7 @@
 //      //@include transition(margin 0.1s ease, width 0.1s ease); //makes rows jiggle while calculating
 //    }
   }
-  &:nth-child(#{$numPerRow}n) {
+  &:nth-of-type(#{$numPerRow}n) {
     margin-right: auto;
 //    &:hover {
 //      width: $square + 1;

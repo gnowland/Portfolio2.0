@@ -20,20 +20,19 @@
    column-width: 4em,
  );
 
-// Setting z-indexes
-$z-nav:     7;
-$z-header:  ($z-nav - 1);
-$z-about:   ($z-nav - 2);
-$z-skills:  ($z-nav - 3);
-$z-work:    ($z-nav - 4);
-$z-contact: ($z-nav - 5);
-$z-footer:  ($z-nav - 6);
-
  // Making Mixins
  //@mixin offset ($margin) { // Moved to _mediaqueries.scss
  // border-top: 3em solid transparent;
  // margin-top: -$margin;
  //}
+
+// !!!! IMPORTANT!!!!
+$totalSections: 8; //The TOTAL NUMBER OF CURRENT TOP-LEVEL SECTIONS (Change if more added!!!)
+
+@mixin sectionSettings ($n) { //n is the current section's # (0 for nav, cascading to footer)
+  z-index: $totalSections - $n;
+  position: relative;
+}
 
  // Necessary for loading on right place when page is called from hash (http://goo.gl/2rNgyB)
  // overrides "offset" function in waypoints.js
@@ -54,9 +53,24 @@ $z-footer:  ($z-nav - 6);
   //@include offset($row-top-offset); //moved to _mediaqueries.scss
 }
 
+nav {
+  @include sectionSettings(0);
+  //max-width: 22.1em; //moved ot mediaqueries.css
+  //width: span(3);
+  margin: 0 auto;
+  ul {
+  }
+  //@include span(last 4 nest) {
+    li {
+      //@include span(isolate 1 of 4 0 no-gutters wide);
+      @include span(no-gutters wide);
+    }
+}
+
 header {
-  z-index: $z-header;
+  z-index: ($totalSections - 1);
   position: fixed; // keep on top of window
+  //@include sectionSettings(1); //Not used here because of 'position: fixed'.
   top: 0;
   left: 0;
   right: 0;
@@ -75,21 +89,6 @@ header {
   }
 }
 
-nav {
-  z-index: $z-nav;
-  position: relative;
-  //max-width: 22.1em; //moved ot mediaqueries.css
-  //width: span(3);
-  margin: 0 auto;
-  ul {
-  }
-  //@include span(last 4 nest) {
-    li {
-      //@include span(isolate 1 of 4 0 no-gutters wide);
-      @include span(no-gutters wide);
-    }
-}
-
 section {
   @include container(100%);
   @include full;
@@ -97,31 +96,32 @@ section {
 }
 
 #about {
-  z-index: $z-about;
-  position: relative;
+  @include sectionSettings(2);
+  @include span(12);
+}
+
+#slug {
+  @include sectionSettings(3);
   @include span(12);
 }
 
 #skills {
-  z-index: $z-skills;
-  position: relative;
+  @include sectionSettings(4);
+  @include span(12);
 }
 
 #work {
-  z-index: $z-work;
-  position: relative;
+  @include sectionSettings(5);
 }
 
 #contact {
-  z-index: $z-contact;
-  position: relative;
+  @include sectionSettings(6);
 }
 
 footer {
   @include span (12);
   //margin-top: 0.4em; //to compensate for $top-border-height: 0.4em;
-  z-index: $z-footer;
-  position: relative;
+  @include sectionSettings(7);
 }
 
 
