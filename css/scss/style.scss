@@ -21,10 +21,26 @@ $contact-color:    rgb(201, 99, 99);
 $contact-bg-color: rgb(34, 34, 34);
 $blog-color:       rgb(67, 103, 158);
 
-//Mixins:
 
-body {
-//  border-top: $top-border-height #eee solid;
+%brdr-about {
+    border-top: $top-border-height $about-color solid;
+}
+%brdr-work {
+    border-top: $top-border-height $work-color solid;
+}
+%brdr-contact {
+    border-top: $top-border-height $contact-color solid;
+}
+%brdr-blog {
+    border-top: $top-border-height $blog-color solid;
+}
+
+//Mixins:
+@mixin topBorder($section) {
+  &.#{$section} {
+    @extend %brdr-#{$section};
+    @include transition(border-top 0.2s linear);
+  }
 }
 
 header {
@@ -36,22 +52,12 @@ header {
   border-top: $top-border-height #eee solid;
   @include transition(border-top 0.2s linear);
   //@include box-shadow(0px 0px 5px 0px rgba(50, 50, 50, 0.50));
-  &.about {
-    border-top: $top-border-height $about-color solid;
-    @include transition(border-top 0.2s linear);
-  }
-  &.work {
-    border-top: $top-border-height $work-color solid;
-    @include transition(border-top 0.2s linear);
-  }
-  &.contact {
-    border-top: $top-border-height $contact-color solid;
-    @include transition(border-top 0.2s linear);
-  }
-  &.blog {
-    border-top: $top-border-height $blog-color solid;
-    @include transition(border-top 0.2s linear);
-  }
+
+  @include topBorder(about);
+  @include topBorder(work);
+  @include topBorder(contact);
+  @include topBorder(blog);
+
   h1 {
     margin: 0;
     padding: 0.07em 0;
@@ -89,60 +95,56 @@ header {
   }
 }
 
+
+//NAV MIXINS
+@mixin navLinks($n,$c) {
+  &:nth-of-type(#{$n}) {
+    @include box-shadow(inset $c 0px 0px 0);
+    &:hover, &:focus {
+      @include box-shadow(inset $c 0px 2em 0);
+      & a {
+        color: $body-bg;
+      }
+    }
+    &.selected {
+      @include box-shadow(inset $c 0px 2em 0);
+      & a {
+        color: $body-bg;
+      }
+    }
+  }
+}
+
 // Navigation
 nav {
+    max-width: 6.5em * 4; //4 is how many nav items //6.5em is just a good looking width to cap it at. overrides media query
   li {
-    display: inline-block;
     text-align: center;
-    @include transition(background 0.2s linear);
-    color: scale-color($anchor-font-color, $lightness: 3%);//hover color
+    @include transition(color 0.2s linear, box-shadow 0.3s ease);
     //&:hover, &:focus { //Misleading...
     //  cursor: pointer;
     //}
     a {
+      max-width: 6.5em; //6.5em is just a good looking width to cap it at
       font-family: $gotham-font-stack;//$sourcesanspro-font-stack;
       text-transform: uppercase;
       font-weight: 700;
       color: rgb(26, 74, 116);
       padding: 0;
       border: none;
-    }
-    a:hover, a:focus {
-      background: none;
-      text-decoration: none;
-    }
-    &.selected {
-      color: #eee; //hover color
-      &:nth-of-type(1) {
-        background: $about-color;
-        @include transition(background 0.2s linear);
-      }
-      &:nth-of-type(2) {
-        background: $work-color;
-        @include transition(background 0.2s linear);
-      }
-      &:nth-of-type(3) {
-        background: $contact-color;
-        @include transition(background 0.2s linear);
-      }
-      &:nth-of-type(4) {
-        background: $blog-color;
-        @include transition(background 0.2s linear);
-      }
-      a {
-        color: #eee;
-        &:hover, &:focus {
-          background: none;
-          text-decoration: none;
-        }
-      }
-    }
-    &.external {
-      a:hover, a:focus {
+      display: inline-block;
+      &:hover, &:focus {
         background: none;
         text-decoration: none;
+        color: $body-bg;
       }
     }
+
+    @include navLinks(1,$about-color);
+    @include navLinks(2,$work-color);
+    @include navLinks(3,$contact-color);
+    @include navLinks(4,$blog-color);
+
   }
 }
 
@@ -248,7 +250,7 @@ nav {
     border-style: solid;
     border-width: 0px 40px 40px 0px;
     border-color: transparent transparent rgb(50, 50, 50) transparent;
-    box-shadow: inset 0 5px 20px -10px rgb(40,40,40);
+    @include box-shadow(inset 0 5px 20px -10px rgb(40,40,40));
   }
   &:after {
     position: absolute;
@@ -259,7 +261,7 @@ nav {
     border-style: solid;
     border-width: 0px 0px 40px 40px;
     border-color: transparent transparent rgb(50, 50, 50) transparent;
-    box-shadow: inset 0 5px 20px -10px rgb(40,40,40);
+    @include box-shadow(inset 0 5px 20px -10px rgb(40,40,40));
   }
 }
 

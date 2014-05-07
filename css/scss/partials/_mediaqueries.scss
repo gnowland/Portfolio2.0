@@ -28,7 +28,7 @@
       width: $starting-width + ($i / 1 ); //to float center //+1.5em because "CONTACT" is too wide... pushes nav slightly off screen though.
       //width: 21em + ($i / 1 );
       // will be overridden at 6.5em (see 'overrides' below)
-      li {
+      a {
       width: (4.7em + ($i / 1) / 4) + .1em; //4 is how many nav items //+1.5em because "CONTACT" is too wide... pushes nav slightly off screen though.
       //width: ((21em + ($i / 1)) / 4);
       // will be overridden at 6.5em (see 'overrides' below)
@@ -173,13 +173,6 @@
 }
 
 
-//OVERRIDES:
-nav {
-  max-width: 6.5em * 4; //4 is how many nav items //6.5em is just a good looking width to cap it at. overrides media query
-  li {
-    max-width: 6.5em; //6.5em is just a good looking width to cap it at
-  }
-}
 
 // Header adjust override:
 // header h1.compact {

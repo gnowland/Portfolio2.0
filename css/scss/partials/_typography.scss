@@ -163,9 +163,9 @@ $definition-list-margin-bottom: rem-calc(12) !default;
     &:hover,
     &:focus {
     //text-decoration: underline;
-    color: inherit !important;//$anchor-font-color-hover;
-    border-color: inherit !important;
-    text-shadow: inherit !important;
+    color: inherit;//$anchor-font-color-hover;
+    border-color: inherit;
+    text-shadow: inherit;
     }
 
     // [R]

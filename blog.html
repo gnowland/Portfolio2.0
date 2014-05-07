@@ -1,103 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
   <head>
-    <!--
-             .::.   ::.   THIS WEBSITE MADE WITH LOVE, BAKED FROM SCRATCH
-           .:: ::.  ::.           USING ONLY THE FINEST INGREDIENTS
-         .::    ::. ::.   ALL RIGHTS RESERVED (c) A.D. MMXIV Gifford Nowland
-       .::   ::. ::.::.           (except where otherwise credited)
-     .::      ::. ::::.   Please use the contact form on giffordnowland.com
-    :::::::::::::. :::.  for information, freelance, or employment inquiries.
-    -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="The professional WEB DEVELOPMENT + DESIGN portfolio of Gifford Nowland: arcitect of engaging, attractive, functional, responsive modern web experiences." />
+    <meta name="description" content="The professional Development &amp; Design portfolio of Gifford Nowland: arcitect of engaging, attractive, functional, &amp; responsive modern web experiences." />
 
-    <title>Gifford Nowland Blog of Development + Design</title>
+    <title>Gifford Nowland Weblog</title>
 
     <!-- AUTHOR META -->
     <link rel=”author” href=”https://plus.google.com/+GiffordNowland“/>
     <!-- FAVICONS -->
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="/img/icon/favicon-152.png">
-    <!-- JS-->
-    <script src="js/vendor/responsive.ie10mobilefix.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/print.css" />
-
-    <style>
-    body {
-      margin-top:0;
-    }
-    .pitch p:before, .pitch p:after {
-      display: none;
-    }
-    .disclosure p:before {
-        position: absolute;
-        width: 50%;
-        left: 0;
-        top: -40px;
-        content: "";
-        border-style: solid;
-        border-width: 0px 40px 40px 0px;
-        border-color: transparent transparent rgb(50, 50, 50) transparent;
-        box-shadow: inset 0 5px 20px -10px rgb(40,40,40);
-    }
-    .disclosure p:after {
-        position: absolute;
-        width: 50%;
-        right: 0;
-        top: -40px;
-        content: "";
-        border-style: solid;
-        border-width: 0px 0px 40px 40px;
-        border-color: transparent transparent rgb(50, 50, 50) transparent;
-        box-shadow: inset 0 5px 20px -10px rgb(40,40,40);
-    }
-    #about {
-      height: 100%; margin-top:0; border:none; padding-top:13%; min-height: 37em;
-    }
-    .pitch {
-      padding: 2em 0.5em 0;
-    }
-    .disclosure {
-      padding: 0.5em; position:absolute; bottom: 0; width:100%;
-    }
-    @media screen and (max-width: 60.188em) {
-      #about {
-        padding-top:25%;
-      }
-    }
-    </style>
-
+    <!-- JS-->
+    <script src="js/vendor/respond.min.js"></script>
     <!--[if lt IE 9 &!(IEMobile)]>
         <script src="js/vendor/html5shiv.js"></script>
     <![endif]-->
+    <style>
+    #about:before {
+      border-width: 20px;
+      border-color: rgb(50,50,50);
+    }
+    #about:after {
+      border-width: 20px;
+      border-color: rgb(50,50,50);
+    }
+    </style>
   </head>
-  <body style="margin-top:0;">
-    <header class="blog">
-        <nav>
-          <ul>
-            <li class="external"><a href="index.html#about">About</a></li>
-            <li class="external"><a href="index.html#work">Work</a></li>
-            <li class="external"><a href="index.html#contact">Hire</a></li>
-            <li class="selected"><a href="blog.html">Weblog</a></li>
-          </ul>
-        </nav>
-        <h1>GIFFORD <span aria-hidden="true" data-icon="&#61696;"></span> NOWLAND</h1>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li class="external"><a href="index.html#about">About</a></li>
+          <li class="external"><a href="index.html#work">Work</a></li>
+          <li class="external"><a href="index.html#contact">Hire</a></li>
+          <li class="selected"><a href="blog.html">Weblog</a></li>
+        </ul>
+      </nav>
+      <h1>GIFFORD <span aria-hidden="true" data-icon="&#61696;"></span> NOWLAND</h1>
     </header>
+
     <section id="about">
-      <div class="tagline"><span>coming</span><span>soon</span></div>
-      <div class="pitch"><p><strong>I'm brewing up some great articles &mdash; stay thirsty my friends!</strong></p></div>
-      <div class="disclosure"><p>Please check again soon!</p></div>
+      <div class="middle">
+        <div class="tagline"><span>coming</span><span>soon</span></div>
+        <p><strong>I&rsquo;m brewing up some fresh articles &mdash; stay thirsty my friends!</strong></p>
+      </div>
     </section>
 
+    <!--
+    <footer>
+      <p>&copy; A.D. MMXIV Gifford Nowland</p>
+    </footer>
+    -->
+
     <!--[if IE 8]>
-    <script src="js/vendor/jquery-1.11.0.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
     <![endif]-->
     <!--[if gt IE 8]><!-->
-    <script src="js/vendor/jquery-2.1.0.min.js"></script>
+    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.0.min.js"><\/script>')</script>
     <!--<![endif]-->
-    <script src="js/site.js"></script>
+    <script src="js/site-min.js"></script>
   </body>
+</html>

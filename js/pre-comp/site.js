@@ -30,7 +30,7 @@ $(function() { //When the document loads
   var sections = $('section');
   var nav_a = $('nav a');
   var offsetAdj = 8;// $('header').outerHeight(); // Overridden by adding a psudo-element to all sections
-  var currentOffset = $('body').css('margin-top').match(/\d+/);
+  var currentOffset = $('section').css('border-top').match(/\d+/);
 
 //SUPERSEEDED BY THE CODE BELOW IT
 // remove ".external" from firing
@@ -77,7 +77,7 @@ $('.asterisk').click(function() {
     //        }
     //    }
     //});
-  //Older chris coyer scipt, might interfere with carousels?
+  //Older chris coyer scipt, (?might interfere with carousels?)
   $('a[href*=#]:not([href=#]).scrollto').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
         var target = $(this.hash);
