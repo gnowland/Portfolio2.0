@@ -324,7 +324,7 @@ nav {
   position: relative;
   width: 100%;
 
-  h1 {
+  > h1 {
     position: relative;
     z-index: 2;
     margin: 0 4%;
@@ -421,12 +421,12 @@ nav {
   $nWorkboxes: 10;
 
 .workbench {
-  width:95%;
+  width:100%;
   overflow: hidden;
-  margin: 0 2.5%;
+  margin: 0;
 }
 .workbox {
-  width: 1100%;
+  width: 1000%;
 }
   article {
     //display: inline-block;
@@ -435,20 +435,23 @@ nav {
     //position: relative;
     float: left;
     max-height: 0;
-    width: 50%;
+    width: 0;
+    left: -100%;
     overflow: hidden;
     display:inline-block;
     position: relative;
     vertical-align: top;
-    @include transition(max-height 1s linear, width 0s linear 2s);
+    @include transition(left 1s linear, max-height 1s linear,  width 0s linear 2s); //Animation OUT
 
     &:target {
-      max-height: 999px;
+      max-height: 100vh;
       width: 99vw;
+      height: auto;
+      left: 0;
+      padding: 0 2em; //DONT MESS WITH MARGIN
       z-index: 2;
       position: relative;
-      left: 0;
-      @include transition(max-height 1s linear 1s);
+      @include transition(max-height 1s linear 1s); //Animation IN
       //line-height: 1;
 
 

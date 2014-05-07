@@ -1353,7 +1353,7 @@ nav li:nth-of-type(4).selected a {
   position: relative;
   width: 100%;
 }
-#work h1 {
+#work > h1 {
   position: relative;
   z-index: 2;
   margin: 0 4%;
@@ -1466,33 +1466,36 @@ nav li:nth-of-type(4).selected a {
   transition: transform 0.3s ease-out, opacity 0.4s ease-out, font-size 0.05s ease;
 }
 #work .workbench {
-  width: 95%;
+  width: 100%;
   overflow: hidden;
-  margin: 0 2.5%;
+  margin: 0;
 }
 #work .workbox {
-  width: 1100%;
+  width: 1000%;
 }
 #work article {
   float: left;
   max-height: 0;
-  width: 50%;
+  width: 0;
+  left: -100%;
   overflow: hidden;
   display: inline-block;
   position: relative;
   vertical-align: top;
-  -moz-transition: max-height 1s linear, width 0s linear 2s;
-  -o-transition: max-height 1s linear, width 0s linear 2s;
-  -webkit-transition: max-height 1s linear, width 0s linear;
-  -webkit-transition-delay: 0s, 2s;
-  transition: max-height 1s linear, width 0s linear 2s;
+  -moz-transition: left 1s linear, max-height 1s linear, width 0s linear 2s;
+  -o-transition: left 1s linear, max-height 1s linear, width 0s linear 2s;
+  -webkit-transition: left 1s linear, max-height 1s linear, width 0s linear;
+  -webkit-transition-delay: 0s, 0s, 2s;
+  transition: left 1s linear, max-height 1s linear, width 0s linear 2s;
 }
 #work article:target {
-  max-height: 999px;
+  max-height: 100vh;
   width: 99vw;
+  height: auto;
+  left: 0;
+  padding: 0 2em;
   z-index: 2;
   position: relative;
-  left: 0;
   -moz-transition: max-height 1s linear 1s;
   -o-transition: max-height 1s linear 1s;
   -webkit-transition: max-height 1s linear;
