@@ -323,7 +323,7 @@ nav {
 
   h1 {
     position: relative;
-    z-index: 1;
+    z-index: 2;
   }
 
   aside {
@@ -332,6 +332,7 @@ nav {
   position: relative;
   z-index: 1;
   display: inline-block;
+  background: $body-bg;
   }
 
   figure {
@@ -412,52 +413,30 @@ nav {
     text-shadow: rgb(0, 0, 0) -1px 0.5px 0;
     @include transition(transform 0.3s ease-out, opacity 0.4s ease-out, font-size 0.05s ease);
   }
-}
 
-$totalArticles: 10;
-
-@mixin workScroll($a, $n) {
-  #workbench + ##{$a}:target {
-    left: -100% * $n;
-  }
-}
-
-#workroom {
+  article {
+    display: inline-block;
+    //position: relative;
     width: 100%;
-    overflow: auto;
-    float: left;
-    z-index: 2;
-
-    @include transition (height 1.5s ease-out);
-    a {
+    position: absolute;
+    left: -100%;
+    @include transition(left 1s ease-in-out);
+    &:target {
+      height: auto;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      position: relative;
+      display: inline-block;
+    }
+    a:first-of-type { //X Button
       position: absolute;
       right: 1em;
-      z-index: 2;
-    }
-
-  #workbench {
-    background: gray;
-    display: inline-block;
-    width: 100% * $totalArticles;
-    position: relative;
-    article {
-      display: inline-block;
-      //position: relative;
-      width: 100% / $totalArticles;
+      z-index: 3;
     }
   }
 }
 
-@include workScroll(young,            0);
-@include workScroll(whitehall,        1);
-@include workScroll(loso,             2);
-@include workScroll(udress,           3);
-@include workScroll(delride,          4);
-@include workScroll(csbs,             5);
-@include workScroll(crowdcalls,       6);
-@include workScroll(yellowarrownewark,7);
-@include workScroll(queen,            8);
-@include workScroll(edgemoor,         9);
 
 #contact {
   background-color: $contact-bg-color;
