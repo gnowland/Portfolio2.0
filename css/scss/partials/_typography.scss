@@ -109,11 +109,24 @@ $definition-list-margin-bottom: rem-calc(12) !default;
   margin-bottom: $subheader-bottom-margin;
 }
 
+
+//MY MIXINS:
+
 @mixin textStyle($color, $x) {
   color: $color;
   text-shadow: scale-color($color, $lightness: -33%) $x (-$x / 2) 0;
   border-color: $color;
 }
+
+@mixin linkHover {
+  &:hover, &:focus {
+    //text-decoration: underline;
+    color: inherit;//$anchor-font-color-hover;
+    border-color: inherit;
+    text-shadow: inherit;
+  }
+}
+
 
 @include exports("type") {
 
@@ -150,23 +163,15 @@ $definition-list-margin-bottom: rem-calc(12) !default;
 
   /* Default Link Styles */
   a {
-    color: $anchor-font-color;
-    text-decoration: $anchor-text-decoration;
-    border-bottom: 1px solid scale-color($anchor-font-color, $lightness: -20%);
-    line-height: inherit;
-    //margin: 0 0.2em;
-    padding-bottom: 0.1em;
+      @include textStyle($anchor-font-color, -1px); //color: $anchor-font-color;
+      text-decoration: $anchor-text-decoration;
+      border-bottom: 1px dotted scale-color($anchor-font-color, $lightness: -20%);
+      line-height: inherit;
+      //margin: 0 0.2em;
+      padding-bottom: 0.1em;
 
-    transition: 0.2s ease-out;
-    transition-property: (border-color, color, text-shadow);
-
-    &:hover,
-    &:focus {
-    //text-decoration: underline;
-    color: inherit;//$anchor-font-color-hover;
-    border-color: inherit;
-    text-shadow: inherit;
-    }
+      transition: 0.2s ease-out;
+      transition-property: (border-color, color, text-shadow);
 
     // [R]
     // Remove the border around images in anchors.

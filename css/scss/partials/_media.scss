@@ -5,6 +5,25 @@
  * FILE: _media.scss
  */
 
+// Responsive Slider http://demosthenes.info/blog/627/Make-A-Responsive-CSS3-Image-Slider
+
+@mixin imageSlider($n) {
+  #slider {
+    width: 80%;
+    max-width: 1000px; //Max-width of one individual image
+  }
+  #slider figure {
+    position: relative;
+    width: $n * 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+  }
+}
+
+
+
+
 // .media styles adapted from RESPONSIVEBP
 // http://responsivebp.com/css/media.html
 
