@@ -679,10 +679,6 @@ section::after {
   z-index: 3;
   position: relative;
 }
-#work article {
-  width: 100%;
-  float: left;
-}
 
 #contact {
   z-index: 2;
@@ -1348,6 +1344,9 @@ nav li:nth-of-type(4).selected a {
 #skills {
   background: #eeeeee;
 }
+#skills h1 {
+  margin: 0 4%;
+}
 
 #work {
   background-color: #eeeeee;
@@ -1357,6 +1356,7 @@ nav li:nth-of-type(4).selected a {
 #work h1 {
   position: relative;
   z-index: 2;
+  margin: 0 4%;
 }
 #work aside {
   height: auto;
@@ -1465,26 +1465,34 @@ nav li:nth-of-type(4).selected a {
   -webkit-transition: -webkit-transform 0.3s ease-out, opacity 0.4s ease-out, font-size 0.05s ease;
   transition: transform 0.3s ease-out, opacity 0.4s ease-out, font-size 0.05s ease;
 }
+#work .workbench {
+  width: 95%;
+  overflow: hidden;
+  margin: 0 2.5%;
+}
 #work .workbox {
-  display: inline-block;
-  float: left;
-  width: 100%;
+  width: 1100%;
 }
 #work article {
+  float: left;
   max-height: 0;
   width: 50%;
   overflow: hidden;
   display: inline-block;
-  -moz-transition: max-height 1s linear, width 0s linear 1s;
-  -o-transition: max-height 1s linear, width 0s linear 1s;
+  position: relative;
+  vertical-align: top;
+  -moz-transition: max-height 1s linear, width 0s linear 2s;
+  -o-transition: max-height 1s linear, width 0s linear 2s;
   -webkit-transition: max-height 1s linear, width 0s linear;
-  -webkit-transition-delay: 0s, 1s;
-  transition: max-height 1s linear, width 0s linear 1s;
+  -webkit-transition-delay: 0s, 2s;
+  transition: max-height 1s linear, width 0s linear 2s;
 }
 #work article:target {
   max-height: 999px;
-  width: 50%;
+  width: 99vw;
   z-index: 2;
+  position: relative;
+  left: 0;
   -moz-transition: max-height 1s linear 1s;
   -o-transition: max-height 1s linear 1s;
   -webkit-transition: max-height 1s linear;

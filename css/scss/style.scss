@@ -314,6 +314,9 @@ nav {
 }
 #skills {
   background: $body-bg;
+  h1 {
+    margin: 0 4%;
+  }
 }
 
 #work {
@@ -324,6 +327,7 @@ nav {
   h1 {
     position: relative;
     z-index: 2;
+    margin: 0 4%;
   }
 
   aside {
@@ -416,26 +420,34 @@ nav {
 
   $nWorkboxes: 10;
 
+.workbench {
+  width:95%;
+  overflow: hidden;
+  margin: 0 2.5%;
+}
 .workbox {
-  display:inline-block;
-  float: left;
-  width: 100%;
+  width: 1100%;
 }
   article {
     //display: inline-block;
     //position: relative;
     //width: 100% / $nWorkboxes;
     //position: relative;
+    float: left;
     max-height: 0;
     width: 50%;
     overflow: hidden;
     display:inline-block;
-    @include transition(max-height 1s linear, width 0s linear 1s);
+    position: relative;
+    vertical-align: top;
+    @include transition(max-height 1s linear, width 0s linear 2s);
 
     &:target {
       max-height: 999px;
-      width: 50%;
+      width: 99vw;
       z-index: 2;
+      position: relative;
+      left: 0;
       @include transition(max-height 1s linear 1s);
       //line-height: 1;
 

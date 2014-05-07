@@ -112,9 +112,9 @@ section {
 
 #work {
   @include sectionSettings(5);
-  article {
-    @include span(12);
-  }
+//  article {
+//    @include span(12);
+//  }
 }
 
 #contact {
