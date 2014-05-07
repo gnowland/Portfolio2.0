@@ -330,7 +330,7 @@ nav {
   height: auto;
   width: 100%;
   position: relative;
-  z-index: 1;
+  z-index: 99; //keep on top of workbox
   display: inline-block;
   background: $body-bg;
   }
@@ -414,20 +414,38 @@ nav {
     @include transition(transform 0.3s ease-out, opacity 0.4s ease-out, font-size 0.05s ease);
   }
 
+  $nWorkboxes: 10;
+
   article {
-    display: inline-block;
+    //display: inline-block;
     //position: relative;
-    width: 100%;
-    position: absolute;
-    left: -100%;
-    @include transition(left 1s ease-in-out);
+    //width: 100% / $nWorkboxes;
+    //position: relative;
+    max-height: 0;
+    width: 0;
+    overflow: hidden;
+    @include transition(max-height 3s ease-out, width 0s linear 3s);
+
     &:target {
-      height: auto;
-      left: 0;
-      top: 0;
-      z-index: 1;
-      position: relative;
-      display: inline-block;
+      max-height: 1000px;
+      width: 100%;
+      z-index: 2;
+      @include transition(max-height 3s ease-out);
+      //line-height: 1;
+
+
+        //@include transition(max-height 3s ease-out);
+        //& ~ aside {
+        //  padding: 2%;
+        //  figure {
+        //    display: inline-block;
+        //    width: 20%;
+        //    margin: 2%;
+        //    }
+        //  p {
+        //    display: none;
+        //  }
+        //}
     }
     a:first-of-type { //X Button
       position: absolute;
@@ -436,6 +454,7 @@ nav {
     }
   }
 }
+
 
 
 #contact {

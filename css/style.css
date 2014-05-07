@@ -1362,7 +1362,7 @@ nav li:nth-of-type(4).selected a {
   height: auto;
   width: 100%;
   position: relative;
-  z-index: 1;
+  z-index: 99;
   display: inline-block;
   background: #eeeeee;
 }
@@ -1466,22 +1466,23 @@ nav li:nth-of-type(4).selected a {
   transition: transform 0.3s ease-out, opacity 0.4s ease-out, font-size 0.05s ease;
 }
 #work article {
-  display: inline-block;
-  width: 100%;
-  position: absolute;
-  left: -100%;
-  -moz-transition: left 1s ease-in-out;
-  -o-transition: left 1s ease-in-out;
-  -webkit-transition: left 1s ease-in-out;
-  transition: left 1s ease-in-out;
+  max-height: 0;
+  width: 0;
+  overflow: hidden;
+  -moz-transition: max-height 3s ease-out, width 0s linear 3s;
+  -o-transition: max-height 3s ease-out, width 0s linear 3s;
+  -webkit-transition: max-height 3s ease-out, width 0s linear;
+  -webkit-transition-delay: 0s, 3s;
+  transition: max-height 3s ease-out, width 0s linear 3s;
 }
 #work article:target {
-  height: auto;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  position: relative;
-  display: inline-block;
+  max-height: 1000px;
+  width: 100%;
+  z-index: 2;
+  -moz-transition: max-height 3s ease-out;
+  -o-transition: max-height 3s ease-out;
+  -webkit-transition: max-height 3s ease-out;
+  transition: max-height 3s ease-out;
 }
 #work article a:first-of-type {
   position: absolute;
@@ -1503,13 +1504,18 @@ footer p {
  * FILE: _mediaqueries.scss
  */
 @media (min-width: 19.375em) {
-  section, #work article {
+  section {
     border-top: 3.3em solid #eeeeee;
     margin-top: -3.7em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 3.3em solid transparent;
+    margin-top: -3.7em;
   }
 
   nav {
@@ -1529,13 +1535,18 @@ footer p {
   }
 }
 @media (min-width: 21.25em) {
-  section, #work article {
+  section {
     border-top: 3.414em solid #eeeeee;
     margin-top: -3.814em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 3.414em solid transparent;
+    margin-top: -3.814em;
   }
 
   nav {
@@ -1555,13 +1566,18 @@ footer p {
   }
 }
 @media (min-width: 23.125em) {
-  section, #work article {
+  section {
     border-top: 3.528em solid #eeeeee;
     margin-top: -3.928em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 3.528em solid transparent;
+    margin-top: -3.928em;
   }
 
   nav {
@@ -1581,13 +1597,18 @@ footer p {
   }
 }
 @media (min-width: 25em) {
-  section, #work article {
+  section {
     border-top: 3.642em solid #eeeeee;
     margin-top: -4.042em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 3.642em solid transparent;
+    margin-top: -4.042em;
   }
 
   nav {
@@ -1607,13 +1628,18 @@ footer p {
   }
 }
 @media (min-width: 26.875em) {
-  section, #work article {
+  section {
     border-top: 3.756em solid #eeeeee;
     margin-top: -4.156em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 3.756em solid transparent;
+    margin-top: -4.156em;
   }
 
   nav {
@@ -1633,13 +1659,18 @@ footer p {
   }
 }
 @media (min-width: 28.75em) {
-  section, #work article {
+  section {
     border-top: 3.87em solid #eeeeee;
     margin-top: -4.27em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 3.87em solid transparent;
+    margin-top: -4.27em;
   }
 
   nav {
@@ -1659,13 +1690,18 @@ footer p {
   }
 }
 @media (min-width: 30.625em) {
-  section, #work article {
+  section {
     border-top: 3.984em solid #eeeeee;
     margin-top: -4.384em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 3.984em solid transparent;
+    margin-top: -4.384em;
   }
 
   nav {
@@ -1685,13 +1721,18 @@ footer p {
   }
 }
 @media (min-width: 32.5em) {
-  section, #work article {
+  section {
     border-top: 4.098em solid #eeeeee;
     margin-top: -4.498em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 4.098em solid transparent;
+    margin-top: -4.498em;
   }
 
   nav {
@@ -1711,13 +1752,18 @@ footer p {
   }
 }
 @media (min-width: 34.375em) {
-  section, #work article {
+  section {
     border-top: 4.212em solid #eeeeee;
     margin-top: -4.612em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 4.212em solid transparent;
+    margin-top: -4.612em;
   }
 
   nav {
@@ -1737,13 +1783,18 @@ footer p {
   }
 }
 @media (min-width: 36.25em) {
-  section, #work article {
+  section {
     border-top: 4.326em solid #eeeeee;
     margin-top: -4.726em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 4.326em solid transparent;
+    margin-top: -4.726em;
   }
 
   nav {
@@ -1763,13 +1814,18 @@ footer p {
   }
 }
 @media (min-width: 38.125em) {
-  section, #work article {
+  section {
     border-top: 4.44em solid #eeeeee;
     margin-top: -4.84em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 4.44em solid transparent;
+    margin-top: -4.84em;
   }
 
   nav {
@@ -1789,13 +1845,18 @@ footer p {
   }
 }
 @media (min-width: 40em) {
-  section, #work article {
+  section {
     border-top: 4.554em solid #eeeeee;
     margin-top: -4.954em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 4.554em solid transparent;
+    margin-top: -4.954em;
   }
 
   nav {
@@ -1815,13 +1876,18 @@ footer p {
   }
 }
 @media (min-width: 41.875em) {
-  section, #work article {
+  section {
     border-top: 4.668em solid #eeeeee;
     margin-top: -5.068em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 4.668em solid transparent;
+    margin-top: -5.068em;
   }
 
   nav {
@@ -1841,13 +1907,18 @@ footer p {
   }
 }
 @media (min-width: 43.75em) {
-  section, #work article {
+  section {
     border-top: 4.782em solid #eeeeee;
     margin-top: -5.182em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 4.782em solid transparent;
+    margin-top: -5.182em;
   }
 
   nav {
@@ -1867,13 +1938,18 @@ footer p {
   }
 }
 @media (min-width: 45.625em) {
-  section, #work article {
+  section {
     border-top: 4.896em solid #eeeeee;
     margin-top: -5.296em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 4.896em solid transparent;
+    margin-top: -5.296em;
   }
 
   nav {
@@ -1893,13 +1969,18 @@ footer p {
   }
 }
 @media (min-width: 47.5em) {
-  section, #work article {
+  section {
     border-top: 5.01em solid #eeeeee;
     margin-top: -5.41em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 5.01em solid transparent;
+    margin-top: -5.41em;
   }
 
   nav {
@@ -1919,13 +2000,18 @@ footer p {
   }
 }
 @media (min-width: 49.375em) {
-  section, #work article {
+  section {
     border-top: 5.124em solid #eeeeee;
     margin-top: -5.524em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 5.124em solid transparent;
+    margin-top: -5.524em;
   }
 
   nav {
@@ -1945,13 +2031,18 @@ footer p {
   }
 }
 @media (min-width: 51.25em) {
-  section, #work article {
+  section {
     border-top: 5.238em solid #eeeeee;
     margin-top: -5.638em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 5.238em solid transparent;
+    margin-top: -5.638em;
   }
 
   nav {
@@ -1971,13 +2062,18 @@ footer p {
   }
 }
 @media (min-width: 53.125em) {
-  section, #work article {
+  section {
     border-top: 5.352em solid #eeeeee;
     margin-top: -5.752em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 5.352em solid transparent;
+    margin-top: -5.752em;
   }
 
   nav {
@@ -1997,13 +2093,18 @@ footer p {
   }
 }
 @media (min-width: 55em) {
-  section, #work article {
+  section {
     border-top: 5.466em solid #eeeeee;
     margin-top: -5.866em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 5.466em solid transparent;
+    margin-top: -5.866em;
   }
 
   nav {
@@ -2023,13 +2124,18 @@ footer p {
   }
 }
 @media (min-width: 56.875em) {
-  section, #work article {
+  section {
     border-top: 5.58em solid #eeeeee;
     margin-top: -5.98em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 5.58em solid transparent;
+    margin-top: -5.98em;
   }
 
   nav {
@@ -2049,13 +2155,18 @@ footer p {
   }
 }
 @media (min-width: 58.75em) {
-  section, #work article {
+  section {
     border-top: 5.694em solid #eeeeee;
     margin-top: -6.094em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 5.694em solid transparent;
+    margin-top: -6.094em;
   }
 
   nav {
@@ -2075,13 +2186,18 @@ footer p {
   }
 }
 @media (min-width: 60.625em) {
-  section, #work article {
+  section {
     border-top: 5.808em solid #eeeeee;
     margin-top: -6.208em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 5.808em solid transparent;
+    margin-top: -6.208em;
   }
 
   nav {
@@ -2101,13 +2217,18 @@ footer p {
   }
 }
 @media (min-width: 62.5em) {
-  section, #work article {
+  section {
     border-top: 5.922em solid #eeeeee;
     margin-top: -6.322em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 5.922em solid transparent;
+    margin-top: -6.322em;
   }
 
   nav {
@@ -2127,13 +2248,18 @@ footer p {
   }
 }
 @media (min-width: 64.375em) {
-  section, #work article {
+  section {
     border-top: 6.036em solid #eeeeee;
     margin-top: -6.436em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 6.036em solid transparent;
+    margin-top: -6.436em;
   }
 
   nav {
@@ -2153,13 +2279,18 @@ footer p {
   }
 }
 @media (min-width: 66.25em) {
-  section, #work article {
+  section {
     border-top: 6.15em solid #eeeeee;
     margin-top: -6.55em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 6.15em solid transparent;
+    margin-top: -6.55em;
   }
 
   nav {
@@ -2179,13 +2310,18 @@ footer p {
   }
 }
 @media (min-width: 68.125em) {
-  section, #work article {
+  section {
     border-top: 6.264em solid #eeeeee;
     margin-top: -6.664em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 6.264em solid transparent;
+    margin-top: -6.664em;
   }
 
   nav {
@@ -2205,13 +2341,18 @@ footer p {
   }
 }
 @media (min-width: 70em) {
-  section, #work article {
+  section {
     border-top: 6.378em solid #eeeeee;
     margin-top: -6.778em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 6.378em solid transparent;
+    margin-top: -6.778em;
   }
 
   nav {
@@ -2231,13 +2372,18 @@ footer p {
   }
 }
 @media (min-width: 71.875em) {
-  section, #work article {
+  section {
     border-top: 6.492em solid #eeeeee;
     margin-top: -6.892em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 6.492em solid transparent;
+    margin-top: -6.892em;
   }
 
   nav {
@@ -2257,13 +2403,18 @@ footer p {
   }
 }
 @media (min-width: 73.75em) {
-  section, #work article {
+  section {
     border-top: 6.606em solid #eeeeee;
     margin-top: -7.006em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 6.606em solid transparent;
+    margin-top: -7.006em;
   }
 
   nav {
@@ -2283,13 +2434,18 @@ footer p {
   }
 }
 @media (min-width: 75.625em) {
-  section, #work article {
+  section {
     border-top: 6.72em solid #eeeeee;
     margin-top: -7.12em;
   }
 
   section:nth-of-type(1) {
     margin-top: 0;
+  }
+
+  #work article {
+    border-top: 6.72em solid transparent;
+    margin-top: -7.12em;
   }
 
   nav {
