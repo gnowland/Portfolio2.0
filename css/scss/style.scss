@@ -436,22 +436,23 @@ nav {
     float: left;
     max-height: 0;
     width: 0;
-    left: -100%;
     overflow: hidden;
     display:inline-block;
     position: relative;
     vertical-align: top;
-    @include transition(left 1s linear, max-height 1s linear,  width 0s linear 2s); //Animation OUT
+    opacity: 0;
+    @include transition(max-height 0.8s ease-in-out, opacity 0.3s linear, width 0s linear 2s); //Animation OUT
 
     &:target {
       max-height: 100vh;
       width: 99vw;
       height: auto;
       left: 0;
-      padding: 0 2em; //DONT MESS WITH MARGIN
+      //padding: 0 2em; //DONT MESS WITH MARGIN
       z-index: 2;
       position: relative;
-      @include transition(max-height 1s linear 1s); //Animation IN
+      opacity: 1;
+      @include transition(max-height 1s ease-in-out 0.4s, opacity 1s linear); //Animation IN
       //line-height: 1;
 
 
