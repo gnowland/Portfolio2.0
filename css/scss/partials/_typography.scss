@@ -156,7 +156,6 @@ $definition-list-margin-bottom: rem-calc(12) !default;
     line-height: inherit;
     //margin: 0 0.2em;
     padding-bottom: 0.1em;
-    white-space: nowrap;
 
     transition: 0.2s ease-out;
     transition-property: (border-color, color, text-shadow);
@@ -189,6 +188,9 @@ $definition-list-margin-bottom: rem-calc(12) !default;
       font-size: $paragraph-aside-font-size;
       line-height: $paragraph-aside-line-height;
       font-style: $paragraph-aside-font-style;
+    }
+    a {
+      white-space: nowrap;
     }
   }
 

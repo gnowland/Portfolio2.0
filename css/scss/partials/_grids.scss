@@ -114,6 +114,10 @@ section {
   @include sectionSettings(5);
 }
 
+#case {
+  @include span(12);
+}
+
 #contact {
   @include sectionSettings(6);
 }
