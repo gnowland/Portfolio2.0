@@ -17,7 +17,7 @@
     //  border-top: ($header-height + ($i * 0.114em)) solid transparent; //offset mixin
     //  margin-top: -($header-height + ($i * 0.114em)); //offset mixin
     //}
-    section {
+    section, #work article {
       border-top: ($header-height + ($i * 0.114em)) solid #eee; // 0.4 em is the border top //offset mixin //#eee to make placeholder for nav/header
       margin-top: -($header-height + ($i * 0.114em) + 0.4em); //offset mixin
     }
@@ -25,9 +25,8 @@
       margin-top: 0;
     }
     #work article {
-          border-top: ($header-height + ($i * 0.114em)) solid transparent; // 0.4 em is the border top //offset mixin //#eee to make placeholder for nav/header
-          margin-top: -($header-height + ($i * 0.114em) + 0.4em); //offset mixin
-        }
+      border-color: transparent;
+    }
     nav {
       width: $starting-width + ($i / 1 ); //to float center //+1.5em because "CONTACT" is too wide... pushes nav slightly off screen though.
       //width: 21em + ($i / 1 );

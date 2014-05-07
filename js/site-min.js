@@ -650,6 +650,7 @@ $('.asterisk').click(function() {
       });
   });
 
+
   //Performs a smooth page scroll to an anchor on the same page from all links
     //Newer chris coyer srcipt, but makes page flash.. use this if carousels are messing up
     //$('.scrollto').click(function() {

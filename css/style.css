@@ -1465,24 +1465,31 @@ nav li:nth-of-type(4).selected a {
   -webkit-transition: -webkit-transform 0.3s ease-out, opacity 0.4s ease-out, font-size 0.05s ease;
   transition: transform 0.3s ease-out, opacity 0.4s ease-out, font-size 0.05s ease;
 }
+#work .workbox {
+  display: inline-block;
+  float: left;
+  width: 100%;
+}
 #work article {
   max-height: 0;
-  width: 0;
+  width: 50%;
   overflow: hidden;
-  -moz-transition: max-height 3s ease-out, width 0s linear 3s;
-  -o-transition: max-height 3s ease-out, width 0s linear 3s;
-  -webkit-transition: max-height 3s ease-out, width 0s linear;
-  -webkit-transition-delay: 0s, 3s;
-  transition: max-height 3s ease-out, width 0s linear 3s;
+  display: inline-block;
+  -moz-transition: max-height 1s linear, width 0s linear 1s;
+  -o-transition: max-height 1s linear, width 0s linear 1s;
+  -webkit-transition: max-height 1s linear, width 0s linear;
+  -webkit-transition-delay: 0s, 1s;
+  transition: max-height 1s linear, width 0s linear 1s;
 }
 #work article:target {
-  max-height: 1000px;
-  width: 100%;
+  max-height: 999px;
+  width: 50%;
   z-index: 2;
-  -moz-transition: max-height 3s ease-out;
-  -o-transition: max-height 3s ease-out;
-  -webkit-transition: max-height 3s ease-out;
-  transition: max-height 3s ease-out;
+  -moz-transition: max-height 1s linear 1s;
+  -o-transition: max-height 1s linear 1s;
+  -webkit-transition: max-height 1s linear;
+  -webkit-transition-delay: 1s;
+  transition: max-height 1s linear 1s;
 }
 #work article a:first-of-type {
   position: absolute;
@@ -1504,7 +1511,7 @@ footer p {
  * FILE: _mediaqueries.scss
  */
 @media (min-width: 19.375em) {
-  section {
+  section, #work article {
     border-top: 3.3em solid #eeeeee;
     margin-top: -3.7em;
   }
@@ -1514,8 +1521,7 @@ footer p {
   }
 
   #work article {
-    border-top: 3.3em solid transparent;
-    margin-top: -3.7em;
+    border-color: transparent;
   }
 
   nav {
@@ -1535,7 +1541,7 @@ footer p {
   }
 }
 @media (min-width: 21.25em) {
-  section {
+  section, #work article {
     border-top: 3.414em solid #eeeeee;
     margin-top: -3.814em;
   }
@@ -1545,8 +1551,7 @@ footer p {
   }
 
   #work article {
-    border-top: 3.414em solid transparent;
-    margin-top: -3.814em;
+    border-color: transparent;
   }
 
   nav {
@@ -1566,7 +1571,7 @@ footer p {
   }
 }
 @media (min-width: 23.125em) {
-  section {
+  section, #work article {
     border-top: 3.528em solid #eeeeee;
     margin-top: -3.928em;
   }
@@ -1576,8 +1581,7 @@ footer p {
   }
 
   #work article {
-    border-top: 3.528em solid transparent;
-    margin-top: -3.928em;
+    border-color: transparent;
   }
 
   nav {
@@ -1597,7 +1601,7 @@ footer p {
   }
 }
 @media (min-width: 25em) {
-  section {
+  section, #work article {
     border-top: 3.642em solid #eeeeee;
     margin-top: -4.042em;
   }
@@ -1607,8 +1611,7 @@ footer p {
   }
 
   #work article {
-    border-top: 3.642em solid transparent;
-    margin-top: -4.042em;
+    border-color: transparent;
   }
 
   nav {
@@ -1628,7 +1631,7 @@ footer p {
   }
 }
 @media (min-width: 26.875em) {
-  section {
+  section, #work article {
     border-top: 3.756em solid #eeeeee;
     margin-top: -4.156em;
   }
@@ -1638,8 +1641,7 @@ footer p {
   }
 
   #work article {
-    border-top: 3.756em solid transparent;
-    margin-top: -4.156em;
+    border-color: transparent;
   }
 
   nav {
@@ -1659,7 +1661,7 @@ footer p {
   }
 }
 @media (min-width: 28.75em) {
-  section {
+  section, #work article {
     border-top: 3.87em solid #eeeeee;
     margin-top: -4.27em;
   }
@@ -1669,8 +1671,7 @@ footer p {
   }
 
   #work article {
-    border-top: 3.87em solid transparent;
-    margin-top: -4.27em;
+    border-color: transparent;
   }
 
   nav {
@@ -1690,7 +1691,7 @@ footer p {
   }
 }
 @media (min-width: 30.625em) {
-  section {
+  section, #work article {
     border-top: 3.984em solid #eeeeee;
     margin-top: -4.384em;
   }
@@ -1700,8 +1701,7 @@ footer p {
   }
 
   #work article {
-    border-top: 3.984em solid transparent;
-    margin-top: -4.384em;
+    border-color: transparent;
   }
 
   nav {
@@ -1721,7 +1721,7 @@ footer p {
   }
 }
 @media (min-width: 32.5em) {
-  section {
+  section, #work article {
     border-top: 4.098em solid #eeeeee;
     margin-top: -4.498em;
   }
@@ -1731,8 +1731,7 @@ footer p {
   }
 
   #work article {
-    border-top: 4.098em solid transparent;
-    margin-top: -4.498em;
+    border-color: transparent;
   }
 
   nav {
@@ -1752,7 +1751,7 @@ footer p {
   }
 }
 @media (min-width: 34.375em) {
-  section {
+  section, #work article {
     border-top: 4.212em solid #eeeeee;
     margin-top: -4.612em;
   }
@@ -1762,8 +1761,7 @@ footer p {
   }
 
   #work article {
-    border-top: 4.212em solid transparent;
-    margin-top: -4.612em;
+    border-color: transparent;
   }
 
   nav {
@@ -1783,7 +1781,7 @@ footer p {
   }
 }
 @media (min-width: 36.25em) {
-  section {
+  section, #work article {
     border-top: 4.326em solid #eeeeee;
     margin-top: -4.726em;
   }
@@ -1793,8 +1791,7 @@ footer p {
   }
 
   #work article {
-    border-top: 4.326em solid transparent;
-    margin-top: -4.726em;
+    border-color: transparent;
   }
 
   nav {
@@ -1814,7 +1811,7 @@ footer p {
   }
 }
 @media (min-width: 38.125em) {
-  section {
+  section, #work article {
     border-top: 4.44em solid #eeeeee;
     margin-top: -4.84em;
   }
@@ -1824,8 +1821,7 @@ footer p {
   }
 
   #work article {
-    border-top: 4.44em solid transparent;
-    margin-top: -4.84em;
+    border-color: transparent;
   }
 
   nav {
@@ -1845,7 +1841,7 @@ footer p {
   }
 }
 @media (min-width: 40em) {
-  section {
+  section, #work article {
     border-top: 4.554em solid #eeeeee;
     margin-top: -4.954em;
   }
@@ -1855,8 +1851,7 @@ footer p {
   }
 
   #work article {
-    border-top: 4.554em solid transparent;
-    margin-top: -4.954em;
+    border-color: transparent;
   }
 
   nav {
@@ -1876,7 +1871,7 @@ footer p {
   }
 }
 @media (min-width: 41.875em) {
-  section {
+  section, #work article {
     border-top: 4.668em solid #eeeeee;
     margin-top: -5.068em;
   }
@@ -1886,8 +1881,7 @@ footer p {
   }
 
   #work article {
-    border-top: 4.668em solid transparent;
-    margin-top: -5.068em;
+    border-color: transparent;
   }
 
   nav {
@@ -1907,7 +1901,7 @@ footer p {
   }
 }
 @media (min-width: 43.75em) {
-  section {
+  section, #work article {
     border-top: 4.782em solid #eeeeee;
     margin-top: -5.182em;
   }
@@ -1917,8 +1911,7 @@ footer p {
   }
 
   #work article {
-    border-top: 4.782em solid transparent;
-    margin-top: -5.182em;
+    border-color: transparent;
   }
 
   nav {
@@ -1938,7 +1931,7 @@ footer p {
   }
 }
 @media (min-width: 45.625em) {
-  section {
+  section, #work article {
     border-top: 4.896em solid #eeeeee;
     margin-top: -5.296em;
   }
@@ -1948,8 +1941,7 @@ footer p {
   }
 
   #work article {
-    border-top: 4.896em solid transparent;
-    margin-top: -5.296em;
+    border-color: transparent;
   }
 
   nav {
@@ -1969,7 +1961,7 @@ footer p {
   }
 }
 @media (min-width: 47.5em) {
-  section {
+  section, #work article {
     border-top: 5.01em solid #eeeeee;
     margin-top: -5.41em;
   }
@@ -1979,8 +1971,7 @@ footer p {
   }
 
   #work article {
-    border-top: 5.01em solid transparent;
-    margin-top: -5.41em;
+    border-color: transparent;
   }
 
   nav {
@@ -2000,7 +1991,7 @@ footer p {
   }
 }
 @media (min-width: 49.375em) {
-  section {
+  section, #work article {
     border-top: 5.124em solid #eeeeee;
     margin-top: -5.524em;
   }
@@ -2010,8 +2001,7 @@ footer p {
   }
 
   #work article {
-    border-top: 5.124em solid transparent;
-    margin-top: -5.524em;
+    border-color: transparent;
   }
 
   nav {
@@ -2031,7 +2021,7 @@ footer p {
   }
 }
 @media (min-width: 51.25em) {
-  section {
+  section, #work article {
     border-top: 5.238em solid #eeeeee;
     margin-top: -5.638em;
   }
@@ -2041,8 +2031,7 @@ footer p {
   }
 
   #work article {
-    border-top: 5.238em solid transparent;
-    margin-top: -5.638em;
+    border-color: transparent;
   }
 
   nav {
@@ -2062,7 +2051,7 @@ footer p {
   }
 }
 @media (min-width: 53.125em) {
-  section {
+  section, #work article {
     border-top: 5.352em solid #eeeeee;
     margin-top: -5.752em;
   }
@@ -2072,8 +2061,7 @@ footer p {
   }
 
   #work article {
-    border-top: 5.352em solid transparent;
-    margin-top: -5.752em;
+    border-color: transparent;
   }
 
   nav {
@@ -2093,7 +2081,7 @@ footer p {
   }
 }
 @media (min-width: 55em) {
-  section {
+  section, #work article {
     border-top: 5.466em solid #eeeeee;
     margin-top: -5.866em;
   }
@@ -2103,8 +2091,7 @@ footer p {
   }
 
   #work article {
-    border-top: 5.466em solid transparent;
-    margin-top: -5.866em;
+    border-color: transparent;
   }
 
   nav {
@@ -2124,7 +2111,7 @@ footer p {
   }
 }
 @media (min-width: 56.875em) {
-  section {
+  section, #work article {
     border-top: 5.58em solid #eeeeee;
     margin-top: -5.98em;
   }
@@ -2134,8 +2121,7 @@ footer p {
   }
 
   #work article {
-    border-top: 5.58em solid transparent;
-    margin-top: -5.98em;
+    border-color: transparent;
   }
 
   nav {
@@ -2155,7 +2141,7 @@ footer p {
   }
 }
 @media (min-width: 58.75em) {
-  section {
+  section, #work article {
     border-top: 5.694em solid #eeeeee;
     margin-top: -6.094em;
   }
@@ -2165,8 +2151,7 @@ footer p {
   }
 
   #work article {
-    border-top: 5.694em solid transparent;
-    margin-top: -6.094em;
+    border-color: transparent;
   }
 
   nav {
@@ -2186,7 +2171,7 @@ footer p {
   }
 }
 @media (min-width: 60.625em) {
-  section {
+  section, #work article {
     border-top: 5.808em solid #eeeeee;
     margin-top: -6.208em;
   }
@@ -2196,8 +2181,7 @@ footer p {
   }
 
   #work article {
-    border-top: 5.808em solid transparent;
-    margin-top: -6.208em;
+    border-color: transparent;
   }
 
   nav {
@@ -2217,7 +2201,7 @@ footer p {
   }
 }
 @media (min-width: 62.5em) {
-  section {
+  section, #work article {
     border-top: 5.922em solid #eeeeee;
     margin-top: -6.322em;
   }
@@ -2227,8 +2211,7 @@ footer p {
   }
 
   #work article {
-    border-top: 5.922em solid transparent;
-    margin-top: -6.322em;
+    border-color: transparent;
   }
 
   nav {
@@ -2248,7 +2231,7 @@ footer p {
   }
 }
 @media (min-width: 64.375em) {
-  section {
+  section, #work article {
     border-top: 6.036em solid #eeeeee;
     margin-top: -6.436em;
   }
@@ -2258,8 +2241,7 @@ footer p {
   }
 
   #work article {
-    border-top: 6.036em solid transparent;
-    margin-top: -6.436em;
+    border-color: transparent;
   }
 
   nav {
@@ -2279,7 +2261,7 @@ footer p {
   }
 }
 @media (min-width: 66.25em) {
-  section {
+  section, #work article {
     border-top: 6.15em solid #eeeeee;
     margin-top: -6.55em;
   }
@@ -2289,8 +2271,7 @@ footer p {
   }
 
   #work article {
-    border-top: 6.15em solid transparent;
-    margin-top: -6.55em;
+    border-color: transparent;
   }
 
   nav {
@@ -2310,7 +2291,7 @@ footer p {
   }
 }
 @media (min-width: 68.125em) {
-  section {
+  section, #work article {
     border-top: 6.264em solid #eeeeee;
     margin-top: -6.664em;
   }
@@ -2320,8 +2301,7 @@ footer p {
   }
 
   #work article {
-    border-top: 6.264em solid transparent;
-    margin-top: -6.664em;
+    border-color: transparent;
   }
 
   nav {
@@ -2341,7 +2321,7 @@ footer p {
   }
 }
 @media (min-width: 70em) {
-  section {
+  section, #work article {
     border-top: 6.378em solid #eeeeee;
     margin-top: -6.778em;
   }
@@ -2351,8 +2331,7 @@ footer p {
   }
 
   #work article {
-    border-top: 6.378em solid transparent;
-    margin-top: -6.778em;
+    border-color: transparent;
   }
 
   nav {
@@ -2372,7 +2351,7 @@ footer p {
   }
 }
 @media (min-width: 71.875em) {
-  section {
+  section, #work article {
     border-top: 6.492em solid #eeeeee;
     margin-top: -6.892em;
   }
@@ -2382,8 +2361,7 @@ footer p {
   }
 
   #work article {
-    border-top: 6.492em solid transparent;
-    margin-top: -6.892em;
+    border-color: transparent;
   }
 
   nav {
@@ -2403,7 +2381,7 @@ footer p {
   }
 }
 @media (min-width: 73.75em) {
-  section {
+  section, #work article {
     border-top: 6.606em solid #eeeeee;
     margin-top: -7.006em;
   }
@@ -2413,8 +2391,7 @@ footer p {
   }
 
   #work article {
-    border-top: 6.606em solid transparent;
-    margin-top: -7.006em;
+    border-color: transparent;
   }
 
   nav {
@@ -2434,7 +2411,7 @@ footer p {
   }
 }
 @media (min-width: 75.625em) {
-  section {
+  section, #work article {
     border-top: 6.72em solid #eeeeee;
     margin-top: -7.12em;
   }
@@ -2444,8 +2421,7 @@ footer p {
   }
 
   #work article {
-    border-top: 6.72em solid transparent;
-    margin-top: -7.12em;
+    border-color: transparent;
   }
 
   nav {
