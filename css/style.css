@@ -786,7 +786,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #28415c;
   text-rendering: optimizeLegibility;
   page-break-after: avoid;
-  margin-top: 0.2rem;
+  margin-top: 0.4rem;
   margin-bottom: 0.4rem;
   line-height: 1.4;
   text-transform: uppercase;
@@ -1038,7 +1038,7 @@ header [data-icon='\f100'] {
   font-size: 1.25em;
   line-height: 0;
   margin: 0 -0.13em 0 -0.27em;
-  text-shadow: 0 -0.5px 1px #a3a3a3;
+  text-shadow: -0.5px 0.5px 0px white, 0.5px 0.5px 0px white, 0.5px -0.5px 0px white, -0.5px -0.5px 0px white, -0.5px 0px 0px white, 0px -0.5px 0px white, 0px 0.5px 0px white;
   position: relative;
   -moz-transition-duration: 0.6s;
   -o-transition-duration: 0.6s;
@@ -1174,6 +1174,11 @@ nav li:nth-of-type(4).selected a {
   text-align: center;
 }
 
+/* Sections Styles */
+.sectionName {
+  margin-left: 2%;
+}
+
 #about, #blog {
   background: url(../img/graph-pattern.png) fixed 0 0 repeat, #285073;
   padding: 0 0 40px 0;
@@ -1284,7 +1289,7 @@ nav li:nth-of-type(4).selected a {
 
 #slug {
   margin: 0;
-  padding: 1.5em 1em;
+  padding: 3em 1em 2em;
   background: #323232;
   text-align: center;
 }
@@ -1329,23 +1334,46 @@ nav li:nth-of-type(4).selected a {
 #slug p:nth-of-type(1) i {
   width: 100%;
   display: block;
-  margin-top: .3em;
+  margin-top: .1em;
   font-style: italic;
   color: #4eb188;
   text-shadow: #34775b -1px 0.5px 0;
   border-color: #4eb188;
 }
+#slug p:nth-of-type(2) {
+  font-family: "Gotham", "Century Gothic", "Tw Cen MT", Futura, "URW Gothic L", Arial, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.7em;
+  color: #969696;
+  text-shadow: #656565 -1px 0.5px 0;
+  border-color: #969696;
+  text-rendering: optimizeLegibility;
+  page-break-after: avoid;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+#slug p:nth-of-type(4) {
+  margin-top: 1.2em;
+}
+#slug p:nth-of-type(4):before {
+  color: gray;
+  content: "\2014\00a0\00a0";
+}
+#slug p:nth-of-type(4):after {
+  color: #969696;
+  content: "\00a0\00a0\2014";
+}
 #slug hr {
   padding: 0;
   max-width: 40em;
-  margin: 1em auto;
+  margin: 2em auto 1.8em;
 }
 
 #skills {
   background: #eeeeee;
-}
-#skills h1 {
-  margin: 0 4%;
 }
 
 #work {
@@ -1356,15 +1384,6 @@ nav li:nth-of-type(4).selected a {
 #work > h1 {
   position: relative;
   z-index: 2;
-  margin: 0 4%;
-}
-#work aside {
-  height: auto;
-  width: 100%;
-  position: relative;
-  z-index: 99;
-  display: inline-block;
-  background: #eeeeee;
 }
 #work figure {
   display: inline-block;
@@ -1464,48 +1483,6 @@ nav li:nth-of-type(4).selected a {
   -o-transition: -o-transform 0.3s ease-out, opacity 0.4s ease-out, font-size 0.05s ease;
   -webkit-transition: -webkit-transform 0.3s ease-out, opacity 0.4s ease-out, font-size 0.05s ease;
   transition: transform 0.3s ease-out, opacity 0.4s ease-out, font-size 0.05s ease;
-}
-#work .workbench {
-  width: 100%;
-  overflow: hidden;
-  margin: 0;
-}
-#work .workbox {
-  width: 1000%;
-}
-#work article {
-  float: left;
-  max-height: 0;
-  width: 0;
-  overflow: hidden;
-  display: inline-block;
-  position: relative;
-  vertical-align: top;
-  opacity: 0;
-  -moz-transition: max-height 0.8s ease-in-out, opacity 0.3s linear, width 0s linear 2s;
-  -o-transition: max-height 0.8s ease-in-out, opacity 0.3s linear, width 0s linear 2s;
-  -webkit-transition: max-height 0.8s ease-in-out, opacity 0.3s linear, width 0s linear;
-  -webkit-transition-delay: 0s, 0s, 2s;
-  transition: max-height 0.8s ease-in-out, opacity 0.3s linear, width 0s linear 2s;
-}
-#work article:target {
-  max-height: 100vh;
-  width: 99vw;
-  height: auto;
-  left: 0;
-  z-index: 2;
-  position: relative;
-  opacity: 1;
-  -moz-transition: max-height 1s ease-in-out 0.4s, opacity 1s linear;
-  -o-transition: max-height 1s ease-in-out 0.4s, opacity 1s linear;
-  -webkit-transition: max-height 1s ease-in-out, opacity 1s linear;
-  -webkit-transition-delay: 0.4s, 0s;
-  transition: max-height 1s ease-in-out 0.4s, opacity 1s linear;
-}
-#work article a:first-of-type {
-  position: absolute;
-  right: 1em;
-  z-index: 3;
 }
 
 #contact {
@@ -2477,25 +2454,25 @@ footer p {
   }
 }
 @media (min-width: 20em) {
-  #work aside {
-    padding: 2% 8%;
+  #work div {
+    padding: 0 8% 2%;
   }
-  #work aside figure {
+  #work div figure {
     width: 99%;
     margin: 0%;
   }
-  #work aside figure:nth-of-type(n) {
+  #work div figure:nth-of-type(n) {
     margin: 0%;
   }
-  #work aside figure:nth-of-type(1n) {
+  #work div figure:nth-of-type(1n) {
     margin-right: auto;
   }
-  #work aside figure:nth-child(1n) {
+  #work div figure:nth-child(1n) {
     margin-left: auto;
     margin-top: 5%;
     margin-bottom: 5%;
   }
-  #work aside figure figcaption {
+  #work div figure figcaption {
     font-size: 1.5em;
   }
 }
@@ -2503,70 +2480,80 @@ footer p {
   display: block;
 }
 @media (min-width: 27.5em) {
-  #work aside figure {
+  #work div figure {
     width: 45%;
     margin: 2.25%;
   }
-  #work aside figure:nth-of-type(n) {
+  #work div figure:nth-of-type(n) {
     margin: 2.25%;
   }
-  #work aside figure:nth-of-type(2n) {
+  #work div figure:nth-of-type(2n) {
     margin-right: auto;
   }
-  #work aside figure figcaption {
+  #work div figure figcaption {
     font-size: 1.2em;
   }
 }
 @media (min-width: 43.75em) {
-  #work aside {
-    padding: 1% 4%;
+  #work div {
+    padding: 0 4% 2%;
   }
-  #work aside figure figcaption {
+  #work div figure {
+    width: 30%;
+    margin: 1.5%;
+  }
+  #work div figure:nth-of-type(n) {
+    margin: 1.5%;
+  }
+  #work div figure:nth-of-type(3n) {
+    margin-right: auto;
+  }
+  #work div figure figcaption {
     font-size: 1.5em;
   }
 }
 @media (min-width: 53.125em) {
-  #work aside {
-    padding: 1.5% 3%;
+  #work div {
+    padding: 0 3% 2%;
   }
-  #work aside figure {
-    width: 30%;
-    margin: 1.5%;
+  #work div figure {
+    width: 22.25%;
+    margin: 1.25%;
   }
-  #work aside figure:nth-of-type(n) {
-    margin: 1.5%;
+  #work div figure:nth-of-type(n) {
+    margin: 1.25%;
   }
-  #work aside figure:nth-of-type(3n) {
+  #work div figure:nth-of-type(4n) {
     margin-right: auto;
   }
 }
 @media (min-width: 75em) {
-  #work aside {
-    padding: 1.5% 3%;
+  #work div {
+    padding: 0 3% 2%;
   }
-  #work aside figure {
-    width: 22.25%;
-    margin: 1.25%;
+  #work div figure {
+    width: 18.3%;
+    margin: 0.75%;
   }
-  #work aside figure:nth-of-type(n) {
-    margin: 1.25%;
+  #work div figure:nth-of-type(n) {
+    margin: 0.75%;
   }
-  #work aside figure:nth-of-type(4n) {
+  #work div figure:nth-of-type(5n) {
     margin-right: auto;
   }
 }
 @media (min-width: 100em) {
-  #work aside {
-    padding: 1.5% 3%;
+  #work div {
+    padding: 0 8% 2%;
   }
-  #work aside figure {
+  #work div figure {
     width: 18.3%;
     margin: 0.75%;
   }
-  #work aside figure:nth-of-type(n) {
+  #work div figure:nth-of-type(n) {
     margin: 0.75%;
   }
-  #work aside figure:nth-of-type(5n) {
+  #work div figure:nth-of-type(5n) {
     margin-right: auto;
   }
 }

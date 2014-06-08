@@ -83,6 +83,9 @@
   }
 }
 
+
+//Section padding
+
    //////////////
   // BOX GRID //
  //////////////
@@ -110,8 +113,8 @@
 
 //Box Sizes
 @media (min-width: 20em) { // 1 up
-  #work aside {
-    padding: 2% 8%; //half of below "rowMachine" padding //coencides with the padding of the boxes below
+  #work div {
+    padding: 0 8% 2%; //half of below "rowMachine" padding //coencides with the padding of the boxes below
     figure {
     @include rowMachine(1, 0%);
     &:nth-child(1n) {
@@ -133,42 +136,45 @@
   display: block;
 }
 @media (min-width: 27.5em) { //2 up //coencides with padding above
-  #work aside {
+  #work div {
     figure {
       @include rowMachine(2, 4.5%);
       figcaption {
-          font-size: 1.2em;
+        font-size: 1.2em;
       }
     }
   }
 }
-@media (min-width: 43.750em) { //2 up, larger screen
-  #work aside {
-    padding: 1% 4%;
-    figure figcaption {
-      font-size: 1.5em;
-    }
-  }
-}
-@media (min-width: 53.125em) { //3 up
-  #work aside {
-    padding: 1.5% 3%;
+@media (min-width: 43.750em) { //3 up
+  #work div {
+    padding: 0 4% 2%;
     figure {
       @include rowMachine(3, 3%);
+      figcaption {
+        font-size: 1.5em;
+      }
     }
   }
 }
-@media (min-width: 75em) { //4 up
-  #work aside {
-    padding: 1.5% 3%;
+@media (min-width: 53.125em) { //4 up
+  #work div {
+    padding: 0 3% 2%;
     figure {
       @include rowMachine(4, 2.5%);
     }
   }
 }
-@media (min-width: 100em) { // 5 up
-  #work aside {
-    padding: 1.5% 3%;
+@media (min-width: 75em) { //5 up
+  #work div {
+    padding: 0 3% 2%;
+    figure {
+      @include rowMachine(5, 1.5%);
+    }
+  }
+}
+@media (min-width: 100em) { // 5 up, center
+  #work div {
+    padding: 0 8% 2%;
     figure {
       @include rowMachine(5, 1.5%)
     }

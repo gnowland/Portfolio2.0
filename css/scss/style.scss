@@ -78,7 +78,8 @@ header {
     line-height: 0;
     margin: 0 -0.13em 0 -0.27em;
     //@include text-shadow(0px 1px 1px rgba(255, 255, 255, 1));
-    @include text-shadow(0 -0.5px 1px rgb(163,163,163)); //rgb(117, 122, 128) //rgb(178,181,184)
+    //@include text-shadow(0 -0.5px 1px rgb(163,163,163)); //rgb(117, 122, 128) //rgb(178,181,184)
+    @include text-shadow(-0.5px 0.5px 0px rgb(255, 255, 255), 0.5px 0.5px 0px rgb(255, 255, 255), 0.5px -0.5px 0px rgb(255, 255, 255), -0.5px -0.5px 0px rgb(255, 255, 255), -0.5px 0px 0px rgb(255, 255, 255), 0px -0.5px 0px rgb(255, 255, 255), 0px 0.5px 0px rgb(255, 255, 255));
     //color: rgb(26, 74, 116);
     //color: $body-bg; //rgba(27,60,89,0.82);
     //@include text-shadow(1px 2px 2px $body-bg, 0 0 0 #000, 1px 2px 2px $body-bg);
@@ -149,6 +150,12 @@ nav {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+}
+
+/* Sections Styles */
+
+.sectionName {
+  margin-left: 2%;
 }
 
 #about, #blog {
@@ -266,7 +273,7 @@ nav {
 
 #slug {
   margin: 0;
-  padding: 1.5em 1em;
+  padding: 3em 1em 2em;
   background: rgb(50,50,50);//rgba(20,40,60, 0.4);
   text-align: center;
   //@include transition(background 500ms ease);
@@ -299,24 +306,46 @@ nav {
       i {
         width: 100%;
         display: block;
-        margin-top: .3em;
+        margin-top: .1em;
         font-style: italic;
         //background-color: rgba(70,69,74, 0.7);//rgb(253, 253, 154);
         @include textStyle($about-color, $pitch-shadow-d);//@include textStyle(rgb(181,91,40));
+      }
+    }
+    &:nth-of-type(2) {
+      font-family: $gotham-font-stack;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 1.7em;
+      @include textStyle($hr-border-color, $pitch-shadow-d);
+      text-rendering: optimizeLegibility;
+      page-break-after: avoid;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+    &:nth-of-type(4) {
+      margin-top: 0.6em * 2; //makes margin even
+      &:before {
+        color: gray;
+        content:"\2014\00a0\00a0";
+      }
+      &:after {
+        color: $hr-border-color;
+        content:"\00a0\00a0\2014";
       }
     }
   }
   hr {
     padding: 0;
     max-width: 40em;
-    margin: 1em auto;
+    margin: 2em auto 1.8em;
   }
 }
+
 #skills {
   background: $body-bg;
-  h1 {
-    margin: 0 4%;
-  }
 }
 
 #work {
@@ -327,16 +356,7 @@ nav {
   > h1 {
     position: relative;
     z-index: 2;
-    margin: 0 4%;
-  }
-
-  aside {
-  height: auto;
-  width: 100%;
-  position: relative;
-  z-index: 99; //keep on top of workbox
-  display: inline-block;
-  background: $body-bg;
+    //margin: 0 4%;
   }
 
   figure {
@@ -416,64 +436,6 @@ nav {
     color: rgb(250, 250, 250);
     text-shadow: rgb(0, 0, 0) -1px 0.5px 0;
     @include transition(transform 0.3s ease-out, opacity 0.4s ease-out, font-size 0.05s ease);
-  }
-
-  $nWorkboxes: 10;
-
-.workbench {
-  width:100%;
-  overflow: hidden;
-  margin: 0;
-}
-.workbox {
-  width: 1000%;
-}
-  article {
-    //display: inline-block;
-    //position: relative;
-    //width: 100% / $nWorkboxes;
-    //position: relative;
-    float: left;
-    max-height: 0;
-    width: 0;
-    overflow: hidden;
-    display:inline-block;
-    position: relative;
-    vertical-align: top;
-    opacity: 0;
-    @include transition(max-height 0.8s ease-in-out, opacity 0.3s linear, width 0s linear 2s); //Animation OUT
-
-    &:target {
-      max-height: 100vh;
-      width: 99vw;
-      height: auto;
-      left: 0;
-      //padding: 0 2em; //DONT MESS WITH MARGIN
-      z-index: 2;
-      position: relative;
-      opacity: 1;
-      @include transition(max-height 1s ease-in-out 0.4s, opacity 1s linear); //Animation IN
-      //line-height: 1;
-
-
-        //@include transition(max-height 3s ease-out);
-        //& ~ aside {
-        //  padding: 2%;
-        //  figure {
-        //    display: inline-block;
-        //    width: 20%;
-        //    margin: 2%;
-        //    }
-        //  p {
-        //    display: none;
-        //  }
-        //}
-    }
-    a:first-of-type { //X Button
-      position: absolute;
-      right: 1em;
-      z-index: 3;
-    }
   }
 }
 

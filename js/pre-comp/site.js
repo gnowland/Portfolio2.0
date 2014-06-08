@@ -61,6 +61,15 @@ $('.asterisk').click(function() {
       });
   });
 
+//Scroll to Skills!
+$('a[href=#skills]').click(function() {
+  var scrollToSection = $('#skills');
+  $('html, body').animate({
+    scrollTop:  scrollToSection.offset().top-(currentOffset)
+    }, 650, 'swing' );
+  return false;
+  });
+
 
   //Performs a smooth page scroll to an anchor on the same page from all links
     //Newer chris coyer srcipt, but makes page flash.. use this if carousels are messing up
@@ -102,7 +111,7 @@ $('.asterisk').click(function() {
       active_section = $(this);
       if (direction === "up") { active_section = active_section.prevAll('section'); }
 
-      console.log("You are here:", active_section);
+      //console.log("You are here:", active_section);
 
       var active_link = $('nav a[href="#' + active_section.attr("id") + '"]');
       nav_a.parent().removeClass('selected');
@@ -112,7 +121,7 @@ $('.asterisk').click(function() {
 //        $('header h1').addClass('compact');
 //      }
     },
-    offset: offsetAdj
+    offset: '36%'
   });
 
 // Check if at bottom of page, if so, add class to last <a> as sometimes the last div
