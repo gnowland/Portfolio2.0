@@ -122,7 +122,7 @@ header {
 }
 
 // Navigation
-nav {
+header nav {
     max-width: 6.5em * 4; //4 is how many nav items //6.5em is just a good looking width to cap it at. overrides media query
   li {
     text-align: center;
@@ -433,6 +433,7 @@ nav {
     right: 0;
     width: 100%;
     padding: 3% 2%;
+    white-space: pre-wrap;
     overflow: hidden;
     opacity: 1;
     text-align: center;
@@ -666,5 +667,7 @@ footer {
     }
   }
 }
+
+@import "partials/workpages";
 
 @import "partials/mediaqueries";

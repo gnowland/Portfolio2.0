@@ -1,0 +1,60 @@
+/* Work Pages Styles */
+
+.casestudy {
+  #slidy-container {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  p {
+    font-size: 1.2em;
+    letter-spacing: 1em;
+  }
+
+  nav#minipagenav {
+    background: rgb(75,75,75);
+    width: 100%;
+    clear: both;
+    display: block;
+    position: relative;
+    height: auto;
+    margin: 1em 0 0;
+    border: 0.5em solid rgb(75,75,75);
+
+    div {
+      width: 100%;
+      white-space: nowrap;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      height: auto;
+      padding: 0 0.2em;
+    }
+
+    figure {
+      width: 9.3em;
+      margin: 0.5em 0.2em;
+
+      figcaption {
+        bottom: 15%;
+        @include opacity(0);
+        background-color: rgba(0, 0, 0, 0.67);
+      }
+
+      a {
+        @include box-shadow(none);
+        border: 0px solid rgb(95, 95, 95);
+          &:hover {
+          figcaption {
+            @include opacity(1);
+            @include transition(opacity 0.4s ease-out);
+            @include transform(translate(0, 0));
+          }
+        }
+      }
+      &.currentPage {
+        @include opacity(0.5);
+      }
+    }
+  }
+}

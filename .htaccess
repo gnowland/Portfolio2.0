@@ -1,0 +1,16 @@
+### MAIN DEFAULTS
+Options +ExecCGI -Indexes
+DirectoryIndex index.html index.htm index.php
+DefaultLanguage en-US
+AddDefaultCharset UTF-8
+ServerSignature Off
+
+### MIME TYPES
+AddType video/x-flv .flv
+AddType application/x-shockwave-flash .swf
+AddType image/x-icon .ico
+
+### ERRORDOCUMENTS
+#-> http://askapache.com/htaccess/apache-status-code-headers-errordocument.html
+
+ErrorDocument 404 /test/Portfolio2/404.php

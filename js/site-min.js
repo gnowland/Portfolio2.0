@@ -659,6 +659,15 @@ $('a[href=#skills]').click(function() {
   return false;
   });
 
+//Scroll to Top!
+$('a[href=#top]').click(function() {
+  $('html, body').animate({
+    scrollTop:  0
+    }, 650, 'swing', function () {
+      window.location.hash = '';
+      });
+    return false;
+  });
 
   //Performs a smooth page scroll to an anchor on the same page from all links
     //Newer chris coyer srcipt, but makes page flash.. use this if carousels are messing up
@@ -700,7 +709,7 @@ $('a[href=#skills]').click(function() {
       active_section = $(this);
       if (direction === "up") { active_section = active_section.prevAll('section'); }
 
-      console.log("You are here:", active_section);
+      //console.log("You are here:", active_section);
 
       var active_link = $('nav a[href="#' + active_section.attr("id") + '"]');
       nav_a.parent().removeClass('selected');

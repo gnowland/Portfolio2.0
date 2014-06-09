@@ -1,47 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-  <head>
-    <!--
-             .::.   ::.   THIS WEBSITE MADE WITH LOVE, BAKED FROM SCRATCH
-           .:: ::.  ::.           USING ONLY THE FINEST INGREDIENTS
-         .::    ::. ::.   ALL RIGHTS RESERVED (c) A.D. MMXIV Gifford Nowland
-       .::   ::. ::.::.           (except where otherwise credited)
-     .::      ::. ::::.   Please use the contact form on giffordnowland.com
-    :::::::::::::. :::.  for information, freelance, or employment inquiries.
-    -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="The professional Development &amp; Design portfolio of Gifford Nowland: arcitect of engaging, attractive, functional, &amp; responsive modern web experiences." />
+  <?php require_once('includes/head1.inc.php'); ?>
 
     <title>Gifford Nowland Digital Development + Design</title>
 
-    <!-- AUTHOR META -->
-    <link rel=”author” href=”https://plus.google.com/+GiffordNowland“/>
-    <!-- FAVICONS -->
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="apple-touch-icon-precomposed" href="/img/icon/favicon-152.png">
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/print.css" />
-    <!-- JS-->
-    <script src="js/vendor/respond.min.js"></script>
-    <!--[if lt IE 9 &!(IEMobile)]>
-        <script src="js/vendor/html5shiv.js"></script>
-    <![endif]-->
+  <?php require_once('includes/head2.inc.php'); ?>
+
   </head>
 
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#about" class="scrollto">About</a></li>
-          <li><a href="#work" class="scrollto">Work</a></li>
-          <li><a href="#contact" class="scrollto">Hire</a></li>
-          <li class="external"><a href="blog.html">Weblog</a></li>
-        </ul>
-      </nav>
-      <h1>GIFFORD <span aria-hidden="true" data-icon="&#61696;"></span> NOWLAND</h1>
-    </header>
+  <body class="home">
+    <?php require_once('includes/index.header.inc.php'); ?>
 
     <section id="about">
       <div class="middle">
@@ -54,7 +21,7 @@
       <i>I like to make web and mobile experiences simple, enjoyable, and effective.</i></p>
       <hr>
       <p>So, what can I do <span>for your brand?</span></p>
-      <p><a href="#skills">Read on</a> to delve deeper into my background and areas of expertise, or skip ahead to take a look at past projects in <a href="#work" class="scrollto">my portfolio</a>. Check out caffeinated web dev insights in <a href="blog.html" class="scrollto">my blog</a>, and don't hesitate to <a href="#contact" class="scrollto">contact me</a> to discuss your project, <span> full-time position,</span> <span>or to simply</span> <span>talk shop.</span></p>
+      <p><a href="#skills">Read on</a> to delve deeper into my background and areas of expertise, or skip ahead to take a look at past projects in <a href="#work" class="scrollto">my portfolio</a>. Check out caffeinated web dev insights in <a href="blog.php" class="scrollto">my blog</a>, and don't hesitate to <a href="#contact" class="scrollto">contact me</a> to discuss your project, <span> full-time position,</span> <span>or to simply</span> <span>talk shop.</span></p>
       <p><i>I look forward to hearing from you!</i></p>
     </div>
 
@@ -69,7 +36,7 @@
       <div> <!-- to make h1 stay put -->
         <!-- Young -->
         <figure>
-          <a href="#young" class="scrollto">
+          <a href="work/youngconsultinggroup.php">
           <img src="img/work/young.jpg" alt="Young Consulting Group">
             <figcaption>Young Consulting Group</figcaption>
           </a>
@@ -77,7 +44,7 @@
         </figure>
         <!-- Whitehall -->
         <figure>
-          <a href="#whitehall" class="scrollto">
+          <a href="work/whitehall.php">
           <img src="img/work/whitehall.jpg" alt="Whitehall &amp; Company">
             <figcaption>Whitehall &amp; Company</figcaption>
           </a>
@@ -85,7 +52,7 @@
         </figure>
         <!-- LoSo -->
         <figure>
-          <a href="#loso" class="scrollto">
+          <a href="work/tapthecampus.php">
           <img src="img/work/loso.jpg" alt="Tap The Campus">
             <figcaption>Tap The Campus</figcaption>
           </a>
@@ -93,15 +60,15 @@
         </figure>
         <!-- SnowBums -->
         <figure>
-          <a href="#loso" class="scrollto">
-          <img src="img/work/loso.jpg" alt="Delaware SnowBums">
+          <a href="work/delawaresnowbums.php">
+          <img src="img/work/desb.jpg" alt="Delaware SnowBums">
             <figcaption>Delaware SnowBums</figcaption>
           </a>
           <p><span>2012</span> <b>Logo Design</b>&nbsp;&ndash; Photoshop, Illustartor</p>
         </figure>
         <!-- UDress -->
         <figure>
-          <a href="#udress" class="scrollto">
+          <a href="work/udress.php">
           <img src="img/work/udress.jpg" alt="UDress Magazine">
             <figcaption>UDress Magazine</figcaption>
           </a>
@@ -109,7 +76,7 @@
         </figure>
         <!-- DelRide -->
         <figure>
-          <a href="#delride" class="scrollto">
+          <a href="work/delride.php">
           <img src="img/work/delride.jpg" alt="DelRide SnowCorp">
             <figcaption>DelRide SnowCorp</figcaption>
           </a>
@@ -117,7 +84,7 @@
         </figure>
         <!-- Backcountry -->
         <figure>
-          <a href="#csbs" class="scrollto">
+          <a href="work/backcountry.php">
           <img src="img/work/csbs.jpg" alt="Backcountry.com">
             <figcaption>Backcountry&#8203;.com</figcaption>
           </a>
@@ -125,7 +92,7 @@
         </figure>
         <!-- Crowd Calls -->
         <figure>
-          <a href="#crowdcalls" class="scrollto">
+          <a href="work/crowdcalls.php">
           <img src="img/work/crowdcalls.jpg" alt="Crowd Calls">
             <figcaption>Crowd Calls</figcaption>
           </a>
@@ -133,7 +100,7 @@
         </figure>
         <!-- Yellow Arrow Newark -->
         <figure>
-          <a href="#yellowarrownewark" class="scrollto">
+          <a href="work/yellowarrownewark.php">
           <img src="img/work/yellowarrownewark.jpg" alt="Yellow Arrow: Newark">
             <figcaption>Yellow Arrow: Newark</figcaption>
           </a>
@@ -141,7 +108,7 @@
         </figure>
         <!-- Queen -->
         <figure>
-          <a href="#queen" class="scrollto">
+          <a href="work/lightupthequeen.php">
           <img src="img/work/queen.jpg" alt="Light Up The Queen">
             <figcaption>Light Up The Queen</figcaption>
           </a>
@@ -149,7 +116,7 @@
         </figure>
         <!-- Edgemoor -->
         <figure>
-          <a href="#edgemoor" class="scrollto">
+          <a href="work/edgemoor.php">
           <img src="img/work/ecc.jpg" alt="Edgemoor Community Center">
             <figcaption>Edgemoor Community Center</figcaption>
           </a>
@@ -194,31 +161,8 @@
       </div>
     </section>
 
-    <footer>
-    <ul>
-      <li>
-      &nbsp;
-      </li>
-      <li>
-        <p>&copy; A.D. MMXIV Gifford Nowland</p>
-      </li>
-      <li>
-        <nav>
-          <a href="#about" class="scrollto">&uarr; Beam me up &uarr;</a>
-        </nav>
-      </li>
-    </ul>
-    </footer>
+    <?php require_once('includes/footer.inc.php'); ?>
 
-    <!--[if IE 8]>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
-    <![endif]-->
-    <!--[if gt IE 8]><!-->
-    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.0.min.js"><\/script>')</script>
-    <!--<![endif]-->
-    <script src="js/site-min.js"></script>
+    <?php require_once('includes/toe.inc.php'); ?>
   </body>
 </html>
