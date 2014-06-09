@@ -617,7 +617,7 @@ $(function() { //When the document loads
   // NAVIGATION MENU
 
   var sections = $('section');
-  var nav_a = $('nav a');
+  var nav_a = $('header nav a');
   var offsetAdj = 8;// $('header').outerHeight(); // Overridden by adding a psudo-element to all sections
   var currentOffset = $('section').css('border-top').match(/\d+/);
 
@@ -700,7 +700,7 @@ $('a[href=#skills]').click(function() {
       active_section = $(this);
       if (direction === "up") { active_section = active_section.prevAll('section'); }
 
-      //console.log("You are here:", active_section);
+      console.log("You are here:", active_section);
 
       var active_link = $('nav a[href="#' + active_section.attr("id") + '"]');
       nav_a.parent().removeClass('selected');
@@ -720,6 +720,7 @@ $('a[href=#skills]').click(function() {
       if (direction === 'down') {
         nav_a.parent().removeClass('selected');
         nav_a.parent().not('.external').last().addClass('selected');
+
         $('header').removeClass().addClass($(this).attr("id")); //to change the color of the border
       }
       // Add class to the section above the last div once the user starts scrolling up again,
@@ -727,6 +728,7 @@ $('a[href=#skills]').click(function() {
       else {
         nav_a.parent().removeClass('selected');
         nav_a.parent().not('.external').eq(-2).addClass('selected');
+
         $('header').removeClass().addClass($(this).prev().attr("id")); //to change the color of the border
       }
     },
@@ -768,4 +770,61 @@ $('a[href=#skills]').click(function() {
 //    offset: -40
 //  });
 
+
+// AJAX Form sumbit
+
+// Get the form.
+var form = $('#ajax-contact');
+
+// Get the messages div.
+var formMessages = $('#form-messages');
+
+// Get the submit div.
+var formSubmit = $('#submit');
+
+// Set up an event listener for the contact form.
+$(form).submit(function(e) {
+  // Stop the browser from submitting the form.
+  e.preventDefault();
+
+  // Serialize the form data.
+  var formData = $(form).serialize();
+
+  // Submit the form using AJAX.
+  $.ajax({
+    type: 'POST',
+    url: $(form).attr('action'),
+    data: formData
+  })
+
+
+  .done(function(response) {
+    // Make sure that the formMessages div has the 'success' class.
+    $(formMessages).removeClass('error');
+    $(formMessages).addClass('success');
+
+    // Set the message text.
+    $(formMessages).text(response);
+
+    // Clear the form.
+    $('#name').val('');
+    $('#email').val('');
+    $('#message').val('');
+    $('#captcha').val('');
+
+  })
+  .fail(function(data) {
+    // Make sure that the formMessages div has the 'error' class.
+    $(formMessages).removeClass('success');
+    $(formMessages).addClass('error');
+
+    // Set the message text.
+    if (data.responseText !== '') {
+      $(formMessages).text(data.responseText);
+    } else {
+      $(formMessages).text('Oops! An error occured and your message could not be sent.');
+    }
+  });
+
+});
 });

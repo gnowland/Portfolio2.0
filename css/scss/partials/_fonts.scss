@@ -97,3 +97,31 @@
   $sourcesanspro-font-stack: "SourceSansPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   $heuristica-font-stack: "Heuristica", "Hoefler Text", Garamond, Baskerville, "Baskerville Old Face", "Times New Roman", serif; 
 
+// Make FontCustom
+  [data-icon]:before { content: attr(data-icon); }
+
+  [data-icon]:before,
+  .icon-GN:before,
+  .icon-amp:before,
+  .icon-comment:before,
+  .icon-email:before,
+  .icon-name:before {
+    display: inline-block;
+    font-family: "fontcustom";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-decoration: inherit;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+  }
+
+  .icon-GN:before { content: "\f100"; }
+  .icon-amp:before { content: "\f101"; }
+  .icon-comment:before { content: "\f102"; }
+  .icon-email:before { content: "\f103"; }
+  .icon-name:before { content: "\f104"; }

@@ -18,7 +18,9 @@ $skills-txt-color: rgb(220,220,220);
 $work-color:       rgb(0, 140, 186);
 $work-bg-color:    $body-bg;
 $contact-color:    rgb(201, 99, 99);
-$contact-bg-color: rgb(34, 34, 34);
+$contact-bg-color: rgb(220, 206, 179); //rgb(169, 181, 211); //rgb(151, 167, 207); //rgb(129, 153, 202); //rgb(201, 99, 99); //rgb(204, 203, 226); //rgb(34, 34, 34);
+$footer-bg-color:  rgb(34,34,34);
+
 $blog-color:       rgb(67, 103, 158);
 
 
@@ -42,6 +44,8 @@ $blog-color:       rgb(67, 103, 158);
     @include transition(border-top 0.2s linear);
   }
 }
+
+/* Header Styles */
 
 header {
   margin: 0;
@@ -96,6 +100,7 @@ header {
   }
 }
 
+/* Navigation Styles */
 
 //NAV MIXINS
 @mixin navLinks($n,$c) {
@@ -233,6 +238,10 @@ nav {
       border: none;
       font-size: 1.2em;
       line-height: 0;
+      &:hover {
+        color: inherit;
+        text-shadow: inherit;
+      }
     }
     strong {
       font-weight: 700;
@@ -295,7 +304,7 @@ nav {
       //@include textStyle($anchor-font-color, $pitch-shadow-d);
       @include linkHover;
     }
-    > span:first-child { //asterisk
+    .asterisk2 { //asterisk
         font-size: 1.8em;
         @include textStyle($skills-txt-color, $pitch-shadow-d);//rgb(181,91,40));
         line-height: 0;
@@ -312,11 +321,11 @@ nav {
         @include textStyle($about-color, $pitch-shadow-d);//@include textStyle(rgb(181,91,40));
       }
     }
-    &:nth-of-type(2) {
+    &:nth-of-type(2) { //"So, what can I do for your brand?"
       font-family: $gotham-font-stack;
       font-weight: 600;
       font-style: normal;
-      font-size: 1.7em;
+      font-size: 1.9em;
       @include textStyle($hr-border-color, $pitch-shadow-d);
       text-rendering: optimizeLegibility;
       page-break-after: avoid;
@@ -325,7 +334,7 @@ nav {
       line-height: 1.4;
       text-transform: uppercase;
     }
-    &:nth-of-type(4) {
+    &:nth-of-type(4) { //m-dash before and after "I look forward to hearing from you!"
       margin-top: 0.6em * 2; //makes margin even
       &:before {
         color: gray;
@@ -439,17 +448,222 @@ nav {
   }
 }
 
-
-
 #contact {
   background-color: $contact-bg-color;
+  background-image: url(../img/NOLA.jpg);
+  @include background-size(auto);
+  background-attachment: scroll;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  .overlay {
+    background-color: rgba(168, 156, 133, 0.6); //rgba(220, 206, 179, 0.6); //rgba(75,75,75, 0.5);
+    height: 100%;
+    width: 100%;
+  }
+
+  .contain {
+    text-align: center;
+  }
+
+  #form-div {
+    background-color: rgba(72,72,72,0.6);
+    padding: 1.5em;
+    width: 95%;
+    max-width: 35em;
+    //float: left;
+    //left: 50%;
+    //position: absolute;
+    margin: 2em auto;
+    @include border-radius(4px);
+    display: inline-block;
+  }
+
+  .feedback-input {
+    color: rgb(60, 60, 60);
+    font-family: $sourcesanspro-font-stack;
+    font-weight:500;
+    font-size: 1.2em;
+    //@include border-radius(0px);
+    line-height: 1;
+    background-color: #fbfbfb;
+    padding: 0.75em 0.5em 0.5em 2.5em;
+    margin-bottom: 0.2em;
+    width:100%;
+    @include box-sizing(border-box);
+    border: 3px solid rgba(0,0,0,0);
+
+    &:focus{
+      background: #fff;
+      box-shadow: 0;
+      border: 3px solid rgba(53, 139, 196, 0.7);
+      color: #3498db;
+      outline: none;
+      padding: 0.75em 0.5em 0.5em 2.5em;
+    }
+  }
+
+  .focused{
+    color:#30aed6;
+    border:#30aed6 solid 3px;
+  }
+
+  // Icons
+
+  @mixin contactFormIcon($field) {
+    ##{$field} {
+      background-image: url(../img/icon/#{$field}.svg);
+      background-size: 1.5em 1.5em;
+      background-position: 0.65em 0.5em;
+      background-repeat: no-repeat;
+    &:focus {
+      background-image: url(../img/icon/#{$field}-focus.svg);
+      background-size: 1.5em 1.5em;
+      background-position: 0.65em 0.5em;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+  @include contactFormIcon(name);
+  @include contactFormIcon(email);
+  @include contactFormIcon(message);
+
+  textarea {
+      width: 100%;
+      height: 150px;
+      line-height: 150%;
+      resize:vertical;
+  }
+
+  input:hover, textarea:hover,
+  input:focus, textarea:focus {
+    background-color:white;
+  }
+
+  .captcha {
+    color: rgb(255, 255, 255);
+    font-family: $sourcesanspro-font-stack;
+    font-weight:500;
+    font-size: 1.2em;
+    line-height: 1.2;
+    display: inline-block;
+    margin-right: 1em;
+    text-align: left;
+
+    span {
+      background-color: rgb(55,55,55);
+      padding: 0.2em 0.4em;
+      color: rgb(223,223,70);
+      font-weight: 700;
+      margin: 0 0.1em;
+    }
+  }
+
+  #captcha { //captcha overrides
+    &.feedback-input {
+      max-width: 3em;
+      padding:0.5em 0.4em 0.4em;
+      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+
+      &:focus {
+        padding:0.5em 0.4em 0.4em;
+      }
+    }
+  }
+
+  #submit{
+    font-family: $gotham-font-stack;
+    font-weight:700;
+    float: left;
+    width: 100%;
+    border: 0px solid rgba(0,0,0,0); //#fbfbfb solid 4px;
+    cursor:pointer;
+    background-color: $work-color;
+    color: white;
+    font-size: 1.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    @include transition(background-color 0.2s);
+
+    &:hover {
+      background-color: rgb(57, 133, 101); //$about-color;
+      color: white; //#0493bd;
+    }
+    &:focus, &:active {
+      border: 0px solid rgba(0,0,0,0);
+      outline:0;
+    }
+  }
+
+  #submit.loading {
+    background-color: hsl(120, 40%, 30%);
+    @include animation(phase 1s infinite);
+  }
+  /*Lets create a pulsating animation for the loader face*/
+  @keyframes phase {
+    50% {background-color: hsl(120, 70%, 30%);}
+  }
+
+  #form-messages {
+    &.success {
+      padding: 1em;
+      margin-bottom: 0.75rem;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+      color: #468847;
+      background-color: #dff0d8;
+      border: 1px solid #d6e9c6;
+      @include border-radius(2px);
+    }
+
+    &.error {
+      padding: 1em;
+      margin-bottom: 0.75rem;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+      color: #b94a48;
+      background-color: #f2dede;
+      border: 1px solid rgba(185, 74, 72, 0.3);
+      @include border-radius(2px);
+    }
+  }
 }
 
 footer {
+  background-color: $footer-bg-color;
+  padding: 0.5% 1%;
+
+  ul {
+    list-style: none;
+  }
+
+  > ul{
+    > li{
+      width:33%;
+      float:left;
+    }
+  }
+
   p {
     text-align: center;
-    color: rgba(255, 255, 255, 0.18);
+    color: rgb(65, 65, 65);
     margin: 0;
+  }
+
+  nav {
+    text-align: right;
+    color: rgb(250, 250, 250);
+    a {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-family: $sourcesanspro-font-stack;
+      border-bottom: none;
+      &:hover {
+        color: inherit;
+        text-shadow: inherit;
+      }
+    }
   }
 }
 
