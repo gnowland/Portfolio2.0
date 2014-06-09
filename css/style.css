@@ -217,7 +217,9 @@
   src: url("../font/font-custom/fontcustom.eot?#iefix") format("embedded-opentype"), url("../font/font-custom/fontcustom.woff") format("woff"), url("../font/font-custom/fontcustom.ttf") format("truetype"), url("../font/font-custom/fontcustom.svg#fontcustom") format("svg");
 }
 [data-icon]:before {
+  font-family: "FontCustom";
   content: attr(data-icon);
+  speak: none;
 }
 
 [data-icon]:before,
@@ -227,11 +229,10 @@
 .icon-email:before,
 .icon-name:before {
   display: inline-block;
-  font-family: "fontcustom";
+  font-family: "FontCustom";
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
-  line-height: 1;
   text-decoration: inherit;
   text-rendering: optimizeLegibility;
   text-transform: none;

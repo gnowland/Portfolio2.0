@@ -98,7 +98,11 @@
   $heuristica-font-stack: "Heuristica", "Hoefler Text", Garamond, Baskerville, "Baskerville Old Face", "Times New Roman", serif; 
 
 // Make FontCustom
-  [data-icon]:before { content: attr(data-icon); }
+  [data-icon]:before {
+    font-family: "FontCustom";
+    content: attr(data-icon);
+    speak: none;
+   }
 
   [data-icon]:before,
   .icon-GN:before,
@@ -107,11 +111,11 @@
   .icon-email:before,
   .icon-name:before {
     display: inline-block;
-    font-family: "fontcustom";
+    font-family: "FontCustom";
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
-    line-height: 1;
+    //line-height: 1;
     text-decoration: inherit;
     text-rendering: optimizeLegibility;
     text-transform: none;
