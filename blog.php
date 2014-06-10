@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-  <?php require_once('includes/head1.inc.php'); ?>
-    <title>Gifford Nowland Weblog</title>
-    <?php require_once('includes/head2.inc.php'); ?>
-    <style>
+<?php
+
+$title = 'Gifford Nowland Weblog'; // Page title
+$description = 'The Web Development &amp; Design Blog of Gifford Nowland: Caffeinated Web Dev.'; //Page Description
+$style = '
     #blog:before {
       border-width: 20px;
       border-color: rgb(50,50,50);
@@ -10,9 +10,10 @@
     #blog:after {
       border-width: 20px;
       border-color: rgb(50,50,50);
-    }
-    </style>
-  </head>
+    }';
+require_once('includes/overallheader.inc.php');
+
+?>
 
   <body class="blog">
   <?php require_once('includes/header.inc.php'); ?>

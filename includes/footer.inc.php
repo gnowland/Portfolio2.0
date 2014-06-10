@@ -3,7 +3,7 @@ function romanNumerals($num)
 {
     $n = intval($num);
     $res = '';
-    
+
     // roman_numerals array
     $roman_numerals = array(
                 'M'  => 1000,
@@ -46,7 +46,7 @@ function romanNumerals($num)
     </li>
     <li>
       <nav>
-        <a href="#top" class="scrollto">&uarr; Beam me up &uarr;</a>
+        <a href="#top" class="scrollto"><span>&uarr; Beam me up &uarr;</span></a>
       </nav>
     </li>
   </ul>

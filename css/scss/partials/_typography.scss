@@ -18,13 +18,14 @@
 $header-font-family: $gotham-font-stack !default;
 $header-font-weight: bold !default;
 $header-font-style: normal !default;
-$header-font-color: rgb(40, 65, 92) !default;//#122A3F !default;
+$header-font-color: rgba(40, 65, 92, 0.95) !default;//#122A3F !default;
 $header-line-height: 1.4 !default;
 $header-top-margin: .4rem !default;
 $header-bottom-margin: .4rem !default;
 $header-text-rendering: optimizeLegibility !default; // 1
 $header-page-break-after: avoid !default; // 2
 $header-text-transform: uppercase;
+//$header-background-color: rgba(75,75,75,0.1) !default;
 
 // [F]
 // We use these to control header font sizes
@@ -215,7 +216,6 @@ $definition-list-margin-bottom: rem-calc(12) !default;
     margin-top: $header-top-margin;
     margin-bottom: $header-bottom-margin;
     line-height: $header-line-height;
-    text-transform: $header-text-transform;
 
     small {
       font-size: $small-font-size;
@@ -224,7 +224,12 @@ $definition-list-margin-bottom: rem-calc(12) !default;
     }
   }
 
-  h1 { font-size: $h1-font-size - rem-calc(10); }
+  h1 { font-size: $h1-font-size - rem-calc(10);
+       //background-color: $header-background-color;
+       text-transform: $header-text-transform;
+       margin-top: $header-top-margin + 1.6rem;
+       //margin-bottom: $header-bottom-margin + 1.6rem;
+     }
   h2 { font-size: $h2-font-size - rem-calc(10); }
   h3 { font-size: $h3-font-size - rem-calc(5); }
   h4 { font-size: $h4-font-size - rem-calc(5); }

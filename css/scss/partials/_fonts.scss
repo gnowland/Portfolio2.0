@@ -110,7 +110,7 @@
   .icon-comment:before,
   .icon-email:before,
   .icon-name:before {
-    display: inline-block;
+    //display: inline-block; //Screws up safari's baseline rendering.
     font-family: "FontCustom";
     font-style: normal;
     font-weight: normal;

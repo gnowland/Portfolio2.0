@@ -5,7 +5,7 @@
 
   <?php require_once('includes/head2.inc.php'); ?>
 
-  <body class="casestudy">
+  <body class="work">
     <?php require_once('includes/header.inc.php'); ?>
 
     <section id="work">

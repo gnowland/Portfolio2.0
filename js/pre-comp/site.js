@@ -65,7 +65,16 @@ $('.asterisk').click(function() {
 $('a[href=#skills]').click(function() {
   var scrollToSection = $('#skills');
   $('html, body').animate({
-    scrollTop:  scrollToSection.offset().top-(currentOffset)
+    scrollTop:  scrollToSection.offset().top-(currentOffset)-5
+    }, 650, 'swing' );
+  return false;
+  });
+
+//Scroll to Resume!
+$('a[href=#resume]').click(function() {
+  var scrollToSection = $('#resume');
+  $('html, body').animate({
+    scrollTop:  scrollToSection.offset().top-(currentOffset)-10
     }, 650, 'swing' );
   return false;
   });

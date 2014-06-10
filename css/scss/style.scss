@@ -67,13 +67,14 @@ header {
     padding: 0.07em 0;
     padding: 0.1em 0 0.15em 0;
     font-family: $gotham-font-stack;
-    color: $header-font-color;
+    color: rgb(40, 65, 92);
     font-size: 1.7em;
     font-weight: 700;
     letter-spacing: 0.1em;
     line-height: 1;
     text-align: center;
     @include text-shadow(rgba(255, 255, 255, 1) -1px 1px 0, rgb(33,77,114) -2px 2px 0);
+    background-color: transparent;
     //font-size: 2.75rem;
     //line-height: 2.5rem;
   }
@@ -134,6 +135,8 @@ header nav {
       max-width: 6.5em; //6.5em is just a good looking width to cap it at
       font-family: $gotham-font-stack;//$sourcesanspro-font-stack;
       text-transform: uppercase;
+      font-size: 1rem;
+      line-height: 1;
       font-weight: 700;
       color: rgb(26, 74, 116);
       padding: 0;
@@ -160,7 +163,13 @@ header nav {
 /* Sections Styles */
 
 .sectionName {
-  margin-left: 2%;
+  max-width: 59em;
+  margin-left: auto;
+  margin-right: auto;
+  height: inherit;
+  position: relative;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 #about, #blog {
@@ -355,6 +364,50 @@ header nav {
 
 #skills {
   background: $body-bg;
+
+  p {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0.015em;
+    line-height: 1.5;
+    &.alignRight {
+      text-align: right;
+    }
+  }
+
+  img {
+    width: 50%;
+    max-width: 19em;
+    margin-left: 2%;
+    margin-right: 2%;
+
+    &:nth-of-type(odd) {
+      float: right;
+    }
+    &:nth-of-type(even) {
+      float: left;
+    }
+    &:nth-of-type(1) {
+      margin-top: -4em;
+    }
+    &.resume {
+      min-width: 100%;
+      float: none;
+      margin: 0;
+      max-width: 59rem;
+    }
+  }
+  a[href="resume.php"] { //Resume
+    color: transparent;
+    text-shadow: none;
+    border-bottom: none;
+    text-decoration: none;
+    line-height: 0;
+    padding-bottom: 0;
+    transition: none;
+  }
 }
 
 #work {
@@ -465,6 +518,7 @@ header nav {
 
   .contain {
     text-align: center;
+    padding-top: 0.5em;
   }
 
   #form-div {
@@ -549,7 +603,7 @@ header nav {
     font-size: 1.2em;
     line-height: 1.2;
     display: inline-block;
-    margin-right: 1em;
+    margin-right: 0.1em;
     text-align: left;
 
     span {
@@ -567,7 +621,6 @@ header nav {
       padding:0.5em 0.4em 0.4em;
       text-align: center;
       display: inline-block;
-      vertical-align: top;
 
       &:focus {
         padding:0.5em 0.4em 0.4em;
@@ -633,7 +686,8 @@ header nav {
 
 footer {
   background-color: $footer-bg-color;
-  padding: 0.5% 1%;
+  @include box-shadow(inset 0 9px 20px -10px rgba(0,0,0,0.8));
+  padding: 1% 1%;
 
   ul {
     list-style: none;
@@ -650,6 +704,7 @@ footer {
     text-align: center;
     color: rgb(65, 65, 65);
     margin: 0;
+    line-height: 1;
   }
 
   nav {

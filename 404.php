@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-  <?php require_once('includes/head1.inc.php'); ?>
-    <title>404 - Page Not Found</title>
-  <?php require_once('includes/head2.inc.php'); ?>
-    <style>
+<?php
+
+$title = '404 - Page Not Found'; // Page title
+$style = '
     #about:before {
       border-width: 20px;
       border-color: rgb(50,50,50);
@@ -11,9 +9,11 @@
     #about:after {
       border-width: 20px;
       border-color: rgb(50,50,50);
-    }
-    </style>
-  </head>
+    }';
+$description = '404 - Page Not Found';
+require('includes/overallheader.inc.php');
+
+?>
 
   <body class="404">
     <?php require_once('includes/header.inc.php'); ?>
@@ -25,7 +25,9 @@
       </div>
     </section>
 
+    <!-- No footer for you
     <?php require_once('includes/footer.inc.php'); ?>
+    -->
 
     <?php require_once('includes/toe.inc.php'); ?>
   </body>

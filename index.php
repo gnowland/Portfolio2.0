@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-  <?php require_once('includes/head1.inc.php'); ?>
+<?php
 
-    <title>Gifford Nowland Digital Development + Design</title>
+$title = 'Gifford Nowland Digital Development + Design'; // Page title
+require('includes/overallheader.inc.php');
 
-  <?php require_once('includes/head2.inc.php'); ?>
-
-  </head>
+?>
 
   <body class="home">
-    <?php require_once('includes/index.header.inc.php'); ?>
+    <?php require_once('includes/header.inc.php'); ?>
 
     <section id="about">
       <div class="middle">
@@ -21,15 +19,39 @@
       <i>I like to make web and mobile experiences simple, enjoyable, and effective.</i></p>
       <hr>
       <p>So, what can I do <span>for your brand?</span></p>
-      <p><a href="#skills">Read on</a> to delve deeper into my background and areas of expertise, or skip ahead to take a look at past projects in <a href="#work" class="scrollto">my portfolio</a>. Check out caffeinated web dev insights in <a href="blog.php" class="scrollto">my blog</a>, and don't hesitate to <a href="#contact" class="scrollto">contact me</a> to discuss your project, <span> full-time position,</span> <span>or to simply</span> <span>talk shop.</span></p>
-      <p><i>I look forward to hearing from you!</i></p>
+      <p><a href="#skills">Read on</a> to delve deeper into my background and areas of expertise, check out my <a href="#resume">resume</a>, or skip ahead to take a look at past projects in <a href="#work" class="scrollto">my portfolio</a>. Check out caffeinated web dev insights in <a href="blog.php" class="scrollto">my blog</a>, and don't hesitate to <a href="#contact" class="scrollto">contact me</a> to discuss your project, <span> full-time position,</span> <span>or to simply</span> <span>talk shop.</span></p>
+      <p><i>I look forward to <span>hearing from you!</span></i></p>
     </div>
 
-    <div id="skills">
-      <h1 class="sectionName">Experience</h1>
+    <article id="skills">
       <div class="contain">
+      <h1>Experience</h1>
+
+        <h2>&ldquo;Initial Development&rdquo;</h2>
+        <img src="img/timeline/win31.jpg" alt="My first computer, a Windows 3.1">
+        <p>I was only six years old but I still remember how excited I was to purchase my family's first computer. My father, brother, and I waited in line for over an hour outside of a Wilmington, Delaware Circuit City on a chilly December morning to buy an AT&amp;T Windows 3.1 PC workstation. It boasted a state-of-the-art 540 MB Hard Drive and 8 MB of RAM, and it was only $1,099!</p>
+
+        <p>My first foray into computer programming came two years later, and it did not end well. My curiosity for code got the best of me and at the age of nine I broke into MS-DOS, began executing commands, and promptly corrupted the operating system beyond repair. Considering the long wait in the cold only a few years earlier, my father was not impressed.</p>
+
+        <img src="img/timeline/cap.jpg" alt="Graduation mortar board">
+
+        <p class="alignRight">Fortunately, I have since learned how to apply my fascination for code in more constructive ways. I taught myself HTML and built my first website when I was twelve. It was full of tables and garish colors, rotating GIF images, auto-playing MIDI files, and blinking text. It is most likely the reason AOL decided to abandon their "AOL Hometown". Nevertheless, throughout high school and college I continued to pursue my passion for web design and development while supplementing my expertise studying traditional graphic design, print design, interactive media, typography, illustration, animation, and marketing.</p>
+
+        <h2>&ldquo;A Triple Threat&rdquo;</h2>
+        <p>With a degree in marketing I added a business background into the mix. Now, alongside my eye for design, I leverage my business education to give me a knack for developing easy to use and effective websites and mobile apps. I can envision web applications from all sides, understanding needs from both the business and design sides of things.</p>
+
+        <p>Degree in marketing (or business), a passion for programming, an eye for design. Triple-pronged threat.</p>
+
+      <h1 id="resume">R&eacute;sum&eacute;</h1>
+
+        <p>Click on my resume to open it as a PDF, where you can zoom, save, and print the file.</p>
+
+        <p><a href="resume.php">
+        <img src="img/GiffordRNowland-Resume.jpg" alt="resume" class="resume">
+        </a></p>
+
       </div>
-    </div>
+    </article>
 
     <section id="work">
       <h1 class="sectionName">Past Projects</h1>
@@ -64,7 +86,7 @@
           <img src="img/work/desb.jpg" alt="Delaware SnowBums">
             <figcaption>Delaware SnowBums</figcaption>
           </a>
-          <p><span>2012</span> <b>Logo Design</b>&nbsp;&ndash; Photoshop, Illustartor</p>
+          <p><span>2012</span> <b>Logo Design</b>&nbsp;&ndash; Photoshop, Illustrator</p>
         </figure>
         <!-- UDress -->
         <figure>
@@ -127,8 +149,8 @@
 
     <section id="contact">
       <div class="overlay">
-      <h1 class="sectionName">Contact Me</h1>
       <div class="contain">
+      <h1 class="sectionName">Contact Me</h1>
         <h3>I'm currently available for full-time and freelance opportunities!</h3>
 
           <div id="form-div">
@@ -148,7 +170,7 @@
               </p>
 
               <p>
-                <label class="captcha"><b>Anti-SPAM:</b><br>What is the sum of <span>10+12</span>?</label>
+                <label class="captcha"><b>Anti-SPAM:</b> <span>10+12</span> = </label>
                 <input name="captcha" id="captcha" class="feedback-input" placeholder=" " maxlength="2" required>
               </p>
 

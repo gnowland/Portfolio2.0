@@ -46,10 +46,16 @@ $totalSections: 8; //The TOTAL NUMBER OF CURRENT TOP-LEVEL SECTIONS (Change if m
 //  margin-top: $section-top-offset + $top-border-height; //moved to _mediaqueries.scss
 //}
 
-.contain{
-  @include container;
+.contain {
+  p, h1, h2, h3 {
+    max-width: 59rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
   height: inherit;
   position: relative;
+  padding-left: 2%;
+  padding-right: 2%;
   //@include offset($row-top-offset); //moved to _mediaqueries.scss
 }
 
