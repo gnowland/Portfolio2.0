@@ -39,7 +39,9 @@ function romanNumerals($num)
 <footer>
   <ul>
     <li>
-    &nbsp;
+        <a href="http://www.linkedin.com/in/giffordnowland" style="border-bottom:none; text-decoration:none;" target="_blank">
+            <img src="https://static.licdn.com/scds/common/u/img/logos/logo_linkedin_92x22.png" width="92" height="22" border="0" style="background-color:#ffffff; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; padding: 2px;" alt="View Gifford Nowland's profile on LinkedIn">
+        </a>
     </li>
     <li>
       <p>&copy; A.D. <?php $year = date('Y'); echo romanNumerals($year); ?> Gifford Nowland</p>

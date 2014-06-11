@@ -26,17 +26,17 @@ require('includes/overallheader.inc.php');
 
     <article id="skills">
       <div class="contain">
-      <h1>Experience</h1>
+      <h1>My Experience</h1>
 
         <h2>&ldquo;Initial Development&rdquo;</h2>
         <img src="img/timeline/win31.jpg" alt="My first computer, a Windows 3.1" class="article">
-        <p>I was only six years old but I still remember how excited I was when my family purchased our first computer. My father, brother, and I waited in line for over an hour outside of a Wilmington, Delaware Circuit City on a chilly December morning to buy an AT&amp;T beige box running Windows 3.1. It boasted a state-of-the-art 540 MB Hard Drive and 8 MB of RAM, and it was only $1,099!</p>
+        <p>I was only six years old but I still remember how excited I was when my family purchased its first computer. My father, brother, and I waited in line for over an hour outside of a Wilmington, Delaware Circuit City on a chilly December morning to buy an AT&amp;T beige box running Windows 3.1. It boasted a state-of-the-art 540 MB Hard Drive and 8 MB of RAM, and it was only $1,099!</p>
 
         <p>My first foray into computer programming came two years later, and it did not end well. My curiosity for code got the best of me and at the age of nine I broke into MS-DOS, began executing commands, and promptly corrupted the operating system beyond repair. Considering the long wait in the cold only a few years earlier, my father was not impressed.</p>
 
         <img src="img/timeline/osx.jpg" alt="How far computers have come" class="article">
 
-        <p class="alignRight">Fortunately, I have since learned how to apply my fascination in more constructive ways. I taught myself HTML and built my first website when I was twelve. It was full of tables and garish colors, rotating GIF images, auto-playing MIDI files, and blinking text. It is most likely the reason AOL decided to abandon their "AOL Hometown". Nevertheless, throughout high school and college I continued to pursue my passion for web design and development while supplementing my expertise studying traditional graphic design, print design, interactive media, typography, illustration, animation, and marketing.</p>
+        <p class="alignRight">Fortunately, I have since learned to apply my fascination in more constructive ways. I taught myself HTML and built my first website when I was twelve. It was full of tables and garish colors, rotating GIF images, auto-playing MIDI files, and blinking text. It is most likely the reason AOL decided to abandon their "AOL Hometown". Nevertheless, throughout high school and college I continued to pursue my passion for web design and development while supplementing my expertise studying traditional graphic design, print design, interactive media, typography, illustration, animation, and marketing.</p>
 
         <h2>&ldquo;The Triple Threat&rdquo;</h2>
           <ul>
@@ -47,18 +47,18 @@ require('includes/overallheader.inc.php');
             <li>
               <img src="img/icon/code.svg" alt="development">
               <h3>Program&shy;ming<br>Passion</h3>
-              <p>
             </li>
             <li>
               <img src="img/icon/degree.svg" alt="degree">
               <h3>Business<br>Degree</h3>
             </li>
           </ul>
-        <p>With a Bachelor of Science in Business Administration: Marketing and a Minor in Interactive Media (which encompassed classes from Graphic Design, Web Design, Programming, and Typography to Film and Animation) from the University of Delaware I added a business school foundation to my burgeoning eye for design and passion for programming. I leverage what I learned at the University of Delaware to help envision digital applications from all sides, understanding the requirements of the design, functional, and business operations point of view.</p>
+          <p>With a Bachelor of Science in Business Administration, Major in Marketing and Minor in Interactive Media*, from the University of Delaware I added a business school foundation to my burgeoning dedication to great design and strong passion for programming. I am able to leverage what I learned at the University of Delaware to help envision digital applications from all sides, understanding the requirements of the design, functional, and business operations point of view.</p>
+          <aside>*The University of Delaware's Minor in Interactive Media combined curriculum from the Computer Science and Visual Communications departments, encompassing courses ranging from graphic design, web design, programming, and typography, to film production and digital animation.</aside>
 
-      <h1 id="resume">R&eacute;sum&eacute;</h1>
+      <h1 id="resume">My R&eacute;sum&eacute;</h1>
 
-        <p>Click on my resume to open it as a PDF, where you can zoom, save, and print the file.</p>
+        <p>Click on my r&eacute;sum&eacute; below to open it as an interactive PDF that you can zoom, print, and save.</p>
 
         <p><a href="resume.php">
         <img src="img/GiffordRNowland-Resume.jpg" alt="resume" class="resume">
@@ -68,7 +68,7 @@ require('includes/overallheader.inc.php');
     </article>
 
     <section id="work">
-      <h1 class="sectionName">Past Projects</h1>
+      <h1 class="sectionName">My Past Projects</h1>
       <p style="text-align:center; color:darkred; background-color:rgba(255, 108, 108, 0.3); padding:0.1em;">Sorry, these are not yet linked to individual pages! See <a href="http://www.linkedin.com/in/giffordnowland/" target="_blank">LinkedIn</a> for project details.</p>
       <div> <!-- to make h1 stay put -->
         <!-- Young -->
