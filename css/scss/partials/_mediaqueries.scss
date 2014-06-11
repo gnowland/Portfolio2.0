@@ -59,7 +59,7 @@
 
 @media (max-width: 30em) {
   #skills {
-    img {
+    img.article {
       &:nth-of-type(odd), &:nth-of-type(even) {
         float: none;
         margin: 0;
@@ -101,6 +101,9 @@
     p {
       font-size: 1.1rem;
       line-height: 1.4;
+    }
+    ul > li h3 {
+      font-size: 1.25em;
     }
   }
   #contact {

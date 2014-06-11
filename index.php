@@ -6,6 +6,7 @@ require('includes/overallheader.inc.php');
 ?>
 
   <body class="home">
+
     <?php require_once('includes/header.inc.php'); ?>
 
     <section id="about">
@@ -28,19 +29,32 @@ require('includes/overallheader.inc.php');
       <h1>Experience</h1>
 
         <h2>&ldquo;Initial Development&rdquo;</h2>
-        <img src="img/timeline/win31.jpg" alt="My first computer, a Windows 3.1">
-        <p>I was only six years old but I still remember how excited I was to purchase my family's first computer. My father, brother, and I waited in line for over an hour outside of a Wilmington, Delaware Circuit City on a chilly December morning to buy an AT&amp;T Windows 3.1 PC workstation. It boasted a state-of-the-art 540 MB Hard Drive and 8 MB of RAM, and it was only $1,099!</p>
+        <img src="img/timeline/win31.jpg" alt="My first computer, a Windows 3.1" class="article">
+        <p>I was only six years old but I still remember how excited I was when my family purchased our first computer. My father, brother, and I waited in line for over an hour outside of a Wilmington, Delaware Circuit City on a chilly December morning to buy an AT&amp;T beige box running Windows 3.1. It boasted a state-of-the-art 540 MB Hard Drive and 8 MB of RAM, and it was only $1,099!</p>
 
         <p>My first foray into computer programming came two years later, and it did not end well. My curiosity for code got the best of me and at the age of nine I broke into MS-DOS, began executing commands, and promptly corrupted the operating system beyond repair. Considering the long wait in the cold only a few years earlier, my father was not impressed.</p>
 
-        <img src="img/timeline/cap.jpg" alt="Graduation mortar board">
+        <img src="img/timeline/osx.jpg" alt="How far computers have come" class="article">
 
-        <p class="alignRight">Fortunately, I have since learned how to apply my fascination for code in more constructive ways. I taught myself HTML and built my first website when I was twelve. It was full of tables and garish colors, rotating GIF images, auto-playing MIDI files, and blinking text. It is most likely the reason AOL decided to abandon their "AOL Hometown". Nevertheless, throughout high school and college I continued to pursue my passion for web design and development while supplementing my expertise studying traditional graphic design, print design, interactive media, typography, illustration, animation, and marketing.</p>
+        <p class="alignRight">Fortunately, I have since learned how to apply my fascination in more constructive ways. I taught myself HTML and built my first website when I was twelve. It was full of tables and garish colors, rotating GIF images, auto-playing MIDI files, and blinking text. It is most likely the reason AOL decided to abandon their "AOL Hometown". Nevertheless, throughout high school and college I continued to pursue my passion for web design and development while supplementing my expertise studying traditional graphic design, print design, interactive media, typography, illustration, animation, and marketing.</p>
 
-        <h2>&ldquo;A Triple Threat&rdquo;</h2>
-        <p>With a degree in marketing I added a business background into the mix. Now, alongside my eye for design, I leverage my business education to give me a knack for developing easy to use and effective websites and mobile apps. I can envision web applications from all sides, understanding needs from both the business and design sides of things.</p>
-
-        <p>Degree in marketing (or business), a passion for programming, an eye for design. Triple-pronged threat.</p>
+        <h2>&ldquo;The Triple Threat&rdquo;</h2>
+          <ul>
+            <li>
+              <img src="img/icon/design.svg" alt="design">
+              <h3>Design<br>Dedi&shy;cation</h3>
+            </li>
+            <li>
+              <img src="img/icon/code.svg" alt="development">
+              <h3>Program&shy;ming<br>Passion</h3>
+              <p>
+            </li>
+            <li>
+              <img src="img/icon/degree.svg" alt="degree">
+              <h3>Business<br>Degree</h3>
+            </li>
+          </ul>
+        <p>With a Bachelor of Science in Business Administration: Marketing and a Minor in Interactive Media (which encompassed classes from Graphic Design, Web Design, Programming, and Typography to Film and Animation) from the University of Delaware I added a business school foundation to my burgeoning eye for design and passion for programming. I leverage what I learned at the University of Delaware to help envision digital applications from all sides, understanding the requirements of the design, functional, and business operations point of view.</p>
 
       <h1 id="resume">R&eacute;sum&eacute;</h1>
 
@@ -55,10 +69,11 @@ require('includes/overallheader.inc.php');
 
     <section id="work">
       <h1 class="sectionName">Past Projects</h1>
+      <p style="text-align:center; color:darkred; background-color:rgba(255, 108, 108, 0.3); padding:0.1em;">Sorry, these are not yet linked to individual pages! See <a href="http://www.linkedin.com/in/giffordnowland/" target="_blank">LinkedIn</a> for project details.</p>
       <div> <!-- to make h1 stay put -->
         <!-- Young -->
         <figure>
-          <a href="work/youngconsultinggroup.php">
+          <a>
           <img src="img/work/young.jpg" alt="Young Consulting Group">
             <figcaption>Young Consulting Group</figcaption>
           </a>
@@ -66,7 +81,7 @@ require('includes/overallheader.inc.php');
         </figure>
         <!-- Whitehall -->
         <figure>
-          <a href="work/whitehall.php">
+          <a>
           <img src="img/work/whitehall.jpg" alt="Whitehall &amp; Company">
             <figcaption>Whitehall &amp; Company</figcaption>
           </a>
@@ -74,7 +89,7 @@ require('includes/overallheader.inc.php');
         </figure>
         <!-- LoSo -->
         <figure>
-          <a href="work/tapthecampus.php">
+          <a>
           <img src="img/work/loso.jpg" alt="Tap The Campus">
             <figcaption>Tap The Campus</figcaption>
           </a>
@@ -82,7 +97,7 @@ require('includes/overallheader.inc.php');
         </figure>
         <!-- SnowBums -->
         <figure>
-          <a href="work/delawaresnowbums.php">
+          <a>
           <img src="img/work/desb.jpg" alt="Delaware SnowBums">
             <figcaption>Delaware SnowBums</figcaption>
           </a>
@@ -90,7 +105,7 @@ require('includes/overallheader.inc.php');
         </figure>
         <!-- UDress -->
         <figure>
-          <a href="work/udress.php">
+          <a>
           <img src="img/work/udress.jpg" alt="UDress Magazine">
             <figcaption>UDress Magazine</figcaption>
           </a>
@@ -98,7 +113,7 @@ require('includes/overallheader.inc.php');
         </figure>
         <!-- DelRide -->
         <figure>
-          <a href="work/delride.php">
+          <a>
           <img src="img/work/delride.jpg" alt="DelRide SnowCorp">
             <figcaption>DelRide SnowCorp</figcaption>
           </a>
@@ -106,7 +121,7 @@ require('includes/overallheader.inc.php');
         </figure>
         <!-- Backcountry -->
         <figure>
-          <a href="work/backcountry.php">
+          <a>
           <img src="img/work/csbs.jpg" alt="Backcountry.com">
             <figcaption>Backcountry&#8203;.com</figcaption>
           </a>
@@ -114,7 +129,7 @@ require('includes/overallheader.inc.php');
         </figure>
         <!-- Crowd Calls -->
         <figure>
-          <a href="work/crowdcalls.php">
+          <a>
           <img src="img/work/crowdcalls.jpg" alt="Crowd Calls">
             <figcaption>Crowd Calls</figcaption>
           </a>
@@ -122,7 +137,7 @@ require('includes/overallheader.inc.php');
         </figure>
         <!-- Yellow Arrow Newark -->
         <figure>
-          <a href="work/yellowarrownewark.php">
+          <a>
           <img src="img/work/yellowarrownewark.jpg" alt="Yellow Arrow: Newark">
             <figcaption>Yellow Arrow: Newark</figcaption>
           </a>
@@ -130,7 +145,7 @@ require('includes/overallheader.inc.php');
         </figure>
         <!-- Queen -->
         <figure>
-          <a href="work/lightupthequeen.php">
+          <a>
           <img src="img/work/queen.jpg" alt="Light Up The Queen">
             <figcaption>Light Up The Queen</figcaption>
           </a>
@@ -138,7 +153,7 @@ require('includes/overallheader.inc.php');
         </figure>
         <!-- Edgemoor -->
         <figure>
-          <a href="work/edgemoor.php">
+          <a>
           <img src="img/work/ecc.jpg" alt="Edgemoor Community Center">
             <figcaption>Edgemoor Community Center</figcaption>
           </a>

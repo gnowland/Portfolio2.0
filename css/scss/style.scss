@@ -45,6 +45,21 @@ $blog-color:       rgb(67, 103, 158);
   }
 }
 
+// Warning style:
+#note {
+    position: relative;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fde073;
+    text-align: center;
+    line-height: 1.1;
+    padding: 0.5em;
+    overflow: hidden;
+    @include box-shadow(0 0 5px black);
+}
+
 /* Header Styles */
 
 header {
@@ -225,7 +240,7 @@ header nav {
     }
     img {
       height: auto;
-      border-radius: 50%;
+      @include border-radius(50%);
       margin: 0 -0.15em 0 -0.1em;
       position: relative;
       z-index: 1;
@@ -365,6 +380,10 @@ header nav {
 #skills {
   background: $body-bg;
 
+  h2 {
+    font-size: 2em;
+  }
+
   p {
     color: rgba(0, 0, 0, 0.8);
     font-size: 1.4rem;
@@ -377,7 +396,7 @@ header nav {
     }
   }
 
-  img {
+  img.article {
     width: 50%;
     max-width: 19em;
     margin-left: 2%;
@@ -392,13 +411,8 @@ header nav {
     &:nth-of-type(1) {
       margin-top: -4em;
     }
-    &.resume {
-      min-width: 100%;
-      float: none;
-      margin: 0;
-      max-width: 59rem;
-    }
   }
+
   a[href="resume.php"] { //Resume
     color: transparent;
     text-shadow: none;
@@ -407,6 +421,33 @@ header nav {
     line-height: 0;
     padding-bottom: 0;
     transition: none;
+  }
+
+  ul{
+    list-style: none;
+    max-width: 50em;
+    > li {
+      width: 32.6%;
+      display: inline-block;
+      padding: 0.2em;
+      vertical-align: middle;
+      background-color: rgba(75,75,75,0.5);
+      border: 0.2em rgb(238, 238, 238) solid;
+      @include border-radius(10px);
+      @include box-sizing(border-box);
+      h3 {
+        text-align: center;
+        font-size: 1.7em;
+        @include textStyle($body-bg , $pitch-shadow-d);
+      }
+      p {
+        text-align: center;
+      }
+     img {
+        width: 48%;
+        margin: 0 26%;
+      }
+    }
   }
 }
 
@@ -472,7 +513,7 @@ header nav {
       letter-spacing: 0.03em;
       // border: solid rgba(151, 151, 151, 0.88);
       // border-width: 0 0 1px 0;
-      border-radius: 3px;
+      @include border-radius(3px);
       background: rgb(165, 165, 165);//rgb(96, 147, 202);//rgb(83, 170, 199);///rgb(99, 154, 214);
       @include transition(background 0.2s linear);
       }
