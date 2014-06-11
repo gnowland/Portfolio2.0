@@ -39,8 +39,11 @@ function romanNumerals($num)
 <footer>
   <ul>
     <li>
-        <a href="http://www.linkedin.com/in/giffordnowland" style="border-bottom:none; text-decoration:none;" target="_blank">
-            <img src="https://static.licdn.com/scds/common/u/img/logos/logo_linkedin_92x22.png" width="92" height="22" border="0" style="background-color:#ffffff; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; padding: 2px;" alt="View Gifford Nowland's profile on LinkedIn">
+        <a href="http://www.linkedin.com/in/giffordnowland" style="margin: 0 0.2em; border-bottom:none; text-decoration:none;" target="_blank">
+            <img src="img/icon/linkedin.svg" width="22px" height="22px" border="0" alt="View Gifford Nowland's profile on LinkedIn">
+        </a>
+        <a href="http://twitter.com/gnowland" style="margin: 0 0.2em; border-bottom:none; text-decoration:none;" target="_blank">
+            <img src="img/icon/twitter.svg" width="22px" height="22px" border="0" alt="View Gifford Nowland's profile on Twitter">
         </a>
     </li>
     <li>

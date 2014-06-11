@@ -57,22 +57,11 @@
 
 //Font Breakpoint
 
-@media (max-width: 30em) {
-  #work {
-    img.article {
-      &:nth-of-type(odd), &:nth-of-type(even) {
-        float: none;
-        margin: 0;
-      }
-    }
-    p.alignRight {
-    text-align: left;
-    }
-  }
-  #hero h1 {
-    font-size: 3em;
-  }
-}
+//@media (max-width: 64.1em) {
+//  #about p {
+//    margin: 0.8em 1em;
+//  }
+//}
 
 @media (max-width: 47.9em) {
   h1 {
@@ -102,7 +91,7 @@
   }
   #work {
     p {
-      font-size: 1.1rem;
+      font-size: 1.1em;
       line-height: 1.4;
     }
     ul > li h3 {
@@ -119,11 +108,30 @@
   }
 }
 
-//@media (max-width: 64.1em) {
-//  #about p {
-//    margin: 0.8em 1em;
-//  }
-//}
+@media (max-width: 30em) {
+  #slides .slidesjs-navigation {
+    font-size: 1em;
+  }
+  #skills {
+    img.article {
+      &:nth-of-type(odd), &:nth-of-type(even) {
+        float: none;
+        margin: 0;
+      }
+    }
+    p.alignRight {
+    text-align: left;
+    }
+  }
+  #hero {
+    background-attachment: initial;
+    h1 {
+      font-size: 3em;
+    }
+  }
+}
+
+
 
 
 //Section padding

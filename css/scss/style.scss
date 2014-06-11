@@ -386,11 +386,11 @@ article {
 
   p {
     color: rgba(0, 0, 0, 0.8);
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-style: normal;
     font-weight: normal;
     letter-spacing: 0.015em;
-    line-height: 1.5;
+    line-height: 1.4;
     &.alignRight {
       text-align: right;
     }
@@ -733,7 +733,7 @@ article {
 footer {
   background-color: $footer-bg-color;
   @include box-shadow(inset 0 9px 20px -10px rgba(0,0,0,0.8));
-  padding: 1% 1%;
+  padding: 0.75em 1%;
 
   > ul{
     list-style: none;
@@ -742,12 +742,15 @@ footer {
       width: 32.5%;
       vertical-align: middle;
       display: inline-block;
+      a:hover {
+        color: rgb(250, 250, 250);
+      }
     }
   }
 
   p {
     text-align: center;
-    color: rgb(65, 65, 65);
+    color: #7F7F7F;
     margin: 0;
     line-height: 1;
   }
@@ -757,12 +760,13 @@ footer {
     color: rgb(250, 250, 250);
     a {
       text-transform: uppercase;
+      color: #7F7F7F;
+      text-shadow: none;
       font-weight: 600;
       font-family: $sourcesanspro-font-stack;
       border-bottom: none;
       &:hover {
         color: inherit;
-        text-shadow: inherit;
       }
     }
   }

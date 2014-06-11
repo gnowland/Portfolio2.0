@@ -50,8 +50,8 @@ require_once('includes/header.inc.php');
               <h3>Business<br>Educa&shy;tion</h3>
             </li>
           </ul>
-          <p>With a Bachelor of Science in Business Administration, Major in Marketing and Minor in Interactive Media*, from the University of Delaware, I added a business school foundation to my burgeoning love of exceptional design and carefully executed development. Leveraging what I learned at the University of Delaware I am able to conceptualize applications from all perspectives, intuitively understanding requirements of the design, functionality, feasibility, and business operations standpoints.</p>
-          <aside>*The University of Delaware's Minor in Interactive Media combined curriculum from the Computer Science &amp; Visual Communications departments, encompassing courses ranging from graphic design, web design, programming, and typography, to film production and computer animation.</aside>
+          <p>With a Bachelor of Science in Business Administration, Major in Marketing, Minor in Interactive Media*, from the University of Delaware, I added a business school foundation to my burgeoning love of exceptional design and craftily executed development. Leveraging my knowledge of and experience with design, functionality, feasibility, and business operations perspectives I am able to more effectively conceptualize and produce seamlessly-integrated applications from the planning phase all the way through deployment.</p>
+          <aside>*The University of Delaware's Interactive Media Minor combined curriculum from the Computer Science &amp; Visual Communications departments, encompassing courses ranging from graphic design, web design, programming, and typography, to film production and computer animation.</aside>
 
       <h1 id="resume">My R&eacute;sum&eacute;</h1>
 
@@ -66,11 +66,10 @@ require_once('includes/header.inc.php');
 
     <section id="work">
       <h1 class="sectionName">Past Projects</h1>
-      <p style="text-align:center; color:darkred; background-color:rgba(255, 108, 108, 0.3); padding:0.1em;">Sorry, these are not yet linked to individual pages! See <a href="http://www.linkedin.com/in/giffordnowland/" target="_blank">LinkedIn</a> for project details.</p>
       <div> <!-- to make h1 stay put -->
         <!-- Young -->
         <figure>
-          <a>
+          <a href="work.php?project=young">
           <img src="img/work/young.jpg" alt="Young Consulting Group">
             <figcaption>Young Consulting Group</figcaption>
           </a>
@@ -86,7 +85,7 @@ require_once('includes/header.inc.php');
         </figure>
         <!-- LoSo -->
         <figure>
-          <a>
+          <a href="work.php?project=tapthecampus">
           <img src="img/work/loso.jpg" alt="Tap The Campus">
             <figcaption>Tap The Campus</figcaption>
           </a>
@@ -94,7 +93,7 @@ require_once('includes/header.inc.php');
         </figure>
         <!-- SnowBums -->
         <figure>
-          <a>
+          <a href="work.php?project=snowbums">
           <img src="img/work/desb.jpg" alt="Delaware SnowBums">
             <figcaption>Delaware SnowBums</figcaption>
           </a>
@@ -102,7 +101,7 @@ require_once('includes/header.inc.php');
         </figure>
         <!-- UDress -->
         <figure>
-          <a>
+          <a href="work.php?project=udress">
           <img src="img/work/udress.jpg" alt="UDress Magazine">
             <figcaption>UDress Magazine</figcaption>
           </a>
@@ -110,7 +109,7 @@ require_once('includes/header.inc.php');
         </figure>
         <!-- DelRide -->
         <figure>
-          <a>
+          <a href="work.php?project=delride">
           <img src="img/work/delride.jpg" alt="DelRide SnowCorp">
             <figcaption>DelRide SnowCorp</figcaption>
           </a>
@@ -118,7 +117,7 @@ require_once('includes/header.inc.php');
         </figure>
         <!-- Backcountry -->
         <figure>
-          <a>
+          <a href="work.php?project=backcountry">
           <img src="img/work/csbs.jpg" alt="Backcountry.com">
             <figcaption>Backcountry&#8203;.com</figcaption>
           </a>
@@ -126,7 +125,7 @@ require_once('includes/header.inc.php');
         </figure>
         <!-- Crowd Calls -->
         <figure>
-          <a>
+          <a href="work.php?project=crowdcalls">
           <img src="img/work/crowdcalls.jpg" alt="Crowd Calls">
             <figcaption>Crowd Calls</figcaption>
           </a>
@@ -134,7 +133,7 @@ require_once('includes/header.inc.php');
         </figure>
         <!-- Yellow Arrow Newark -->
         <figure>
-          <a>
+          <a href="work.php?project=yellowarrow">
           <img src="img/work/yellowarrownewark.jpg" alt="Yellow Arrow: Newark">
             <figcaption>Yellow Arrow: Newark</figcaption>
           </a>
@@ -142,7 +141,7 @@ require_once('includes/header.inc.php');
         </figure>
         <!-- Queen -->
         <figure>
-          <a>
+          <a href="work.php?project=queen">
           <img src="img/work/queen.jpg" alt="Light Up The Queen">
             <figcaption>Light Up The Queen</figcaption>
           </a>
@@ -150,7 +149,7 @@ require_once('includes/header.inc.php');
         </figure>
         <!-- Edgemoor -->
         <figure>
-          <a>
+          <a href="work.php?project=edgemoor">
           <img src="img/work/ecc.jpg" alt="Edgemoor Community Center">
             <figcaption>Edgemoor Community Center</figcaption>
           </a>

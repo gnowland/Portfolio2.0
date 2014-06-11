@@ -4,9 +4,11 @@ $heroHeight: 520px;
 
 #hero {
   color: rgb(255,255,255);
-  background-position: center center;
-  width: 100%;
+  background-position: top center;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
   text-align: center;
   height: $heroHeight;
   padding: 0;
@@ -21,7 +23,7 @@ $heroHeight: 520px;
     z-index: 0;
   }
   h1 {
-    @include textStyle(rgb(255,255,255), -2px);
+    @include textStyle(rgba(255,255,255,0.7), -1px);
     font-weight: 800;
     font-size: 4.5em;
     letter-spacing: -.025em;
@@ -29,18 +31,46 @@ $heroHeight: 520px;
     line-height: 1.1;
   }
   .tools {
+    color: rgba(255,255,255,0.8);
+    font-size: 1em;
+    margin: 2em 0;
     font-style: italic;
+    display: block;
+  }
+  time {
+    font-style: normal;
+    line-height: 2;
+    border: 1px solid rgb(200,200,200);
+    //border-bottom: 1px solid rgb(200,200,200);
+    padding: 0.15em 0.4em 0.22em;
   }
   p {
-    margin-top: 2em;
-    font-size: 1.25rem;
+    color: rgba(255,255,255,0.8);
+    font-size: 1.3rem;
     font-style: normal;
     font-weight: normal;
     letter-spacing: 0.015em;
-    line-height: 1.2;
+    line-height: 1.3;
   }
 }
 
+#imac {
+  width: 100%;
+  max-width: 59em;
+  margin: 2em auto 0;
+  text-align: center;
+  display: block;
+  position: relative;
+  .overlay {
+    position: relative;
+    z-index: 9999;
+  }
+
+  .screen {
+    position: absolute;
+    top: 0;
+  }
+}
 
 body.work {
 
@@ -53,15 +83,18 @@ body.work {
   }
 
   nav#minipagenav {
-    background: rgb(75,75,75);
+    //background: rgb(75,75,75);
     width: 100%;
     clear: both;
     display: block;
     position: relative;
     height: auto;
     margin: 3em 0 0;
-    border: 0.5em solid rgb(75,75,75);
+    border: 0.5em solid #eeeeee;
     display: inline-block;
+    h3 {
+      padding:0; margin: 0;
+    }
 
     div {
       width: 100%;

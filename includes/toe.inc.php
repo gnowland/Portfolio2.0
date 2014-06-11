@@ -8,12 +8,7 @@
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.0.min.js"><\/script>')</script>
   <!--<![endif]-->
   <script src="js/site-min.js"></script>
-  <script>
-   close = document.getElementById("close");
-   close.addEventListener('click', function() {
-     note = document.getElementById("note");
-     note.style.display = 'none';
-   }, false);
-  </script>
+  <script src="<?php if(isset($scriptfsrc)) {echo $scriptfsrc; } ?>"></script>
+  <script><?php if(isset($scriptf)) {echo $scriptf; } ?></script>
   </body>
 </html>

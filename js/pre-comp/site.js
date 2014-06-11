@@ -8,6 +8,10 @@
 
 $(function() { //When the document loads
 
+
+  var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0)); //checks to see if it's a touchscreen
+  if (isTouch) { $('#hero').css("background-attachment","scroll"); } //sets background-attachment to scroll
+
   // Tell the DOM that JS is enabled and page is loaded
   $('html').addClass('loaded').removeClass('no-js');
 

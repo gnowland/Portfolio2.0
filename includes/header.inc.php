@@ -8,7 +8,4 @@
     </ul>
   </nav>
   <h1>GIFFORD <span aria-hidden="true" data-icon="&#61696;"></span> NOWLAND</h1>
-  <div id="note">
-      CAUTION: This is website is currently ALPHA. Code is not optimized and is subject to change at any time. Beware of broken links and odd site behavior! <a id="close">[close]</a>
-  </div>
 </header>
