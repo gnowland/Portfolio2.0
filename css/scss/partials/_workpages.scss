@@ -1,15 +1,55 @@
 /* Work Pages Styles */
 
-body.work {
-  #slidy-container {
+$heroHeight: 520px;
+
+#hero {
+  color: rgb(255,255,255);
+  background-position: center center;
+  width: 100%;
+  background-size: cover;
+  text-align: center;
+  height: $heroHeight;
+  padding: 0;
+  overflow: hidden;
+  display: inline-table;
+  .overlay {
     width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
+    height: $heroHeight;
+    position: absolute;
+    left: 0;
+    opacity: 0.60;
+    z-index: 0;
+  }
+  h1 {
+    @include textStyle(rgb(255,255,255), -2px);
+    font-weight: 800;
+    font-size: 4.5em;
+    letter-spacing: -.025em;
+    z-index: 1;
+    line-height: 1.1;
+  }
+  .tools {
+    font-style: italic;
+  }
+  p {
+    margin-top: 2em;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0.015em;
+    line-height: 1.2;
+  }
+}
+
+
+body.work {
+
+  header {
+    border-top: 0.4em rgb(0, 140, 186) solid; //Forces border to stay blue
   }
 
-  p {
-    font-size: 1.2em;
-    letter-spacing: 0.02em;
+  article .contain {
+    margin-top: 2em;
   }
 
   nav#minipagenav {
@@ -19,8 +59,9 @@ body.work {
     display: block;
     position: relative;
     height: auto;
-    margin: 1em 0 0;
+    margin: 3em 0 0;
     border: 0.5em solid rgb(75,75,75);
+    display: inline-block;
 
     div {
       width: 100%;
@@ -29,10 +70,11 @@ body.work {
       overflow-y: hidden;
       height: auto;
       padding: 0 0.2em;
+      text-align: center;
     }
 
     figure {
-      width: 9.3em;
+      width: 8em;
       margin: 0.5em 0.2em;
 
       figcaption {

@@ -645,12 +645,12 @@ select {
   margin-right: auto;
 }
 
-nav {
+header nav {
   z-index: 8;
   position: relative;
   margin: 0 auto;
 }
-nav li {
+header nav li {
   float: left;
 }
 
@@ -1443,13 +1443,13 @@ header nav li:nth-of-type(4).selected a {
   margin: 2em auto 1.8em;
 }
 
-#skills {
+article {
   background: #eeeeee;
 }
-#skills h2 {
+article h2 {
   font-size: 2em;
 }
-#skills p {
+article p {
   color: rgba(0, 0, 0, 0.8);
   font-size: 1.4rem;
   font-style: normal;
@@ -1457,24 +1457,25 @@ header nav li:nth-of-type(4).selected a {
   letter-spacing: 0.015em;
   line-height: 1.5;
 }
-#skills p.alignRight {
+article p.alignRight {
   text-align: right;
 }
-#skills img.article {
+article img.article {
   width: 50%;
   max-width: 19em;
   margin-left: 2%;
   margin-right: 2%;
 }
-#skills img.article:nth-of-type(odd) {
+article img.article:nth-of-type(odd) {
   float: right;
 }
-#skills img.article:nth-of-type(even) {
+article img.article:nth-of-type(even) {
   float: left;
 }
-#skills img.article:nth-of-type(1) {
+article img.article:nth-of-type(1) {
   margin-top: -4em;
 }
+
 #skills a[href="resume.php"] {
   color: transparent;
   text-shadow: none;
@@ -1501,9 +1502,25 @@ header nav li:nth-of-type(4).selected a {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  position: relative;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  overflow: hidden;
 }
 #skills ul > li:nth-of-type(2) {
   padding: 1.5em 0;
+}
+#skills ul > li:hover, #skills ul > li:focus, #skills ul > li:active {
+  -moz-transform: rotateY(360deg);
+  -ms-transform: rotateY(360deg);
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
 }
 #skills ul > li h3 {
   text-align: center;
@@ -1529,14 +1546,15 @@ header nav li:nth-of-type(4).selected a {
   position: relative;
   z-index: 2;
 }
-#work figure {
+
+#work figure, #minipagenav figure {
   display: inline-block;
   position: relative;
   max-width: 23.625em;
   border-color: transparent;
   vertical-align: top;
 }
-#work figure a {
+#work figure a, #minipagenav figure a {
   padding: 0;
   border: 1px solid white;
   -moz-box-shadow: 0px 2px 3px 0 #c8c8c8;
@@ -1550,7 +1568,7 @@ header nav li:nth-of-type(4).selected a {
   transition: transform 0.2s linear, box-shadow 0.1s ease-out;
   overflow: hidden;
 }
-#work figure a:hover {
+#work figure a:hover, #minipagenav figure a:hover {
   -moz-transform: scale(1.05);
   -ms-transform: scale(1.05);
   -webkit-transform: scale(1.05);
@@ -1559,7 +1577,7 @@ header nav li:nth-of-type(4).selected a {
   -webkit-box-shadow: 0px 2px 3px 0 transparent;
   box-shadow: 0px 2px 3px 0 transparent;
 }
-#work figure a:hover figcaption {
+#work figure a:hover figcaption, #minipagenav figure a:hover figcaption {
   -moz-transform: translate(0, 200%);
   -ms-transform: translate(0, 200%);
   -webkit-transform: translate(0, 200%);
@@ -1567,16 +1585,16 @@ header nav li:nth-of-type(4).selected a {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
-#work figure a:hover + p {
+#work figure a:hover + p, #minipagenav figure a:hover + p {
   color: #646464;
 }
-#work figure a:hover + p span {
+#work figure a:hover + p span, #minipagenav figure a:hover + p span {
   background: #828282;
 }
-#work figure img {
+#work figure img, #minipagenav figure img {
   max-width: 100%;
 }
-#work figure p {
+#work figure p, #minipagenav figure p {
   color: #7d7d7d;
   line-height: 1.2;
   padding-top: 0.5em;
@@ -1588,7 +1606,7 @@ header nav li:nth-of-type(4).selected a {
   -webkit-transition: color 0.2s linear;
   transition: color 0.2s linear;
 }
-#work figure p span {
+#work figure p span, #minipagenav figure p span {
   float: right;
   margin-left: 0.9em;
   font-weight: 400;
@@ -1606,7 +1624,7 @@ header nav li:nth-of-type(4).selected a {
   -webkit-transition: background 0.2s linear;
   transition: background 0.2s linear;
 }
-#work figcaption {
+#work figcaption, #minipagenav figcaption {
   background-color: rgba(0, 0, 0, 0.77);
   position: absolute;
   bottom: 15%;
@@ -1642,7 +1660,6 @@ header nav li:nth-of-type(4).selected a {
   background-attachment: scroll;
   background-position: center center;
   background-repeat: no-repeat;
-  /*Lets create a pulsating animation for the loader face*/
 }
 #contact .overlay {
   background-color: rgba(168, 156, 133, 0.6);
@@ -1788,17 +1805,6 @@ header nav li:nth-of-type(4).selected a {
   border: 0px solid transparent;
   outline: 0;
 }
-#contact #submit.loading {
-  background-color: #2e6b2e;
-  -moz-animation: phase 1s infinite;
-  -webkit-animation: phase 1s infinite;
-  animation: phase 1s infinite;
-}
-@keyframes phase {
-  #contact 50%  {
-    background-color: #178217;
-  }
-}
 #contact #form-messages.success {
   padding: 1em;
   margin-bottom: 0.75rem;
@@ -1860,14 +1866,52 @@ footer nav a:hover {
 }
 
 /* Work Pages Styles */
-body.work #slidy-container {
+#hero {
+  color: white;
+  background-position: center center;
   width: 100%;
-  margin: 0 auto;
+  background-size: cover;
+  text-align: center;
+  height: 520px;
+  padding: 0;
   overflow: hidden;
+  display: inline-table;
 }
-body.work p {
-  font-size: 1.2em;
-  letter-spacing: 0.02em;
+#hero .overlay {
+  width: 100%;
+  height: 520px;
+  position: absolute;
+  left: 0;
+  opacity: 0.60;
+  z-index: 0;
+}
+#hero h1 {
+  color: white;
+  text-shadow: #ababab -2px 1px 0;
+  border-color: white;
+  font-weight: 800;
+  font-size: 4.5em;
+  letter-spacing: -.025em;
+  z-index: 1;
+  line-height: 1.1;
+}
+#hero .tools {
+  font-style: italic;
+}
+#hero p {
+  margin-top: 2em;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0.015em;
+  line-height: 1.2;
+}
+
+body.work header {
+  border-top: 0.4em #008cba solid;
+}
+body.work article .contain {
+  margin-top: 2em;
 }
 body.work nav#minipagenav {
   background: #4b4b4b;
@@ -1876,8 +1920,9 @@ body.work nav#minipagenav {
   display: block;
   position: relative;
   height: auto;
-  margin: 1em 0 0;
+  margin: 3em 0 0;
   border: 0.5em solid #4b4b4b;
+  display: inline-block;
 }
 body.work nav#minipagenav div {
   width: 100%;
@@ -1886,9 +1931,10 @@ body.work nav#minipagenav div {
   overflow-y: hidden;
   height: auto;
   padding: 0 0.2em;
+  text-align: center;
 }
 body.work nav#minipagenav figure {
-  width: 9.3em;
+  width: 8em;
   margin: 0.5em 0.2em;
 }
 body.work nav#minipagenav figure figcaption {
@@ -1925,8 +1971,8 @@ body.work nav#minipagenav figure.currentPage {
  */
 @media (min-width: 19.375em) {
   section, #work article {
-    border-top: 3.3em solid #eeeeee;
-    margin-top: -3.7em;
+    border-top: 4em solid #eeeeee;
+    margin-top: -4.4em;
   }
 
   section:nth-of-type(1) {
@@ -1955,8 +2001,8 @@ body.work nav#minipagenav figure.currentPage {
 }
 @media (min-width: 21.25em) {
   section, #work article {
-    border-top: 3.414em solid #eeeeee;
-    margin-top: -3.814em;
+    border-top: 4.114em solid #eeeeee;
+    margin-top: -4.514em;
   }
 
   section:nth-of-type(1) {
@@ -1985,8 +2031,8 @@ body.work nav#minipagenav figure.currentPage {
 }
 @media (min-width: 23.125em) {
   section, #work article {
-    border-top: 3.528em solid #eeeeee;
-    margin-top: -3.928em;
+    border-top: 4.228em solid #eeeeee;
+    margin-top: -4.628em;
   }
 
   section:nth-of-type(1) {
@@ -2015,8 +2061,8 @@ body.work nav#minipagenav figure.currentPage {
 }
 @media (min-width: 25em) {
   section, #work article {
-    border-top: 3.642em solid #eeeeee;
-    margin-top: -4.042em;
+    border-top: 4.342em solid #eeeeee;
+    margin-top: -4.742em;
   }
 
   section:nth-of-type(1) {
@@ -2045,8 +2091,8 @@ body.work nav#minipagenav figure.currentPage {
 }
 @media (min-width: 26.875em) {
   section, #work article {
-    border-top: 3.756em solid #eeeeee;
-    margin-top: -4.156em;
+    border-top: 4.456em solid #eeeeee;
+    margin-top: -4.856em;
   }
 
   section:nth-of-type(1) {
@@ -2075,8 +2121,8 @@ body.work nav#minipagenav figure.currentPage {
 }
 @media (min-width: 28.75em) {
   section, #work article {
-    border-top: 3.87em solid #eeeeee;
-    margin-top: -4.27em;
+    border-top: 4.57em solid #eeeeee;
+    margin-top: -4.97em;
   }
 
   section:nth-of-type(1) {
@@ -2105,8 +2151,8 @@ body.work nav#minipagenav figure.currentPage {
 }
 @media (min-width: 30.625em) {
   section, #work article {
-    border-top: 3.984em solid #eeeeee;
-    margin-top: -4.384em;
+    border-top: 4.684em solid #eeeeee;
+    margin-top: -5.084em;
   }
 
   section:nth-of-type(1) {
@@ -2135,8 +2181,8 @@ body.work nav#minipagenav figure.currentPage {
 }
 @media (min-width: 32.5em) {
   section, #work article {
-    border-top: 4.098em solid #eeeeee;
-    margin-top: -4.498em;
+    border-top: 4.798em solid #eeeeee;
+    margin-top: -5.198em;
   }
 
   section:nth-of-type(1) {
@@ -2165,8 +2211,8 @@ body.work nav#minipagenav figure.currentPage {
 }
 @media (min-width: 34.375em) {
   section, #work article {
-    border-top: 4.212em solid #eeeeee;
-    margin-top: -4.612em;
+    border-top: 4.912em solid #eeeeee;
+    margin-top: -5.312em;
   }
 
   section:nth-of-type(1) {
@@ -2195,8 +2241,8 @@ body.work nav#minipagenav figure.currentPage {
 }
 @media (min-width: 36.25em) {
   section, #work article {
-    border-top: 4.326em solid #eeeeee;
-    margin-top: -4.726em;
+    border-top: 5.026em solid #eeeeee;
+    margin-top: -5.426em;
   }
 
   section:nth-of-type(1) {
@@ -2225,8 +2271,8 @@ body.work nav#minipagenav figure.currentPage {
 }
 @media (min-width: 38.125em) {
   section, #work article {
-    border-top: 4.44em solid #eeeeee;
-    margin-top: -4.84em;
+    border-top: 5.14em solid #eeeeee;
+    margin-top: -5.54em;
   }
 
   section:nth-of-type(1) {
@@ -2255,8 +2301,8 @@ body.work nav#minipagenav figure.currentPage {
 }
 @media (min-width: 40em) {
   section, #work article {
-    border-top: 4.554em solid #eeeeee;
-    margin-top: -4.954em;
+    border-top: 5.254em solid #eeeeee;
+    margin-top: -5.654em;
   }
 
   section:nth-of-type(1) {
@@ -2285,8 +2331,8 @@ body.work nav#minipagenav figure.currentPage {
 }
 @media (min-width: 41.875em) {
   section, #work article {
-    border-top: 4.668em solid #eeeeee;
-    margin-top: -5.068em;
+    border-top: 5.368em solid #eeeeee;
+    margin-top: -5.768em;
   }
 
   section:nth-of-type(1) {
@@ -2315,8 +2361,8 @@ body.work nav#minipagenav figure.currentPage {
 }
 @media (min-width: 43.75em) {
   section, #work article {
-    border-top: 4.782em solid #eeeeee;
-    margin-top: -5.182em;
+    border-top: 5.482em solid #eeeeee;
+    margin-top: -5.882em;
   }
 
   section:nth-of-type(1) {
@@ -2345,8 +2391,8 @@ body.work nav#minipagenav figure.currentPage {
 }
 @media (min-width: 45.625em) {
   section, #work article {
-    border-top: 4.896em solid #eeeeee;
-    margin-top: -5.296em;
+    border-top: 5.596em solid #eeeeee;
+    margin-top: -5.996em;
   }
 
   section:nth-of-type(1) {
@@ -2375,8 +2421,8 @@ body.work nav#minipagenav figure.currentPage {
 }
 @media (min-width: 47.5em) {
   section, #work article {
-    border-top: 5.01em solid #eeeeee;
-    margin-top: -5.41em;
+    border-top: 5.71em solid #eeeeee;
+    margin-top: -6.11em;
   }
 
   section:nth-of-type(1) {
@@ -2405,8 +2451,8 @@ body.work nav#minipagenav figure.currentPage {
 }
 @media (min-width: 49.375em) {
   section, #work article {
-    border-top: 5.124em solid #eeeeee;
-    margin-top: -5.524em;
+    border-top: 5.824em solid #eeeeee;
+    margin-top: -6.224em;
   }
 
   section:nth-of-type(1) {
@@ -2435,8 +2481,8 @@ body.work nav#minipagenav figure.currentPage {
 }
 @media (min-width: 51.25em) {
   section, #work article {
-    border-top: 5.238em solid #eeeeee;
-    margin-top: -5.638em;
+    border-top: 5.938em solid #eeeeee;
+    margin-top: -6.338em;
   }
 
   section:nth-of-type(1) {
@@ -2465,8 +2511,8 @@ body.work nav#minipagenav figure.currentPage {
 }
 @media (min-width: 53.125em) {
   section, #work article {
-    border-top: 5.352em solid #eeeeee;
-    margin-top: -5.752em;
+    border-top: 6.052em solid #eeeeee;
+    margin-top: -6.452em;
   }
 
   section:nth-of-type(1) {
@@ -2495,8 +2541,8 @@ body.work nav#minipagenav figure.currentPage {
 }
 @media (min-width: 55em) {
   section, #work article {
-    border-top: 5.466em solid #eeeeee;
-    margin-top: -5.866em;
+    border-top: 6.166em solid #eeeeee;
+    margin-top: -6.566em;
   }
 
   section:nth-of-type(1) {
@@ -2525,8 +2571,8 @@ body.work nav#minipagenav figure.currentPage {
 }
 @media (min-width: 56.875em) {
   section, #work article {
-    border-top: 5.58em solid #eeeeee;
-    margin-top: -5.98em;
+    border-top: 6.28em solid #eeeeee;
+    margin-top: -6.68em;
   }
 
   section:nth-of-type(1) {
@@ -2555,8 +2601,8 @@ body.work nav#minipagenav figure.currentPage {
 }
 @media (min-width: 58.75em) {
   section, #work article {
-    border-top: 5.694em solid #eeeeee;
-    margin-top: -6.094em;
+    border-top: 6.394em solid #eeeeee;
+    margin-top: -6.794em;
   }
 
   section:nth-of-type(1) {
@@ -2585,8 +2631,8 @@ body.work nav#minipagenav figure.currentPage {
 }
 @media (min-width: 60.625em) {
   section, #work article {
-    border-top: 5.808em solid #eeeeee;
-    margin-top: -6.208em;
+    border-top: 6.508em solid #eeeeee;
+    margin-top: -6.908em;
   }
 
   section:nth-of-type(1) {
@@ -2615,8 +2661,8 @@ body.work nav#minipagenav figure.currentPage {
 }
 @media (min-width: 62.5em) {
   section, #work article {
-    border-top: 5.922em solid #eeeeee;
-    margin-top: -6.322em;
+    border-top: 6.622em solid #eeeeee;
+    margin-top: -7.022em;
   }
 
   section:nth-of-type(1) {
@@ -2645,8 +2691,8 @@ body.work nav#minipagenav figure.currentPage {
 }
 @media (min-width: 64.375em) {
   section, #work article {
-    border-top: 6.036em solid #eeeeee;
-    margin-top: -6.436em;
+    border-top: 6.736em solid #eeeeee;
+    margin-top: -7.136em;
   }
 
   section:nth-of-type(1) {
@@ -2675,8 +2721,8 @@ body.work nav#minipagenav figure.currentPage {
 }
 @media (min-width: 66.25em) {
   section, #work article {
-    border-top: 6.15em solid #eeeeee;
-    margin-top: -6.55em;
+    border-top: 6.85em solid #eeeeee;
+    margin-top: -7.25em;
   }
 
   section:nth-of-type(1) {
@@ -2704,12 +2750,16 @@ body.work nav#minipagenav figure.currentPage {
   }
 }
 @media (max-width: 30em) {
-  #skills img.article:nth-of-type(odd), #skills img.article:nth-of-type(even) {
+  #work img.article:nth-of-type(odd), #work img.article:nth-of-type(even) {
     float: none;
     margin: 0;
   }
-  #skills p.alignRight {
+  #work p.alignRight {
     text-align: left;
+  }
+
+  #hero h1 {
+    font-size: 3em;
   }
 }
 @media (max-width: 47.9em) {
@@ -2740,38 +2790,42 @@ body.work nav#minipagenav figure.currentPage {
     font-size: 1.5em;
   }
 
-  #skills p {
+  #work p {
     font-size: 1.1rem;
     line-height: 1.4;
   }
-  #skills ul > li h3 {
+  #work ul > li h3 {
     font-size: 1.25em;
   }
 
   #contact h3 {
     line-height: 1.1;
   }
+
+  #hero h1 {
+    font-size: 3.5em;
+  }
 }
 @media (min-width: 20em) {
-  .home #work div {
+  .index #work div {
     padding: 0 8% 2%;
   }
-  .home #work div figure {
+  .index #work div figure {
     width: 99%;
     margin: 0%;
   }
-  .home #work div figure:nth-of-type(n) {
+  .index #work div figure:nth-of-type(n) {
     margin: 0%;
   }
-  .home #work div figure:nth-of-type(1n) {
+  .index #work div figure:nth-of-type(1n) {
     margin-right: auto;
   }
-  .home #work div figure:nth-child(1n) {
+  .index #work div figure:nth-child(1n) {
     margin-left: auto;
     margin-top: 5%;
     margin-bottom: 5%;
   }
-  .home #work div figure figcaption {
+  .index #work div figure figcaption {
     font-size: 1.5em;
   }
 }
@@ -2779,80 +2833,80 @@ body.work nav#minipagenav figure.currentPage {
   display: block;
 }
 @media (min-width: 27.5em) {
-  .home #work div figure {
+  .index #work div figure {
     width: 45%;
     margin: 2.25%;
   }
-  .home #work div figure:nth-of-type(n) {
+  .index #work div figure:nth-of-type(n) {
     margin: 2.25%;
   }
-  .home #work div figure:nth-of-type(2n) {
+  .index #work div figure:nth-of-type(2n) {
     margin-right: auto;
   }
-  .home #work div figure figcaption {
+  .index #work div figure figcaption {
     font-size: 1.2em;
   }
 }
 @media (min-width: 43.75em) {
-  .home #work div {
+  .index #work div {
     padding: 0 4% 2%;
   }
-  .home #work div figure {
+  .index #work div figure {
     width: 30%;
     margin: 1.5%;
   }
-  .home #work div figure:nth-of-type(n) {
+  .index #work div figure:nth-of-type(n) {
     margin: 1.5%;
   }
-  .home #work div figure:nth-of-type(3n) {
+  .index #work div figure:nth-of-type(3n) {
     margin-right: auto;
   }
-  .home #work div figure figcaption {
+  .index #work div figure figcaption {
     font-size: 1.5em;
   }
 }
 @media (min-width: 53.125em) {
-  .home #work div {
+  .index #work div {
     padding: 0 3% 2%;
   }
-  .home #work div figure {
+  .index #work div figure {
     width: 22.25%;
     margin: 1.25%;
   }
-  .home #work div figure:nth-of-type(n) {
+  .index #work div figure:nth-of-type(n) {
     margin: 1.25%;
   }
-  .home #work div figure:nth-of-type(4n) {
+  .index #work div figure:nth-of-type(4n) {
     margin-right: auto;
   }
 }
 @media (min-width: 75em) {
-  .home #work div {
+  .index #work div {
     padding: 0 3% 2%;
   }
-  .home #work div figure {
+  .index #work div figure {
     width: 18.3%;
     margin: 0.75%;
   }
-  .home #work div figure:nth-of-type(n) {
+  .index #work div figure:nth-of-type(n) {
     margin: 0.75%;
   }
-  .home #work div figure:nth-of-type(5n) {
+  .index #work div figure:nth-of-type(5n) {
     margin-right: auto;
   }
 }
 @media (min-width: 100em) {
-  .home #work div {
+  .index #work div {
     padding: 0 8% 2%;
   }
-  .home #work div figure {
+  .index #work div figure {
     width: 18.3%;
     margin: 0.75%;
   }
-  .home #work div figure:nth-of-type(n) {
+  .index #work div figure:nth-of-type(n) {
     margin: 0.75%;
   }
-  .home #work div figure:nth-of-type(5n) {
+  .index #work div figure:nth-of-type(5n) {
     margin-right: auto;
   }
 }

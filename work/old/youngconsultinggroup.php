@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-  <?php require_once('../includes/head1.inc.php'); ?>
+  <?php require_once('includes/head1.inc.php'); ?>
 
   <title>Gifford Nowland Portfolio: Young Consulting Group</title>
 
@@ -29,7 +29,7 @@
 
     </section>
 
-    <?php require_once('../includes/footer.inc.php'); ?>
+    <?php require_once('includes/footer.inc.php'); ?>
 
     <?php require_once('includes/toe.inc.php'); ?>
     <?php require_once('includes/slidy.inc.php') ?>

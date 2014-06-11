@@ -30,6 +30,7 @@
         <script src="js/vendor/html5shiv.js"></script>
     <![endif]-->
     <style><?php if(isset($style)) { echo $style; } ?></style>
-    <script src="<?php if(isset($scriptsrc)) {echo $scriptsrc; } ?>"></script>
-    <script><?php if(isset($script)) {echo $script; } ?></script>
+    <script src="<?php if(isset($scripthsrc)) {echo $scripthsrc; } ?>"></script>
+    <script><?php if(isset($scripth)) {echo $scripth; } ?></script>
   </head>
+  <body class="<?php echo (basename($_SERVER['PHP_SELF'],'.php')); ?>">

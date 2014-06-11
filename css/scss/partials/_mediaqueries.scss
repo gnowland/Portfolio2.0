@@ -6,7 +6,7 @@
  */
 
  $starting-width: 19.375em; //a good place to start with 30 revolutions... any window below 19.375em will fail but that would be a postage stamp anyway.
- $header-height: 3.3em; //3.321 was calculated as the starting point at a width of 19.375em and then finagled so that everything checked out in browser
+ $header-height: 4em; //3.321 was calculated as the starting point at a width of 19.375em and then finagled so that everything checked out in browser
 
 @for $i from 0 through 25 { // 19.375em == 0 . // 30 is where the header stops needing to get any larger
   @media (min-width: 19.375em + ($i * 1.875em)) {
@@ -58,7 +58,7 @@
 //Font Breakpoint
 
 @media (max-width: 30em) {
-  #skills {
+  #work {
     img.article {
       &:nth-of-type(odd), &:nth-of-type(even) {
         float: none;
@@ -68,6 +68,9 @@
     p.alignRight {
     text-align: left;
     }
+  }
+  #hero h1 {
+    font-size: 3em;
   }
 }
 
@@ -97,7 +100,7 @@
       }
     }
   }
-  #skills {
+  #work {
     p {
       font-size: 1.1rem;
       line-height: 1.4;
@@ -110,6 +113,9 @@
     h3 {
       line-height: 1.1;
     }
+  }
+  #hero h1 {
+    font-size: 3.5em;
   }
 }
 
@@ -149,7 +155,7 @@
 
 //Box Sizes
 @media (min-width: 20em) { // 1 up
-  .home #work div {
+  .index #work div {
     padding: 0 8% 2%; //half of below "rowMachine" padding //coencides with the padding of the boxes below
     figure {
     @include rowMachine(1, 0%);
@@ -172,7 +178,7 @@
   display: block;
 }
 @media (min-width: 27.5em) { //2 up //coencides with padding above
-  .home #work div {
+  .index #work div {
     figure {
       @include rowMachine(2, 4.5%);
       figcaption {
@@ -182,7 +188,7 @@
   }
 }
 @media (min-width: 43.750em) { //3 up
-  .home #work div {
+  .index #work div {
     padding: 0 4% 2%;
     figure {
       @include rowMachine(3, 3%);
@@ -193,7 +199,7 @@
   }
 }
 @media (min-width: 53.125em) { //4 up
-  .home #work div {
+  .index #work div {
     padding: 0 3% 2%;
     figure {
       @include rowMachine(4, 2.5%);
@@ -201,7 +207,7 @@
   }
 }
 @media (min-width: 75em) { //5 up
-  .home #work div {
+  .index #work div {
     padding: 0 3% 2%;
     figure {
       @include rowMachine(5, 1.5%);
@@ -209,7 +215,7 @@
   }
 }
 @media (min-width: 100em) { // 5 up, center
-  .home #work div {
+  .index #work div {
     padding: 0 8% 2%;
     figure {
       @include rowMachine(5, 1.5%)

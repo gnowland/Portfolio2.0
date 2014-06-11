@@ -377,7 +377,7 @@ header nav {
   }
 }
 
-#skills {
+article {
   background: $body-bg;
 
   h2 {
@@ -412,7 +412,9 @@ header nav {
       margin-top: -4em;
     }
   }
+}
 
+#skills {
   a[href="resume.php"] { //Resume
     color: transparent;
     text-shadow: none;
@@ -437,6 +439,14 @@ header nav {
       @include box-sizing(border-box);
       &:nth-of-type(2) {
         padding: 1.5em 0;
+      }
+      // Transition
+      position: relative;
+      @include transition-duration(1s);
+      @include transition-property(transform);
+      overflow: hidden;
+      &:hover, &:focus, &:active {
+        @include transform(rotateY( 360deg ));
       }
       h3 {
         text-align: center;
@@ -464,7 +474,8 @@ header nav {
     z-index: 2;
     //margin: 0 4%;
   }
-
+}
+#work, #minipagenav {
   figure {
     display: inline-block;
     position: relative;
@@ -694,15 +705,6 @@ header nav {
       border: 0px solid rgba(0,0,0,0);
       outline:0;
     }
-  }
-
-  #submit.loading {
-    background-color: hsl(120, 40%, 30%);
-    @include animation(phase 1s infinite);
-  }
-  /*Lets create a pulsating animation for the loader face*/
-  @keyframes phase {
-    50% {background-color: hsl(120, 70%, 30%);}
   }
 
   #form-messages {

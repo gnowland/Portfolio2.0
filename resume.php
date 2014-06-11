@@ -1,9 +1,9 @@
 <?php
 
 $title = 'Gifford Nowland - Resume'; // Page title
-$scriptsrc = 'js/vendor/pdfobject.min.js';
 $style = 'p { text-align: center; } a { text-transform: uppercase; }';
-$script = "function embedPDF(){
+$scripthsrc = 'js/vendor/pdfobject.min.js';
+$scripth = "function embedPDF(){
 
     var myPDF = new PDFObject({
 

@@ -12,11 +12,8 @@ $style = '
       border-color: rgb(50,50,50);
     }';
 require_once('includes/overallheader.inc.php');
-
+require_once('includes/header.inc.php');
 ?>
-
-  <body class="blog">
-  <?php require_once('includes/header.inc.php'); ?>
 
     <section id="blog">
       <div class="middle">
@@ -31,6 +28,4 @@ require_once('includes/overallheader.inc.php');
     </footer>
     -->
 
-    <?php require_once('includes/toe.inc.php'); ?>
-  </body>
-</html>
+<?php require_once('includes/toe.inc.php'); ?>

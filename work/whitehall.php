@@ -1,40 +1,21 @@
-<!DOCTYPE html>
-  <?php require_once('../includes/head1.inc.php'); ?>
+<?php
+$name = 'Whitehall &amp; Company'; // Page title
+?>
 
-  <title>Gifford Nowland Portfolio: Whitehall &amp; Company</title>
 
-  <?php require_once('includes/head2.inc.php'); ?>
+<div id="hero" style="background-image: url(work/img/whitehall/hero.jpg)">
+  <div class="overlay" style="background: #a89322;"></div>
+  <div class="contain middle">
+    <h1>Whitehall &amp; Company</h1>
+    <div class="tools">Design · Strategy · Code</div>
+    <time>January &mdash; February 2011</time>
+    <p style="max-width:25em;">Whitehall &amp; Company is a boutique investment bank located in the heart of New York City's Times Square.</p>
+  </div>
+</div>
 
-  <body class="wrok">
-    <?php require_once('includes/header.inc.php'); ?>
-
-    <section id="work">
-
-      <div id="slidy-container">
-        <figure id="slidy">
-          <img src="img1.jpg" alt="" data-caption="">
-          <img src="img2.jpg" alt="" data-caption="">
-          <img src="img3.jpg" alt="" data-caption="">
-          <img src="img4.jpg" alt="" data-caption="">
-        </figure>
-      </div>
-
-      <article>
-        <h1>Whitehall &amp; Company</h1>
-          <h2>Project Brief</h2>
-            <p>Whitehall's existing website was a static HTML site that Jon, one of the Managing Directors, had created in his spare time. Because Jon designed it himself he was understandably attached to the appearance of the site, but was finding it prohibitively time consuming to maintain its development. Jon wanted to create a system that would allow employees with little to no knowledge of web coding languages to easily publish site content and assist with maintaining the site on a day-to-day basis.</p>
-
-      </article>
-
-      <!-- Projects Navigation-->
-      <?php require_once('includes/minipagenav.inc.php'); ?>
-
-    </section>
-
-    <?php require_once('../includes/footer.inc.php'); ?>
-
-    <?php require_once('includes/toe.inc.php'); ?>
-    <?php require_once('includes/slidy.inc.php') ?>
-
-  </body>
-</html>
+<article>
+  <div class="contain">
+      <h2>Project Brief</h2>
+        <p>When I joined Whitehall their website was a static HTML site that one of the firm's Managing Directors had made. Since he designed it himself he was attached to the appearance but was finding it prohibitively time consuming to add frequent updates to the site. I proposed creating a custom Wordpress-based template that would match the existing site but allow employees with little knowledge of web languages to easily publish content.</p>
+  </div>
+</article>

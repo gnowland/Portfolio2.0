@@ -59,7 +59,7 @@ $totalSections: 8; //The TOTAL NUMBER OF CURRENT TOP-LEVEL SECTIONS (Change if m
   //@include offset($row-top-offset); //moved to _mediaqueries.scss
 }
 
-nav {
+header nav {
   @include sectionSettings(0);
   //max-width: 22.1em; //moved ot mediaqueries.css
   //width: span(3);

@@ -11,12 +11,9 @@ $style = '
       border-color: rgb(50,50,50);
     }';
 $description = '404 - Page Not Found';
-require('includes/overallheader.inc.php');
-
+require_once('includes/overallheader.inc.php');
+require_once('includes/header.inc.php');
 ?>
-
-  <body class="404">
-    <?php require_once('includes/header.inc.php'); ?>
 
     <section id="about">
       <div class="middle">
@@ -29,6 +26,4 @@ require('includes/overallheader.inc.php');
     <?php require_once('includes/footer.inc.php'); ?>
     -->
 
-    <?php require_once('includes/toe.inc.php'); ?>
-  </body>
-</html>
+ <?php require_once('includes/toe.inc.php'); ?>

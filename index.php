@@ -1,13 +1,10 @@
 <?php
 
 $title = 'Gifford Nowland Digital Development + Design'; // Page title
-require('includes/overallheader.inc.php');
+require_once('includes/overallheader.inc.php');
+require_once('includes/header.inc.php');
 
 ?>
-
-  <body class="home">
-
-    <?php require_once('includes/header.inc.php'); ?>
 
     <section id="about">
       <div class="middle">
@@ -50,7 +47,7 @@ require('includes/overallheader.inc.php');
             </li>
             <li>
               <img src="img/icon/degree.svg" alt="degree">
-              <h3>Business<br>Degree</h3>
+              <h3>Business<br>Educa&shy;tion</h3>
             </li>
           </ul>
           <p>With a Bachelor of Science in Business Administration, Major in Marketing and Minor in Interactive Media*, from the University of Delaware, I added a business school foundation to my burgeoning love of exceptional design and carefully executed development. Leveraging what I learned at the University of Delaware I am able to conceptualize applications from all perspectives, intuitively understanding requirements of the design, functionality, feasibility, and business operations standpoints.</p>
@@ -68,7 +65,7 @@ require('includes/overallheader.inc.php');
     </article>
 
     <section id="work">
-      <h1 class="sectionName">My Past Projects</h1>
+      <h1 class="sectionName">Past Projects</h1>
       <p style="text-align:center; color:darkred; background-color:rgba(255, 108, 108, 0.3); padding:0.1em;">Sorry, these are not yet linked to individual pages! See <a href="http://www.linkedin.com/in/giffordnowland/" target="_blank">LinkedIn</a> for project details.</p>
       <div> <!-- to make h1 stay put -->
         <!-- Young -->
@@ -81,7 +78,7 @@ require('includes/overallheader.inc.php');
         </figure>
         <!-- Whitehall -->
         <figure>
-          <a>
+          <a href="work.php?project=whitehall">
           <img src="img/work/whitehall.jpg" alt="Whitehall &amp; Company">
             <figcaption>Whitehall &amp; Company</figcaption>
           </a>
@@ -171,26 +168,11 @@ require('includes/overallheader.inc.php');
           <div id="form-div">
             <div id="form-messages"></div>
             <form id="ajax-contact" method="post" action="./php/mailer.php" class="form">
-
-              <p>
-                <input name="name" type="text" class="feedback-input" placeholder="Name" id="name" required>
-              </p>
-
-              <p>
-                <input name="email" type="email" class="feedback-input" id="email" placeholder="Email" required>
-              </p>
-
-              <p>
-                <textarea name="message" class="feedback-input" id="message" placeholder="Message" required></textarea>
-              </p>
-
-              <p>
-                <label class="captcha"><b>Anti-SPAM:</b> <span>10+12</span> = </label>
-                <input name="captcha" id="captcha" class="feedback-input" placeholder=" " maxlength="2" required>
-              </p>
-
+              <p><input name="name" type="text" class="feedback-input" placeholder="Name" id="name" required></p>
+              <p><input name="email" type="email" class="feedback-input" id="email" placeholder="Email" required></p>
+              <p><textarea name="message" class="feedback-input" id="message" placeholder="Message" required></textarea></p>
+              <p><label class="captcha"><b>Anti-SPAM:</b> <span>10+12</span> = </label> <input name="captcha" id="captcha" class="feedback-input" placeholder=" " maxlength="2" required></p>
               <input type="submit" value="SEND" id="submit"/>
-
             </form>
           </div>
 
@@ -198,8 +180,7 @@ require('includes/overallheader.inc.php');
       </div>
     </section>
 
-    <?php require_once('includes/footer.inc.php'); ?>
-
-    <?php require_once('includes/toe.inc.php'); ?>
-  </body>
-</html>
+<?php
+require_once('includes/footer.inc.php');
+require_once('includes/toe.inc.php');
+?>
