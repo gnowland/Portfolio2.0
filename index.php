@@ -53,8 +53,8 @@ require('includes/overallheader.inc.php');
               <h3>Business<br>Degree</h3>
             </li>
           </ul>
-          <p>With a Bachelor of Science in Business Administration, Major in Marketing and Minor in Interactive Media*, from the University of Delaware I added a business school foundation to my burgeoning dedication to great design and strong passion for programming. I am able to leverage what I learned at the University of Delaware to help envision digital applications from all sides, understanding the requirements of the design, functional, and business operations point of view.</p>
-          <aside>*The University of Delaware's Minor in Interactive Media combined curriculum from the Computer Science and Visual Communications departments, encompassing courses ranging from graphic design, web design, programming, and typography, to film production and digital animation.</aside>
+          <p>With a Bachelor of Science in Business Administration, Major in Marketing and Minor in Interactive Media*, from the University of Delaware, I added a business school foundation to my burgeoning love of exceptional design and carefully executed development. Leveraging what I learned at the University of Delaware I am able to conceptualize applications from all perspectives, intuitively understanding requirements of the design, functionality, feasibility, and business operations standpoints.</p>
+          <aside>*The University of Delaware's Minor in Interactive Media combined curriculum from the Computer Science &amp; Visual Communications departments, encompassing courses ranging from graphic design, web design, programming, and typography, to film production and computer animation.</aside>
 
       <h1 id="resume">My R&eacute;sum&eacute;</h1>
 
