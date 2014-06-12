@@ -2990,6 +2990,11 @@ body.work nav#minipagenav figure.currentPage {
   #skills img.article:nth-of-type(odd), #skills img.article:nth-of-type(even) {
     float: none;
     margin: 0;
+    width: 100%;
+  }
+  #skills p {
+    font-size: 1.2em;
+    line-height: 1.25;
   }
   #skills p.alignRight {
     text-align: left;

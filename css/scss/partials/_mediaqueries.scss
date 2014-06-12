@@ -117,10 +117,15 @@
       &:nth-of-type(odd), &:nth-of-type(even) {
         float: none;
         margin: 0;
+        width: 100%;
       }
     }
-    p.alignRight {
-    text-align: left;
+    p {
+      font-size: 1.2em;
+      line-height: 1.25;
+      &.alignRight {
+      text-align: left;
+      }
     }
     ul > li h3 {
       font-size: 1.2em;
