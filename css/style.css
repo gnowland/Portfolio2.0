@@ -1341,7 +1341,11 @@ header nav li:nth-of-type(4).selected a {
 }
 
 #about, #blog {
-  background: url(../img/graph-pattern.png) fixed 0 0 repeat, #285073;
+  background: url(../img/vignette.png) scroll center center no-repeat, url(../img/graph-pattern.png) fixed 0 0 repeat, #285073;
+  -moz-background-size: cover, auto;
+  -o-background-size: cover, auto;
+  -webkit-background-size: cover, auto;
+  background-size: cover, auto;
   padding: 0 0 40px 0;
   overflow: hidden;
   min-height: 100%;
@@ -2145,6 +2149,10 @@ body.work nav#minipagenav figure a:hover figcaption {
 body.work nav#minipagenav figure.currentPage {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
+}
+
+#blog {
+  background-color: #dbdbdb;
 }
 
 /* - - - local partials assembly - - - - - - - - - - - - - - - - - - - -
@@ -2985,6 +2993,10 @@ body.work nav#minipagenav figure.currentPage {
   }
   #skills p.alignRight {
     text-align: left;
+  }
+  #skills ul > li h3 {
+    font-size: 1.2em;
+    line-height: 1.1;
   }
 
   #hero {

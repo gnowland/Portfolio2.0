@@ -188,7 +188,8 @@ header nav {
 }
 
 #about, #blog {
-  background: url(../img/graph-pattern.png) fixed 0 0 repeat, $about-bg-color;
+  background: url(../img/vignette.png) scroll center center no-repeat, url(../img/graph-pattern.png) fixed 0 0 repeat, $about-bg-color;
+  @include background-size(cover, auto);
   padding: 0 0 40px 0; //40 px for  the bottom border
   //text-align: center; //part of .middle
   overflow: hidden;
@@ -807,5 +808,6 @@ footer {
 }
 
 @import "partials/workpages";
+@import "partials/blog";
 
 @import "partials/mediaqueries";

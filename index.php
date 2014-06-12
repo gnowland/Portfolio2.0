@@ -13,7 +13,7 @@ require_once('includes/header.inc.php');
       </div>
     </section>
     <div id="slug">
-      <p><span class="asterisk2">&#42;&#42;</span> Okay, I realize that sounds like a lot of web jargon&hellip; <span>To put it plainly:</span>
+      <p><span class="asterisk2">&#42;&#42;</span> Okay, I realize that sounds like an awful lot of web jargon&hellip; <span>To put it plainly:</span>
       <i>I like to make web and mobile experiences simple, enjoyable, and effective.</i></p>
       <hr>
       <p>So, what can I do <span>for your brand?</span></p>
@@ -95,7 +95,7 @@ require_once('includes/header.inc.php');
     <div id="endslug">
       <div class="contain">
         <h1>About This Website</h1>
-        <p>Built from scratch in the spring of 2014 using Sublime Text and CodeKit, HTML5, CSS3 with SASS, PHP, a little JavaScript, and a whole lotta love. Additionally, no templates or frameworks were harmed in the making of this site. I did borrow some math cues from the Foundation framework; props to Zurb for some kick-ass SASS.</p>
+        <p>This mobile-first, responsive website was built from scratch in the spring of 2014 using Sublime Text and CodeKit, HTML5, CSS3 with SASS, PHP, a little JavaScript, and a whole lotta love. Additionally, no templates or frameworks were harmed in the making of this site. I did borrow some math cues from the Foundation framework; props to Zurb for some kick-ass SASS.</p>
       </div>
     </div>
 
