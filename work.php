@@ -53,9 +53,12 @@ require_once('includes/header.inc.php');
 
 </section>
 
-<?php
-require_once('includes/workpagenav.inc.php');
+<nav id="minipagenav">
+<h3>Check out some of my other projects:</h3>
+<?php require_once('includes/portfolio.inc.php'); ?>
+</nav>
 
+<?php
 require_once('includes/footer.inc.php');
 require_once('includes/toe.inc.php');
 ?>

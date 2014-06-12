@@ -1072,7 +1072,25 @@ ol li ol {
 .slideContain {
   margin: 0 auto;
   max-width: 65em;
-  padding: 0 2em;
+  padding: 0;
+}
+
+.caption {
+  z-index: 500;
+  display: block !important;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 30px;
+  padding: 5px 20px 0 20px;
+  background: #000;
+  background: rgba(0, 0, 0, 0.5);
+  width: 540px;
+  font-size: 1.3em;
+  line-height: 1.33;
+  color: #fff;
+  border-top: 1px solid #000;
+  text-shadow: none;
 }
 
 .no-js header {
@@ -1527,6 +1545,14 @@ article {
 article h2 {
   font-size: 2em;
 }
+article a {
+  text-shadow: none;
+  padding-bottom: 0;
+}
+article a:hover {
+  color: #005e7d;
+  border-bottom-color: #005e7d;
+}
 article p {
   color: rgba(0, 0, 0, 0.8);
   font-size: 1.3rem;
@@ -1623,6 +1649,8 @@ article img.article:nth-of-type(1) {
 #work > h1 {
   position: relative;
   z-index: 2;
+  font-size: 2.5rem;
+  border-bottom: solid #a8a8a8 1px;
 }
 
 #work figure, #minipagenav figure {
@@ -1735,7 +1763,7 @@ article img.article:nth-of-type(1) {
   -o-background-size: auto;
   -webkit-background-size: auto;
   background-size: auto;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
 }
@@ -1906,6 +1934,32 @@ article img.article:nth-of-type(1) {
   border-radius: 2px;
 }
 
+#endslug {
+  margin: 0;
+  display: inline-block;
+  padding: 1em 0;
+  background: #323232;
+  text-align: center;
+  width: 100%;
+}
+#endslug p {
+  color: #fafafa;
+  text-shadow: #a8a8a8 -0.2px 0.1px 0;
+  border-color: #fafafa;
+  max-width: 59rem;
+  margin: 0 auto 0.6em;
+  font-size: 1.1em;
+  line-height: 1.2;
+  color: rgba(250, 250, 250, 0.8);
+  letter-spacing: 0.025em;
+}
+#endslug h1 {
+  color: rgba(250, 250, 250, 0.8);
+  padding: 0;
+  margin: 0 auto;
+  font-size: 1.5em;
+}
+
 footer {
   background-color: #222222;
   -moz-box-shadow: inset 0 9px 20px -10px rgba(0, 0, 0, 0.8);
@@ -1968,6 +2022,10 @@ footer nav a:hover {
   left: 0;
   opacity: 0.60;
   z-index: 0;
+  text-align: right;
+  color: #828282;
+  font-size: 0.9em;
+  font-family: "SourceSansPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 #hero h1 {
   color: rgba(255, 255, 255, 0.7);
@@ -1986,7 +2044,7 @@ footer nav a:hover {
   font-style: italic;
   display: block;
 }
-#hero time {
+#hero .timespan {
   font-style: normal;
   line-height: 2;
   border: 1px solid #c8c8c8;
@@ -2002,8 +2060,8 @@ footer nav a:hover {
 }
 
 #imac {
-  width: 100%;
-  max-width: 59em;
+  width: 90%;
+  max-width: 50em;
   margin: 2em auto 0;
   text-align: center;
   display: block;
@@ -2024,6 +2082,9 @@ body.work header {
 body.work article .contain {
   margin-top: 2em;
 }
+body.work #slug {
+  margin-top: 2em;
+}
 body.work nav#minipagenav {
   width: 100%;
   clear: both;
@@ -2037,11 +2098,13 @@ body.work nav#minipagenav {
 body.work nav#minipagenav h3 {
   padding: 0;
   margin: 0;
+  text-align: center;
+  text-transform: uppercase;
 }
 body.work nav#minipagenav div {
   width: 100%;
   white-space: nowrap;
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
   height: auto;
   padding: 0 0.2em;
@@ -2056,6 +2119,10 @@ body.work nav#minipagenav figure figcaption {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.67);
+  font-size: 1em;
+}
+body.work nav#minipagenav figure p {
+  display: none;
 }
 body.work nav#minipagenav figure a {
   -moz-box-shadow: none;

@@ -1,38 +1,39 @@
 <?php
-$name = 'Whitehall &amp; Company'; // Page title
+$name = 'Backcountry.com CSBS'; // Page title
 ?>
 
 
-<div id="hero" style="background-image: url(work/img/whitehall/hero.jpg)">
-  <div class="overlay" style="background: rgb(2, 8, 19);"></div>
+<div id="hero" style="background-image: url(work/img/backcountry/hero.jpg)">
+  <div class="overlay" style="background: rgb(19, 19, 22);">photo: backcountry.com</div>
   <div class="contain middle">
-    <h1>Whitehall &amp; Company</h1>
-    <div class="tools">Design &sdot; Strategy &sdot; Code<br>
-    <time>January &ndash; February 2011</time><br>
-    HTML &sdot; CSS &sdot; PHP &sdot; SQL &sdot; Joomla! &sdot; <span>Google API &sdot; MailChimp</span></div>
-    <p style="max-width: 25em;">Whitehall &amp; Company is a boutique investment bank located in the heart of Times Square, New York City.</p>
+    <h1>Back&shy;country CSBS</h1>
+    <div class="tools">Design &sdot; Code<br>
+      <span class="timespan">January 2013 &ndash; March 2013</span><br>
+      Wikitext &sdot; HTML &sdot; CSS </div>
+      <p style="max-width: 25em;"> Backcountry.com is the world's second-largest online retailer of <span>outdoor gear.</span></p>
   </div>
 </div>
 
 <article>
   <div class="contain">
     <h2>Project Brief</h2>
-      <p>When I joined Whitehall &amp; Company their website consisted of a group of static HTML pages that the firm's Managing Director had made. Since he designed it himself he was attached to the appearance, but was finding it prohibitively time consuming to add updates to the site.</p>
+      <p>While working as a product expert on the sales team at Backcountry.com I recognized that there was an absence of adequate distribution and archival of the internal company newsletter, the Customer Service Bulletin Semi-Weekly (CSBS). I initiated a conversation with the Customer Solutions Department Supervisor and was authorized to lead an operation to digitize the newsletter. I endeavored to maintain its print formatting even though it was extremely tricky to recreate the subtleties in the table-centric Wikitext language.</p>
     <h2>Project Strategy</h2>
-      <p>I proposed creating a custom PHP template backed by a powerful Content management system. I was confident that following this strategy I could match the aesthetics of the existing site and enable employees with little knowledge of web markup to easily publish content. With Joomla! powering the site I would also be able to develop a custom plugin using Google API to integrate the automated publication of the firm's weekly e-newsletter, Monitoring the Markets, for which I was also in charge of the design.</p>
+      <p>The Customer Service web team suggested that I simply use a screenshot of the PDF files, but I wanted the text to be searchable, editable, and responsive. I wanted to create an attractive gallery archive page with pictures of each issue that linked to the full-text, search-optimized version. Many times I had to code with no preview because the Wikitext tabular formatting would cause the WYSIWYG view to crash. After a few iterations, I succeeded at creating a true-to-format replica of the original printed newsletter.</p>
     <div id="imac">
       <div class="overlay"><img src="work/img/imac.png" alt="mac screen"></div>
-      <div class="screen"><img src="work/img/whitehall/1.jpg" alt="whitehall's homepage"></div>
+      <div class="screen"><img src="work/img/backcountry/window.jpg" alt="the Backcountry.com CSBS's homepage"></div>
     </div>
     <h2>Project Result</h2>
-    <p>The Whitehall team was highly impressed by how easy changing the website became by using a Content Management System. The weekly e-newsletter archival system contributed to countless hours saved each week and providing historical market snapshots has generated a considerable amount of traffic to the website. At this time the newsletter is seen by over 1,000 influential investors each week.</p>
+    <p>The customer service department supervisors were extremely impressed with my initiative and I received considerable recognition from upper management. I was further contacted to consult on a SQL database project and later participated in user interface/user experience feedback discussions regarding the public-facing (<a href="http://www.backcountry.com" target="_blank">backcountry.com</a>) product list pages. Although I no longer work for Backcountry.com I am told the distribution of the CSBS continues to be administered using my original workflow and templates to this day.</p>
+     <p></p>
   </div>
   <div id="slug">
   <div class="slideContain">
   <div id="slides">
-    <img src="work/img/whitehall/2.jpg" alt="Whitehall advisory page">
-    <img src="work/img/whitehall/3.jpg" alt="Monitoring the Markets">
-    <img src="work/img/whitehall/4.jpg" alt="Whitehall careers page">
+  <img src="work/img/backcountry/gallery/1.jpg" alt="A Backcountry CSBS climbing rope newsletter">
+  <img src="work/img/backcountry/gallery/2.jpg" alt="The edit page of the Backcountry CSBS wiki">
+  <img src="work/img/backcountry/gallery/3.jpg" alt="A product list page like the one I was asked to give feedback on">
     <a href="#" class="slidesjs-previous slidesjs-navigation">&lt;</a>
     <a href="#" class="slidesjs-next slidesjs-navigation">&gt;</a>
   </div>

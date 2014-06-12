@@ -73,5 +73,23 @@
 .slideContain {
   margin: 0 auto;
   max-width: 65em;
-  padding: 0 2em;
+  padding: 0;
+}
+
+.caption {
+  z-index:500;
+  display:block!important;
+  position:absolute;
+  bottom:0;
+  left:0;
+  height:30px;
+  padding:5px 20px 0 20px;
+  background:#000;
+  background:rgba(0,0,0,.5);
+  width:540px;
+  font-size:1.3em;
+  line-height:1.33;
+  color:#fff;
+  border-top:1px solid #000;
+  text-shadow:none;
 }
