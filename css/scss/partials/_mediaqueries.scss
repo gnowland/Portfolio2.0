@@ -172,7 +172,7 @@
 
 //Box Sizes
 @media (min-width: 20em) { // 1 up
-  .index #work div {
+  .index #work #gallery {
     padding: 0 8% 2%; //half of below "rowMachine" padding //coencides with the padding of the boxes below
     figure {
     @include rowMachine(1, 0%);
@@ -195,7 +195,7 @@
   display: block;
 }
 @media (min-width: 27.5em) { //2 up //coencides with padding above
-  .index #work div {
+  .index #work #gallery {
     figure {
       @include rowMachine(2, 4.5%);
       figcaption {
@@ -205,7 +205,7 @@
   }
 }
 @media (min-width: 43.750em) { //3 up
-  .index #work div {
+  .index #work #gallery {
     padding: 0 4% 2%;
     figure {
       @include rowMachine(3, 3%);
@@ -216,7 +216,7 @@
   }
 }
 @media (min-width: 53.125em) { //4 up
-  .index #work div {
+  .index #work #gallery {
     padding: 0 3% 2%;
     figure {
       @include rowMachine(4, 2.5%);
@@ -224,7 +224,7 @@
   }
 }
 @media (min-width: 75em) { //5 up
-  .index #work div {
+  .index #work #gallery {
     padding: 0 3% 2%;
     figure {
       @include rowMachine(5, 1.5%);
@@ -232,7 +232,7 @@
   }
 }
 @media (min-width: 100em) { // 5 up, center
-  .index #work div {
+  .index #work #gallery {
     padding: 0 8% 2%;
     figure {
       @include rowMachine(5, 1.5%)

@@ -3,15 +3,13 @@
 $project = $_GET['project'];
 
 ob_start();
-include("work/$project.php"); //Includes the variables but does not print the file
+include("includes/work/$project.php"); //Includes the variables but does not print the file
 ob_end_clean();
 
 $title = "Gifford Nowland &raquo; Portfolio &raquo; $name";
-$style = '
+$style = "
   /* Prevents slides from flashing */
-  #slides {
-    display:none;
-  }';
+  #slides { display:none; } ";
 
 //Includes SlidesJS
 $scriptfsrc = "js/jquery.slides.min.js";
@@ -40,7 +38,8 @@ $scriptf = "
               // [number] restart delay on inactive slideshow
           }
     });
-  }); ";
+  });
+";
 
 require_once('includes/overallheader.inc.php');
 require_once('includes/header.inc.php');
@@ -49,7 +48,7 @@ require_once('includes/header.inc.php');
 
 <section id="work">
 
-<?php include("work/$project.php"); ?>
+<?php include("includes/work/$project.php"); ?>
 
 </section>
 

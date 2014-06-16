@@ -29,8 +29,8 @@
     <!--[if lt IE 9 &!(IEMobile)]>
         <script src="js/vendor/html5shiv.js"></script>
     <![endif]-->
-    <style><?php if(isset($style)) { echo $style; } ?></style>
-    <script src="<?php if(isset($scripthsrc)) {echo $scripthsrc; } ?>"></script>
-    <script><?php if(isset($scripth)) {echo $scripth; } ?></script>
+    <?php if(isset($style)) { echo "<style> $style </style>"; } ?>
+    <?php if(isset($scripthsrc)) { echo "<script src=\"$scripthsrc\" ></script>"; } ?>
+    <?php if(isset($scripth)) { echo "<script>$scripth</script>"; } ?>
   </head>
   <body class="<?php echo (basename($_SERVER['PHP_SELF'],'.php')); ?>">

@@ -1,16 +1,59 @@
 ### MAIN DEFAULTS
-Options +ExecCGI -Indexes
+#Options +ExecCGI -Indexes
 DirectoryIndex index.html index.htm index.php
 DefaultLanguage en-US
 AddDefaultCharset UTF-8
-ServerSignature Off
-
-### MIME TYPES
-AddType video/x-flv .flv
-AddType application/x-shockwave-flash .swf
-AddType image/x-icon .ico
-
+#
 ### ERRORDOCUMENTS
 #-> http://askapache.com/htaccess/apache-status-code-headers-errordocument.html
+#ErrorDocument 404 404.php
+###
 
-ErrorDocument 404 /test/Portfolio2/404.php
+###New Defaults:
+
+# do not allow anyone else to read your .htaccess file
+<Files .htaccess>
+deny from all
+</Files>
+
+# forbid viewing of directories
+Options All -Indexes
+
+# hide this list of files from being seen when listing a directory
+IndexIgnore .htaccess */.??* *~ *# */HEADER* */README* */_vti*
+
+# disable the server signature- helps with preformance
+ServerSignature Off
+
+# since it's out of fashion to use www- redirect URLs to non-www
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.website\.com$ [NC]
+RewriteRule ^.*$ http://website.com%{REQUEST_URI} [R=301,L]
+RewriteBase /
+# keep the URLs clean:
+# if someone asks for index.php- rewrite the URL without it
+RewriteRule ^(.*?)/?index\.php$ $1 [NC,R=301,L]
+
+##404 page
+ErrorDocument 404 /404.php
+
+# Redirect old file path to new file path
+RewriteRule ^/?test/portfolio2 index.php [R=301,L]
+
+# compress text, html, javascript, css, xml:
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+
+# remove browser bugs
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+Header append Vary User-Agent

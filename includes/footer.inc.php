@@ -45,6 +45,9 @@ function romanNumerals($num)
         <a href="http://twitter.com/gnowland" style="margin: 0 0.2em; border-bottom:none; text-decoration:none;" target="_blank">
             <img src="img/icon/twitter.svg" width="22px" height="22px" border="0" alt="View Gifford Nowland's profile on Twitter">
         </a>
+        <a href="https://plus.google.com/+GiffordNowland?rel=author" style="margin: 0 0.2em; border-bottom:none; text-decoration:none;" target="_blank">
+            <img src="img/icon/gplus.svg" width="22px" height="22px" border="0" alt="View Gifford Nowland's profile on Google+">
+        </a>
     </li>
     <li>
       <p>&copy; A.D. <?php $year = date('Y'); echo romanNumerals($year); ?> Gifford Nowland</p>

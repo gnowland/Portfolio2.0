@@ -8,8 +8,8 @@
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.0.min.js"><\/script>')</script>
   <!--<![endif]-->
   <script src="js/site-min.js"></script>
-  <script src="<?php if(isset($scriptfsrc)) {echo $scriptfsrc; } ?>"></script>
-  <script><?php if(isset($scriptf)) {echo $scriptf; } ?></script>
+  <?php if(isset($scriptfsrc)) { echo "<script src=\"$scriptfsrc\" ></script>"; } ?>
+  <?php if(isset($scriptf)) { echo "<script>$scriptf</script>"; } ?>
   <script><!-- Google Analytics-->
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -1,11 +1,3 @@
-// REMOVE BEFORE SHIP!!! :
-/*jshint devel:true */
-
-// DEBUGGING CODE:
-// console.log("You are here:", this.id);
-
-
-
 $(function() { //When the document loads
 
 

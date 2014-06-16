@@ -8,8 +8,8 @@ require_once('includes/header.inc.php');
 
     <section id="about">
       <div class="middle">
-        <div class="tagline"><span>design</span><img src="img/portrait.jpg" alt="Gifford Nowland"><span>build</span></div>
-        <p>I&rsquo;m a <strong>front end web developer</strong> and <strong>digital user interface designer</strong> living in <span><em>New Orleans, Louisiana.</em></span> <span>I love</span> creating <strong>engaging &amp; intuitive user experiences</strong>, utilizing <strong>innovative design techniques</strong> to build responsive websites and <span>mobile applications.<a class="asterisk"><b>&#42;&#42;</b></a></span><br></p><!-- <img src="img/devices.png" alt="digital devices"> -->
+        <div class="tagline"><span>design</span><img src="img/portrait.jpg" alt="- Gifford Nowland -"><span>build</span></div>
+        <p>I&rsquo;m a <strong>front end web developer</strong> and <strong>digital user interface designer</strong> living in <span><em>New Orleans, Louisiana.</em></span> <span>I love</span> creating <strong>engaging &amp; intuitive user experiences</strong>, utilizing <strong>innovative design techniques</strong> to build responsive websites and <span>mobile applications.<a class="asterisk"><b>&#42;&#42;</b></a></span><br></p>
       </div>
     </section>
     <div id="slug">
@@ -69,6 +69,12 @@ require_once('includes/header.inc.php');
       <?php
       include_once('includes/portfolio.inc.php');
       ?>
+      <div id="endslug">
+        <div class="contain">
+          <h1>About This Website</h1>
+          <p>This fully-responsive, progressively-enhanced, mobile-first website was built from scratch in the spring of 2014 using Sublime Text and CodeKit, HTML5, CSS3 with SASS, PHP, a little JavaScript, and a whole lotta love. Additionally, no templates or frameworks were harmed in the making of this site. I did borrow some math cues from the Foundation framework; props to Zurb for some kick-ass SASS.</p>
+        </div>
+      </div>
     </section>
 
     <section id="contact">
@@ -91,13 +97,6 @@ require_once('includes/header.inc.php');
       </div>
       </div>
     </section>
-
-    <div id="endslug">
-      <div class="contain">
-        <h1>About This Website</h1>
-        <p>This mobile-first, responsive website was built from scratch in the spring of 2014 using Sublime Text and CodeKit, HTML5, CSS3 with SASS, PHP, a little JavaScript, and a whole lotta love. Additionally, no templates or frameworks were harmed in the making of this site. I did borrow some math cues from the Foundation framework; props to Zurb for some kick-ass SASS.</p>
-      </div>
-    </div>
 
 <?php
 require_once('includes/footer.inc.php');

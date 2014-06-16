@@ -1034,7 +1034,7 @@ ol li ol {
   width: 13px;
   height: 0;
   padding-top: 13px;
-  background-image: url(img/pagination.png);
+  background-image: url(../img/pagination.png);
   background-position: 0 0;
   float: left;
   overflow: hidden;
@@ -2056,11 +2056,13 @@ footer nav a:hover {
 }
 #hero p {
   color: rgba(255, 255, 255, 0.8);
+  font-family: "SourceSansPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.3rem;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
   letter-spacing: 0.015em;
   line-height: 1.3;
+  max-width: 25em;
 }
 
 #imac {
@@ -2074,10 +2076,18 @@ footer nav a:hover {
 #imac .overlay {
   position: relative;
   z-index: 9999;
+  max-width: inherit;
+}
+#imac .overlay img {
+  max-width: inherit;
 }
 #imac .screen {
   position: absolute;
   top: 0;
+  max-width: inherit;
+}
+#imac .screen img {
+  max-width: inherit;
 }
 
 body.work header {
@@ -3012,25 +3022,25 @@ body.work nav#minipagenav figure.currentPage {
   }
 }
 @media (min-width: 20em) {
-  .index #work div {
+  .index #work #gallery {
     padding: 0 8% 2%;
   }
-  .index #work div figure {
+  .index #work #gallery figure {
     width: 99%;
     margin: 0%;
   }
-  .index #work div figure:nth-of-type(n) {
+  .index #work #gallery figure:nth-of-type(n) {
     margin: 0%;
   }
-  .index #work div figure:nth-of-type(1n) {
+  .index #work #gallery figure:nth-of-type(1n) {
     margin-right: auto;
   }
-  .index #work div figure:nth-child(1n) {
+  .index #work #gallery figure:nth-child(1n) {
     margin-left: auto;
     margin-top: 5%;
     margin-bottom: 5%;
   }
-  .index #work div figure figcaption {
+  .index #work #gallery figure figcaption {
     font-size: 1.5em;
   }
 }
@@ -3038,80 +3048,80 @@ body.work nav#minipagenav figure.currentPage {
   display: block;
 }
 @media (min-width: 27.5em) {
-  .index #work div figure {
+  .index #work #gallery figure {
     width: 45%;
     margin: 2.25%;
   }
-  .index #work div figure:nth-of-type(n) {
+  .index #work #gallery figure:nth-of-type(n) {
     margin: 2.25%;
   }
-  .index #work div figure:nth-of-type(2n) {
+  .index #work #gallery figure:nth-of-type(2n) {
     margin-right: auto;
   }
-  .index #work div figure figcaption {
+  .index #work #gallery figure figcaption {
     font-size: 1.2em;
   }
 }
 @media (min-width: 43.75em) {
-  .index #work div {
+  .index #work #gallery {
     padding: 0 4% 2%;
   }
-  .index #work div figure {
+  .index #work #gallery figure {
     width: 30%;
     margin: 1.5%;
   }
-  .index #work div figure:nth-of-type(n) {
+  .index #work #gallery figure:nth-of-type(n) {
     margin: 1.5%;
   }
-  .index #work div figure:nth-of-type(3n) {
+  .index #work #gallery figure:nth-of-type(3n) {
     margin-right: auto;
   }
-  .index #work div figure figcaption {
+  .index #work #gallery figure figcaption {
     font-size: 1.5em;
   }
 }
 @media (min-width: 53.125em) {
-  .index #work div {
+  .index #work #gallery {
     padding: 0 3% 2%;
   }
-  .index #work div figure {
+  .index #work #gallery figure {
     width: 22.25%;
     margin: 1.25%;
   }
-  .index #work div figure:nth-of-type(n) {
+  .index #work #gallery figure:nth-of-type(n) {
     margin: 1.25%;
   }
-  .index #work div figure:nth-of-type(4n) {
+  .index #work #gallery figure:nth-of-type(4n) {
     margin-right: auto;
   }
 }
 @media (min-width: 75em) {
-  .index #work div {
+  .index #work #gallery {
     padding: 0 3% 2%;
   }
-  .index #work div figure {
+  .index #work #gallery figure {
     width: 18.3%;
     margin: 0.75%;
   }
-  .index #work div figure:nth-of-type(n) {
+  .index #work #gallery figure:nth-of-type(n) {
     margin: 0.75%;
   }
-  .index #work div figure:nth-of-type(5n) {
+  .index #work #gallery figure:nth-of-type(5n) {
     margin-right: auto;
   }
 }
 @media (min-width: 100em) {
-  .index #work div {
+  .index #work #gallery {
     padding: 0 8% 2%;
   }
-  .index #work div figure {
+  .index #work #gallery figure {
     width: 18.3%;
     margin: 0.75%;
   }
-  .index #work div figure:nth-of-type(n) {
+  .index #work #gallery figure:nth-of-type(n) {
     margin: 0.75%;
   }
-  .index #work div figure:nth-of-type(5n) {
+  .index #work #gallery figure:nth-of-type(5n) {
     margin-right: auto;
   }
 }

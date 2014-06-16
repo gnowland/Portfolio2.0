@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /backup
+Disallow: /test
+sitemap: http://www.your-domain-name.com/sitemap.xml
