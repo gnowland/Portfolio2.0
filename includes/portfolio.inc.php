@@ -1,7 +1,7 @@
   <div id="gallery"> <!-- to make h1 stay put -->
     <!-- Young -->
     <figure>
-      <a href="work.php?project=young">
+      <a href="work.php?project=young-consulting-group">
       <img src="img/work/grid/young.jpg" alt="Young Consulting Group">
         <figcaption>Young Consulting Group</figcaption>
       </a>
@@ -9,7 +9,7 @@
     </figure>
     <!-- Whitehall -->
     <figure>
-      <a href="work.php?project=whitehall">
+      <a href="work.php?project=whitehall-and-company">
       <img src="img/work/grid/whitehall.jpg" alt="Whitehall &amp; Company">
         <figcaption>Whitehall &amp; Company</figcaption>
       </a>
@@ -17,23 +17,23 @@
     </figure>
     <!-- Tap The Campus -->
     <figure>
-      <a href="work.php?project=tapthecampus">
+      <a href="work.php?project=tap-the-campus">
       <img src="img/work/grid/loso.jpg" alt="Tap The Campus">
         <figcaption>Tap The Campus</figcaption>
       </a>
       <p><span>2012</span> <b>Mobile App</b>&nbsp;&ndash; HTML, CSS, PHP, JavaScript, Symfony, PhoneGap, AWS</p>
     </figure>
-    <!-- SnowBums
+    <!-- SnowBums -->
     <figure>
-      <a href="work.php?project=snowbums">
+      <a href="work.php?project=delaware-snowbums">
       <img src="img/work/grid/desb.jpg" alt="Delaware SnowBums">
         <figcaption>Delaware SnowBums</figcaption>
       </a>
       <p><span>2012</span> <b>Logo Design</b>&nbsp;&ndash; Photoshop, Illustrator</p>
-    </figure> -->
+    </figure>
     <!-- UDress -->
     <figure>
-      <a href="work.php?project=udress">
+      <a href="work.php?project=udress-magazine">
       <img src="img/work/grid/udress.jpg" alt="UDress Magazine">
         <figcaption>UDress Magazine</figcaption>
       </a>
@@ -41,7 +41,7 @@
     </figure>
     <!-- DelRide -->
     <figure>
-      <a href="work.php?project=delride">
+      <a href="work.php?project=delride-snowcorp">
       <img src="img/work/grid/delride.jpg" alt="DelRide SnowCorp">
         <figcaption>DelRide SnowCorp</figcaption>
       </a>
@@ -49,7 +49,7 @@
     </figure>
     <!-- Backcountry -->
     <figure>
-      <a href="work.php?project=backcountry">
+      <a href="work.php?project=backcountry-csbs">
       <img src="img/work/grid/csbs.jpg" alt="Backcountry.com">
         <figcaption>Backcountry&#8203;.com</figcaption>
       </a>
@@ -65,7 +65,7 @@
     </figure> -->
     <!-- Yellow Arrow Newark
     <figure>
-      <a href="work.php?project=yellowarrow">
+      <a href="work.php?project=yellow-arrow-project-newark">
       <img src="img/work/grid/yellowarrownewark.jpg" alt="Yellow Arrow: Newark">
         <figcaption>Yellow Arrow: Newark</figcaption>
       </a>
@@ -73,7 +73,7 @@
     </figure> -->
     <!-- Queen -->
     <figure>
-      <a href="work.php?project=queen">
+      <a href="work.php?project=light-up-the-queen">
       <img src="img/work/grid/queen.jpg" alt="Light Up The Queen">
         <figcaption>Light Up The Queen</figcaption>
       </a>
@@ -81,7 +81,7 @@
     </figure>
     <!-- Edgemoor
     <figure>
-      <a href="work.php?project=edgemoor">
+      <a href="work.php?project=edgemoor-community-center">
       <img src="img/work/grid/ecc.jpg" alt="Edgemoor Community Center">
         <figcaption>Edgemoor Community Center</figcaption>
       </a>

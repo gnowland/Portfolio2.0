@@ -58,7 +58,7 @@ require_once('includes/header.inc.php');
         <p>Click on my r&eacute;sum&eacute; below to open it as an interactive PDF that you can zoom, print, and save.</p>
 
         <p><a href="resume.php">
-        <img src="img/GiffordRNowland-Resume.jpg" alt="resume" class="resume">
+        <img src="img/GiffordRNowland-Resume.jpg" alt="Click here for my resume" class="resume">
         </a></p>
 
       </div>
@@ -71,6 +71,7 @@ require_once('includes/header.inc.php');
       ?>
       <div id="endslug">
         <div class="contain">
+          <img src="img/devices.png" alt="Innovative web experiences for every screen">
           <h1>About This Website</h1>
           <p>This fully-responsive, progressively-enhanced, mobile-first website was built from scratch in the spring of 2014 using Sublime Text and CodeKit, HTML5, CSS3 with SASS, PHP, a little JavaScript, and a whole lotta love. Additionally, no templates or frameworks were harmed in the making of this site. I did borrow some math cues from the Foundation framework; props to Zurb for some kick-ass SASS.</p>
         </div>

@@ -759,9 +759,13 @@ article {
     }
   h1 {
     color: rgba(250,250,250,0.8);
-    padding: 0;
+    padding: 0 0 1em;
     margin: 0 auto;
     font-size: 1.5em;
+  }
+  img {
+    max-width: 16em;
+    padding-top: 1em;
   }
 }
 
