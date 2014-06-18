@@ -11,13 +11,27 @@
     -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="
-        <?php if(isset($description)) { echo $description; }
-        else { echo 'The professional Web Development &amp; Design Portfolio of Gifford Nowland: engaging, attractive, functional, &amp; responsive modern web experiences.'; } ?>" />
+    <meta name="description" content="<?php if(isset($description)) { echo $description; }
+        else { echo 'The professional Web Development &amp; Design Portfolio of Gifford Nowland: engaging, enjoyable, functional, &amp; responsive modern web experiences.'; } ?>" />
     <title><?php if(isset($title)) { echo $title; }
-        else { echo 'Gifford Nowland'; } ?></title>
+        else { echo 'Gifford Nowland Digital Design + Development'; } ?></title>
     <!-- AUTHOR META -->
-    <link rel=”author” href=”https://plus.google.com/+GiffordNowland“/>
+    <link rel=”author” href=”https://plus.google.com/+GiffordNowland?rel=author“ />
+    <!-- OPEN GRAPH -->
+    <meta property="og:url" content="<?php $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+        echo $url; ?>" />
+    <meta property="og:title" content="<?php if(isset($title)) { echo $title; }
+        else { echo 'Gifford Nowland Digital Design + Development'; } ?>" />
+    <meta property="og:site_name" content="Gifford Nowland" />
+    <meta property="og:description" content="<?php if(isset($description)) { echo $description; }
+        else { echo 'The professional Web Development &amp; Design Portfolio of Gifford Nowland: engaging, enjoyable, functional, &amp; responsive modern web experiences.'; } ?>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="<?php $filename = "http://www.giffordnowland.com/img/ogimage/$ogimg.jpg";
+        if (file_exists($filename)) { echo $filename; }
+        else { echo 'http://www.giffordnowland.com/img/ogimage/index.jpg'; } ?>" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1300" />
+    <meta property="og:image:height" content="683" />
     <!-- FAVICONS -->
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="img/icon/favicon-152.png">

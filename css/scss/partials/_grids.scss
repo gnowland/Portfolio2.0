@@ -123,6 +123,10 @@ section {
 //  }
 }
 
+#endslug {
+  @include sectionSettings(5);
+}
+
 #contact {
   @include sectionSettings(6);
 }

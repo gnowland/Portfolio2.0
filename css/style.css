@@ -717,6 +717,11 @@ section::after {
   position: relative;
 }
 
+#endslug {
+  z-index: 3;
+  position: relative;
+}
+
 #contact {
   z-index: 2;
   position: relative;

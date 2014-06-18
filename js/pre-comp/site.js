@@ -25,7 +25,7 @@ $(function() { //When the document loads
 
   var sections = $('section');
   var nav_a = $('header nav a');
-  var offsetAdj = 8;// $('header').outerHeight(); // Overridden by adding a psudo-element to all sections
+  var offsetAdj = -6;// $('header').outerHeight(); // Overridden by adding a psudo-element to all sections
   var currentOffset = $('section').css('border-top').match(/\d+/);
 
 //SUPERSEEDED BY THE CODE BELOW IT
