@@ -1114,7 +1114,7 @@ header.about {
   border-top: 0.4em #4eb188 solid;
 }
 
-header.work {
+header.work, header.endslug {
   border-top: 0.4em #008cba solid;
 }
 

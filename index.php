@@ -71,13 +71,13 @@ require_once('includes/header.inc.php');
       ?>
     </section>
 
-    <div id="endslug">
+    <aside id="endslug">
       <div class="contain">
         <img src="img/devices.jpg" alt="Innovative web experiences for every screen">
         <h1>About This Website</h1>
         <p>This fully-responsive, progressively-enhanced, mobile-first website was built from scratch in the spring of 2014 using Sublime Text and CodeKit, HTML5, CSS3 with SASS/Compass, PHP, Font Custom, a little JavaScript, and a whole lotta love. No templates or prefab frameworks were harmed in the making of this site, however I did borrow some math cues from the Foundation framework&ndash; props to Zurb for some kick-ass SASS.</p>
       </div>
-    </div>
+    </aside>
 
     <section id="contact">
       <div class="overlay">

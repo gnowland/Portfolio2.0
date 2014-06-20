@@ -27,7 +27,7 @@ $blog-color:       rgb(67, 103, 158);
 %brdr-about {
     border-top: $top-border-height $about-color solid;
 }
-%brdr-work {
+%brdr-work, header.endslug {
     border-top: $top-border-height $work-color solid;
 }
 %brdr-contact {
