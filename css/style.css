@@ -1589,15 +1589,6 @@ article img.article:nth-of-type(1) {
   margin-top: -4em;
 }
 
-#skills a[href="resume.php"] {
-  color: transparent;
-  text-shadow: none;
-  border-bottom: none;
-  text-decoration: none;
-  line-height: 0;
-  padding-bottom: 0;
-  transition: none;
-}
 #skills ul {
   list-style: none;
   max-width: 50em;

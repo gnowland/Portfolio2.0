@@ -17,9 +17,24 @@ require_once('includes/header.inc.php');
       <i>I like to make web and mobile experiences simple, enjoyable, and effective.</i></p>
       <hr>
       <p>So, what can I do <span>for your brand?</span></p>
-      <p><a href="#skills">Read on</a> to delve deeper into my background and areas of expertise, check out my <a href="#resume">resume</a>, or skip ahead to take a look at past projects in <a href="#work" class="scrollto">my portfolio</a>. Check out caffeinated web dev insights in <a href="blog.php" class="scrollto">my blog</a>, and don't hesitate to <a href="#contact" class="scrollto">contact me</a> to discuss your project, <span> full-time position,</span> <span>or to simply</span> <span>talk shop.</span></p>
+      <p>Take a look at some of my past projects in <a href="#work" class="scrollto">my portfolio</a>, delve deeper into <a href="#skills">my background</a> and areas of expertise, and download <a href="#resume">my resume</a>. Check out my caffeinated web dev insights in <a href="blog.php" class="scrollto">my blog</a>, and don't hesitate to <a href="#contact" class="scrollto">contact me</a> to discuss your project, <span> full-time position,</span> <span>or to simply</span> <span>talk shop.</span></p>
       <p><i>I look forward to <span>hearing from you!</span></i></p>
     </div>
+
+    <section id="work">
+      <h1 class="sectionName">Previous Work</h1>
+      <?php
+      include_once('includes/portfolio.inc.php');
+      ?>
+    </section>
+
+    <aside id="endslug">
+      <div class="contain">
+        <img src="img/devices.jpg" alt="Innovative web experiences for every screen">
+        <h1>About This Website</h1>
+        <p>This fully-responsive, progressively-enhanced, mobile-first website was built from scratch in the spring of 2014 using Sublime Text and CodeKit, HTML5, CSS3 with SASS/Compass, PHP, Font Custom, a little JavaScript, and a whole lotta love. No templates or prefab frameworks were harmed in the making of this site, however I did borrow some math cues from the Foundation framework&ndash; props to Zurb for some kick-ass SASS.</p>
+      </div>
+    </aside>
 
     <article id="skills">
       <div class="contain">
@@ -55,29 +70,10 @@ require_once('includes/header.inc.php');
 
       <h1 id="resume">My R&eacute;sum&eacute;</h1>
 
-        <p>Click on my r&eacute;sum&eacute; below to open it as an interactive PDF that you can zoom, print, and save.</p>
-
-        <p><a href="resume.php">
-        <img src="img/GiffordRNowland-Resume.jpg" alt="Click here for my resume" class="resume">
-        </a></p>
+        <p><a href="resume.php">Open my r&eacute;sum&eacute;</a> as an embedded interactive PDF that you can zoom, highlight, copy, print, and save.</p>
 
       </div>
     </article>
-
-    <section id="work">
-      <h1 class="sectionName">Previous Work</h1>
-      <?php
-      include_once('includes/portfolio.inc.php');
-      ?>
-    </section>
-
-    <aside id="endslug">
-      <div class="contain">
-        <img src="img/devices.jpg" alt="Innovative web experiences for every screen">
-        <h1>About This Website</h1>
-        <p>This fully-responsive, progressively-enhanced, mobile-first website was built from scratch in the spring of 2014 using Sublime Text and CodeKit, HTML5, CSS3 with SASS/Compass, PHP, Font Custom, a little JavaScript, and a whole lotta love. No templates or prefab frameworks were harmed in the making of this site, however I did borrow some math cues from the Foundation framework&ndash; props to Zurb for some kick-ass SASS.</p>
-      </div>
-    </aside>
 
     <section id="contact">
       <div class="overlay">

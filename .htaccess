@@ -39,7 +39,7 @@ RewriteRule ^(.*?)/?index\.php$ $1 [NC,R=301,L]
 ErrorDocument 404 /404.php
 
 # Redirect old file path to new file path
-RewriteRule ^/?test/portfolio2 index.php [R=301,L]
+RewriteRule ^/?test/portfolio2 index.php [NC,R=301,L]
 
 # compress text, html, javascript, css, xml:
 AddOutputFilterByType DEFLATE text/plain

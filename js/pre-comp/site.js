@@ -140,25 +140,25 @@ $('a[href=#top]').click(function() {
 
 // Check if at bottom of page, if so, add class to last <a> as sometimes the last div
 // isnt long enough to scroll to the top of the page and trigger the active state.
-  $('section:last').waypoint({
-    handler: function(direction){
-      if (direction === 'down') {
-        nav_a.parent().removeClass('selected');
-        nav_a.parent().not('.external').last().addClass('selected');
+  // $('section:last').waypoint({
+  //   handler: function(direction){
+  //     if (direction === 'down') {
+  //       nav_a.parent().removeClass('selected');
+  //       nav_a.parent().not('.external').last().addClass('selected');
 
-        $('header').removeClass().addClass($(this).attr("id")); //to change the color of the border
-      }
-      // Add class to the section above the last div once the user starts scrolling up again,
-      // then the normal "highlighting" function takes back over control
-      else {
-        nav_a.parent().removeClass('selected');
-        nav_a.parent().not('.external').eq(-2).addClass('selected');
+  //       $('header').removeClass().addClass($(this).attr("id")); //to change the color of the border
+  //     }
+  //     // Add class to the section above the last div once the user starts scrolling up again,
+  //     // then the normal "highlighting" function takes back over control
+  //     else {
+  //       nav_a.parent().removeClass('selected');
+  //       nav_a.parent().not('.external').eq(-2).addClass('selected');
 
-        $('header').removeClass().addClass($(this).prev().attr("id")); //to change the color of the border
-      }
-    },
-    offset: 'bottom-in-view'
-  });
+  //       $('header').removeClass().addClass($(this).prev().attr("id")); //to change the color of the border
+  //     }
+  //   },
+  //   offset: 'bottom-in-view'
+  // });
 
   // Check if scrolled to top of page, if so, add class to first <a>
   // (forcefix for when all content fits on one screen)
