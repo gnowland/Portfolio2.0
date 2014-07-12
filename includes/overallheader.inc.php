@@ -38,13 +38,15 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- <link rel="stylesheet" href="css/print.css" /> -->
-    <!-- JS-->
-    <script src="js/vendor/respond.min.js"></script>
-    <!--[if lt IE 9 &!(IEMobile)]>
-        <script src="js/vendor/html5shiv.js"></script>
-    <![endif]-->
     <?php if(isset($style)) { echo "<style> $style </style>"; } ?>
     <?php if(isset($scripthsrc)) { echo "<script src=\"$scripthsrc\" ></script>"; } ?>
     <?php if(isset($scripth)) { echo "<script>$scripth</script>"; } ?>
+
+    <!--[if lt IE 9 &!(IEMobile)]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+
+        <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body class="<?php echo (basename($_SERVER['PHP_SELF'],'.php')); ?>">
