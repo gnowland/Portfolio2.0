@@ -25,10 +25,11 @@
         $recipient = "gnowland@gmail.com";
 
         // Set the email subject.
-        $subject = "New contact from $name";
+        $subject = "Freelance inquiry from $name on giffordnowland.com";
 
         // Build the email content.
-        $email_content = "Name: $name\n";
+        $email_content = "<strong>Via contact form on giffordnowland.com:</strong>\n";
+        $email_content .= "Name: $name\n";
         $email_content .= "Email: $email\n\n";
         $email_content .= "Message:\n$message\n";
 
