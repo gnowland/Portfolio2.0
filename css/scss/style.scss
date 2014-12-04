@@ -571,10 +571,10 @@ article {
 #contact {
   background-color: $contact-bg-color;
   background-image: url(../img/NOLA.jpg);
-  @include background-size(auto);
+  @include background-size(100%);
   background-attachment: fixed;
   background-position: center center;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
 
   .overlay {
     background-color: rgba(168, 156, 133, 0.6); //rgba(220, 206, 179, 0.6); //rgba(75,75,75, 0.5);
