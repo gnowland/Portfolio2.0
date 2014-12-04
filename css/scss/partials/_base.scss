@@ -1,13 +1,14 @@
 // This partial file is to combine together all stylesheets with common variables and framework utilities
 
+//Install gems using [rvm use system], [sudo gem install compass], use external compiler in CodeKit.
+
 /* ---------------------------------------------------------------------------------------------------
  * BEGIN COMPASS PLUGIN IMPORT */
 
-@import
-  "compass/css3",
-  "susy",
-  "breakpoint",
-  "fonts"; //user partial
+@import "compass/css3"; //included with compass
+@import "susy"; // gem install susy
+@import "breakpoint"; //gem install breakpoint
+@import "fonts"; //user partial
 
 // Import Normalize seperately so I can add these first:
   // [Responsify.it]
@@ -32,8 +33,8 @@
     vertical-align:baseline;
     background:transparent;
   }
-@import
-  "normalize";
+
+@import "normalize"; // gem install
 
 /*
  * END COMPASS PLUGIN IMPORT
