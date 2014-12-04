@@ -22,19 +22,31 @@
 
         // Set the recipient email address.
 
-        $recipient = "gnowland@gmail.com";
+        $recipient = "Gifford Nowland <gnowland@gmail.com>";
 
-        // Set the email subject.
-        $subject = "Freelance inquiry from $name on giffordnowland.com";
+            // Set the email subject.
+            $subject = "New inquiry from $name on " . preg_replace('/^www\./','',$_SERVER['SERVER_NAME']);
 
-        // Build the email content.
-        $email_content = "<strong>Via contact form on giffordnowland.com:</strong>\n";
-        $email_content .= "Name: $name\n";
-        $email_content .= "Email: $email\n\n";
-        $email_content .= "Message:\n$message\n";
+            // Build the email content.
+            $email_content = "<html>
+                              <head>
+                              <title>$subject</title>
+                              </head>
+                              <body>" . "\r\n";
+            $email_content .= "<p><em>Via: contact form on " . preg_replace('/^www\./','',$_SERVER['SERVER_NAME']) . "</em><br />" . "\r\n";
+            $email_content .= "Name: $name<br />" . "\r\n";
+            $email_content .= "Email: $email<br /></p>" . "\r\n";
+            $email_content .= "<p>Message:<br />$message<br /></p>" . "\r\n";
+            $email_content .= "</body>
+                               </html>";
 
-        // Build the email headers.
-        $email_headers = "From: $name <$email>";
+            // Build the email headers.
+            // Always set content-type when sending HTML email
+            $email_headers = "MIME-Version: 1.0" . "\r\n";
+            $email_headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+            $email_headers .= "From: Gifford Nowland Digital <contact@giffordnowland.com>" . "\r\n";
+            $email_headers .= "Reply-To: $name <$email>" . "\r\n";
+            $email_headers .= "X-Mailer: PHP/" . phpversion();
 
         // Send the email.
         if (mail($recipient, $subject, $email_content, $email_headers)) {
