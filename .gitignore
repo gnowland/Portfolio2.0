@@ -6,3 +6,4 @@ sftp-config.json
 font/
 -excluded/
 -/
+*.sublime-workspace
