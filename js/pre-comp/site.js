@@ -247,7 +247,7 @@ $(form).submit(function(e) {
     if (data.responseText !== '') {
       $(formMessages).text(data.responseText);
     } else {
-      $(formMessages).text('Oops! An error occured and your message could not be sent.');
+      $(formMessages).text('My apologies, a processing error occured and your message could not be sent. Please send your request directly to <a href="mailto:hi@giffordnowland.com">hi@giffordnowland.com</a>. Thank you!');
     }
   });
 
