@@ -1923,6 +1923,10 @@ article img.article:nth-of-type(1) {
   border: 0px solid transparent;
   outline: 0;
 }
+#contact #form-messages a {
+  text-shadow: none;
+  border-bottom: none;
+}
 #contact #form-messages.success {
   padding: 1em;
   margin-bottom: 0.75rem;

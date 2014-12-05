@@ -719,6 +719,11 @@ article {
   }
 
   #form-messages {
+    a {
+      text-shadow: none;
+      border-bottom: none;
+    }
+
     &.success {
       padding: 1em;
       margin-bottom: 0.75rem;

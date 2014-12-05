@@ -56,7 +56,7 @@
         } else {
             // Set a 500 (internal server error) response code.
             http_response_code(500);
-            echo "Oops! Something went wrong and we couldn't send your message.";
+            echo 'PHP: My apologies, a processing error occured and your message could not be sent. Please send your request directly to <a href="mailto:hi@giffordnowland.com">hi@giffordnowland.com</a>. Thank you!';
         }
 
     } else {

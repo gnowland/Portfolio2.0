@@ -229,7 +229,7 @@ $(form).submit(function(e) {
     $(formMessages).addClass('success');
 
     // Set the message text.
-    $(formMessages).text(response);
+    $(formMessages).html(response);
 
     // Clear the form.
     $('#name').val('');
@@ -245,9 +245,9 @@ $(form).submit(function(e) {
 
     // Set the message text.
     if (data.responseText !== '') {
-      $(formMessages).text(data.responseText);
+      $(formMessages).html(data.responseText);
     } else {
-      $(formMessages).text('My apologies, a processing error occured and your message could not be sent. Please send your request directly to <a href="mailto:hi@giffordnowland.com">hi@giffordnowland.com</a>. Thank you!');
+      $(formMessages).html('My apologies, a processing error occured and your message could not be sent. Please send your request directly to <a href="mailto:hi@giffordnowland.com">hi@giffordnowland.com</a>. Thank you!');
     }
   });
 
