@@ -18,13 +18,13 @@
             $message = trim($_POST["message"]);
         }
         if(isset($_POST["g-recaptcha-response"])){
-            $captcha = $_POST["g-recaptcha-response"]
+            $captcha = $_POST["g-recaptcha-response"];
         }
 
-        $response=json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6Le81hMTAAAAADNX6DTW4tY75bcdLFGSyHnzCnxC&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']), true);
+        $response = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6Le81hMTAAAAADNX6DTW4tY75bcdLFGSyHnzCnxC&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']), true);
 
         // Check that data was sent to the mailer.
-        if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR !$captcha OR  ) {
+        if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR !$captcha ) {
             // Set a 400 (bad request) response code and exit.
             http_response_code(400);
             echo "Oops! There was a problem with your submission. Please complete the form and try again.";
