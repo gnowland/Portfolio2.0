@@ -1881,6 +1881,7 @@ article img.article:nth-of-type(1) {
   display: inline-block;
   margin-right: 0.1em;
   text-align: left;
+  margin-bottom: 1.25rem;
 }
 #contact .captcha span {
   background-color: #373737;

@@ -6,17 +6,36 @@
     // Only process POST reqeusts.
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Get the form fields and remove whitespace.
-        $name = strip_tags(trim($_POST["name"]));
-				$name = str_replace(array("\r","\n"),array(" "," "),$name);
-        $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-        $message = trim($_POST["message"]);
-        $captcha = strip_tags(trim($_POST['captcha']));
+        $name; $email; $message; $captcha;
+        if(isset($_POST["name"])){
+            $name = strip_tags(trim($_POST["name"]));
+		    $name = str_replace(array("\r","\n"),array(" "," "),$name);
+        }
+        if(isset($_POST["email"])){
+            $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+        }
+        if(isset($_POST["message"])){
+            $message = trim($_POST["message"]);
+        }
+        if(isset($_POST["g-recaptcha-response"])){
+            $captcha = $_POST["g-recaptcha-response"]
+        }
+
+        $response=json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6Le81hMTAAAAADNX6DTW4tY75bcdLFGSyHnzCnxC&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']), true);
 
         // Check that data was sent to the mailer.
-        if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR ($captcha != 22) ) {
+        if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR !$captcha OR  ) {
             // Set a 400 (bad request) response code and exit.
             http_response_code(400);
             echo "Oops! There was a problem with your submission. Please complete the form and try again.";
+            exit;
+        }
+
+        // Check the reCAPTCHA
+        if($response['success'] == false){
+            // Set a 400 (bad request) response code and exit.
+            http_response_code(400);
+            echo "You failed the reCAPTCHA, spammer!";
             exit;
         }
 

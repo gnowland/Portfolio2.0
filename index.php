@@ -87,7 +87,7 @@ require_once('includes/header.inc.php');
               <p><input name="name" type="text" class="feedback-input" placeholder="Name" id="name" required></p>
               <p><input name="email" type="email" class="feedback-input" id="email" placeholder="Email" required></p>
               <p><textarea name="message" class="feedback-input" id="message" placeholder="Message" required></textarea></p>
-              <div class="g-recaptcha" data-sitekey="6Le81hMTAAAAAI4k5BETwVDqA3gvNVReIwP8_thr"></div>
+              <div class="g-recaptcha captcha" data-sitekey="6Le81hMTAAAAAI4k5BETwVDqA3gvNVReIwP8_thr"></div>
               <input type="submit" value="SEND" id="submit"/>
             </form>
           </div>
