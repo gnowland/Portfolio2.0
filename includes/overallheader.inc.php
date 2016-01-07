@@ -48,5 +48,6 @@
 
         <script src="js/vendor/respond.min.js"></script>
     <![endif]-->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
   </head>
   <body class="<?php echo (basename($_SERVER['PHP_SELF'],'.php')); ?>">
