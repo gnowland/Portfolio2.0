@@ -63,7 +63,7 @@
             // Always set content-type when sending HTML email
             $email_headers = "MIME-Version: 1.0" . "\r\n";
             $email_headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-            $email_headers .= "From: Gifford Nowland Digital <contact@giffordnowland.com>" . "\r\n";
+            $email_headers .= "From: $name <$email>" . "\r\n";
             $email_headers .= "Reply-To: $name <$email>" . "\r\n";
             $email_headers .= "X-Mailer: PHP/" . phpversion();
 
