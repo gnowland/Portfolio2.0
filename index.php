@@ -70,7 +70,7 @@ require_once('includes/header.inc.php');
 
       <h1 id="resume">My R&eacute;sum&eacute;</h1>
 
-        <p>Please <a href="#contact" class="scrollto">send me a message</a> to request a copy of my current r&eacute;sum&eacute;</p>
+        <p>Please <a href="#contact" class="scrollto">send me a message</a> to request a copy of my current r&eacute;sum&eacute;.</p>
 
       </div>
     </article>
