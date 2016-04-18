@@ -17,7 +17,7 @@ require_once('includes/header.inc.php');
       <i>I like to make web and mobile experiences simple, enjoyable, and effective.</i></p>
       <hr>
       <p>So, what can I do <span>for your brand?</span></p>
-      <p>Take a look at some of my past projects in <a href="#work" class="scrollto">my portfolio</a>, delve deeper into <a href="#skills">my background</a> and areas of expertise, and download <a href="#resume">my resume</a>. Check out my caffeinated web dev insights in <a href="blog.php" class="scrollto">my blog</a>, and don't hesitate to <a href="#contact" class="scrollto">contact me</a> to discuss your project, <span> full-time position,</span> <span>or to simply</span> <span>talk shop.</span></p>
+      <p>Take a look at some of my past projects in <a href="#work" class="scrollto">my portfolio</a>, delve deeper into <a href="#skills">my background</a> and areas of expertise, and download <a href="#resume" class="scrollto">my resume</a>. Check out my caffeinated web dev insights in <a href="blog.php" class="scrollto">my blog</a>, and don't hesitate to <a href="#contact" class="scrollto">contact me</a> to discuss your project, <span> full-time position,</span> <span>or to simply</span> <span>talk shop.</span></p>
       <p><i>I look forward to <span>hearing from you!</span></i></p>
     </div>
 
@@ -70,7 +70,7 @@ require_once('includes/header.inc.php');
 
       <h1 id="resume">My R&eacute;sum&eacute;</h1>
 
-        <p><a href="resume.php">Open my r&eacute;sum&eacute;</a> as an embedded interactive PDF that you can zoom, highlight, copy, print, and save.</p>
+        <p>Please <a href="#contact" class="scrollto">send me a message</a> to request a copy of my current r&eacute;sum&eacute;</p>
 
       </div>
     </article>
@@ -79,7 +79,7 @@ require_once('includes/header.inc.php');
       <div class="overlay">
       <div class="contain">
       <h1 class="sectionName">Contact Me</h1>
-        <h3>I'm currently available for full-time and freelance opportunities!</h3>
+        <h3>Please contact me with any freelance or consulting requests!</h3>
 
           <div id="form-div">
             <div id="form-messages"></div>
