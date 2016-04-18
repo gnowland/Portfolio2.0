@@ -15,7 +15,7 @@
       </a>
       <p><span>2011</span> <b>CMS Retrofit</b>&nbsp;&ndash; HTML, CSS, PHP, Joomla!, AJAX, Google APIs, MailChimp</p>
     </figure>
-    <!-- Tap The Campus -->
+    <!-- Tap The Campus
     <figure>
       <a href="work.php?project=tap-the-campus">
       <img src="img/work/grid/loso.jpg" alt="Tap The Campus">
@@ -23,6 +23,7 @@
       </a>
       <p><span>2012</span> <b>Mobile App</b>&nbsp;&ndash; HTML, CSS, PHP, JavaScript, Symfony, PhoneGap, AWS</p>
     </figure>
+    -->
     <!-- SnowBums -->
     <figure>
       <a href="work.php?project=delaware-snowbums">
